@@ -2,6 +2,14 @@
 # This template is heavily inspired by anthropic's computer use demo, but you can use
 # it with any LM.
 agent:
+  model:
+    name: 'azure/gpt-5.5-20260424'
+    per_instance_cost_limit: 0
+    total_cost_limit: 0
+    per_instance_call_limit: 100
+    max_input_tokens: 0
+    temperature: null
+    top_p: null
   templates:
     system_template: |-
       You are a helpful assistant that can interact with a computer to solve tasks.
@@ -63,7 +71,7 @@ agent:
           </diff>
     enable_bash_tool: true
     parse_function:
-      type: thought_action
+      type: function_calling
   history_processors:
     - type: cache_control
       last_n_messages: 2
