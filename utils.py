@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+import json
+import re
 import shlex
+import subprocess
 from pathlib import Path
 from typing import Any, TypedDict
 
@@ -111,13 +114,76 @@ class ApplyPriorPatchesHook(RunHook):
             env.communicate(commit_command, check="raise", timeout=120, error_msg=f"Failed to commit prior patch {patch_name}")
 
 
+def _repo_name_from_path(path: str) -> str | None:
+    path = path.strip().rstrip("/")
+    if not path or path == "/" or not path.startswith("/"):
+        return None
+    return path.removeprefix("/")
+
+
+def _repo_name_from_test_cmds(test_cmds: str) -> str | None:
+    match = re.search(r"cd\s+(/[^\s&|;]+)", test_cmds)
+    if match is None:
+        return None
+    return _repo_name_from_path(match.group(1))
+
+
+def _repo_name_from_image_workdir(image_name: str) -> str | None:
+    subprocess.run(
+        ["docker", "pull", image_name],
+        capture_output=True,
+        check=False,
+        text=True,
+        timeout=600,
+    )
+    result = subprocess.run(
+        ["docker", "image", "inspect", "--format", "{{.Config.WorkingDir}}", image_name],
+        capture_output=True,
+        check=False,
+        text=True,
+        timeout=10,
+    )
+    if result.returncode != 0:
+        return None
+    return _repo_name_from_path(result.stdout)
+
+
 def _get_repo_name(instance: dict[str, Any]) -> str:
-    image_name = instance["docker_image"].removeprefix("docker.io/")
-    if image_name.startswith("jefzda/sweap-images"):
+    source = instance["source"]
+    image = instance["docker_image"]
+    if source == "swebench-pro" or "jefzda" in image:
         return "app"
-    if image_name.startswith(("swerebench/", "swerebenchv2/")):
+    if source == "swe-rebench-v2" or "swerebenchv2" in image:
         return instance["repo"].rstrip("/").split("/")[-1]
+    if repo_name := _repo_name_from_test_cmds(instance.get("test_cmds", "")):
+        return repo_name
+    if repo_name := _repo_name_from_image_workdir(instance["docker_image"]):
+        return repo_name
     return "testbed"
+
+
+def _strip_cache_control(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {
+            key: _strip_cache_control(item)
+            for key, item in value.items()
+            if key != "cache_control"
+        }
+    if isinstance(value, list):
+        return [_strip_cache_control(item) for item in value]
+    return value
+
+
+def _sanitize_memory_trajectory(path: str | Path, output_dir: str | Path) -> Path:
+    path = Path(path)
+    target_dir = Path(output_dir) / "_memory"
+    target_dir.mkdir(parents=True, exist_ok=True)
+    target = target_dir / path.name
+
+    trajectory = json.loads(path.read_text())
+    trajectory["history"] = _strip_cache_control(trajectory["history"])
+    target.write_text(json.dumps(trajectory, ensure_ascii=False))
+    return target
 
 
 def run_instance(
@@ -141,7 +207,10 @@ def run_instance(
     if memory_trajectories:
         agent_config.templates.demonstrations = [
             *agent_config.templates.demonstrations,
-            *[Path(path).resolve() for path in memory_trajectories],
+            *[
+                _sanitize_memory_trajectory(path, output_dir).resolve()
+                for path in memory_trajectories
+            ],
         ]
         agent_config.templates.put_demos_in_history = True
     env_config = EnvironmentConfig(

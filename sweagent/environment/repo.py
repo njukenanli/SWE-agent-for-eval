@@ -29,12 +29,13 @@ class Repo(Protocol):
 
 
 def _get_git_reset_commands(base_commit: str) -> list[str]:
+    quoted = shlex.quote(base_commit)
     return [
-        "git fetch",
+        f"git fetch origin {quoted} || git fetch --unshallow || git fetch --all --tags",
         "git status",
         "git restore .",
         "git reset --hard",
-        f"git checkout {shlex.quote(base_commit)}",
+        f"(git checkout {quoted} || echo SWE-CHECKOUT-SKIPPED: trusting image state for {quoted})",
         "git clean -fdq",
     ]
 

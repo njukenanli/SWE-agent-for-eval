@@ -12,7 +12,7 @@ import yaml
 from utils import ContinuousInstance, SingleTask, run_instance
 
 
-DEFAULT_DATASET = "../../continuous-swe/data/final_filtered_docker_pushed.jsonl"
+DEFAULT_DATASET = "../../continuous-swe/data/final_filtered.jsonl"
 _SEQ_META_KEYS = ("continuous_id", "repo", "base_commit", "docker_image", "source", "date_range")
 _BUG_KEEP_KEYS = (
     "swebench_instance_id",
@@ -57,8 +57,20 @@ def patch_path(output_dir: str | Path, instance_id: str) -> Path:
     return Path(output_dir) / instance_id / f"{instance_id}.patch"
 
 
+def pred_path(output_dir: str | Path, instance_id: str) -> Path:
+    return Path(output_dir) / instance_id / f"{instance_id}.pred"
+
+
 def traj_path(output_dir: str | Path, instance_id: str) -> Path:
     return Path(output_dir) / instance_id / f"{instance_id}.traj"
+
+
+def bug_is_complete(output_dir: str | Path, instance_id: str) -> bool:
+    return (
+        patch_path(output_dir, instance_id).exists()
+        and pred_path(output_dir, instance_id).exists()
+        and traj_path(output_dir, instance_id).exists()
+    )
 
 
 def read_patch_if_present(output_dir: str | Path, instance_id: str) -> str:
@@ -66,6 +78,54 @@ def read_patch_if_present(output_dir: str | Path, instance_id: str) -> str:
     if not path.exists():
         return ""
     return path.read_text()
+
+
+def collect_completed_prediction(
+    sequence: ContinuousInstance,
+    *,
+    output_dir: str | Path,
+    mode: str,
+    model_name_or_path: str,
+) -> dict | None:
+    results = []
+    for bug in sequence["bug_fixes"]:
+        instance_id = bug["swebench_instance_id"]
+        if not bug_is_complete(output_dir, instance_id):
+            return None
+        results.append(
+            {
+                "instance_id": instance_id,
+                "model_patch": read_patch_if_present(output_dir, instance_id),
+            }
+        )
+    return merge_agent_into_sequence(
+        sequence,
+        {"mode": mode, "results": results},
+        model_name_or_path,
+    )
+
+
+def recollect_predictions(
+    sequences: list[ContinuousInstance],
+    *,
+    output_dir: str | Path,
+    output_file: str | Path,
+    mode: str,
+    model_name_or_path: str,
+) -> None:
+    completed = []
+    for sequence in sequences:
+        prediction = collect_completed_prediction(
+            sequence,
+            output_dir=output_dir,
+            mode=mode,
+            model_name_or_path=model_name_or_path,
+        )
+        if prediction is not None:
+            completed.append(prediction)
+    with Path(output_file).open("w") as f:
+        for prediction in completed:
+            f.write(json.dumps(prediction, ensure_ascii=False) + "\n")
 
 
 def prior_model_patches(output_dir: str | Path, bug_fixes: list[SingleTask], current_index: int) -> list[tuple[str, str]]:
@@ -79,12 +139,10 @@ def prior_model_patches(output_dir: str | Path, bug_fixes: list[SingleTask], cur
 
 
 def prior_memory_trajectories(output_dir: str | Path, bug_fixes: list[SingleTask], current_index: int) -> list[Path]:
-    trajectories = []
-    for prior_bug in bug_fixes[:current_index]:
-        path = traj_path(output_dir, prior_bug["swebench_instance_id"])
-        if path.exists():
-            trajectories.append(path)
-    return trajectories
+    if current_index == 0:
+        return []
+    path = traj_path(output_dir, bug_fixes[current_index - 1]["swebench_instance_id"])
+    return [path] if path.exists() else []
 
 
 def prior_ground_truth_patches(bug_fixes: list[SingleTask], current_index: int) -> list[tuple[str, str]]:
@@ -108,14 +166,18 @@ def run_bug(
     memory_trajectories: list[str | Path] | None = None,
 ) -> dict:
     instance = build_swebench_instance(sequence, bug_fix)
-    run_instance(
-        instance,
-        config_dir=config_dir,
-        output_dir=output_dir,
-        prior_patches=prior_patches,
-        memory_trajectories=memory_trajectories,
-    )
     instance_id = instance["instance_id"]
+    if not bug_is_complete(output_dir, instance_id):
+        run_instance(
+            instance,
+            config_dir=config_dir,
+            output_dir=output_dir,
+            prior_patches=prior_patches,
+            memory_trajectories=memory_trajectories,
+        )
+    else:
+        print(f"Skipping completed bug {instance_id}")
+
     return {
         "instance_id": instance_id,
         "model_patch": read_patch_if_present(output_dir, instance_id),
@@ -231,10 +293,14 @@ def main(
     }[mode]
 
     for sequence in dataset:
-        result = mode_fn(sequence, output_dir=output_dir, config_dir=config_dir)
-        merged = merge_agent_into_sequence(sequence, result, model_name_or_path)
-        with output_file.open("a") as f:
-            f.write(json.dumps(merged, ensure_ascii=False) + "\n")
+        mode_fn(sequence, output_dir=output_dir, config_dir=config_dir)
+        recollect_predictions(
+            dataset,
+            output_dir=output_dir,
+            output_file=output_file,
+            mode=mode,
+            model_name_or_path=model_name_or_path,
+        )
 
 
 if __name__ == "__main__":
