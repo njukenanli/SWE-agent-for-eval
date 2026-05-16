@@ -25,3 +25,5 @@ pip install openai azure-identity-broker --upgrade
 ```bash
 python main.py --mode {interleaved/sequential/sequential-memory} --config_dir config/default.yaml
 ```
+
+Runtime log is printed to `logs/{mode}/{instance_id}/{instance_id}.trace.log` for debug
