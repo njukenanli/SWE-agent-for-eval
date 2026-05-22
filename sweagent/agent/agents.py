@@ -962,7 +962,7 @@ class DefaultAgent(AbstractAgent):
         try:
             step.observation = self._env.communicate(
                 input=run_action,
-                timeout=self.tools.config.execution_timeout,
+                timeout=90*60, # 1.5 h limit to align with evaluation code
                 check="raise" if self._always_require_zero_exit_code else "ignore",
             )
         except CommandTimeoutError:

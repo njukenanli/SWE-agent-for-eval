@@ -173,7 +173,7 @@ class SimpleBatchInstance(BaseModel):
     def from_swe_bench(cls, instance: dict[str, Any]) -> Self:
         """Convert instances from the classical SWE-bench dataset to the `SimpleBatchInstance` format."""
         iid = instance["instance_id"]
-        image_name = instance.get("image_name", None)
+        image_name = instance.get("image_name", instance.get("docker_image", None))
         if image_name is None:
             # Docker doesn't allow double underscore, so we replace them with a magic token
             id_docker_compatible = iid.replace("__", "_1776_")
@@ -270,7 +270,7 @@ class InstancesFromHuggingFace(BaseModel, AbstractInstanceSource):
 class SWEBenchInstances(BaseModel, AbstractInstanceSource):
     """Load instances from SWE-bench."""
 
-    subset: Literal["lite", "verified", "full", "multimodal", "multilingual"] = "lite"
+    subset: str = "lite"
     """Subset of swe-bench to use"""
 
     # IMPORTANT: Do not call this `path`, because then if people do not specify instance.type,
@@ -322,9 +322,9 @@ class SWEBenchInstances(BaseModel, AbstractInstanceSource):
         return dataset_mapping[self.subset]
 
     def get_instance_configs(self) -> list[BatchInstance]:
-        from datasets import load_dataset
 
-        ds: list[dict[str, Any]] = load_dataset(self._get_dataset_path(), split=self.split)  # type: ignore
+        with open(self.subset) as f:
+            ds: list[dict[str, Any]] = [json.loads(i) for i in f]  # type: ignore
 
         if isinstance(self.deployment, DockerDeploymentConfig):
             self.deployment.platform = "linux/amd64"

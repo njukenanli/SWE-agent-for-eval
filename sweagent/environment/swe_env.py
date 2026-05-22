@@ -142,7 +142,7 @@ class SWEEnv:
             info: additional information (e.g. debugging information)
         """
         self.communicate(input="cd /", check="raise")
-        self._copy_repo()
+        #self._copy_repo()
         self._reset_repository()
         self._chook.on_environment_startup()
 
@@ -155,7 +155,7 @@ class SWEEnv:
             startup_commands = [
                 f"cd /{self.repo.repo_name}",
                 "export ROOT=$(pwd -P)",
-                *self.repo.get_reset_commands(),
+                #*self.repo.get_reset_commands(),
             ]
             self.communicate(
                 input=" && ".join(startup_commands),

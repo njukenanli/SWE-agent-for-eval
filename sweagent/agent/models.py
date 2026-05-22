@@ -717,20 +717,34 @@ class LiteLLMModel(AbstractModel):
             completion_kwargs["extra_headers"] = {}
         if "User-Agent" not in completion_kwargs["extra_headers"]:
             completion_kwargs["extra_headers"]["User-Agent"] = f"swe-agent/{__version__}"
-
+        
         try:
-            response: litellm.types.utils.ModelResponse = litellm.completion(  # type: ignore
-                model=self.config.name,
-                messages=messages,
-                temperature=self.config.temperature if temperature is None else temperature,
-                top_p=self.config.top_p,
-                api_version=self.config.api_version,
-                api_key=self.config.choose_api_key(),
-                fallbacks=self.config.fallbacks,
-                **completion_kwargs,
-                **extra_args,
-                n=n,
-            )
+            if "azure" in self.config.name:
+                from cloudgpt_aoai import get_openai_token_provider
+                token_provider = get_openai_token_provider()
+                response: litellm.types.utils.ModelResponse = litellm.completion(  # type: ignore
+                    model=self.config.name,
+                    messages=messages,
+                    api_base = "https://cloudgpt-openai.azure-api.net/",
+                    api_version = "2025-04-01-preview",
+                    azure_ad_token_provider = token_provider,
+                    fallbacks=self.config.fallbacks,
+                    **completion_kwargs,
+                    **extra_args,
+                )
+            else:
+                response: litellm.types.utils.ModelResponse = litellm.completion(  # type: ignore
+                    model=self.config.name,
+                    messages=messages,
+                    #temperature=self.config.temperature if temperature is None else temperature,
+                    #top_p=self.config.top_p,
+                    #api_version=self.config.api_version,
+                    api_key=self.config.choose_api_key(),
+                    fallbacks=self.config.fallbacks,
+                    **completion_kwargs,
+                    **extra_args,
+                    n=n,
+                )
         except litellm.exceptions.ContextWindowExceededError as e:
             raise ContextWindowExceededError from e
         except litellm.exceptions.ContentPolicyViolationError as e:
