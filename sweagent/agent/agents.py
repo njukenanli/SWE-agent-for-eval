@@ -4,6 +4,7 @@ import asyncio
 import copy
 import json
 import logging
+import re
 import time
 from pathlib import Path, PurePosixPath
 from typing import Annotated, Any, Literal
@@ -219,6 +220,28 @@ class _TotalExecutionTimeExceeded(Exception):
 RETRY_WITH_OUTPUT_TOKEN = "###SWE-AGENT-RETRY-WITH-OUTPUT###"
 RETRY_WITHOUT_OUTPUT_TOKEN = "###SWE-AGENT-RETRY-WITHOUT-OUTPUT###"
 EXIT_FORFEIT_TOKEN = "###SWE-AGENT-EXIT-FORFEIT###"
+
+_EXIT_CMD_RE = re.compile(
+    r"(;|&&|\|\||\n|^)\s*((?<!\()exit\b(?:\s+[^\s;&|()]+)?)",
+    re.MULTILINE,
+)
+
+
+def _sanitize_exit_commands(cmd: str) -> str:
+    """Replace bare 'exit [code]' with '(exit [code])' so the pexpect bash session stays alive.
+
+    A literal `exit` kills the bash process, causing pexpect EOF.  Running it
+    inside a subshell leaves the parent shell running while still propagating
+    the exit code as $?.  Only replaces `exit` in command position (after a
+    separator or at the start), so it does not corrupt `exit` appearing as an
+    argument to commands such as `echo`.
+    """
+
+    def _wrap(m: re.Match) -> str:
+        sep, exit_cmd = m.group(1), m.group(2).strip()
+        return f"{sep} ({exit_cmd})"
+
+    return _EXIT_CMD_RE.sub(_wrap, cmd)
 
 
 class AbstractAgent:
@@ -959,6 +982,7 @@ class DefaultAgent(AbstractAgent):
         self._chook.on_action_started(step=step)
         execution_t0 = time.perf_counter()
         run_action: str = self.tools.guard_multiline_input(step.action).strip()
+        run_action = _sanitize_exit_commands(run_action)
         try:
             step.observation = self._env.communicate(
                 input=run_action,

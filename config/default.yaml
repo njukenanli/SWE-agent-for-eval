@@ -1,12 +1,10 @@
-# Formerly called: anthropic_filemap.yaml
-# This template is heavily inspired by anthropic's computer use demo, but you can use
-# it with any LM.
+
 agent:
   model:
     name: 'azure/gpt-5.5-20260424'
     per_instance_cost_limit: 0
     total_cost_limit: 0
-    per_instance_call_limit: 120
+    per_instance_call_limit: 100
     max_input_tokens: 0
   templates:
     system_template: |-
@@ -62,7 +60,7 @@ agent:
             If you have already removed your reproduction script, please ignore this step.
           2. Remove your reproduction script (if you haven't done so already).
           3. If you have modified any TEST files, please revert them to the state they had before you started fixing the issue.
-            You can do this with `git checkout -- /path/to/test/file.py`. Use below <diff> to find the files you need to revert.
+            You can do this with `git restore /path/to/test/file.py` (this is the only place you can use git; do not use git anywhere else, otherwise your solution would be marked as failed). Use below <diff> to find the files you need to revert.
           4. Run the submit command again to confirm.
 
           Here is a list of all of your changes:

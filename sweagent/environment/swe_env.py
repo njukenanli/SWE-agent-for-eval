@@ -186,6 +186,10 @@ class SWEEnv:
                 CreateBashSessionRequest(startup_source=["/root/.bashrc"], startup_timeout=10)
             )
         )
+        # Prevent literal tab characters in commands from triggering readline
+        # tab-completion, which corrupts command input when Go-style (tab-indented)
+        # code appears in tool arguments sent through the PTY.
+        self.communicate("bind 'set disable-completion on' 2>/dev/null || true")
         self.set_env_variables({"LANG": "C.UTF-8", "LC_ALL": "C.UTF-8", "PIP_PROGRESS_BAR": "off", "PAGER": "cat"})
         self.logger.info("Environment Initialized")
 
