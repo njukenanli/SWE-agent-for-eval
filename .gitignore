@@ -8,6 +8,8 @@ data/**
 *.env
 !tools/*
 
+cloudgpt_aoai.py
+
 # -------- automatically generated files --------
 
 # Byte-compiled / optimized / DLL files

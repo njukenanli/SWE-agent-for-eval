@@ -1039,7 +1039,7 @@ class DefaultAgent(AbstractAgent):
         Returns:
             step_output: step output
         """
-        if self._total_execution_time > self.tools.config.total_execution_timeout:
+        if self._total_execution_time > 5*60*60:
             raise _TotalExecutionTimeExceeded()
 
         # we continuously add actions, output etc. to the step object
