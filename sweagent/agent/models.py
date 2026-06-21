@@ -11,6 +11,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 from threading import Lock
 from typing import Annotated, Any, Literal
+from urllib.parse import urlsplit, urlunsplit
 
 import litellm
 import litellm.types.utils
@@ -52,6 +53,15 @@ _THREADS_THAT_USED_API_KEYS = []
 """Keeps track of thread orders so that we can choose the same API key for the same thread."""
 
 
+def _normalize_openai_base_url(base_url: str | None) -> str | None:
+    if not base_url:
+        return None
+    parsed = urlsplit(base_url)
+    if parsed.path in {"", "/"}:
+        parsed = parsed._replace(path="/v1")
+    return urlunsplit(parsed)
+
+
 class RetryConfig(PydanticBaseModel):
     """This configuration object specifies how many times to retry a failed LM API call."""
 
@@ -80,6 +90,8 @@ class GenericAPIModelConfig(PydanticBaseModel):
     """Sampling temperature"""
     top_p: float | None = 1.0
     """Sampling top-p"""
+    samples: int = Field(default=1, ge=1)
+    """Number of independent runs for each batch instance."""
     api_base: str | None = None
     api_version: str | None = None
     api_key: SecretStr | None = None
@@ -702,11 +714,9 @@ class LiteLLMModel(AbstractModel):
             msg = f"Input tokens {input_tokens} exceed max tokens {self.model_max_input_tokens}"
             raise ContextWindowExceededError(msg)
         extra_args = {}
-        if self.config.api_base:
-            # Not assigned a default value in litellm, so only pass this if it's set
-            extra_args["api_base"] = self.config.api_base
         if self.tools.use_function_calling:
             extra_args["tools"] = self.tools.tools
+            extra_args["tool_choice"] = "auto"
         # We need to always set max_tokens for anthropic models
         completion_kwargs = copy.deepcopy(self.config.completion_kwargs)
         if self.lm_provider == "anthropic":
@@ -719,32 +729,20 @@ class LiteLLMModel(AbstractModel):
             completion_kwargs["extra_headers"]["User-Agent"] = f"swe-agent/{__version__}"
         
         try:
-            if "azure" in self.config.name:
-                from cloudgpt_aoai import get_openai_token_provider
-                token_provider = get_openai_token_provider()
-                response: litellm.types.utils.ModelResponse = litellm.completion(  # type: ignore
-                    model=self.config.name,
-                    messages=messages,
-                    api_base = "https://cloudgpt-openai.azure-api.net/",
-                    api_version = "2025-04-01-preview",
-                    azure_ad_token_provider = token_provider,
-                    fallbacks=self.config.fallbacks,
-                    **completion_kwargs,
-                    **extra_args,
-                )
-            else:
-                response: litellm.types.utils.ModelResponse = litellm.completion(  # type: ignore
-                    model=self.config.name,
-                    messages=messages,
-                    #temperature=self.config.temperature if temperature is None else temperature,
-                    #top_p=self.config.top_p,
-                    #api_version=self.config.api_version,
-                    api_key=self.config.choose_api_key(),
-                    fallbacks=self.config.fallbacks,
-                    **completion_kwargs,
-                    **extra_args,
-                    n=n,
-                )
+            response: litellm.types.utils.ModelResponse = litellm.completion(  # type: ignore
+                model=self.config.name,
+                messages=messages,
+                temperature=self.config.temperature,
+                api_key=os.environ.get("LLM_API_KEY"),
+                base_url=_normalize_openai_base_url(
+                    os.environ.get("LLM_API_BASE") or self.config.api_base
+                ),
+                custom_llm_provider="openai",
+                fallbacks=self.config.fallbacks,
+                **completion_kwargs,
+                **extra_args,
+                n=n,
+            )
         except litellm.exceptions.ContextWindowExceededError as e:
             raise ContextWindowExceededError from e
         except litellm.exceptions.ContentPolicyViolationError as e:

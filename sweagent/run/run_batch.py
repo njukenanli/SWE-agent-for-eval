@@ -29,7 +29,6 @@ All instance specifications support the [green]filter[/green], [green]slice[/gre
 With [green]filter[/green], you can select specific instances, e.g., [green]--instances.filter='instance_id_1|instance_id_2'[/green].
 """
 
-import getpass
 import json
 import logging
 import random
@@ -38,16 +37,15 @@ import time
 import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from contextlib import ExitStack
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Self
+from typing import Literal, Self
 
-import yaml
 from pydantic import Field, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from rich.live import Live
 from swerex.deployment.hooks.status import SetStatusDeploymentHook
 
-from sweagent import TRAJECTORY_DIR
 from sweagent.agent.agents import AgentConfig, get_agent_from_config
 from sweagent.agent.hooks.status import SetStatusAgentHook
 from sweagent.environment.hooks.status import SetStatusEnvironmentHook
@@ -55,10 +53,10 @@ from sweagent.environment.swe_env import SWEEnv
 from sweagent.exceptions import ModelConfigurationError, TotalCostLimitExceededError
 from sweagent.run._progress import RunBatchProgressManager
 from sweagent.run.batch_instances import BatchInstance, BatchInstanceSourceConfig, SWEBenchInstances
-from sweagent.run.common import BasicCLI, ConfigHelper, save_predictions
+from sweagent.run.common import BasicCLI, ConfigHelper
+from sweagent.run.eval import evaluate
 from sweagent.run.hooks.abstract import CombinedRunHooks, RunHook
 from sweagent.run.hooks.apply_patch import SaveApplyPatchHook
-from sweagent.run.merge_predictions import merge_predictions
 from sweagent.run.run_single import RunSingleConfig
 from sweagent.types import AgentRunResult
 from sweagent.utils.config import load_environment_variables
@@ -71,21 +69,83 @@ from sweagent.utils.log import (
     set_stream_handler_levels,
 )
 
+EVALUATION_TIMEOUT = 1800
+EVALUATION_NAMESPACE = "swebench"
+
+
+def _submission_from_info(info: object) -> str | None:
+    if not isinstance(info, dict):
+        return None
+    submission = info.get("submission")
+    return submission if isinstance(submission, str) else None
+
+
+def _submission_from_trajectory(trajectory_path: Path) -> str | None:
+    try:
+        data = json.loads(trajectory_path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+
+    submission = _submission_from_info(data.get("info"))
+    if submission is not None:
+        return submission
+
+    attempts = data.get("attempts")
+    if isinstance(attempts, list):
+        for attempt in reversed(attempts):
+            if not isinstance(attempt, dict):
+                continue
+            submission = _submission_from_info(attempt.get("info"))
+            if submission is not None:
+                return submission
+    return None
+
+
+def _submission_from_agent(agent: object) -> str | None:
+    candidates = [agent, getattr(agent, "_agent", None)]
+    for candidate in candidates:
+        if candidate is None:
+            continue
+        submission = _submission_from_info(getattr(candidate, "info", None))
+        if submission is not None:
+            return submission
+    return None
+
+
+def _write_trajectory_success(trajectory_path: Path, success: bool) -> None:
+    try:
+        data = json.loads(trajectory_path.read_text())
+    except (OSError, json.JSONDecodeError):
+        data = {}
+    if not isinstance(data, dict):
+        data = {}
+    info = data.get("info")
+    if not isinstance(info, dict):
+        info = {}
+        data["info"] = info
+    info["success"] = success
+    trajectory_path.write_text(json.dumps(data, indent=2))
+
+
+def _get_primary_model_config(agent_config: AgentConfig):
+    if hasattr(agent_config, "model"):
+        return agent_config.model
+    return agent_config.agent_configs[0].model
+
 
 class RunBatchConfig(BaseSettings, cli_implicit_flags=False):
     instances: BatchInstanceSourceConfig = Field(description="Instances to run.")
     agent: AgentConfig = Field(description="Agent options.")
     output_dir: Path = Field(default=Path("DEFAULT"), description="Output directory.")
-    suffix: str = ""
-    """Suffix to add to the output directory. Only used if `output_dir` is `DEFAULT`."""
+    epoch: int = Field(ge=0, description="Training epoch used in the output directory.")
     raise_exceptions: bool = False
     """Raise exceptions instead of skipping instances."""
     redo_existing: bool = False
     """Do not skip instances that already have a trajectory."""
     env_var_path: Path | None = None
     """Path to a .env file to load environment variables from."""
-    num_workers: int = Field(default=1)
-    """Number of parallel workers to use."""
+    parallel_instances: int = Field(default=1, ge=1)
+    """Number of task instances to run in parallel. Samples for each task use a separate inner thread pool."""
     random_delay_multiplier: float = 0.3
     """We will wait for a random amount of time between 0 and `random_delay_multiplier`
     times the number of workers at the start of each instance. This is to avoid any
@@ -100,34 +160,44 @@ class RunBatchConfig(BaseSettings, cli_implicit_flags=False):
     # pydantic config
     model_config = SettingsConfigDict(extra="forbid", env_prefix="SWE_AGENT_")
 
+    def get_run_type(self) -> Literal["train", "test"]:
+        config_files = getattr(self, "_config_files", [])
+        if not config_files:
+            msg = "The default log layout requires --config config/train.yaml or --config config/test.yaml."
+            raise ValueError(msg)
+        run_type = Path(config_files[-1]).stem
+        if run_type not in {"train", "test"}:
+            msg = f"Expected the final config file to be train.yaml or test.yaml, got {config_files[-1]}."
+            raise ValueError(msg)
+        return run_type
+
     def set_default_output_dir(self) -> None:
-        # Needs to be called explicitly, because self._config_files will be setup
-        # post-init.
-        if self.output_dir == Path("DEFAULT"):
-            user_id = getpass.getuser()
-            source_id = self.instances.id
-            try:
-                model_id = self.agent.model.id  # type: ignore[attr-defined]
-            except AttributeError:
-                model_id = "unknown"
-            config_file = getattr(self, "_config_files", ["no_config"])[0]
-            if config_file != "no_config":
-                config_file = Path(config_file).stem
-            suffix = f"__{self.suffix}" if self.suffix else ""
-            self.output_dir = TRAJECTORY_DIR / user_id / f"{config_file}__{model_id}___{source_id}{suffix}"
+        if self.output_dir != Path("DEFAULT"):
+            return
+        run_type = self.get_run_type()
+        model_name = _get_primary_model_config(self.agent).name
+        model_path = Path(model_name)
+        if model_path.is_absolute() or ".." in model_path.parts:
+            msg = f"Model name must be a safe relative path component, got {model_name!r}."
+            raise ValueError(msg)
+        self.output_dir = Path("logs") / model_path / str(self.epoch) / run_type
 
     @model_validator(mode="after")
-    def evaluate_and_redo_existing(self) -> Self:
-        if not isinstance(self.instances, SWEBenchInstances):
-            return self
-        if self.instances.evaluate and self.redo_existing:
-            msg = (
-                "Cannot evaluate and redo existing at the same time. This would cause invalid results, because "
-                "after the first merge_preds gives you a preds.json, this file would be submitted to SB-CLI, causing"
-                "evaluation of old instances, which could then not be overwritten by the new ones."
-            )
+    def disable_evaluation_artifacts(self) -> Self:
+        if isinstance(self.instances, SWEBenchInstances) and self.instances.evaluate:
+            msg = "instances.evaluate is not supported because per-sample evaluation is always enabled."
             raise ValueError(msg)
         return self
+
+
+@dataclass(frozen=True)
+class SampledBatchInstance:
+    instance: BatchInstance
+    sample_id: int
+
+    @property
+    def instance_id(self) -> str:
+        return self.instance.problem_statement.id
 
 
 class _BreakLoop(Exception):
@@ -144,43 +214,52 @@ class RunBatch:
         hooks: list[RunHook] | None = None,
         raise_exceptions: bool = False,
         redo_existing: bool = False,
-        num_workers: int = 1,
+        parallel_instances: int = 1,
         progress_bar: bool = True,
         random_delay_multiplier: float = 0.3,
+        epoch: int = 0,
+        run_type: Literal["train", "test"] = "train",
     ):
         """Note: When initializing this class, make sure to add the hooks that are required by your actions.
         See `from_config` for an example.
 
         Args:
             hooks: If not specified, the default hooks will be used.
-            num_workers: Number of parallel workers to use. Default is 1 (sequential execution).
+            parallel_instances: Number of task instances to run in parallel. Each task runs all
+                configured samples in its own inner thread pool.
             progress_bar: Whether to show a progress bar. Progress bar is never shown for human models.
                 Progress bar is always shown for multi-worker runs.
             random_delay_multiplier: We will wait for a random amount of time between 0 and `random_delay_multiplier`
                 times the number of workers at the start of each instance. This is to avoid any
                 potential race conditions.
         """
-        if self._model_id in ["human", "human_thought"] and num_workers > 1:
-            msg = "Cannot run with human model in parallel"
-            raise ValueError(msg)
-
-        self.logger = get_logger("swea-run", emoji="🏃")
-        add_file_handler(
-            output_dir / "run_batch.log",
-            id_="progress",
-            filter=lambda name: "swea-run" in name or "config" in name,
-        )
-        self.instances = instances
         self.agent_config = agent_config
+        self.logger = get_logger("swea-run", emoji="🏃")
+        self.instances = instances
         self.output_dir = output_dir
+        self.epoch = epoch
+        self.run_type = run_type
+        samples = _get_primary_model_config(agent_config).samples
+        self.sampled_instances: list[list[SampledBatchInstance]] = [
+            [
+                SampledBatchInstance(instance=instance, sample_id=sample_id)
+                for sample_id in range(samples)
+            ]
+            for instance in instances
+        ]
+        if self._model_id in ["human", "human_thought"] and (parallel_instances > 1 or samples > 1):
+            msg = "Cannot run human models with parallel instances or samples"
+            raise ValueError(msg)
         self._raise_exceptions = raise_exceptions
         self._chooks = CombinedRunHooks()
         self._redo_existing = redo_existing
-        self._num_workers = min(num_workers, len(instances))
+        self._num_workers = min(parallel_instances, len(self.sampled_instances))
+        self._samples = samples
+        self._uses_parallel_threads = self._num_workers > 1 or samples > 1
         for hook in hooks or [SaveApplyPatchHook(show_success_message=False)]:
             self.add_hook(hook)
         self._progress_manager = RunBatchProgressManager(
-            num_instances=len(instances), yaml_report_path=output_dir / "run_batch_exit_statuses.yaml"
+            num_instances=sum(len(sample_group) for sample_group in self.sampled_instances)
         )
         self._show_progress_bar = progress_bar
         self._random_delay_multiplier = random_delay_multiplier
@@ -188,16 +267,24 @@ class RunBatch:
     @property
     def _model_id(self) -> str:
         try:
-            return self.agent_config.model.id  # type: ignore[attr-defined]
+            return _get_primary_model_config(self.agent_config).id
         except AttributeError:
             return "unknown"
+
+    def get_instance_output_dir(self, instance_id: str, sample_id: int) -> Path:
+        return self.output_dir / instance_id / str(sample_id)
+
+    def get_run_id(self, sampled_instance: SampledBatchInstance) -> str:
+        return (
+            f"{self.epoch}_{self.run_type}_"
+            f"{sampled_instance.instance_id}_{sampled_instance.sample_id}"
+        )
 
     @classmethod
     def from_config(cls, config: RunBatchConfig) -> Self:
         load_environment_variables(config.env_var_path)
         config.set_default_output_dir()
         config.output_dir.mkdir(parents=True, exist_ok=True)
-        (config.output_dir / "run_batch.config.yaml").write_text(yaml.dump(config.model_dump_json(), indent=2))
         logger = get_logger("run", emoji="🏃")
         logger.debug("Loading instances from %s", f"{config.instances!r}")
         instances = config.instances.get_instance_configs()
@@ -216,21 +303,18 @@ class RunBatch:
             output_dir=config.output_dir,
             raise_exceptions=config.raise_exceptions,
             redo_existing=config.redo_existing,
-            num_workers=config.num_workers,
+            parallel_instances=config.parallel_instances,
             progress_bar=config.progress_bar,
             random_delay_multiplier=config.random_delay_multiplier,
+            epoch=config.epoch,
+            run_type=config.get_run_type(),
         )
-        if isinstance(config.instances, SWEBenchInstances) and config.instances.evaluate:
-            from sweagent.run.hooks.swe_bench_evaluate import SweBenchEvaluate
-
-            rb.add_hook(
-                SweBenchEvaluate(
-                    output_dir=config.output_dir,
-                    subset=config.instances.subset,
-                    split=config.instances.split,
-                    continuous_submission_every=30,
-                )
-            )
+        logger.info(
+            "Expanded %d instances into %d runs using %d sample(s) per instance",
+            len(instances),
+            sum(len(sample_group) for sample_group in rb.sampled_instances),
+            _get_primary_model_config(config.agent).samples,
+        )
         return rb
 
     def add_hook(self, hook: RunHook) -> None:
@@ -246,11 +330,6 @@ class RunBatch:
         else:
             self.main_multi_worker()
 
-        output_dirs = []
-        for instance in self.instances:
-            output_dirs.append(self.output_dir / instance.problem_statement.id)
-        merge_predictions(output_dirs, self.output_dir / "preds.json")
-
         self._chooks.on_end()
 
     def main_single_worker(self) -> None:
@@ -258,9 +337,9 @@ class RunBatch:
             # Conditionally add progress bar
             if self._model_id not in ["human", "human_thought"] and self._show_progress_bar:
                 stack.enter_context(Live(self._progress_manager.render_group))
-            for instance in self.instances:
+            for sampled_instances in self.sampled_instances:
                 try:
-                    self.run_instance(instance)
+                    self.run_instance(sampled_instances)
                 except _BreakLoop:
                     self.logger.info("Stopping loop over instances")
                     break
@@ -274,7 +353,10 @@ class RunBatch:
 
         with Live(self._progress_manager.render_group):
             with ThreadPoolExecutor(max_workers=self._num_workers) as executor:
-                futures = [executor.submit(self.run_instance, instance) for instance in self.instances]
+                futures = [
+                    executor.submit(self.run_instance, sampled_instances)
+                    for sampled_instances in self.sampled_instances
+                ]
                 try:
                     for future in as_completed(futures):
                         future.result()
@@ -288,27 +370,55 @@ class RunBatch:
                 finally:
                     self._progress_manager.print_report()
 
-    def run_instance(self, instance: BatchInstance) -> None:
-        self.logger.info("Running on instance %s", instance.problem_statement.id)
-        register_thread_name(instance.problem_statement.id)
-        self._add_instance_log_file_handlers(instance.problem_statement.id, multi_worker=self._num_workers > 1)
+    def run_instance(
+        self, sampled_instances: list[SampledBatchInstance]
+    ) -> list[SampledBatchInstance]:
+        """Run all samples for one task concurrently."""
+        if not sampled_instances:
+            return []
+
+        completed_samples: list[SampledBatchInstance] = []
+        with ThreadPoolExecutor(max_workers=len(sampled_instances)) as executor:
+            futures = [
+                executor.submit(self.run_sample, sampled_instance)
+                for sampled_instance in sampled_instances
+            ]
+            try:
+                for future in as_completed(futures):
+                    completed_samples.append(future.result())
+            except (KeyboardInterrupt, _BreakLoop):
+                executor.shutdown(wait=False, cancel_futures=True)
+                raise _BreakLoop
+        return completed_samples
+
+    def run_sample(self, sampled_instance: SampledBatchInstance) -> SampledBatchInstance:
+        run_id = self.get_run_id(sampled_instance)
+        self.logger.info("Running sample %s", run_id)
+        register_thread_name(run_id)
+        self._add_instance_log_file_handler(sampled_instance, multi_worker=self._uses_parallel_threads)
+        output_dir = self.get_instance_output_dir(sampled_instance.instance_id, sampled_instance.sample_id)
+        output_dir.mkdir(parents=True, exist_ok=True)
+        patch_path = output_dir / f"{sampled_instance.instance_id}.patch"
+        if not patch_path.exists():
+            patch_path.write_text("")
         # Let's add some randomness to avoid any potential race conditions or thundering herd
-        if self._progress_manager.n_completed < self._num_workers:
-            time.sleep(random.random() * self._random_delay_multiplier * (self._num_workers - 1))
+        max_parallel_samples = self._num_workers * self._samples
+        if self._progress_manager.n_completed < max_parallel_samples:
+            time.sleep(random.random() * self._random_delay_multiplier * (max_parallel_samples - 1))
 
-        self._progress_manager.on_instance_start(instance.problem_statement.id)
+        self._progress_manager.on_instance_start(run_id)
 
-        if previous_exit_status := self.should_skip(instance):
-            self._progress_manager.on_instance_end(
-                instance.problem_statement.id, exit_status=f"skipped ({previous_exit_status})"
-            )
-            self._remove_instance_log_file_handlers(instance.problem_statement.id)
-            return
+        if previous_exit_status := self.should_skip(sampled_instance):
+            self._progress_manager.on_instance_end(run_id, exit_status=f"skipped ({previous_exit_status})")
+            self._remove_instance_log_file_handler(run_id)
+            return sampled_instance
+
+        (output_dir / f"{sampled_instance.instance_id}.traj").write_text("")
 
         # Either catch and silence exception, or raise _BreakLoop to stop the loop
         # over the instances
         try:
-            result = self._run_instance(instance)
+            result = self._run_sample_agent(sampled_instance)
         except KeyboardInterrupt:
             raise _BreakLoop
         except (SystemExit, ModelConfigurationError, TotalCostLimitExceededError) as e:
@@ -318,62 +428,121 @@ class RunBatch:
             raise _BreakLoop
         except Exception as e:
             self.logger.error(traceback.format_exc())
-            self.logger.error(f"❌ Failed on {instance.problem_statement.id}: {e}")
-            self._progress_manager.on_uncaught_exception(instance.problem_statement.id, e)
+            self.logger.error(f"❌ Failed on {run_id}: {e}")
+            self._progress_manager.on_uncaught_exception(run_id, e)
             if self._raise_exceptions:
                 raise
         else:
-            self._progress_manager.on_instance_end(
-                instance.problem_statement.id, exit_status=result.info.get("exit_status", "unknown_exit")
-            )
+            self._progress_manager.on_instance_end(run_id, exit_status=result.info.get("exit_status", "unknown_exit"))
         finally:
+            self._evaluate_sample(sampled_instance)
             self._progress_manager.update_exit_status_table()
-            self._remove_instance_log_file_handlers(instance.problem_statement.id)
+            self._remove_instance_log_file_handler(run_id)
+        return sampled_instance
 
-    def _run_instance(self, instance: BatchInstance) -> AgentRunResult:
-        output_dir = Path(self.output_dir) / instance.problem_statement.id
+    def _evaluate_sample(self, sampled_instance: SampledBatchInstance) -> bool:
+        output_dir = self.get_instance_output_dir(sampled_instance.instance_id, sampled_instance.sample_id)
+        patch_path = output_dir / f"{sampled_instance.instance_id}.patch"
+        trajectory_path = output_dir / f"{sampled_instance.instance_id}.traj"
+        eval_dir = output_dir / "eval"
+        eval_dir.mkdir(parents=True, exist_ok=True)
+        success = False
+
+        swebench_instance = sampled_instance.instance.swebench_instance
+        if swebench_instance is None:
+            self.logger.warning(
+                "Cannot evaluate %s: original SWE-bench instance data is unavailable",
+                self.get_run_id(sampled_instance),
+            )
+        else:
+            try:
+                prediction = {
+                    "model_name_or_path": _get_primary_model_config(self.agent_config).name,
+                    "instance_id": sampled_instance.instance_id,
+                    "model_patch": patch_path.read_text() if patch_path.exists() else "",
+                }
+                eval_result = evaluate(
+                    prediction=prediction,
+                    instance=swebench_instance,
+                    run_id=self.get_run_id(sampled_instance),
+                    log_dir=eval_dir,
+                    timeout=EVALUATION_TIMEOUT,
+                    namespace=EVALUATION_NAMESPACE,
+                )
+                if eval_result is None:
+                    self.logger.warning(
+                        "Evaluation returned None for %s; recording success=False",
+                        self.get_run_id(sampled_instance),
+                    )
+                else:
+                    success = eval_result
+            except Exception:
+                self.logger.warning(
+                    "Evaluation failed for %s; recording success=False",
+                    self.get_run_id(sampled_instance),
+                    exc_info=True,
+                )
+
+        _write_trajectory_success(trajectory_path, success)
+        return success
+
+    def _run_sample_agent(self, sampled_instance: SampledBatchInstance) -> AgentRunResult:
+        instance = sampled_instance.instance.model_copy(deep=True)
+        run_id = self.get_run_id(sampled_instance)
+        output_dir = self.get_instance_output_dir(sampled_instance.instance_id, sampled_instance.sample_id)
         output_dir.mkdir(parents=True, exist_ok=True)
-        self.agent_config.name = f"{instance.problem_statement.id}"
-        agent = get_agent_from_config(self.agent_config)
+        patch_path = output_dir / f"{sampled_instance.instance_id}.patch"
+        trajectory_path = output_dir / f"{sampled_instance.instance_id}.traj"
+        patch_path.write_text("")
+        agent_config = self.agent_config.model_copy(deep=True)
+        agent_config.name = run_id.replace("/", "-")
+        agent = get_agent_from_config(agent_config)
         single_run_replay_config = RunSingleConfig(
-            agent=self.agent_config,
+            agent=agent_config,
             problem_statement=instance.problem_statement,
             env=instance.env,
         )
-        (output_dir / f"{instance.problem_statement.id}.config.yaml").write_text(
-            yaml.dump(single_run_replay_config.model_dump_json(), indent=2)
-        )
         agent.replay_config = single_run_replay_config  # type: ignore[attr-defined]
-        agent.add_hook(SetStatusAgentHook(instance.problem_statement.id, self._progress_manager.update_instance_status))
-        self._progress_manager.update_instance_status(instance.problem_statement.id, "Starting environment")
-        instance.env.name = f"{instance.problem_statement.id}"
+        agent.add_hook(SetStatusAgentHook(run_id, self._progress_manager.update_instance_status))
+        self._progress_manager.update_instance_status(run_id, "Starting environment")
+        instance.env.name = run_id.replace("/", "-")
         env = SWEEnv.from_config(instance.env)
-        env.add_hook(
-            SetStatusEnvironmentHook(instance.problem_statement.id, self._progress_manager.update_instance_status)
-        )
-        env.deployment.add_hook(
-            SetStatusDeploymentHook(instance.problem_statement.id, self._progress_manager.update_instance_status)
-        )
+        env.add_hook(SetStatusEnvironmentHook(run_id, self._progress_manager.update_instance_status))
+        env.deployment.add_hook(SetStatusDeploymentHook(run_id, self._progress_manager.update_instance_status))
+        completed = False
         try:
             env.start()
-            self._chooks.on_instance_start(index=0, env=env, problem_statement=instance.problem_statement)
+            self._chooks.on_instance_start(
+                index=sampled_instance.sample_id,
+                env=env,
+                problem_statement=instance.problem_statement,
+            )
             result = agent.run(
                 problem_statement=instance.problem_statement,
                 env=env,
                 output_dir=output_dir,
             )
-        except Exception:
+            self._chooks.on_instance_completed(result=result)
+            completed = True
+            return result
+        except BaseException:
             # The actual handling is happening in `run_instance`, but we need to make sure that
             # we log it to the agent specific logger as well
             agent.logger.error(traceback.format_exc())  # type: ignore[attr-defined]
             raise
         finally:
+            if not completed:
+                submission = _submission_from_agent(agent)
+                if submission is None:
+                    submission = _submission_from_trajectory(trajectory_path)
+                if submission is not None:
+                    try:
+                        patch_path.write_text(submission)
+                    except OSError:
+                        self.logger.error("Failed to save recovered patch to %s", patch_path, exc_info=True)
             env.close()
-        save_predictions(self.output_dir, instance.problem_statement.id, result)
-        self._chooks.on_instance_completed(result=result)
-        return result
 
-    def should_skip(self, instance: BatchInstance) -> bool | str:
+    def should_skip(self, sampled_instance: SampledBatchInstance) -> bool | str:
         """Check if we should skip this instance.
         Returns previous exit status if the instance should be skipped.
         """
@@ -381,7 +550,9 @@ class RunBatch:
             return False
 
         # Check if there's an existing trajectory for this instance
-        log_path = self.output_dir / instance.problem_statement.id / (instance.problem_statement.id + ".traj")
+        log_path = self.get_instance_output_dir(
+            sampled_instance.instance_id, sampled_instance.sample_id
+        ) / (sampled_instance.instance_id + ".traj")
         if not log_path.exists():
             return False
 
@@ -408,20 +579,26 @@ class RunBatch:
         self.logger.info(f"⏭️ Skipping existing trajectory: {log_path}")
         return exit_status
 
-    def _add_instance_log_file_handlers(self, instance_id: str, multi_worker: bool = False) -> None:
-        filename_template = f"{instance_id}.{{level}}.log"
-        for level in ["trace", "debug", "info"]:
-            filter = instance_id if multi_worker else ""
-            add_file_handler(
-                self.output_dir / instance_id / filename_template.format(level=level),
-                filter=filter,
-                level=level,
-                id_=f"{instance_id}-{level}",
-            )
+    def _add_instance_log_file_handler(
+        self, sampled_instance: SampledBatchInstance, multi_worker: bool = False
+    ) -> None:
+        run_id = self.get_run_id(sampled_instance)
+        log_filter = ""
+        if multi_worker:
 
-    def _remove_instance_log_file_handlers(self, instance_id: str) -> None:
-        for level in ["trace", "debug", "info"]:
-            remove_file_handler(f"{instance_id}-{level}")
+            def matches_run_logger(logger_name: str, suffix=f"-{run_id}") -> bool:
+                return logger_name.endswith(suffix)
+
+            log_filter = matches_run_logger
+        add_file_handler(
+            self.get_instance_output_dir(sampled_instance.instance_id, sampled_instance.sample_id) / "debug.log",
+            filter=log_filter,
+            level="debug",
+            id_=f"{run_id}-debug",
+        )
+
+    def _remove_instance_log_file_handler(self, run_id: str) -> None:
+        remove_file_handler(f"{run_id}-debug")
 
 
 def run_from_config(config: RunBatchConfig):

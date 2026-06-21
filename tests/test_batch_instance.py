@@ -20,6 +20,7 @@ def test_simple_batch_from_swe_bench_to_full_batch_instance(test_data_sources_pa
     assert isinstance(instance.problem_statement, TextProblemStatement)
     assert instance.problem_statement.text == sb_instance["problem_statement"]
     assert instance.problem_statement.id == "pydicom__pydicom-1458"
+    assert instance.swebench_instance == sb_instance
 
 
 def test_slice_spec_to_slice():

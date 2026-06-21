@@ -84,6 +84,7 @@ class AgentInfo(TypedDict, total=False):
     model_stats: dict[str, float]
     exit_status: str | None
     submission: str | None
+    success: bool
     # same as `ReviewerResult`
     review: dict[str, Any]
     edited_files30: str

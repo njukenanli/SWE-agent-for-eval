@@ -43,6 +43,7 @@ class BatchInstance(BaseModel):
 
     env: EnvironmentConfig
     problem_statement: ProblemStatementConfig
+    swebench_instance: dict[str, Any] | None = Field(default=None, exclude=True)
 
 
 def _slice_spec_to_slice(slice_spec: str) -> slice:
@@ -107,6 +108,7 @@ class SimpleBatchInstance(BaseModel):
     """Any additional data to be added to the instance.
     This data will be available when formatting prompt templates.
     """
+    swebench_instance: dict[str, Any] | None = Field(default=None, exclude=True)
 
     # Ignore instead of allow because they should be added as `extra_fields`
     model_config = ConfigDict(extra="ignore")
@@ -141,11 +143,15 @@ class SimpleBatchInstance(BaseModel):
                 msg = "Local deployment does not support image_name"
                 raise ValueError(msg)
             return BatchInstance(
-                env=EnvironmentConfig(deployment=deployment, repo=repo), problem_statement=problem_statement
+                env=EnvironmentConfig(deployment=deployment, repo=repo),
+                problem_statement=problem_statement,
+                swebench_instance=self.swebench_instance,
             )
         if isinstance(deployment, DummyDeploymentConfig):
             return BatchInstance(
-                env=EnvironmentConfig(deployment=deployment, repo=repo), problem_statement=problem_statement
+                env=EnvironmentConfig(deployment=deployment, repo=repo),
+                problem_statement=problem_statement,
+                swebench_instance=self.swebench_instance,
             )
 
         deployment.image = self.image_name  # type: ignore
@@ -155,7 +161,9 @@ class SimpleBatchInstance(BaseModel):
             deployment.python_standalone_dir = "/root"  # type: ignore
 
         return BatchInstance(
-            env=EnvironmentConfig(deployment=deployment, repo=repo), problem_statement=problem_statement
+            env=EnvironmentConfig(deployment=deployment, repo=repo),
+            problem_statement=problem_statement,
+            swebench_instance=self.swebench_instance,
         )
 
     @model_validator(mode="before")
@@ -189,6 +197,7 @@ class SimpleBatchInstance(BaseModel):
             repo_name="testbed",
             base_commit=instance["base_commit"],
             extra_fields=extra_fields,
+            swebench_instance=instance.copy(),
         )
 
 

@@ -28,10 +28,18 @@ class SaveApplyPatchHook(RunHook):
 
     def on_init(self, *, run):
         self._output_dir = Path(run.output_dir)
+        self._get_instance_output_dir = getattr(run, "get_instance_output_dir", None)
 
     def on_instance_start(self, *, index: int, env: SWEEnv, problem_statement: ProblemStatementConfig):
         self._local.env = env
         self._local.problem_statement = problem_statement
+        get_instance_output_dir = getattr(self, "_get_instance_output_dir", None)
+        if get_instance_output_dir is None:
+            self._local.output_dir = self._output_dir / problem_statement.id
+        else:
+            self._local.output_dir = get_instance_output_dir(problem_statement.id, index)
+            self._local.output_dir.mkdir(exist_ok=True, parents=True)
+            (self._local.output_dir / f"{problem_statement.id}.patch").write_text("")
 
     def on_instance_completed(self, *, result: AgentRunResult):
         instance_id = self._local.problem_statement.id
@@ -79,11 +87,13 @@ class SaveApplyPatchHook(RunHook):
         Returns:
             The path to the patch file, if it was saved. Otherwise, returns None.
         """
-        patch_output_dir = self._output_dir / instance_id
+        patch_output_dir = getattr(self._local, "output_dir", self._output_dir / instance_id)
         patch_output_dir.mkdir(exist_ok=True, parents=True)
         patch_output_file = patch_output_dir / f"{instance_id}.patch"
         if info.get("submission") is None:
             self.logger.info("No patch to save.")
+            if getattr(self, "_get_instance_output_dir", None) is not None:
+                patch_output_file.write_text("")
             return None
         model_patch = info["submission"]
         patch_output_file.write_text(model_patch)

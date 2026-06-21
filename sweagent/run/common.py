@@ -65,7 +65,7 @@ _SETTING_ERROR_HINTS = """
 Run `sweagent <subcommand> --help` for usage examples.
 
 [red][bold]Common mistakes:[/bold][/red]
-- You used dashes instead of underscores (wrong: `--num-workers`, correct: `--num_workers`).
+- You used dashes instead of underscores (wrong: `--parallel-instances`, correct: `--parallel_instances`).
 - You forgot about part of the hierarchy (wrong: `--model.name`, correct: `--agent.model.name`).
 """
 

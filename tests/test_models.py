@@ -104,3 +104,31 @@ def test_user_agent_header_with_other_extra_headers():
         extra_headers = call_kwargs.kwargs.get("extra_headers", {})
         assert extra_headers["User-Agent"] == f"swe-agent/{__version__}"
         assert extra_headers["X-Custom"] == "value"
+
+
+def test_vllm_request_uses_openai_provider_and_normalized_base_url(monkeypatch):
+    monkeypatch.setenv("LLM_API_KEY", "dummy")
+    monkeypatch.setenv("LLM_API_BASE", "http://localhost:5001")
+    model = get_model(
+        GenericAPIModelConfig(
+            name="my-qwen-model",
+            max_input_tokens=0,
+            per_instance_cost_limit=0,
+            total_cost_limit=0,
+        ),
+        ToolConfig(),
+    )
+    mock_response = _make_mock_response()
+
+    with (
+        patch("litellm.completion", return_value=mock_response) as mock_completion,
+        patch("litellm.utils.token_counter", return_value=1),
+    ):
+        model.query(History([{"role": "user", "content": "test"}]))
+
+    call_kwargs = mock_completion.call_args.kwargs
+    assert call_kwargs["model"] == "my-qwen-model"
+    assert call_kwargs["base_url"] == "http://localhost:5001/v1"
+    assert call_kwargs["custom_llm_provider"] == "openai"
+    assert call_kwargs["tool_choice"] == "auto"
+    assert call_kwargs["tools"]

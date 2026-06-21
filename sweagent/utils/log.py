@@ -38,7 +38,8 @@ _THREAD_NAME_TO_LOG_SUFFIX: dict[str, str] = {}
 def register_thread_name(name: str) -> None:
     """Register a suffix to add to the logger name for the current thread."""
     thread_name = threading.current_thread().name
-    _THREAD_NAME_TO_LOG_SUFFIX[thread_name] = name
+    with _LOG_LOCK:
+        _THREAD_NAME_TO_LOG_SUFFIX[thread_name] = name
 
 
 class _RichHandlerWithEmoji(RichHandler):
@@ -60,33 +61,34 @@ def get_logger(name: str, *, emoji: str = "") -> logging.Logger:
     """
     thread_name = threading.current_thread().name
     if thread_name != "MainThread":
-        name = name + "-" + _THREAD_NAME_TO_LOG_SUFFIX.get(thread_name, thread_name)
+        with _LOG_LOCK:
+            suffix = _THREAD_NAME_TO_LOG_SUFFIX.get(thread_name, thread_name)
+        name = name + "-" + suffix
     logger = logging.getLogger(name)
-    if logger.hasHandlers():
-        # Already set up
-        return logger
-    handler = _RichHandlerWithEmoji(
-        emoji=emoji,
-        show_time=bool(os.environ.get("SWE_AGENT_LOG_TIME", False)),
-        show_path=False,
-    )
-    handler.setLevel(_STREAM_LEVEL)
-    # Set to lowest level and only use stream handlers to adjust levels
-    logger.setLevel(logging.TRACE)  # type: ignore
-    logger.addHandler(handler)
-    logger.propagate = False
-    _SET_UP_LOGGERS.add(name)
     with _LOG_LOCK:
-        for handler in _ADDITIONAL_HANDLERS.values():
-            my_filter = getattr(handler, "my_filter", None)
+        if logger.handlers:
+            return logger
+        handler = _RichHandlerWithEmoji(
+            emoji=emoji,
+            show_time=bool(os.environ.get("SWE_AGENT_LOG_TIME", False)),
+            show_path=False,
+        )
+        handler.setLevel(_STREAM_LEVEL)
+        # Set to lowest level and only use stream handlers to adjust levels
+        logger.setLevel(logging.TRACE)  # type: ignore
+        logger.addHandler(handler)
+        logger.propagate = False
+        _SET_UP_LOGGERS.add(name)
+        for additional_handler in _ADDITIONAL_HANDLERS.values():
+            my_filter = getattr(additional_handler, "my_filter", None)
             if my_filter is None:
-                logger.addHandler(handler)
+                logger.addHandler(additional_handler)
             elif isinstance(my_filter, str) and my_filter in name:
-                logger.addHandler(handler)
+                logger.addHandler(additional_handler)
             elif callable(my_filter) and my_filter(name):
-                logger.addHandler(handler)
-    if _INCLUDE_LOGGER_NAME_IN_STREAM_HANDLER:
-        _add_logger_name_to_stream_handler(logger)
+                logger.addHandler(additional_handler)
+        if _INCLUDE_LOGGER_NAME_IN_STREAM_HANDLER:
+            _add_logger_name_to_stream_handler(logger)
     return logger
 
 
@@ -114,8 +116,15 @@ def add_file_handler(
     formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(name)s - %(message)s")
     handler.setFormatter(formatter)
     handler.setLevel(_interpret_level(level))
+    handler.my_filter = filter  # type: ignore
+    if not id_:
+        id_ = str(uuid.uuid4())
     with _LOG_LOCK:
-        # Lock because other thread might be modifying the _SET_UP_LOGGERS set
+        if id_ in _ADDITIONAL_HANDLERS:
+            handler.close()
+            msg = f"File handler id already registered: {id_}"
+            raise ValueError(msg)
+        _ADDITIONAL_HANDLERS[id_] = handler
         for name in _SET_UP_LOGGERS:
             if filter is not None:
                 if isinstance(filter, str) and filter not in name:
@@ -124,21 +133,17 @@ def add_file_handler(
                     continue
             logger = logging.getLogger(name)
             logger.addHandler(handler)
-    handler.my_filter = filter  # type: ignore
-    if not id_:
-        id_ = str(uuid.uuid4())
-    _ADDITIONAL_HANDLERS[id_] = handler
     return id_
 
 
 def remove_file_handler(id_: str) -> None:
     """Remove a file handler by its id."""
-    handler = _ADDITIONAL_HANDLERS.pop(id_)
     with _LOG_LOCK:
-        # Lock because other thread might be modifying the _SET_UP_LOGGERS set
+        handler = _ADDITIONAL_HANDLERS.pop(id_)
         for log_name in _SET_UP_LOGGERS:
             logger = logging.getLogger(log_name)
             logger.removeHandler(handler)
+        handler.close()
 
 
 def _add_logger_name_to_stream_handler(logger: logging.Logger) -> None:

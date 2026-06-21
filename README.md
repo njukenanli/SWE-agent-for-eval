@@ -22,8 +22,44 @@ pip install openai azure-identity-broker --upgrade
 modify sweagent/agent/models.py::LiteLLMModel::_single_query to accept azure_ad_token_provider
 
 ## Rollout
-Prepare config file. The default config file is config/default.yaml
+Use `config/train.yaml` for training rollouts and `config/test.yaml` for test
+rollouts. `agent.model.samples` controls how many independent times each
+instance runs.
 
 ```bash
-nohup sweagent run-batch --config config/default.yaml --num_workers 1 --instances.type swe_bench --instances.subset dataset/path.jsonl > log.out 2>&1 &
+nohup sweagent run-batch \
+  --config config/train.yaml \
+  --parallel_instances 2 \
+  --instances.type swe_bench \
+  --instances.subset dataset/path.jsonl \
+  --epoch 0 \
+  > /dev/null 2>&1 &
 ```
+
+Training uses `samples: 8`, so every instance starts from the beginning eight
+independent times and writes sample IDs `0` through `7`. Test uses `samples: 1`
+and writes only sample ID `0`.
+
+`--parallel_instances` controls the number of different task instances running
+at once. Each active task runs all of its configured samples in a separate
+inner thread pool, so the maximum sample concurrency is
+`parallel_instances * samples`.
+
+Each run writes only these artifacts:
+
+```text
+logs/{model.name}/{epoch}/{train|test}/{instance_id}/{sample_id}/
+  debug.log
+  {instance_id}.traj
+  {instance_id}.patch
+  eval/
+```
+
+The patch file is created before the run starts. If a run exits abnormally,
+SWE-agent recovers the latest submission from agent state or the trajectory
+when possible; otherwise the patch remains empty.
+
+After each sample, SWE-bench evaluates the patch with a 1,800-second timeout.
+Evaluation logs are written to `eval/`, and the trajectory records the boolean
+result at `info.success`. Evaluation run IDs use
+`{epoch}_{train|test}_{instance_id}_{sample_id}`.

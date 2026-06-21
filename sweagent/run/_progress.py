@@ -80,7 +80,8 @@ class RunBatchProgressManager:
 
     @property
     def n_completed(self) -> int:
-        return sum(len(instances) for instances in self._instances_by_exit_status.values())
+        with self._lock:
+            return sum(len(instances) for instances in self._instances_by_exit_status.values())
 
     def update_exit_status_table(self):
         # We cannot update the existing table, so we need to create a new one and
@@ -125,8 +126,8 @@ class RunBatchProgressManager:
             )
 
     def on_instance_end(self, instance_id: str, exit_status: str | None) -> None:
-        self._instances_by_exit_status[exit_status].append(instance_id)
         with self._lock:
+            self._instances_by_exit_status[exit_status].append(instance_id)
             self._task_progress_bar.remove_task(self._spinner_tasks[instance_id])
             self._main_progress_bar.update(TaskID(0), advance=1)
         self.update_exit_status_table()
@@ -139,7 +140,12 @@ class RunBatchProgressManager:
 
     def print_report(self) -> None:
         """Print complete list of instances and their exit statuses."""
-        for status, instances in self._instances_by_exit_status.items():
+        with self._lock:
+            status_snapshot = {
+                status: list(instances)
+                for status, instances in self._instances_by_exit_status.items()
+            }
+        for status, instances in status_snapshot.items():
             print(f"{status}: {len(instances)}")
             for instance in instances:
                 print(f"  {instance}")

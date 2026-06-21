@@ -1,6 +1,8 @@
 import os
 import threading
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+from types import SimpleNamespace
 from unittest.mock import MagicMock
 
 import pytest
@@ -127,3 +129,28 @@ def test_save_apply_patch_hook_concurrent_workers_save_to_correct_dirs(tmp_path)
     assert patch_b.exists(), "Patch for instance-B was not saved to its own directory"
     assert patch_a.read_text() == "patch A content"
     assert patch_b.read_text() == "patch B content"
+
+
+def test_save_apply_patch_hook_uses_sample_directory(tmp_path):
+    hook = SaveApplyPatchHook(show_success_message=False)
+    run = SimpleNamespace(
+        output_dir=tmp_path,
+        get_instance_output_dir=lambda instance_id, sample_id: tmp_path / instance_id / str(sample_id),
+    )
+    hook.on_init(run=run)
+    problem_statement = TextProblemStatement(text="Issue", id="instance-A")
+    env = MagicMock()
+    env.repo = None
+    hook.on_instance_start(index=7, env=env, problem_statement=problem_statement)
+    patch_path = Path(tmp_path) / "instance-A" / "7" / "instance-A.patch"
+    assert patch_path.exists()
+    assert patch_path.read_text() == ""
+
+    hook.on_instance_completed(
+        result=AgentRunResult(
+            info={"submission": "patch content", "exit_status": "submitted"},
+            trajectory=[],
+        )
+    )
+
+    assert patch_path.read_text() == "patch content"
