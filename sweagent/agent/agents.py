@@ -876,7 +876,7 @@ class DefaultAgent(AbstractAgent):
         repo_name = "/"
         if self._env.repo is not None:
             repo_name = f"/{self._env.repo.repo_name}"
-        submission_command = "git add -A && git diff --cached > /root/model.patch"
+        submission_command = "git add -A && git diff --cached --text > /root/model.patch"
         self.logger.info("Executing submission command %s in %s", submission_command, repo_name)
         try:
             self._env.execute_command(submission_command, check=True, cwd=repo_name)

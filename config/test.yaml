@@ -1,11 +1,13 @@
 
 agent:
   model:
-    name: 'azure/gpt-5.5-20260424'
+    name: 'my-qwen-model'
     per_instance_cost_limit: 0
     total_cost_limit: 0
-    per_instance_call_limit: 100
+    per_instance_call_limit: 50
     max_input_tokens: 0
+    temperature: 0.0
+    samples: 1  # Run every instance once, with sample ID 0.
   templates:
     system_template: |-
       You are a helpful assistant that can interact with a computer to solve tasks.
