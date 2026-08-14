@@ -26,6 +26,9 @@ class StepOutput(BaseModel):
     tool_calls: list[dict[str, Any]] | None = None
     tool_call_ids: list[str] | None = None
     thinking_blocks: list[dict[str, Any]] | None = None
+    input_token_ids: list[int] | None = None
+    output_token_ids: list[int] | None = None
+    output_token_probabilities: list[float] | None = None
 
     """State of the environment at the end of the step"""
     extra_info: dict[str, Any] = {}
@@ -50,6 +53,9 @@ class TrajectoryStep(TypedDict):
     execution_time: float
     query: list[dict[str, Any]]
     extra_info: dict[str, Any]
+    input_token_ids: list[int] | None
+    output_token_ids: list[int] | None
+    output_token_probabilities: list[float] | None
 
 
 # required fields go here

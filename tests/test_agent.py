@@ -1,3 +1,5 @@
+import json
+
 import pytest
 import yaml
 from swerex.exceptions import SwerexException
@@ -241,6 +243,52 @@ def test_human_exit(dummy_env: SWEEnv, default_agent: DefaultAgent, tmp_path):
     assert r.done
     assert r.exit_status == "exit_command"
     assert r.action.strip() == "exit"
+
+
+def test_token_metadata_is_saved_in_each_trajectory_round(dummy_env: SWEEnv, test_agent: DefaultAgent, tmp_path):
+    test_agent.model = PredeterminedTestModel(
+        [
+            {
+                "message": "echo first",
+                "input_token_ids": [11, 12],
+                "output_token_ids": [21],
+                "output_token_probabilities": [0.75],
+            },
+            {
+                "message": "echo second",
+                "input_token_ids": [13, 14, 15],
+                "output_token_ids": [22, 23],
+                "output_token_probabilities": [0.25, 0.5],
+            },
+            {
+                "message": "echo without probabilities",
+                "input_token_ids": [16],
+                "output_token_ids": [24, 25],
+            },
+            {"message": "exit"},
+        ]
+    )  # type: ignore
+
+    problem_statement = EmptyProblemStatement()
+    test_agent.run(
+        problem_statement=problem_statement,
+        env=dummy_env,
+        output_dir=tmp_path,
+    )
+
+    trajectory = json.loads((tmp_path / f"{problem_statement.id}.traj").read_text())["trajectory"]
+    assert trajectory[0]["input_token_ids"] == [11, 12]
+    assert trajectory[0]["output_token_ids"] == [21]
+    assert trajectory[0]["output_token_probabilities"] == [0.75]
+    assert trajectory[1]["input_token_ids"] == [13, 14, 15]
+    assert trajectory[1]["output_token_ids"] == [22, 23]
+    assert trajectory[1]["output_token_probabilities"] == [0.25, 0.5]
+    assert trajectory[2]["input_token_ids"] == [16]
+    assert trajectory[2]["output_token_ids"] == [24, 25]
+    assert trajectory[2]["output_token_probabilities"] is None
+    assert trajectory[3]["input_token_ids"] is None
+    assert trajectory[3]["output_token_ids"] is None
+    assert trajectory[3]["output_token_probabilities"] is None
 
 
 def test_function_calling(dummy_env: SWEEnv, function_calling_agent: DefaultAgent, tmp_path):

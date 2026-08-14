@@ -1065,6 +1065,9 @@ class DefaultAgent(AbstractAgent):
             else:
                 output = self.model.query(history)  # type: ignore
             step.output = output["message"]
+            step.input_token_ids = output.get("input_token_ids")
+            step.output_token_ids = output.get("output_token_ids")
+            step.output_token_probabilities = output.get("output_token_probabilities")
             # todo: Can't I override the parser in __init__?
             step.thought, step.action = self.tools.parse_actions(output)
             step.thinking_blocks = output.get("thinking_blocks", [])
@@ -1252,6 +1255,9 @@ class DefaultAgent(AbstractAgent):
                 "state": step.state,
                 "query": step.query,
                 "extra_info": step.extra_info,
+                "input_token_ids": step.input_token_ids,
+                "output_token_ids": step.output_token_ids,
+                "output_token_probabilities": step.output_token_probabilities,
             },
         )
         self.trajectory.append(trajectory_step)

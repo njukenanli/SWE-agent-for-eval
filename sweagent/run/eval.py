@@ -11,7 +11,6 @@ from swebench.harness.constants import (
     DOCKER_PATCH,
     DOCKER_USER,
     DOCKER_WORKDIR,
-    INSTANCE_IMAGE_BUILD_DIR,
     KEY_PREDICTION,
     LOG_INSTANCE,
     LOG_REPORT,
@@ -71,19 +70,6 @@ def run_instance(
     if log_dir.exists():
         shutil.rmtree(log_dir)
     log_dir.mkdir(parents=True, exist_ok=True)
-
-    if not test_spec.is_remote_image:
-        # Link the image build dir in the log dir
-        build_dir = INSTANCE_IMAGE_BUILD_DIR / test_spec.instance_image_key.replace(":", "__")
-        image_build_link = log_dir / "image_build_dir"
-        if not image_build_link.exists():
-            try:
-                # link the image build dir in the log dir
-                image_build_link.symlink_to(build_dir.absolute(), target_is_directory=True)
-            except OSError:
-                pass
-
-    # Set up logger
     log_file = log_dir / LOG_INSTANCE
     logger = setup_logger(run_id, log_file)
 

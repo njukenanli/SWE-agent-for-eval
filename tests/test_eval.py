@@ -76,15 +76,10 @@ def test_evaluate_closes_docker_client_when_setup_fails(tmp_path, monkeypatch):
     client.close.assert_called_once_with()
 
 
-def test_run_instance_creates_local_image_build_link(tmp_path, monkeypatch):
+def test_run_instance_with_remote_image_does_not_create_image_build_link(
+    tmp_path, monkeypatch
+):
     test_spec = FakeTestSpec()
-    test_spec.is_remote_image = False
-    monkeypatch.setattr(eval_module, "INSTANCE_IMAGE_BUILD_DIR", tmp_path / "builds")
-    expected_build_dir = (
-        tmp_path
-        / "builds"
-        / test_spec.instance_image_key.replace(":", "__")
-    )
     monkeypatch.setattr(
         eval_module,
         "build_container",
@@ -104,9 +99,7 @@ def test_run_instance_creates_local_image_build_link(tmp_path, monkeypatch):
     )
 
     assert result is None
-    image_build_link = log_dir / "image_build_dir"
-    assert image_build_link.is_symlink()
-    assert image_build_link.readlink() == expected_build_dir.absolute()
+    assert not (log_dir / "image_build_dir").is_symlink()
 
 
 def test_parallel_samples_use_distinct_eval_logs_and_container_names(tmp_path, monkeypatch):

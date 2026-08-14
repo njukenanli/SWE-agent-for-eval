@@ -1,11 +1,14 @@
 from __future__ import annotations
 
+import math
 from unittest.mock import MagicMock, patch
 
+import pytest
 from pydantic import SecretStr
 
 from sweagent import __version__
 from sweagent.agent.models import GenericAPIModelConfig, get_model
+from sweagent.exceptions import ModelConfigurationError
 from sweagent.tools.parsing import Identity
 from sweagent.tools.tools import ToolConfig
 from sweagent.types import History
@@ -31,11 +34,115 @@ def _make_mock_response(content: str = "mock") -> MagicMock:
     choice = MagicMock()
     choice.message.content = content
     choice.message.tool_calls = None
+    choice.token_ids = None
+    choice.provider_specific_fields = {}
+    choice.logprobs = None
     response = MagicMock()
     response.choices = [choice]
+    response.prompt_token_ids = None
     response.usage.prompt_tokens = 10
     response.usage.completion_tokens = 5
     return response
+
+
+def _make_vllm_mock_response() -> MagicMock:
+    response = _make_mock_response("generated")
+    response.prompt_token_ids = [11, 12, 13]
+    response.choices[0].provider_specific_fields = {"token_ids": [21, 22]}
+    response.choices[0].logprobs = MagicMock()
+    response.choices[0].logprobs.content = [
+        {"token": "generated", "logprob": -0.25, "top_logprobs": []},
+        MagicMock(token=" output", logprob=-1.5, top_logprobs=[]),
+    ]
+    return response
+
+
+def test_vllm_token_metadata_is_returned_with_model_output():
+    model = get_model(
+        GenericAPIModelConfig(
+            name="my-qwen-model",
+            max_input_tokens=0,
+            per_instance_cost_limit=0,
+            total_cost_limit=0,
+        ),
+        ToolConfig(),
+    )
+
+    with (
+        patch("litellm.completion", return_value=_make_vllm_mock_response()),
+        patch("litellm.utils.token_counter", return_value=1),
+    ):
+        output = model.query(History([{"role": "user", "content": "test"}]))
+
+    assert output["input_token_ids"] == [11, 12, 13]  # type: ignore[index]
+    assert output["output_token_ids"] == [21, 22]  # type: ignore[index]
+    assert output["output_token_probabilities"] == [  # type: ignore[index]
+        math.exp(-0.25),
+        math.exp(-1.5),
+    ]
+
+
+@pytest.mark.parametrize("missing_field", ["token_ids", "probabilities"])
+def test_vllm_missing_token_metadata_is_omitted(missing_field):
+    response = _make_vllm_mock_response()
+    if missing_field == "token_ids":
+        response.prompt_token_ids = None
+        response.choices[0].provider_specific_fields = {}
+    else:
+        response.choices[0].logprobs = None
+    model = get_model(
+        GenericAPIModelConfig(
+            name="my-qwen-model",
+            max_input_tokens=0,
+            per_instance_cost_limit=0,
+            total_cost_limit=0,
+        ),
+        ToolConfig(),
+    )
+
+    with (
+        patch("litellm.completion", return_value=response),
+        patch("litellm.utils.token_counter", return_value=1),
+    ):
+        output = model.query(History([{"role": "user", "content": "test"}]))
+
+    if missing_field == "token_ids":
+        assert "input_token_ids" not in output
+        assert "output_token_ids" not in output
+        assert "output_token_probabilities" not in output
+    else:
+        assert output["input_token_ids"] == [11, 12, 13]  # type: ignore[index]
+        assert output["output_token_ids"] == [21, 22]  # type: ignore[index]
+        assert "output_token_probabilities" not in output
+
+
+@pytest.mark.parametrize(
+    ("logprob_content", "error"),
+    [
+        ([{"logprob": -0.25}], "different number"),
+        ([{"logprob": -0.25}, {"logprob": "invalid"}], "invalid log-probability"),
+        ([{"logprob": -0.25}, {"logprob": 0.5}], "positive log-probability"),
+    ],
+)
+def test_vllm_token_metadata_rejects_invalid_probabilities(logprob_content, error):
+    response = _make_vllm_mock_response()
+    response.choices[0].logprobs.content = logprob_content
+    model = get_model(
+        GenericAPIModelConfig(
+            name="my-qwen-model",
+            max_input_tokens=0,
+            per_instance_cost_limit=0,
+            total_cost_limit=0,
+        ),
+        ToolConfig(),
+    )
+
+    with (
+        patch("litellm.completion", return_value=response),
+        patch("litellm.utils.token_counter", return_value=1),
+        pytest.raises(ModelConfigurationError, match=error),
+    ):
+        model.query(History([{"role": "user", "content": "test"}]))
 
 
 def test_user_agent_header_default():

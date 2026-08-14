@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import json
+import math
 import os
 import random
 import shlex
@@ -51,6 +52,81 @@ litellm.suppress_debug_info = True
 
 _THREADS_THAT_USED_API_KEYS = []
 """Keeps track of thread orders so that we can choose the same API key for the same thread."""
+
+
+def _get_response_field(value: object, field: str) -> Any:
+    """Read a response field from either a mapping or an SDK model."""
+    if isinstance(value, dict):
+        return value.get(field)
+    return getattr(value, field, None)
+
+
+def _get_vllm_token_metadata(response: object, choice: object) -> dict[str, list[int] | list[float]]:
+    """Extract vLLM token metadata after LiteLLM's OpenAI response conversion.
+
+    vLLM returns ``prompt_token_ids`` on the top-level chat response and
+    ``token_ids`` on each choice. LiteLLM retains top-level extensions directly,
+    while choice extensions are normally moved to ``provider_specific_fields``.
+    """
+    input_token_ids = _get_response_field(response, "prompt_token_ids")
+    output_token_ids = _get_response_field(choice, "token_ids")
+    if not isinstance(output_token_ids, list):
+        provider_fields = _get_response_field(choice, "provider_specific_fields")
+        output_token_ids = _get_response_field(provider_fields, "token_ids")
+
+    logprobs = _get_response_field(choice, "logprobs")
+    logprob_content = _get_response_field(logprobs, "content")
+
+    metadata: dict[str, list[int] | list[float]] = {}
+
+    if input_token_ids is not None and not isinstance(input_token_ids, list):
+        msg = "vLLM returned invalid prompt_token_ids"
+        raise ModelConfigurationError(msg)
+    if isinstance(input_token_ids, list):
+        if not all(type(token_id) is int for token_id in input_token_ids):
+            msg = "vLLM returned invalid prompt_token_ids"
+            raise ModelConfigurationError(msg)
+        metadata["input_token_ids"] = input_token_ids
+
+    if output_token_ids is not None and not isinstance(output_token_ids, list):
+        msg = "vLLM returned invalid choice token_ids"
+        raise ModelConfigurationError(msg)
+    if isinstance(output_token_ids, list):
+        if not all(type(token_id) is int for token_id in output_token_ids):
+            msg = "vLLM returned invalid choice token_ids"
+            raise ModelConfigurationError(msg)
+        metadata["output_token_ids"] = output_token_ids
+
+    # Token metadata is optional. Missing fields are omitted here and become
+    # None on StepOutput, which serializes them as null in each trajectory step.
+    if logprob_content is None or not isinstance(output_token_ids, list):
+        return metadata
+    if not isinstance(logprob_content, list):
+        msg = "vLLM returned invalid output log-probabilities"
+        raise ModelConfigurationError(msg)
+    if len(logprob_content) != len(output_token_ids):
+        msg = (
+            "vLLM returned a different number of output token IDs and "
+            f"log-probabilities ({len(output_token_ids)} != {len(logprob_content)})"
+        )
+        raise ModelConfigurationError(msg)
+
+    output_token_probabilities = []
+    for index, token_logprob in enumerate(logprob_content):
+        logprob = _get_response_field(token_logprob, "logprob")
+        if isinstance(logprob, bool) or not isinstance(logprob, int | float) or not math.isfinite(logprob):
+            msg = f"vLLM returned an invalid log-probability for output token {index}"
+            raise ModelConfigurationError(msg)
+        if logprob > 0:
+            msg = (
+                "vLLM returned a positive log-probability; configure the server "
+                "with --logprobs-mode processed_logprobs"
+            )
+            raise ModelConfigurationError(msg)
+        output_token_probabilities.append(math.exp(logprob))
+
+    metadata["output_token_probabilities"] = output_token_probabilities
+    return metadata
 
 
 def _normalize_openai_base_url(base_url: str | None) -> str | None:
@@ -557,6 +633,9 @@ class PredeterminedTestModel(AbstractModel):
         result = {"message": output["message"]}
         if "tool_calls" in output:
             result["tool_calls"] = output["tool_calls"]
+        for field in ("input_token_ids", "output_token_ids", "output_token_probabilities"):
+            if field in output:
+                result[field] = output[field]
         return result
 
 
@@ -777,6 +856,7 @@ class LiteLLMModel(AbstractModel):
                 custom_tokenizer=self.custom_tokenizer,
             )
             output_dict = {"message": output}
+            output_dict.update(_get_vllm_token_metadata(response, choices[i]))
             if self.tools.use_function_calling:
                 if response.choices[i].message.tool_calls:  # type: ignore
                     tool_calls = [call.to_dict() for call in response.choices[i].message.tool_calls]  # type: ignore
