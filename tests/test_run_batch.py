@@ -205,7 +205,7 @@ def test_sampled_instances_are_grouped_by_task():
         instances=instances,
         agent_config=SimpleNamespace(model=SimpleNamespace(id="model", name="model", samples=3)),
         hooks=[MagicMock()],
-        parallel_instances=5,
+        num_workers=5,
         progress_bar=False,
     )
 
@@ -217,7 +217,8 @@ def test_sampled_instances_are_grouped_by_task():
         [0, 1, 2],
         [0, 1, 2],
     ]
-    assert runner._num_workers == 2
+    assert runner._num_workers == 5
+    assert runner._instance_workers == 5 // 3 + 3
 
 
 def test_main_multi_worker_runs_task_groups_in_parallel(monkeypatch):
@@ -247,6 +248,8 @@ def test_main_multi_worker_runs_task_groups_in_parallel(monkeypatch):
     monkeypatch.setattr("sweagent.run.run_batch.set_stream_handler_levels", lambda _level: None)
     runner = SimpleNamespace(
         _num_workers=2,
+        _instance_workers=2 // 3 + 3,
+        _samples=3,
         sampled_instances=task_groups,
         run_instance=run_instance,
         logger=MagicMock(),
@@ -256,6 +259,77 @@ def test_main_multi_worker_runs_task_groups_in_parallel(monkeypatch):
     RunBatch.main_multi_worker(runner)
 
     assert len(thread_ids) == len(task_groups)
+
+
+def test_agent_runs_share_global_num_workers_semaphore(tmp_path, monkeypatch):
+    num_workers = 2
+    instances = [
+        SimpleNamespace(problem_statement=SimpleNamespace(id=f"task-{index}")) for index in range(4)
+    ]
+    runner = RunBatch(
+        instances=instances,
+        agent_config=SimpleNamespace(model=SimpleNamespace(id="model", name="model", samples=1)),
+        output_dir=tmp_path,
+        hooks=[MagicMock()],
+        num_workers=num_workers,
+        progress_bar=False,
+        random_delay_multiplier=0,
+    )
+    active = 0
+    peak_active = 0
+    active_lock = threading.Lock()
+    permits_filled = threading.Event()
+    release_rollouts = threading.Event()
+
+    def start_fake_agent_and_environment(sample_agent):
+        sample_agent.instance = sample_agent.sample_instance.instance
+
+        def run_agent(**_kwargs):
+            nonlocal active, peak_active
+            with active_lock:
+                active += 1
+                peak_active = max(peak_active, active)
+                if active == num_workers:
+                    permits_filled.set()
+            try:
+                assert release_rollouts.wait(timeout=5)
+                return AgentRunResult(info={"exit_status": "submitted", "submission": ""}, trajectory=[])
+            finally:
+                with active_lock:
+                    active -= 1
+
+        sample_agent.agent = SimpleNamespace(run=run_agent, logger=MagicMock(), info={})
+        sample_agent.env = SimpleNamespace(close=lambda: None)
+
+    class DummyLive:
+        def __init__(self, _render_group):
+            pass
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return False
+
+    monkeypatch.setattr(SampleAgent, "_start_agent_and_environment", start_fake_agent_and_environment)
+    monkeypatch.setattr(SampleAgent, "_evaluate_sample", lambda _self: True)
+    monkeypatch.setattr("sweagent.run.run_batch.Live", DummyLive)
+    monkeypatch.setattr("sweagent.run.run_batch.add_logger_names_to_stream_handlers", lambda: None)
+    monkeypatch.setattr("sweagent.run.run_batch.set_stream_handler_levels", lambda _level: None)
+
+    def release_when_all_permits_are_used():
+        permits_filled.wait(timeout=5)
+        release_rollouts.set()
+
+    release_thread = threading.Thread(target=release_when_all_permits_are_used)
+    release_thread.start()
+    runner.main_multi_worker()
+    release_thread.join(timeout=2)
+
+    assert not release_thread.is_alive()
+    assert permits_filled.is_set()
+    assert peak_active == num_workers
+    assert active == 0
 
 
 def test_parallel_samples_write_to_distinct_debug_logs(tmp_path):

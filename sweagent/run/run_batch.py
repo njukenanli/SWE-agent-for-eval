@@ -33,6 +33,7 @@ import json
 import logging
 import random
 import sys
+import threading
 import time
 import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -143,8 +144,8 @@ class RunBatchConfig(BaseSettings, cli_implicit_flags=False):
     """Do not skip instances that already have a trajectory."""
     env_var_path: Path | None = None
     """Path to a .env file to load environment variables from."""
-    parallel_instances: int = Field(default=1, ge=1)
-    """Number of task instances to run in parallel. Samples for each task use a separate inner thread pool."""
+    num_workers: int = Field(default=1, ge=1)
+    """Maximum number of sampled agents allowed to execute their rollout concurrently."""
     random_delay_multiplier: float = 0.3
     """We will wait for a random amount of time between 0 and `random_delay_multiplier`
     times the number of workers at the start of each instance. This is to avoid any
@@ -240,7 +241,7 @@ class SampleAgent:
             self.patch_path.write_text("")
 
         # Add randomness to avoid potential race conditions or a thundering herd.
-        max_parallel_samples = run_batch._num_workers * run_batch._samples
+        max_parallel_samples = run_batch._instance_workers * run_batch._samples
         if run_batch._progress_manager.n_completed < max_parallel_samples:
             time.sleep(random.random() * run_batch._random_delay_multiplier * (max_parallel_samples - 1))
 
@@ -361,11 +362,12 @@ class SampleAgent:
                     env=self.env,
                     problem_statement=self.instance.problem_statement,
                 )
-                result = self.agent.run(
-                    problem_statement=self.instance.problem_statement,
-                    env=self.env,
-                    output_dir=self.output_dir,
-                )
+                with self.run_batch._agent_run_semaphore:
+                    result = self.agent.run(
+                        problem_statement=self.instance.problem_statement,
+                        env=self.env,
+                        output_dir=self.output_dir,
+                    )
                 self.run_batch._chooks.on_instance_completed(result=result)
                 self._completed = True
             except BaseException:
@@ -429,7 +431,7 @@ class RunBatch:
         hooks: list[RunHook] | None = None,
         raise_exceptions: bool = False,
         redo_existing: bool = False,
-        parallel_instances: int = 1,
+        num_workers: int = 1,
         progress_bar: bool = True,
         random_delay_multiplier: float = 0.3,
         epoch: int = 0,
@@ -440,8 +442,8 @@ class RunBatch:
 
         Args:
             hooks: If not specified, the default hooks will be used.
-            parallel_instances: Number of task instances to run in parallel. Each task runs all
-                configured samples in its own inner thread pool.
+            num_workers: Maximum number of sampled agents allowed to execute their rollout
+                concurrently. Default is 1.
             progress_bar: Whether to show a progress bar. Progress bar is never shown for human models.
                 Progress bar is always shown for multi-worker runs.
             random_delay_multiplier: We will wait for a random amount of time between 0 and `random_delay_multiplier`
@@ -459,15 +461,24 @@ class RunBatch:
             [SampledBatchInstance(instance=instance, sample_id=sample_id) for sample_id in range(samples)]
             for instance in instances
         ]
-        if self._model_id in ["human", "human_thought"] and (parallel_instances > 1 or samples > 1):
-            msg = "Cannot run human models with parallel instances or samples"
+        if num_workers < 1:
+            msg = "num_workers must be at least 1"
+            raise ValueError(msg)
+        if self._model_id in ["human", "human_thought"] and (num_workers > 1 or samples > 1):
+            msg = "Cannot run human models with parallel workers or samples"
             raise ValueError(msg)
         self._raise_exceptions = raise_exceptions
         self._chooks = CombinedRunHooks()
         self._redo_existing = redo_existing
-        self._num_workers = min(parallel_instances, len(self.sampled_instances))
+        self._num_workers = num_workers
         self._samples = samples
-        self._uses_parallel_threads = self._num_workers > 1 or samples > 1
+        self._instance_workers = num_workers // samples + 3
+        self._agent_run_semaphore = threading.Semaphore(num_workers)
+        self._uses_parallel_threads = samples > 1 or (
+            self._model_id not in ["human", "human_thought"]
+            and self._instance_workers > 1
+            and len(self.sampled_instances) > 1
+        )
         for hook in hooks or [SaveApplyPatchHook(show_success_message=False)]:
             self.add_hook(hook)
         self._progress_manager = RunBatchProgressManager(
@@ -512,7 +523,7 @@ class RunBatch:
             output_dir=config.output_dir,
             raise_exceptions=config.raise_exceptions,
             redo_existing=config.redo_existing,
-            parallel_instances=config.parallel_instances,
+            num_workers=config.num_workers,
             progress_bar=config.progress_bar,
             random_delay_multiplier=config.random_delay_multiplier,
             epoch=config.epoch,
@@ -534,7 +545,7 @@ class RunBatch:
         self.logger.info("Starting run. Find output files at %s", self.output_dir)
         self._chooks.on_start()
 
-        if self._num_workers <= 1:
+        if self._model_id in ["human", "human_thought"] or self._instance_workers <= 1:
             self.main_single_worker()
         else:
             self.main_multi_worker()
@@ -561,7 +572,7 @@ class RunBatch:
         self.logger.setLevel(logging.TRACE)  # type: ignore
 
         with Live(self._progress_manager.render_group):
-            with ThreadPoolExecutor(max_workers=self._num_workers) as executor:
+            with ThreadPoolExecutor(max_workers=self._instance_workers) as executor:
                 futures = [
                     executor.submit(self.run_instance, sampled_instances)
                     for sampled_instances in self.sampled_instances

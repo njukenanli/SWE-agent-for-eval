@@ -29,7 +29,7 @@ instance runs.
 ```bash
 nohup sweagent run-batch \
   --config config/train.yaml \
-  --parallel_instances 2 \
+  --num_workers 2 \
   --instances.type swe_bench \
   --instances.subset dataset/path.jsonl \
   --epoch 0 \
@@ -40,10 +40,12 @@ Training uses `samples: 8`, so every instance starts from the beginning eight
 independent times and writes sample IDs `0` through `7`. Test uses `samples: 1`
 and writes only sample ID `0`.
 
-`--parallel_instances` controls the number of different task instances running
-at once. Each active task runs all of its configured samples in a separate
-inner thread pool, so the maximum sample concurrency is
-`parallel_instances * samples`.
+`--num_workers` globally limits how many sampled agents may execute a rollout
+at once. Each task still starts all of its configured samples in a separate
+inner thread pool; a shared semaphore limits concurrent agent rollouts across
+all task and sample pools. The outer task pool uses
+`num_workers // samples + 3` threads so environment startup and evaluation can
+overlap with active rollouts.
 
 Each run writes only these artifacts:
 

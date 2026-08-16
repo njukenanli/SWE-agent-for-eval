@@ -85,7 +85,7 @@ The system automatically:
 
 ## Running in parallel
 
-Let's speed things up and run on 5 instances at once. Only a single line to change:
+Let's speed things up and allow up to 3 agent rollouts at once. Only a single line to change:
 
 ```bash hl_lines="4-4"
 sweagent run-batch \
@@ -100,7 +100,7 @@ sweagent run-batch \
     --instances.shuffle=True
 ```
 
-You'll see output that looks like this (only with 3 workers instead of 30):
+You'll see output that looks like this (only with 3 rollout workers instead of 30):
 
 <figure markdown="span">
 ![SWE-ReX in action](../assets/batch_animated.gif){: style="max-width: 500px; border-radius: 10px;"}
