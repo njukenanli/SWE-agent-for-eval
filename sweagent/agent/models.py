@@ -771,6 +771,7 @@ class LiteLLMModel(AbstractModel):
         self, messages: list[dict[str, str]], n: int | None = None, temperature: float | None = None
     ) -> list[dict]:
         self._sleep()
+        request_temperature = self.config.temperature if temperature is None else temperature
         # Workaround for litellm bug https://github.com/SWE-agent/SWE-agent/issues/1109
         messages_no_cache_control = copy.deepcopy(messages)
         for message in messages_no_cache_control:
@@ -811,7 +812,7 @@ class LiteLLMModel(AbstractModel):
             response: litellm.types.utils.ModelResponse = litellm.completion(  # type: ignore
                 model=self.config.name,
                 messages=messages,
-                temperature=self.config.temperature,
+                temperature=request_temperature,
                 api_key=os.environ.get("LLM_API_KEY"),
                 base_url=_normalize_openai_base_url(
                     os.environ.get("LLM_API_BASE") or self.config.api_base
@@ -880,7 +881,7 @@ class LiteLLMModel(AbstractModel):
         outputs = []
         # not needed for openai, but oh well.
         for _ in range(n):
-            outputs.extend(self._single_query(messages))
+            outputs.extend(self._single_query(messages, temperature=temperature))
         return outputs
 
     def query(self, history: History, n: int = 1, temperature: float | None = None) -> list[dict] | dict:

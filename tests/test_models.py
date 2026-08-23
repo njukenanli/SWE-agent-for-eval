@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import math
+from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
+import yaml
 from pydantic import SecretStr
 
 from sweagent import __version__
@@ -12,6 +14,9 @@ from sweagent.exceptions import ModelConfigurationError
 from sweagent.tools.parsing import Identity
 from sweagent.tools.tools import ToolConfig
 from sweagent.types import History
+
+
+CONFIG_DIR = Path(__file__).resolve().parents[1] / "config"
 
 
 def test_litellm_mock():
@@ -239,3 +244,47 @@ def test_vllm_request_uses_openai_provider_and_normalized_base_url(monkeypatch):
     assert call_kwargs["custom_llm_provider"] == "openai"
     assert call_kwargs["tool_choice"] == "auto"
     assert call_kwargs["tools"]
+
+
+@pytest.mark.parametrize(
+    ("config_name", "expected_temperature"),
+    [("test.yaml", 0.0), ("train.yaml", 1.0)],
+)
+def test_rollout_config_temperature_is_sent_to_vllm(config_name, expected_temperature):
+    config_data = yaml.safe_load((CONFIG_DIR / config_name).read_text(encoding="utf-8"))
+    model = get_model(
+        GenericAPIModelConfig.model_validate(config_data["agent"]["model"]),
+        ToolConfig(),
+    )
+
+    with (
+        patch("litellm.completion", return_value=_make_mock_response()) as mock_completion,
+        patch("litellm.utils.token_counter", return_value=1),
+    ):
+        model.query(History([{"role": "user", "content": "test"}]))
+
+    assert mock_completion.call_args.kwargs["temperature"] == expected_temperature
+
+
+def test_per_query_temperature_overrides_model_config():
+    model = get_model(
+        GenericAPIModelConfig(
+            name="my-qwen-model",
+            temperature=1.0,
+            max_input_tokens=0,
+            per_instance_cost_limit=0,
+            total_cost_limit=0,
+        ),
+        ToolConfig(),
+    )
+
+    with (
+        patch("litellm.completion", return_value=_make_mock_response()) as mock_completion,
+        patch("litellm.utils.token_counter", return_value=1),
+    ):
+        model.query(
+            History([{"role": "user", "content": "test"}]),
+            temperature=0.25,
+        )
+
+    assert mock_completion.call_args.kwargs["temperature"] == 0.25
