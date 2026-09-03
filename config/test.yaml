@@ -7,6 +7,8 @@ agent:
     per_instance_call_limit: 50
     max_input_tokens: 0
     temperature: 0.0
+    completion_kwargs:
+      max_tokens: 8192
     samples: 1  # Run every instance once, with sample ID 0.
   templates:
     system_template: |-

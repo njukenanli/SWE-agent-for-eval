@@ -32,6 +32,7 @@ With [green]filter[/green], you can select specific instances, e.g., [green]--in
 import json
 import logging
 import random
+import shutil
 import sys
 import threading
 import time
@@ -235,24 +236,30 @@ class SampleAgent:
         sampled_instance = self.sample_instance
         run_batch.logger.info("Running sample %s", self.run_id)
         register_thread_name(self.run_id)
+
+        run_batch._progress_manager.on_instance_start(self.run_id)
+        if previous_exit_status := run_batch.should_skip(sampled_instance):
+            run_batch._progress_manager.on_instance_end(self.run_id, exit_status=f"skipped ({previous_exit_status})")
+            self._skipped = True
+            return
+
+        self._overwrite_output_dir()
         run_batch._add_instance_log_file_handler(sampled_instance, multi_worker=run_batch._uses_parallel_threads)
-        self.output_dir.mkdir(parents=True, exist_ok=True)
-        if not self.patch_path.exists():
-            self.patch_path.write_text("")
+        self.patch_path.write_text("")
+        self.trajectory_path.write_text("")
 
         # Add randomness to avoid potential race conditions or a thundering herd.
         max_parallel_samples = run_batch._instance_workers * run_batch._samples
         if run_batch._progress_manager.n_completed < max_parallel_samples:
             time.sleep(random.random() * run_batch._random_delay_multiplier * (max_parallel_samples - 1))
 
-        run_batch._progress_manager.on_instance_start(self.run_id)
-        if previous_exit_status := run_batch.should_skip(sampled_instance):
-            run_batch._progress_manager.on_instance_end(self.run_id, exit_status=f"skipped ({previous_exit_status})")
-            run_batch._remove_instance_log_file_handler(self.run_id)
-            self._skipped = True
-            return
-
-        self.trajectory_path.write_text("")
+    def _overwrite_output_dir(self) -> None:
+        """Replace every artifact from an unfinished attempt with a clean directory."""
+        if self.output_dir.is_symlink() or self.output_dir.is_file():
+            self.output_dir.unlink()
+        elif self.output_dir.exists():
+            shutil.rmtree(self.output_dir)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
 
     def _start_agent_and_environment(self) -> None:
         """Initialize this sample's agent and start its dedicated SWEEnv."""
@@ -612,8 +619,11 @@ class RunBatch:
         return completed_samples
 
     def should_skip(self, sampled_instance: SampledBatchInstance) -> bool | str:
-        """Check if we should skip this instance.
-        Returns previous exit status if the instance should be skipped.
+        """Return the prior exit status only when the complete sample should be preserved.
+
+        Evaluation writes ``info.success`` after agent execution writes
+        ``info.exit_status``. Requiring both fields prevents a process interruption
+        between rollout and evaluation from being mistaken for a finished sample.
         """
         if self._redo_existing:
             return False
@@ -625,26 +635,27 @@ class RunBatch:
         if not log_path.exists():
             return False
 
-        content = log_path.read_text()
-        if not content.strip():
-            self.logger.warning("Found empty trajectory: %s. Removing.", log_path)
-            log_path.unlink()
+        try:
+            content = log_path.read_text(encoding="utf-8")
+            if not content.strip():
+                raise ValueError("trajectory is empty")
+            data = json.loads(content)
+            if not isinstance(data, dict) or not isinstance(data.get("info"), dict):
+                raise ValueError("trajectory info is missing or invalid")
+            info = data["info"]
+            exit_status = info.get("exit_status")
+            if not isinstance(exit_status, str) or not exit_status.strip() or exit_status == "early_exit":
+                raise ValueError("trajectory has no terminal exit status")
+            if not isinstance(info.get("success"), bool):
+                raise ValueError("trajectory evaluation is not finalized")
+        except (OSError, json.JSONDecodeError, ValueError) as e:
+            self.logger.warning(
+                "Found unfinished sample at %s (%s); overwriting its sample directory.",
+                log_path.parent,
+                e,
+            )
             return False
 
-        try:
-            data = json.loads(content)
-            # If the trajectory has no exit status, it's incomplete and we will redo it
-            exit_status = data["info"].get("exit_status", None)
-            if exit_status == "early_exit" or exit_status is None:
-                self.logger.warning(f"Found existing trajectory with no exit status: {log_path}. Removing.")
-                log_path.unlink()
-                return False
-        except Exception as e:
-            self.logger.error(f"Failed to check existing trajectory: {log_path}: {e}. Removing.")
-            # If we can't check the trajectory, we will redo it
-            log_path.unlink()
-            return False
-        # otherwise, we will skip it
         self.logger.info(f"⏭️ Skipping existing trajectory: {log_path}")
         return exit_status
 

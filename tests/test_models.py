@@ -266,6 +266,23 @@ def test_rollout_config_temperature_is_sent_to_vllm(config_name, expected_temper
     assert mock_completion.call_args.kwargs["temperature"] == expected_temperature
 
 
+@pytest.mark.parametrize("config_name", ["test.yaml", "train.yaml"])
+def test_rollout_config_max_tokens_is_sent_to_vllm(config_name):
+    config_data = yaml.safe_load((CONFIG_DIR / config_name).read_text(encoding="utf-8"))
+    model = get_model(
+        GenericAPIModelConfig.model_validate(config_data["agent"]["model"]),
+        ToolConfig(),
+    )
+
+    with (
+        patch("litellm.completion", return_value=_make_mock_response()) as mock_completion,
+        patch("litellm.utils.token_counter", return_value=1),
+    ):
+        model.query(History([{"role": "user", "content": "test"}]))
+
+    assert mock_completion.call_args.kwargs["max_tokens"] == 8192
+
+
 def test_per_query_temperature_overrides_model_config():
     model = get_model(
         GenericAPIModelConfig(

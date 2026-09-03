@@ -34,12 +34,6 @@ from swebench.harness.grading import get_eval_report
 from swebench.harness.test_spec.test_spec import TestSpec, make_test_spec
 from swebench.harness.utils import EvaluationError
 
-GIT_APPLY_CMDS = [
-    "git apply --verbose",
-    "git apply --verbose --reject",
-    "patch --batch --fuzz=5 -p1 -i",
-]
-
 
 def run_instance(
     test_spec: TestSpec,
@@ -87,27 +81,15 @@ def run_instance(
         logger.info(f"Intermediate patch for {instance_id} written to {patch_file}, now applying to container...")
         copy_to_container(container, patch_file, PurePosixPath(DOCKER_PATCH))
 
-        # Attempt to apply patch to container (TODO: FIX THIS)
-        applied_patch = False
-        for git_apply_cmd in GIT_APPLY_CMDS:
-            val = container.exec_run(
-                f"{git_apply_cmd} {DOCKER_PATCH}",
-                workdir=DOCKER_WORKDIR,
-                user=DOCKER_USER,
-            )
-            if val.exit_code == 0:
-                logger.info(f"{APPLY_PATCH_PASS}:\n{val.output.decode(UTF8)}")
-                applied_patch = True
-                break
-            else:
-                logger.info(f"Failed to apply patch to container: {git_apply_cmd}")
-        if not applied_patch:
-            logger.info(f"{APPLY_PATCH_FAIL}:\n{val.output.decode(UTF8)}")
-            raise EvaluationError(
-                instance_id,
-                f"{APPLY_PATCH_FAIL}:\n{val.output.decode(UTF8)}",
-                logger,
-            )
+        val = container.exec_run(
+            f"git apply --reject  --whitespace=nowarn  {DOCKER_PATCH}",
+            workdir=DOCKER_WORKDIR,
+            user=DOCKER_USER,
+        )
+        if val.exit_code == 0:
+            logger.info(f"{APPLY_PATCH_PASS}:\n{val.output.decode(UTF8)}")
+        else:
+            logger.info(f"Patch did not apply cleanly to the container, though with best effort:\n{val.output.decode(UTF8)}")
 
         # Get git diff before running eval script
         git_diff_output_before = (

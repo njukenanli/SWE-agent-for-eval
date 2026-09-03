@@ -545,7 +545,19 @@ def test_sample_agent_preserves_skip_without_starting_or_evaluating(tmp_path, mo
     )
     sample_dir = tmp_path / instance_id / "0"
     sample_dir.mkdir(parents=True)
-    (sample_dir / f"{instance_id}.traj").write_text(json.dumps({"info": {"exit_status": "submitted"}}))
+    (sample_dir / f"{instance_id}.traj").write_text(
+        json.dumps({"info": {"exit_status": "submitted", "success": False}})
+    )
+    (sample_dir / f"{instance_id}.patch").write_text("finished patch")
+    (sample_dir / "debug.log").write_text("finished debug log")
+    eval_dir = sample_dir / "eval"
+    eval_dir.mkdir()
+    (eval_dir / "report.json").write_text('{"resolved": false}')
+    artifacts_before = {
+        path.relative_to(sample_dir): path.read_bytes()
+        for path in sample_dir.rglob("*")
+        if path.is_file()
+    }
     start_sample = MagicMock()
     evaluate_sample = MagicMock()
     monkeypatch.setattr(SampleAgent, "_start_agent_and_environment", start_sample)
@@ -556,7 +568,97 @@ def test_sample_agent_preserves_skip_without_starting_or_evaluating(tmp_path, mo
     assert sample_agent.rollout() == runner.sampled_instances[0][0]
     start_sample.assert_not_called()
     evaluate_sample.assert_not_called()
-    assert (sample_dir / f"{instance_id}.patch").is_file()
+    artifacts_after = {
+        path.relative_to(sample_dir): path.read_bytes()
+        for path in sample_dir.rglob("*")
+        if path.is_file()
+    }
+    assert artifacts_after == artifacts_before
+
+
+@pytest.mark.parametrize(
+    "unfinished_trajectory",
+    [
+        None,
+        "",
+        "not JSON",
+        json.dumps({"info": {}}),
+        json.dumps({"info": {"exit_status": "early_exit", "success": False}}),
+        json.dumps({"info": {"exit_status": "submitted"}}),
+    ],
+    ids=[
+        "missing-trajectory",
+        "empty-trajectory",
+        "malformed-trajectory",
+        "missing-exit-status",
+        "early-exit",
+        "missing-evaluation-result",
+    ],
+)
+def test_sample_agent_overwrites_entire_unfinished_sample_directory(
+    tmp_path, monkeypatch, unfinished_trajectory
+):
+    instance_id = "owner__repo-unfinished"
+    instance = SimpleNamespace(problem_statement=SimpleNamespace(id=instance_id))
+    runner = RunBatch(
+        instances=[instance],
+        agent_config=SimpleNamespace(model=SimpleNamespace(id="model", name="model", samples=1)),
+        output_dir=tmp_path,
+        hooks=[MagicMock()],
+        progress_bar=False,
+        random_delay_multiplier=0,
+    )
+    sample_dir = tmp_path / instance_id / "0"
+    sample_dir.mkdir(parents=True)
+    trajectory_path = sample_dir / f"{instance_id}.traj"
+    if unfinished_trajectory is not None:
+        trajectory_path.write_text(unfinished_trajectory)
+    (sample_dir / f"{instance_id}.patch").write_text("old patch")
+    (sample_dir / "debug.log").write_text("old debug log")
+    (sample_dir / "stale.txt").write_text("stale artifact")
+    stale_eval_dir = sample_dir / "eval"
+    stale_eval_dir.mkdir()
+    (stale_eval_dir / "report.json").write_text("stale evaluation")
+
+    def start_sample(sample_agent):
+        assert not (sample_dir / "stale.txt").exists()
+        assert not stale_eval_dir.exists()
+        assert sample_agent.patch_path.read_text() == ""
+        assert sample_agent.trajectory_path.read_text() == ""
+        assert "old debug log" not in (sample_dir / "debug.log").read_text()
+        sample_agent.instance = instance
+
+        def run_agent(**_kwargs):
+            sample_agent.patch_path.write_text("new patch")
+            sample_agent.trajectory_path.write_text(
+                json.dumps({"info": {"exit_status": "submitted"}, "trajectory": []})
+            )
+            return AgentRunResult(
+                info={"exit_status": "submitted", "submission": "new patch"},
+                trajectory=[],
+            )
+
+        sample_agent.agent = SimpleNamespace(run=run_agent, logger=MagicMock(), info={})
+        sample_agent.env = SimpleNamespace(close=MagicMock())
+
+    def evaluate_sample(sample_agent):
+        _write_trajectory_success(sample_agent.trajectory_path, False)
+        return False
+
+    monkeypatch.setattr(SampleAgent, "_start_agent_and_environment", start_sample)
+    monkeypatch.setattr(SampleAgent, "_evaluate_sample", evaluate_sample)
+
+    sample_agent = SampleAgent(runner.sampled_instances[0][0], runner)
+
+    assert sample_agent.rollout() == runner.sampled_instances[0][0]
+    assert (sample_dir / f"{instance_id}.patch").read_text() == "new patch"
+    assert json.loads(trajectory_path.read_text())["info"] == {
+        "exit_status": "submitted",
+        "success": False,
+    }
+    assert "old debug log" not in (sample_dir / "debug.log").read_text()
+    assert not (sample_dir / "stale.txt").exists()
+    assert not stale_eval_dir.exists()
 
 
 def test_progress_status_reads_and_writes_hold_lock():
