@@ -1,0 +1,205 @@
+pre
+misc::replace_with_only_matching pass
+feature::f89_files_without_match pass
+feature::f45_precedence_with_others pass
+regression::r1259_drop_last_byte_nonl pass
+misc::byte_offset_only_matching pass
+feature::f243_column_line pass
+regression::r1559 pass
+feature::f45_precedence_internal pass
+feature::f1404_nothing_searched_warning pass
+regression::r900 pass
+regression::r256_j1 pass
+regression::r1537 pass
+regression::r1380 pass
+regression::r199 pass
+regression::r1446_respect_excludes_in_worktree pass
+regression::r1130 pass
+regression::r270 pass
+feature::f1420_no_ignore_exclude pass
+regression::r1638 pass
+regression::r391 pass
+regression::r483_matching_no_stdout pass
+regression::r16 pass
+feature::f70_smart_case pass
+regression::r206 pass
+feature::f419_zero_as_shortcut_for_null pass
+regression::r599 pass
+regression::r451_only_matching pass
+regression::r137 pass
+regression::r1765 pass
+regression::r483_non_matching_exit_code pass
+regression::r99 pass
+regression::r451_only_matching_as_in_issue pass
+regression::r228 pass
+regression::r30 pass
+regression::r428_color_context_path pass
+regression::r279 pass
+regression::r693_context_in_contextless_mode pass
+regression::r64 pass
+regression::r229 pass
+feature::f196_persistent_config pass
+regression::r1203_reverse_suffix_literal pass
+regression::r251 pass
+feature::f1404_nothing_searched_ignored pass
+regression::r50 pass
+regression::r67 pass
+regression::r49 pass
+json::r1095_missing_crlf pass
+feature::f1138_no_ignore_dot pass
+regression::r65 pass
+regression::r405 pass
+regression::r256 pass
+regression::r90 pass
+json::r1095_crlf_empty_match pass
+regression::r1164 pass
+feature::f1414_no_require_git pass
+regression::r553_flag pass
+regression::r428_unrecognized_style pass
+feature::f362_exceeds_regex_size_limit pass
+regression::r93 pass
+regression::r807 pass
+regression::r87 pass
+regression::r568_leading_hyphen_option_args pass
+regression::r25 pass
+misc::file_types_negate_all pass
+feature::f1842_field_match_separator pass
+regression::r184 pass
+feature::f45_relative_cwd pass
+regression::r553_switch pass
+feature::f1842_field_context_separator pass
+feature::f1466_no_ignore_files pass
+misc::word pass
+regression::r1878 pass
+feature::f740_passthru pass
+regression::r1891 pass
+misc::file_types_all pass
+regression::r506_word_not_parenthesized pass
+regression::r1868_context_passthru_override pass
+regression::r1159_exit_status pass
+crates/globset/src/lib.rs - (line 7) skip
+crates/globset/src/lib.rs - (line 37) pass
+crates/globset/src/lib.rs - (line 20) pass
+crates/globset/src/lib.rs - (line 54) pass
+crates/cli/src/lib.rs - (line 77) skip
+crates/cli/src/lib.rs - (line 85) skip
+crates/cli/src/process.rs - process::CommandReader (line 163) - compile pass
+crates/cli/src/decompress.rs - decompress::DecompressionReader (line 322) - compile pass
+crates/cli/src/pattern.rs - pattern::patterns_from_reader (line 135) pass
+crates/cli/src/lib.rs - (line 91) pass
+crates/cli/src/escape.rs - escape::escape (line 35) pass
+crates/cli/src/escape.rs - escape::unescape (line 86) pass
+crates/matcher/src/lib.rs - Match (line 68) pass
+crates/printer/src/color.rs - color::UserColorSpec (line 149) pass
+crates/printer/src/lib.rs - (line 28) pass
+crates/searcher/src/lib.rs - (line 49) pass
+crates/ignore/src/lib.rs - (line 35) - compile pass
+crates/ignore/src/lib.rs - (line 17) - compile pass
+crates/ignore/src/types.rs - types (line 71) pass
+crates/ignore/src/types.rs - types (line 51) pass
+crates/ignore/src/types.rs - types (line 16) pass
+crates/ignore/src/types.rs - types (line 34) pass
+post
+regression::r1064 pass
+misc::vimgrep pass
+misc::unrestricted2 pass
+feature::f1414_no_require_git pass
+regression::r137 pass
+feature::f1404_nothing_searched_warning pass
+regression::r1739_replacement_lineterm_match pass
+regression::r1765 pass
+regression::r1319 pass
+regression::r65 pass
+misc::vimgrep_no_line pass
+regression::r1163 pass
+regression::r900 pass
+misc::symlink_follow pass
+regression::r64 pass
+regression::r451_only_matching pass
+regression::r599 pass
+regression::r1446_respect_excludes_in_worktree pass
+regression::r693_context_in_contextless_mode pass
+regression::r256_j1 pass
+regression::r16 pass
+regression::r391 pass
+regression::r210 pass
+regression::r483_non_matching_exit_code pass
+regression::r99 pass
+regression::r156 pass
+regression::r128 pass
+regression::r256 pass
+regression::r1537 pass
+regression::r279 pass
+feature::f1138_no_ignore_dot pass
+regression::r206 pass
+regression::r1559 pass
+regression::r428_color_context_path pass
+regression::r493 pass
+regression::r49 pass
+regression::r2095 pass
+regression::r90 pass
+regression::r1130 pass
+regression::r1173 pass
+regression::r1638 pass
+regression::r229 pass
+regression::r228 pass
+regression::r30 pass
+regression::r1174 pass
+regression::r270 pass
+regression::r807 pass
+regression::r199 pass
+regression::r2208 pass
+regression::r553_flag pass
+regression::r428_unrecognized_style pass
+regression::r127 pass
+regression::r67 pass
+misc::file_types_negate_all pass
+regression::r87 pass
+regression::r251 pass
+regression::r1259_drop_last_byte_nonl pass
+regression::r405 pass
+regression::r25 pass
+regression::r50 pass
+regression::r1164 pass
+misc::replace_with_only_matching pass
+regression::r1203_reverse_suffix_literal pass
+regression::r93 pass
+feature::f1842_field_match_separator pass
+regression::r184 pass
+feature::f1466_no_ignore_files pass
+feature::f1842_field_context_separator pass
+regression::r553_switch pass
+regression::r568_leading_hyphen_option_args pass
+feature::f740_passthru pass
+feature::f45_relative_cwd pass
+regression::r1878 pass
+regression::r506_word_not_parenthesized pass
+misc::word pass
+regression::r1868_context_passthru_override pass
+regression::r1891 pass
+regression::r1159_exit_status pass
+crates/globset/src/lib.rs - (line 7) skip
+crates/globset/src/lib.rs - (line 20) pass
+crates/globset/src/lib.rs - (line 37) pass
+crates/globset/src/lib.rs - (line 54) pass
+crates/cli/src/lib.rs - (line 77) skip
+crates/cli/src/lib.rs - (line 85) skip
+crates/cli/src/decompress.rs - decompress::DecompressionReader (line 322) - compile pass
+crates/cli/src/process.rs - process::CommandReader (line 163) - compile pass
+crates/cli/src/pattern.rs - pattern::patterns_from_reader (line 135) pass
+crates/cli/src/lib.rs - (line 91) pass
+crates/cli/src/escape.rs - escape::unescape (line 86) pass
+crates/cli/src/escape.rs - escape::escape (line 35) pass
+crates/matcher/src/lib.rs - Match (line 68) pass
+crates/printer/src/color.rs - color::UserColorSpec (line 149) pass
+crates/printer/src/lib.rs - (line 28) pass
+crates/searcher/src/lib.rs - (line 49) pass
+crates/ignore/src/lib.rs - (line 17) - compile pass
+crates/ignore/src/lib.rs - (line 35) - compile pass
+crates/ignore/src/types.rs - types (line 16) pass
+crates/ignore/src/types.rs - types (line 51) pass
+crates/ignore/src/types.rs - types (line 34) pass
+crates/ignore/src/types.rs - types (line 71) pass
+build success
+release success
+{'regression::r2208', 'regression::r2095'}

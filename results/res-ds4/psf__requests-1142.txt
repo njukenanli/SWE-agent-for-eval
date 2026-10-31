@@ -1,0 +1,119 @@
+pre
+Collecting pytest
+  Using cached pytest-8.4.2-py3-none-any.whl (365 kB)
+Collecting iniconfig>=1
+  Using cached iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Collecting pluggy<2,>=1.5
+  Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Collecting exceptiongroup>=1
+  Using cached exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Collecting pygments>=2.7.2
+  Using cached pygments-2.20.0-py3-none-any.whl (1.2 MB)
+Collecting tomli>=1
+  Using cached tomli-2.4.1-py3-none-any.whl (14 kB)
+Collecting packaging>=20
+  Using cached packaging-26.2-py3-none-any.whl (100 kB)
+Collecting typing-extensions>=4.6.0
+  Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, tomli, pygments, pluggy, packaging, iniconfig, exceptiongroup, pytest
+Successfully installed exceptiongroup-1.3.1 iniconfig-2.1.0 packaging-26.2 pluggy-1.6.0 pygments-2.20.0 pytest-8.4.2 tomli-2.4.1 typing-extensions-4.16.0
+WARNING: There was an error checking the latest version of pip.
+Obtaining file:///testbed
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Installing collected packages: requests
+  Attempting uninstall: requests
+    Found existing installation: requests 1.1.0
+    Not uninstalling requests at /testbed, outside environment /testbed/.venv
+    Can't uninstall 'requests'. No files were found to uninstall.
+  Running setup.py develop for requests
+Successfully installed requests-1.1.0
+WARNING: There was an error checking the latest version of pip.
+RequestsTestCase::test_BASICAUTH_TUPLE_HTTP_200_OK_GET fail
+RequestsTestCase::test_DIGESTAUTH_WRONG_HTTP_401_GET fail
+RequestsTestCase::test_DIGEST_HTTP_200_OK_GET fail
+RequestsTestCase::test_HTTP_200_OK_GET_ALTERNATIVE fail
+RequestsTestCase::test_HTTP_200_OK_GET_WITH_MIXED_PARAMS fail
+RequestsTestCase::test_HTTP_200_OK_GET_WITH_PARAMS fail
+RequestsTestCase::test_HTTP_200_OK_HEAD fail
+RequestsTestCase::test_HTTP_200_OK_PUT fail
+RequestsTestCase::test_HTTP_302_ALLOW_REDIRECT_GET fail
+RequestsTestCase::test_POSTBIN_GET_POST_FILES fail
+RequestsTestCase::test_POSTBIN_GET_POST_FILES_WITH_DATA fail
+RequestsTestCase::test_basic_building pass
+RequestsTestCase::test_custom_content_type fail
+RequestsTestCase::test_decompress_gzip fail
+RequestsTestCase::test_different_encodings_dont_break_post fail
+RequestsTestCase::test_entry_points pass
+RequestsTestCase::test_invalid_url pass
+RequestsTestCase::test_links fail
+RequestsTestCase::test_params_are_added_before_fragment pass
+RequestsTestCase::test_path_is_not_double_encoded pass
+RequestsTestCase::test_prepared_request_hook fail
+RequestsTestCase::test_request_ok_set fail
+RequestsTestCase::test_status_raising fail
+RequestsTestCase::test_unicode_get fail
+RequestsTestCase::test_urlencoded_get_query_multivalued_param fail
+RequestsTestCase::test_user_agent_transfers fail
+post
+Collecting pytest
+  Using cached pytest-8.4.2-py3-none-any.whl (365 kB)
+Collecting tomli>=1
+  Using cached tomli-2.4.1-py3-none-any.whl (14 kB)
+Collecting exceptiongroup>=1
+  Using cached exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Collecting packaging>=20
+  Using cached packaging-26.2-py3-none-any.whl (100 kB)
+Collecting iniconfig>=1
+  Using cached iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Collecting pluggy<2,>=1.5
+  Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Collecting pygments>=2.7.2
+  Using cached pygments-2.20.0-py3-none-any.whl (1.2 MB)
+Collecting typing-extensions>=4.6.0
+  Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, tomli, pygments, pluggy, packaging, iniconfig, exceptiongroup, pytest
+Successfully installed exceptiongroup-1.3.1 iniconfig-2.1.0 packaging-26.2 pluggy-1.6.0 pygments-2.20.0 pytest-8.4.2 tomli-2.4.1 typing-extensions-4.16.0
+WARNING: There was an error checking the latest version of pip.
+Obtaining file:///testbed
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Installing collected packages: requests
+  Attempting uninstall: requests
+    Found existing installation: requests 1.1.0
+    Not uninstalling requests at /testbed, outside environment /testbed/.venv
+    Can't uninstall 'requests'. No files were found to uninstall.
+  Running setup.py develop for requests
+Successfully installed requests-1.1.0
+WARNING: There was an error checking the latest version of pip.
+RequestsTestCase::test_BASICAUTH_TUPLE_HTTP_200_OK_GET fail
+RequestsTestCase::test_DIGESTAUTH_WRONG_HTTP_401_GET fail
+RequestsTestCase::test_DIGEST_HTTP_200_OK_GET fail
+RequestsTestCase::test_HTTP_200_OK_GET_ALTERNATIVE fail
+RequestsTestCase::test_HTTP_200_OK_GET_WITH_MIXED_PARAMS fail
+RequestsTestCase::test_HTTP_200_OK_GET_WITH_PARAMS fail
+RequestsTestCase::test_HTTP_200_OK_HEAD fail
+RequestsTestCase::test_HTTP_200_OK_PUT fail
+RequestsTestCase::test_HTTP_302_ALLOW_REDIRECT_GET fail
+RequestsTestCase::test_POSTBIN_GET_POST_FILES fail
+RequestsTestCase::test_POSTBIN_GET_POST_FILES_WITH_DATA fail
+RequestsTestCase::test_basic_building pass
+RequestsTestCase::test_custom_content_type fail
+RequestsTestCase::test_decompress_gzip fail
+RequestsTestCase::test_different_encodings_dont_break_post fail
+RequestsTestCase::test_entry_points pass
+RequestsTestCase::test_invalid_url pass
+RequestsTestCase::test_links fail
+RequestsTestCase::test_no_content_length pass
+RequestsTestCase::test_params_are_added_before_fragment pass
+RequestsTestCase::test_path_is_not_double_encoded pass
+RequestsTestCase::test_prepared_request_hook fail
+RequestsTestCase::test_request_ok_set fail
+RequestsTestCase::test_status_raising fail
+RequestsTestCase::test_unicode_get fail
+RequestsTestCase::test_urlencoded_get_query_multivalued_param fail
+RequestsTestCase::test_user_agent_transfers fail
+(.venv) (.venv) build success
+release success
+{'RequestsTestCase::test_no_content_length'}
+(.venv) (.venv) 

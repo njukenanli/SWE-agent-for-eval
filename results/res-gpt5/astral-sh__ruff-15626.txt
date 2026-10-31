@@ -1,0 +1,66 @@
+pre
+   Compiling red_knot_wasm v0.0.0 (/testbed/crates/red_knot_wasm)
+   Compiling ruff_wasm v0.9.2 (/testbed/crates/ruff_wasm)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 12.82s
+unittests src/main.rs target/debug/deps/red_knot-32239541be2b0814::python_version::tests::same_default_as_python_version pass
+tests/cli.rs target/debug/deps/cli-690d2808810444fe::test_config_override pass
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::hard_links_to_target_outside_project skip
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::changed_versions_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::new_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::changed_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::directory_moved_to_trash fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::deleted_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::unix::changed_metadata fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::directory_moved_to_project fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::unix::symlink_inside_project fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::directory_deleted fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::change_python_version_and_platform fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::unix::symlinked_module_search_path fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::new_ignored_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::add_search_path fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::hard_links_in_project fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::rename_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::nested_projects_delete_root fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::unix::symlink_target_outside_watched_paths fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::move_file_to_project fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::move_file_to_trash fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::directory_renamed fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::search_path fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::remove_search_path fail
+post
+   Compiling red_knot_wasm v0.0.0 (/testbed/crates/red_knot_wasm)
+   Compiling ruff_linter v0.9.2 (/testbed/crates/ruff_linter)
+   Compiling ruff_graph v0.1.0 (/testbed/crates/ruff_graph)
+   Compiling ruff_workspace v0.0.0 (/testbed/crates/ruff_workspace)
+   Compiling ruff_server v0.2.2 (/testbed/crates/ruff_server)
+   Compiling ruff_wasm v0.9.2 (/testbed/crates/ruff_wasm)
+   Compiling ruff v0.9.2 (/testbed/crates/ruff)
+   Compiling ruff_dev v0.0.0 (/testbed/crates/ruff_dev)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 38.60s
+unittests src/main.rs target/debug/deps/red_knot-32239541be2b0814::python_version::tests::same_default_as_python_version pass
+tests/cli.rs target/debug/deps/cli-690d2808810444fe::test_config_override pass
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::hard_links_to_target_outside_project skip
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::changed_versions_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::new_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::nested_projects_delete_root fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::changed_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::deleted_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::hard_links_in_project fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::directory_moved_to_project fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::change_python_version_and_platform fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::unix::changed_metadata fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::move_file_to_trash fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::move_file_to_project fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::add_search_path fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::new_ignored_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::directory_moved_to_trash fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::directory_deleted fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::search_path fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::rename_file fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::remove_search_path fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::directory_renamed fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::unix::symlinked_module_search_path fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::unix::symlink_inside_project fail
+tests/file_watching.rs target/debug/deps/file_watching-64aa9397f6549d2d::unix::symlink_target_outside_watched_paths fail
+build success
+release failed

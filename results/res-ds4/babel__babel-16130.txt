@@ -1,0 +1,205 @@
+pre
+-b :: pass
+arguments :: pass
+directory :: pass
+filename :: pass
+no-strict :: pass
+node-execArgv :: pass
+node_--inspect :: pass
+node_--no-lazy :: pass
+node_-gc_alias_--expose-gc :: pass
+require :: pass
+subprocess-ipc :: pass
+subprocess-no-ipc :: pass
+v8Flag-dashed :: pass
+v8Flag-dashed-with-param :: pass
+v8Flag-underscored :: pass
+v8Flag-underscored-with-param :: pass
+--config-file babelrc nocomment :: pass
+--copy-files :: pass
+--copy-files --include-dotfiles :: pass
+--copy-files --include-dotfiles with ignore :: pass
+--copy-files --include-dotfiles with ignore in babelrc :: pass
+--copy-files --include-dotfiles with only :: pass
+--copy-files --no-copy-ignored with babelignore :: pass
+--copy-files --no-copy-ignored with ignore :: pass
+--copy-files --no-copy-ignored with ignore in babelrc :: pass
+--copy-files --no-copy-ignored with only :: pass
+--copy-files with ignore :: pass
+--copy-files with ignore in babelignore :: pass
+--copy-files with ignore in babelrc :: pass
+--copy-files with only :: pass
+--ignore :: pass
+--ignore complete :: pass
+--ignore glob :: pass
+--minified :: pass
+--only :: pass
+--only glob :: pass
+dir --out-dir :: pass
+dir --out-dir --copy-files :: pass
+dir --out-dir --keep-file-extension :: pass
+dir --out-dir --out-file :: pass
+dir --out-dir --out-file-extension :: pass
+dir --out-dir --relative :: pass
+dir --out-dir --source-maps :: pass
+dir --out-dir --source-maps inline :: pass
+dir --out-dir --verbose :: pass
+dir --out-dir --watch --verbose with external dependencies :: pass
+dir --out-dir --watch multiple dir :: pass
+dir --out-dir --watch with external dependencies :: pass
+dir --out-dir no filenames :: pass
+dir --out-file :: pass
+dir --out-file --extensions :: pass
+dir --skip-initial-build no --watch :: pass
+dir --watch no --out-dir no --out-file :: pass
+dir-sourcemap-config-both :: pass
+dir-sourcemap-config-false :: pass
+dir-sourcemap-config-inline :: pass
+dir-sourcemap-config-inline-cli-false :: pass
+dir-sourcemap-config-inline-cli-true :: pass
+dir-sourcemap-config-true :: pass
+empty dir --out-dir :: pass
+env - SHOW_CONFIG_FOR :: pass
+env - SHOW_CONFIG_FOR with ignored file :: pass
+env - SHOW_CONFIG_FOR with multiple files :: pass
+env - SHOW_CONFIG_FOR with only file :: pass
+error - SHOW_CONFIG_FOR is a folder :: pass
+error --keep-file-extension --out-file-extension :: pass
+error --out-dir :: pass
+error --out-dir --out-file :: pass
+error --relative :: pass
+error --skip-initial-build :: pass
+error --watch :: pass
+error --watch no filename :: pass
+error incorrect options after args :: pass
+error incorrect options before args :: pass
+error wrong filename :: pass
+filename --no-comments :: pass
+filename --out-dir :: pass
+filename --out-dir --relative :: pass
+filename --out-file :: pass
+filename --out-file --source-maps inline :: pass
+filename --out-file deep :: pass
+filename --watch no filenames :: pass
+filename babelrc no comments :: pass
+filename default comments :: pass
+filename does not exist :: pass
+filename-sourcemap --out-file --source-maps inline :: pass
+filenames --out-file :: pass
+filenames --out-file --source-maps :: pass
+filenames --out-file --source-maps inline :: pass
+filenames-sourcemap-config-both :: pass
+stdin :: pass
+stdin --filename :: pass
+stdin --out-file :: pass
+stdin --out-file --source-maps :: pass
+stdin --source-maps inline :: pass
+--output-type global :: pass
+--output-type umd :: pass
+--output-type var :: pass
+--whitelist :: pass
+should warn the user if chmod fails :: pass
+post
+-b :: pass
+arguments :: pass
+directory :: pass
+filename :: pass
+no-strict :: pass
+node-execArgv :: pass
+node_--inspect :: pass
+node_--no-lazy :: pass
+node_-gc_alias_--expose-gc :: pass
+require :: pass
+subprocess-ipc :: pass
+subprocess-no-ipc :: pass
+v8Flag-dashed :: pass
+v8Flag-dashed-with-param :: pass
+v8Flag-underscored :: pass
+v8Flag-underscored-with-param :: pass
+--config-file babelrc nocomment :: pass
+--copy-files :: pass
+--copy-files --include-dotfiles :: pass
+--copy-files --include-dotfiles with ignore :: pass
+--copy-files --include-dotfiles with ignore in babelrc :: pass
+--copy-files --include-dotfiles with only :: pass
+--copy-files --no-copy-ignored with babelignore :: pass
+--copy-files --no-copy-ignored with ignore :: pass
+--copy-files --no-copy-ignored with ignore in babelrc :: pass
+--copy-files --no-copy-ignored with only :: pass
+--copy-files with ignore :: pass
+--copy-files with ignore in babelignore :: pass
+--copy-files with ignore in babelrc :: pass
+--copy-files with only :: pass
+--ignore :: pass
+--ignore complete :: pass
+--ignore glob :: pass
+--minified :: pass
+--only :: pass
+--only glob :: pass
+dir --out-dir :: pass
+dir --out-dir --copy-files :: pass
+dir --out-dir --keep-file-extension :: pass
+dir --out-dir --out-file :: pass
+dir --out-dir --out-file-extension :: pass
+dir --out-dir --relative :: pass
+dir --out-dir --source-maps :: pass
+dir --out-dir --source-maps inline :: pass
+dir --out-dir --verbose :: pass
+dir --out-dir --watch --verbose with external dependencies :: pass
+dir --out-dir --watch multiple dir :: pass
+dir --out-dir --watch with external dependencies :: pass
+dir --out-dir no filenames :: pass
+dir --out-file :: pass
+dir --out-file --extensions :: pass
+dir --skip-initial-build no --watch :: pass
+dir --watch no --out-dir no --out-file :: pass
+dir-sourcemap-config-both :: pass
+dir-sourcemap-config-false :: pass
+dir-sourcemap-config-inline :: pass
+dir-sourcemap-config-inline-cli-false :: pass
+dir-sourcemap-config-inline-cli-true :: pass
+dir-sourcemap-config-true :: pass
+empty dir --out-dir :: pass
+env - SHOW_CONFIG_FOR :: pass
+env - SHOW_CONFIG_FOR with ignored file :: pass
+env - SHOW_CONFIG_FOR with multiple files :: pass
+env - SHOW_CONFIG_FOR with only file :: pass
+error - SHOW_CONFIG_FOR is a folder :: pass
+error --keep-file-extension --out-file-extension :: pass
+error --out-dir :: pass
+error --out-dir --out-file :: pass
+error --relative :: pass
+error --skip-initial-build :: pass
+error --watch :: pass
+error --watch no filename :: pass
+error incorrect options after args :: pass
+error incorrect options before args :: pass
+error wrong filename :: pass
+filename --no-comments :: pass
+filename --out-dir :: pass
+filename --out-dir --relative :: pass
+filename --out-file :: pass
+filename --out-file --source-maps inline :: pass
+filename --out-file deep :: pass
+filename --watch no filenames :: pass
+filename babelrc no comments :: pass
+filename default comments :: pass
+filename does not exist :: pass
+filename-sourcemap --out-file --source-maps inline :: pass
+filenames --out-file :: pass
+filenames --out-file --source-maps :: pass
+filenames --out-file --source-maps inline :: pass
+filenames-sourcemap-config-both :: pass
+stdin :: pass
+stdin --filename :: pass
+stdin --out-file :: pass
+stdin --out-file --source-maps :: pass
+stdin --source-maps inline :: pass
+--output-type global :: pass
+--output-type umd :: pass
+--output-type var :: pass
+--whitelist :: pass
+should warn the user if chmod fails :: pass
+build success
+release success
+{'declaration name conflict helper entrypoint ::'}

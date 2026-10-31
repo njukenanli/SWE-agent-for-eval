@@ -1,0 +1,204 @@
+pre
+node-resolve: setting options.jsnext is deprecated, please override options.mainFields instead
+node-resolve: setting options.module is deprecated, please override options.mainFields instead
+node-resolve: setting options.jsnext is deprecated, please override options.mainFields instead
+node-resolve: setting options.module is deprecated, please override options.mainFields instead
+node-resolve: setting options.jsnext is deprecated, please override options.mainFields instead
+node-resolve: setting options.module is deprecated, please override options.mainFields instead
+node-resolve: setting options.jsnext is deprecated, please override options.mainFields instead
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Using named and default exports together. Consumers of your bundle will have to use preactCompat['default'] to access the default export, which may not be what you want. Use `output.exports: 'named'` to disable this warning
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "preactTestUtils" to dist:
+        404 B: testUtils.js.gz
+        919 B: testUtils.js.br
+        403 B: testUtils.module.js.gz
+        788 B: testUtils.module.js.br
+        483 B: testUtils.umd.js.gz
+       1098 B: testUtils.umd.js.br
+Build "preactDevtools" to dist:
+        154 B: devtools.js.gz
+        185 B: devtools.js.br
+        160 B: devtools.module.js.gz
+        196 B: devtools.module.js.br
+        230 B: devtools.umd.js.gz
+        341 B: devtools.umd.js.br
+Build "preact" to dist:
+       4060 B: preact.min.js.gz
+      10207 B: preact.min.js.br
+Build "preactHooks" to dist:
+       1071 B: hooks.js.gz
+       2690 B: hooks.js.br
+       1084 B: hooks.module.js.gz
+       2525 B: hooks.module.js.br
+       1142 B: hooks.umd.js.gz
+       2821 B: hooks.umd.js.br
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "preactDebug" to dist:
+       3067 B: debug.js.gz
+       7867 B: debug.js.br
+       3059 B: debug.module.js.gz
+       7674 B: debug.module.js.br
+       3153 B: debug.umd.js.gz
+       8072 B: debug.umd.js.br
+Using named and default exports together. Consumers of your bundle will have to use preactCompat['default'] to access the default export, which may not be what you want. Use `output.exports: 'named'` to disable this warning
+Build "preactCompat" to dist:
+       3140 B: compat.js.gz
+       8017 B: compat.js.br
+       3149 B: compat.module.js.gz
+       7587 B: compat.module.js.br
+       3197 B: compat.umd.js.gz
+       8084 B: compat.umd.js.br
+Build "preact" to dist:
+       4029 B: preact.js.gz
+      10241 B: preact.js.br
+       4043 B: preact.module.js.gz
+      10197 B: preact.module.js.br
+       4092 B: preact.umd.js.gz
+      10337 B: preact.umd.js.br
+
+> preact@10.4.8 postbuild
+> node ./config/node-13-exports.js
+
+createContext should return a Provider and a Consumer :: pass
+createContext should return a valid Provider Component :: pass
+createElement(jsx) should return a VNode :: pass
+createElement(jsx) should set VNode#type property :: pass
+createElement(jsx) should set VNode.constructor property to prevent json injection :: pass
+createElement(jsx) should set VNode#props property :: pass
+createElement(jsx) should set VNode#key property :: pass
+createElement(jsx) should not set VNode#props.key property :: pass
+createElement(jsx) should set VNode#ref property :: pass
+createElement(jsx) should not set VNode#props.ref property :: pass
+createElement(jsx) should have ordered VNode properties :: pass
+createElement(jsx) should preserve raw props :: pass
+createElement(jsx) should support element children :: pass
+createElement(jsx) should support multiple element children, given as arg list :: pass
+createElement(jsx) should handle multiple element children, given as an array :: pass
+createElement(jsx) should support nested children :: pass
+createElement(jsx) should support text children :: pass
+createElement(jsx) should NOT set children prop when null :: pass
+createElement(jsx) should NOT set children prop when unspecified :: pass
+createElement(jsx) should NOT merge adjacent text children :: pass
+createElement(jsx) should not merge nested adjacent text children :: pass
+createElement(jsx) should not merge children that are boolean values :: pass
+createElement(jsx) should not merge children of components :: pass
+createElement(jsx) should ignore props.children if children are manually specified :: pass
+preact should be available as named exports :: pass
+isValidElement should check if the argument is a valid vnode :: pass
+build artifact should have exported properties :: pass
+post
+node-resolve: setting options.jsnext is deprecated, please override options.mainFields instead
+node-resolve: setting options.module is deprecated, please override options.mainFields instead
+node-resolve: setting options.jsnext is deprecated, please override options.mainFields instead
+node-resolve: setting options.module is deprecated, please override options.mainFields instead
+node-resolve: setting options.jsnext is deprecated, please override options.mainFields instead
+node-resolve: setting options.module is deprecated, please override options.mainFields instead
+node-resolve: setting options.jsnext is deprecated, please override options.mainFields instead
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Using named and default exports together. Consumers of your bundle will have to use preactCompat['default'] to access the default export, which may not be what you want. Use `output.exports: 'named'` to disable this warning
+Build "preactDevtools" to dist:
+        154 B: devtools.js.gz
+        185 B: devtools.js.br
+        160 B: devtools.module.js.gz
+        196 B: devtools.module.js.br
+        230 B: devtools.umd.js.gz
+        341 B: devtools.umd.js.br
+Build "preactTestUtils" to dist:
+        404 B: testUtils.js.gz
+        919 B: testUtils.js.br
+        403 B: testUtils.module.js.gz
+        788 B: testUtils.module.js.br
+        483 B: testUtils.umd.js.gz
+       1098 B: testUtils.umd.js.br
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "preact" to dist:
+       4060 B: preact.min.js.gz
+      10207 B: preact.min.js.br
+Build "preactHooks" to dist:
+       1071 B: hooks.js.gz
+       2690 B: hooks.js.br
+       1084 B: hooks.module.js.gz
+       2525 B: hooks.module.js.br
+       1142 B: hooks.umd.js.gz
+       2821 B: hooks.umd.js.br
+Using named and default exports together. Consumers of your bundle will have to use preactCompat['default'] to access the default export, which may not be what you want. Use `output.exports: 'named'` to disable this warning
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "preactCompat" to dist:
+       3140 B: compat.js.gz
+       8017 B: compat.js.br
+       3149 B: compat.module.js.gz
+       7587 B: compat.module.js.br
+       3197 B: compat.umd.js.gz
+       8084 B: compat.umd.js.br
+Build "preactDebug" to dist:
+       3067 B: debug.js.gz
+       7867 B: debug.js.br
+       3059 B: debug.module.js.gz
+       7674 B: debug.module.js.br
+       3153 B: debug.umd.js.gz
+       8072 B: debug.umd.js.br
+Build "preact" to dist:
+       4029 B: preact.js.gz
+      10241 B: preact.js.br
+       4043 B: preact.module.js.gz
+      10197 B: preact.module.js.br
+       4092 B: preact.umd.js.gz
+      10337 B: preact.umd.js.br
+
+> preact@10.4.8 postbuild
+> node ./config/node-13-exports.js
+
+createContext should return a Provider and a Consumer :: pass
+createContext should return a valid Provider Component :: pass
+createElement(jsx) should return a VNode :: pass
+createElement(jsx) should set VNode#type property :: pass
+createElement(jsx) should set VNode.constructor property to prevent json injection :: pass
+createElement(jsx) should set VNode#props property :: pass
+createElement(jsx) should set VNode#key property :: pass
+createElement(jsx) should not set VNode#props.key property :: pass
+createElement(jsx) should set VNode#ref property :: pass
+createElement(jsx) should not set VNode#props.ref property :: pass
+createElement(jsx) should have ordered VNode properties :: pass
+createElement(jsx) should preserve raw props :: pass
+createElement(jsx) should support element children :: pass
+createElement(jsx) should support multiple element children, given as arg list :: pass
+createElement(jsx) should handle multiple element children, given as an array :: pass
+createElement(jsx) should support nested children :: pass
+createElement(jsx) should support text children :: pass
+createElement(jsx) should NOT set children prop when null :: pass
+createElement(jsx) should NOT set children prop when unspecified :: pass
+createElement(jsx) should NOT merge adjacent text children :: pass
+createElement(jsx) should not merge nested adjacent text children :: pass
+createElement(jsx) should not merge children that are boolean values :: pass
+createElement(jsx) should not merge children of components :: pass
+createElement(jsx) should ignore props.children if children are manually specified :: pass
+preact should be available as named exports :: pass
+isValidElement should check if the argument is a valid vnode :: pass
+build artifact should have exported properties :: pass
+build success
+release failed

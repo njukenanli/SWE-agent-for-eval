@@ -1,0 +1,102 @@
+pre
+createContext should return a Provider and a Consumer :: pass
+createContext should return a valid Provider Component :: pass
+createElement(jsx) should return a VNode :: pass
+createElement(jsx) should set VNode#type property :: pass
+createElement(jsx) should set VNode.constructor property to prevent json injection :: pass
+createElement(jsx) should set VNode#props property :: pass
+createElement(jsx) should set VNode#key property :: pass
+createElement(jsx) should not set VNode#props.key property :: pass
+createElement(jsx) should set VNode#ref property :: pass
+createElement(jsx) should not set VNode#props.ref property :: pass
+createElement(jsx) should have ordered VNode properties :: pass
+createElement(jsx) should preserve raw props :: pass
+createElement(jsx) should support element children :: pass
+createElement(jsx) should support multiple element children, given as arg list :: pass
+createElement(jsx) should handle multiple element children, given as an array :: pass
+createElement(jsx) should support nested children :: pass
+createElement(jsx) should support text children :: pass
+createElement(jsx) should override children if null is provided as an argument :: pass
+createElement(jsx) should NOT set children prop when unspecified :: pass
+createElement(jsx) should NOT merge adjacent text children :: pass
+createElement(jsx) should not merge nested adjacent text children :: pass
+createElement(jsx) should not merge children that are boolean values :: pass
+createElement(jsx) should not merge children of components :: pass
+createElement(jsx) should respect defaultProps :: pass
+createElement(jsx) should override defaultProps :: pass
+createElement(jsx) should ignore props.children if children are manually specified :: pass
+preact should be available as named exports :: pass
+isValidElement should check if the argument is a valid vnode :: pass
+build artifact should have exported properties :: pass
+Component has state :: pass
+Component has props :: pass
+Component has no base when not mounted :: pass
+Component render can return null :: pass
+Component Fragment should render nested Fragments :: pass
+hoc wraps the given component :: pass
+VNode TS types is returned by h :: pass
+VNode TS types is returned by h :: pass
+VNode TS types createElement conforms to the VNode type :: pass
+VNode TS types has a nodeName equal to the construction function when SFC :: pass
+VNode TS types has a nodeName equal to the constructor of a component :: pass
+VNode TS types has children which is an array of string or other vnodes :: pass
+VNode TS types children type should work with toChildArray :: pass
+VNode TS types toChildArray should filter out some types :: pass
+VNode TS types functions like getDisplayType should work :: pass
+VNode TS types component should work with cloneElement :: pass
+VNode TS types component should work with cloneElement using generics :: pass
+Component setState can be used with an object :: skip
+Component setState can be used with a function :: skip
+test:ts:compat :: pass
+post
+createContext should return a Provider and a Consumer :: pass
+createContext should return a valid Provider Component :: pass
+createElement(jsx) should return a VNode :: pass
+createElement(jsx) should set VNode#type property :: pass
+createElement(jsx) should set VNode.constructor property to prevent json injection :: pass
+createElement(jsx) should set VNode#props property :: pass
+createElement(jsx) should set VNode#key property :: pass
+createElement(jsx) should not set VNode#props.key property :: pass
+createElement(jsx) should set VNode#ref property :: pass
+createElement(jsx) should not set VNode#props.ref property :: pass
+createElement(jsx) should have ordered VNode properties :: pass
+createElement(jsx) should preserve raw props :: pass
+createElement(jsx) should support element children :: pass
+createElement(jsx) should support multiple element children, given as arg list :: pass
+createElement(jsx) should handle multiple element children, given as an array :: pass
+createElement(jsx) should support nested children :: pass
+createElement(jsx) should support text children :: pass
+createElement(jsx) should override children if null is provided as an argument :: pass
+createElement(jsx) should NOT set children prop when unspecified :: pass
+createElement(jsx) should NOT merge adjacent text children :: pass
+createElement(jsx) should not merge nested adjacent text children :: pass
+createElement(jsx) should not merge children that are boolean values :: pass
+createElement(jsx) should not merge children of components :: pass
+createElement(jsx) should respect defaultProps :: pass
+createElement(jsx) should override defaultProps :: pass
+createElement(jsx) should ignore props.children if children are manually specified :: pass
+preact should be available as named exports :: pass
+isValidElement should check if the argument is a valid vnode :: pass
+build artifact should have exported properties :: pass
+Component has state :: pass
+Component has props :: pass
+Component has no base when not mounted :: pass
+Component render can return null :: pass
+Component Fragment should render nested Fragments :: pass
+hoc wraps the given component :: pass
+VNode TS types is returned by h :: pass
+VNode TS types is returned by h :: pass
+VNode TS types createElement conforms to the VNode type :: pass
+VNode TS types has a nodeName equal to the construction function when SFC :: pass
+VNode TS types has a nodeName equal to the constructor of a component :: pass
+VNode TS types has children which is an array of string or other vnodes :: pass
+VNode TS types children type should work with toChildArray :: pass
+VNode TS types toChildArray should filter out some types :: pass
+VNode TS types functions like getDisplayType should work :: pass
+VNode TS types component should work with cloneElement :: pass
+VNode TS types component should work with cloneElement using generics :: pass
+Component setState can be used with an object :: skip
+Component setState can be used with a function :: skip
+test:ts:compat :: pass
+build success
+release failed

@@ -1,0 +1,205 @@
+pre
+v8intrinsic/modulo/01 pass
+bin/babel-node --config-file pass
+bin/babel-node --env-name pass
+bin/babel-node --eval pass
+bin/babel-node --extensions pass
+bin/babel-node --no-babelrc pass
+bin/babel-node --presets pass
+bin/babel-node --print pass
+bin/babel-node --require pass
+bin/babel-node --require_node_modules pass
+bin/babel-node -b pass
+bin/babel-node arguments pass
+bin/babel-node directory pass
+bin/babel-node filename pass
+bin/babel-node no-strict pass
+bin/babel-node node-execArgv pass
+bin/babel-node node_--inspect pass
+bin/babel-node node_--no-lazy pass
+bin/babel-node node_-gc_alias_--expose-gc pass
+bin/babel-node require pass
+bin/babel-node subprocess-ipc pass
+bin/babel-node subprocess-no-ipc pass
+bin/babel-node v8Flag-dashed pass
+bin/babel-node v8Flag-dashed-with-param pass
+bin/babel-node v8Flag-underscored pass
+bin/babel-node v8Flag-underscored-with-param pass
+bin/babel --config-file babelrc nocomment pass
+bin/babel --copy-files pass
+bin/babel --copy-files --include-dotfiles pass
+bin/babel --copy-files --include-dotfiles with ignore pass
+bin/babel --copy-files --include-dotfiles with ignore in babelrc pass
+bin/babel --copy-files --include-dotfiles with only pass
+bin/babel --copy-files --no-copy-ignored with babelignore pass
+bin/babel --copy-files --no-copy-ignored with ignore pass
+bin/babel --copy-files --no-copy-ignored with ignore in babelrc pass
+bin/babel --copy-files --no-copy-ignored with only pass
+bin/babel --copy-files with ignore pass
+bin/babel --copy-files with ignore in babelignore pass
+bin/babel --copy-files with ignore in babelrc pass
+bin/babel --copy-files with only pass
+bin/babel --ignore pass
+bin/babel --ignore complete pass
+bin/babel --ignore glob pass
+bin/babel --minified pass
+bin/babel --only pass
+bin/babel --only glob pass
+bin/babel dir --out-dir pass
+bin/babel dir --out-dir --copy-files pass
+bin/babel dir --out-dir --keep-file-extension pass
+bin/babel dir --out-dir --out-file pass
+bin/babel dir --out-dir --out-file-extension pass
+bin/babel dir --out-dir --relative pass
+bin/babel dir --out-dir --source-maps pass
+bin/babel dir --out-dir --source-maps inline pass
+bin/babel dir --out-dir --verbose pass
+bin/babel dir --out-dir no filenames pass
+bin/babel dir --out-file pass
+bin/babel dir --out-file --extensions pass
+bin/babel dir --skip-initial-build no --watch pass
+bin/babel dir --watch no --out-dir no --out-file pass
+bin/babel empty dir --out-dir pass
+bin/babel env - SHOW_CONFIG_FOR pass
+bin/babel env - SHOW_CONFIG_FOR with ignored file pass
+bin/babel env - SHOW_CONFIG_FOR with multiple files pass
+bin/babel env - SHOW_CONFIG_FOR with only file pass
+bin/babel error - SHOW_CONFIG_FOR is a folder pass
+bin/babel error --keep-file-extension --out-file-extension pass
+bin/babel error --out-dir pass
+bin/babel error --out-dir --out-file pass
+bin/babel error --relative pass
+bin/babel error --skip-initial-build pass
+bin/babel error --watch pass
+bin/babel error --watch no filename pass
+bin/babel error incorrect options after args pass
+bin/babel error incorrect options before args pass
+bin/babel error wrong filename pass
+bin/babel filename --no-comments pass
+bin/babel filename --out-dir pass
+bin/babel filename --out-dir --relative pass
+bin/babel filename --out-file pass
+bin/babel filename --out-file --source-maps inline pass
+bin/babel filename --out-file deep pass
+bin/babel filename --watch no filenames pass
+bin/babel filename babelrc no comments pass
+bin/babel filename default comments pass
+bin/babel filename does not exist pass
+bin/babel filename-sourcemap --out-file --source-maps inline pass
+bin/babel filenames --out-file pass
+bin/babel filenames --out-file --source-maps pass
+bin/babel filenames --out-file --source-maps inline pass
+bin/babel stdin pass
+bin/babel stdin --filename pass
+bin/babel stdin --out-file pass
+bin/babel stdin --out-file --source-maps pass
+bin/babel stdin --source-maps inline pass
+bin/babel-external-helpers --output-type global pass
+bin/babel-external-helpers --output-type umd pass
+bin/babel-external-helpers --output-type var pass
+bin/babel-external-helpers --whitelist pass
+util.js chmod should warn the user if chmod fails pass
+post
+v8intrinsic/modulo/01 pass
+bin/babel-node --config-file pass
+bin/babel-node --env-name pass
+bin/babel-node --eval pass
+bin/babel-node --extensions pass
+bin/babel-node --no-babelrc pass
+bin/babel-node --presets pass
+bin/babel-node --print pass
+bin/babel-node --require pass
+bin/babel-node --require_node_modules pass
+bin/babel-node -b pass
+bin/babel-node arguments pass
+bin/babel-node directory pass
+bin/babel-node filename pass
+bin/babel-node no-strict pass
+bin/babel-node node-execArgv pass
+bin/babel-node node_--inspect pass
+bin/babel-node node_--no-lazy pass
+bin/babel-node node_-gc_alias_--expose-gc pass
+bin/babel-node require pass
+bin/babel-node subprocess-ipc pass
+bin/babel-node subprocess-no-ipc pass
+bin/babel-node v8Flag-dashed pass
+bin/babel-node v8Flag-dashed-with-param pass
+bin/babel-node v8Flag-underscored pass
+bin/babel-node v8Flag-underscored-with-param pass
+bin/babel --config-file babelrc nocomment pass
+bin/babel --copy-files pass
+bin/babel --copy-files --include-dotfiles pass
+bin/babel --copy-files --include-dotfiles with ignore pass
+bin/babel --copy-files --include-dotfiles with ignore in babelrc pass
+bin/babel --copy-files --include-dotfiles with only pass
+bin/babel --copy-files --no-copy-ignored with babelignore pass
+bin/babel --copy-files --no-copy-ignored with ignore pass
+bin/babel --copy-files --no-copy-ignored with ignore in babelrc pass
+bin/babel --copy-files --no-copy-ignored with only pass
+bin/babel --copy-files with ignore pass
+bin/babel --copy-files with ignore in babelignore pass
+bin/babel --copy-files with ignore in babelrc pass
+bin/babel --copy-files with only pass
+bin/babel --ignore pass
+bin/babel --ignore complete pass
+bin/babel --ignore glob pass
+bin/babel --minified pass
+bin/babel --only pass
+bin/babel --only glob pass
+bin/babel dir --out-dir pass
+bin/babel dir --out-dir --copy-files pass
+bin/babel dir --out-dir --keep-file-extension pass
+bin/babel dir --out-dir --out-file pass
+bin/babel dir --out-dir --out-file-extension pass
+bin/babel dir --out-dir --relative pass
+bin/babel dir --out-dir --source-maps pass
+bin/babel dir --out-dir --source-maps inline pass
+bin/babel dir --out-dir --verbose pass
+bin/babel dir --out-dir no filenames pass
+bin/babel dir --out-file pass
+bin/babel dir --out-file --extensions pass
+bin/babel dir --skip-initial-build no --watch pass
+bin/babel dir --watch no --out-dir no --out-file pass
+bin/babel empty dir --out-dir pass
+bin/babel env - SHOW_CONFIG_FOR pass
+bin/babel env - SHOW_CONFIG_FOR with ignored file pass
+bin/babel env - SHOW_CONFIG_FOR with multiple files pass
+bin/babel env - SHOW_CONFIG_FOR with only file pass
+bin/babel error - SHOW_CONFIG_FOR is a folder pass
+bin/babel error --keep-file-extension --out-file-extension pass
+bin/babel error --out-dir pass
+bin/babel error --out-dir --out-file pass
+bin/babel error --relative pass
+bin/babel error --skip-initial-build pass
+bin/babel error --watch pass
+bin/babel error --watch no filename pass
+bin/babel error incorrect options after args pass
+bin/babel error incorrect options before args pass
+bin/babel error wrong filename pass
+bin/babel filename --no-comments pass
+bin/babel filename --out-dir pass
+bin/babel filename --out-dir --relative pass
+bin/babel filename --out-file pass
+bin/babel filename --out-file --source-maps inline pass
+bin/babel filename --out-file deep pass
+bin/babel filename --watch no filenames pass
+bin/babel filename babelrc no comments pass
+bin/babel filename default comments pass
+bin/babel filename does not exist pass
+bin/babel filename-sourcemap --out-file --source-maps inline pass
+bin/babel filenames --out-file pass
+bin/babel filenames --out-file --source-maps pass
+bin/babel filenames --out-file --source-maps inline pass
+bin/babel stdin pass
+bin/babel stdin --filename pass
+bin/babel stdin --out-file pass
+bin/babel stdin --out-file --source-maps pass
+bin/babel stdin --source-maps inline pass
+bin/babel-external-helpers --output-type global pass
+bin/babel-external-helpers --output-type umd pass
+bin/babel-external-helpers --output-type var pass
+bin/babel-external-helpers --whitelist pass
+util.js chmod should warn the user if chmod fails pass
+build success
+release success
+{'[13:48:56] Compiling', 'NODE_FIELDS contains all fields in babel-parser/test/fixtures/es2017/async-functions/await-following-arrow-inside-params/output.json', 'es2017/async functions/await following arrow inside params', 'NODE_FIELDS contains all fields in babel-parser/test/fixtures/es2015/yield/yield-following-arrow-in-params/output.json', 'es2015/yield/yield following arrow in params'}

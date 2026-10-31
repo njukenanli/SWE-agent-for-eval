@@ -1,0 +1,7 @@
+pre
+Repository build/tests cannot be executed in this environment.
+Reason: npm dependency 'iltorb' requires native bindings; 'npm ci' fails during node-gyp build due to missing Python gyp metadata in the environment.
+post
+Repository build/tests cannot be executed in this environment.
+Reason: npm dependency 'iltorb' requires native bindings; 'npm ci' fails during node-gyp build due to missing Python gyp metadata in the environment.
+build failed

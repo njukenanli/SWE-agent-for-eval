@@ -1,0 +1,115 @@
+pre
+make  all-recursive
+make[1]: Entering directory '/testbed'
+Making all in modules/oniguruma
+make[2]: Entering directory '/testbed/modules/oniguruma'
+Making all in src
+make[3]: Entering directory '/testbed/modules/oniguruma/src'
+make  all-am
+make[4]: Entering directory '/testbed/modules/oniguruma/src'
+make[4]: Leaving directory '/testbed/modules/oniguruma/src'
+make[3]: Leaving directory '/testbed/modules/oniguruma/src'
+Making all in test
+make[3]: Entering directory '/testbed/modules/oniguruma/test'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/testbed/modules/oniguruma/test'
+Making all in sample
+make[3]: Entering directory '/testbed/modules/oniguruma/sample'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/testbed/modules/oniguruma/sample'
+make[3]: Entering directory '/testbed/modules/oniguruma'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/testbed/modules/oniguruma'
+make[2]: Leaving directory '/testbed/modules/oniguruma'
+make[2]: Entering directory '/testbed'
+make[2]: Leaving directory '/testbed'
+make[1]: Leaving directory '/testbed'
+test_utf8 pass
+test_syntax pass
+test_options pass
+testc pass
+testcu pass
+test_regset pass
+test_back pass
+encode pass
+listcap pass
+names pass
+simple pass
+sql pass
+syntax pass
+user_property pass
+callout pass
+echo pass
+count pass
+bug_fix pass
+regset pass
+scan pass
+callback_each_match pass
+tests/mantest pass
+tests/jqtest pass
+tests/shtest pass
+tests/utf8test pass
+tests/base64test pass
+tests/optionaltest pass
+tests/onigtest pass
+tests/manonigtest pass
+post
+make  all-recursive
+make[1]: Entering directory '/testbed'
+Making all in modules/oniguruma
+make[2]: Entering directory '/testbed/modules/oniguruma'
+Making all in src
+make[3]: Entering directory '/testbed/modules/oniguruma/src'
+make  all-am
+make[4]: Entering directory '/testbed/modules/oniguruma/src'
+make[4]: Leaving directory '/testbed/modules/oniguruma/src'
+make[3]: Leaving directory '/testbed/modules/oniguruma/src'
+Making all in test
+make[3]: Entering directory '/testbed/modules/oniguruma/test'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/testbed/modules/oniguruma/test'
+Making all in sample
+make[3]: Entering directory '/testbed/modules/oniguruma/sample'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/testbed/modules/oniguruma/sample'
+make[3]: Entering directory '/testbed/modules/oniguruma'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/testbed/modules/oniguruma'
+make[2]: Leaving directory '/testbed/modules/oniguruma'
+make[2]: Entering directory '/testbed'
+  GEN      jq.1
+  CC       src/main.o
+  CCLD     jq
+make[2]: Leaving directory '/testbed'
+make[1]: Leaving directory '/testbed'
+test_utf8 pass
+test_syntax pass
+test_options pass
+testc pass
+testcu pass
+test_regset pass
+test_back pass
+encode pass
+listcap pass
+names pass
+simple pass
+sql pass
+syntax pass
+user_property pass
+callout pass
+echo pass
+count pass
+bug_fix pass
+regset pass
+scan pass
+callback_each_match pass
+tests/mantest pass
+tests/jqtest pass
+tests/shtest pass
+tests/utf8test pass
+tests/base64test pass
+tests/optionaltest pass
+tests/onigtest pass
+tests/manonigtest pass
+build success
+release failed

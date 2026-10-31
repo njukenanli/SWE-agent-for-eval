@@ -1,0 +1,205 @@
+pre
+extract::path::tests::wildcard pass
+routing::tests::nest::wrong_method_nest pass
+response::sse::tests::keep_alive_ends_when_the_stream_ends pass
+routing::tests::nest::nested_with_other_route_also_matching_with_route_last pass
+routing::tests::limited_body_with_streaming_body pass
+routing::tests::nest::nest_8 pass
+routing::tests::route_layer pass
+routing::tests::merge::basic pass
+routing::tests::hello_world pass
+routing::tests::merge::middleware_that_return_early pass
+routing::tests::nest::nest_11 pass
+routing::tests::merge::nesting_and_seeing_the_right_uri_ors_with_nesting pass
+routing::tests::head_with_middleware_applied pass
+routing::tests::nest::nest_7 pass
+routing::tests::nest::nest_12 pass
+routing::tests::nest::nest_6 pass
+routing::tests::nest::nest_13 pass
+routing::tests::nest::nest_1 pass
+routing::tests::nest::nest_static_file_server pass
+routing::tests::merge::many_ors pass
+response::sse::tests::keep_alive pass
+routing::tests::merge::nested_or pass
+json::tests::json_content_types pass
+routing::tests::merge::layer_and_handle_error pass
+routing::tests::handle_error::handler_multiple_methods_last pass
+routing::tests::handle_error::handler_multiple_methods_middle pass
+routing::tests::handle_error::handler pass
+routing::tests::merge::multiple_ors_balanced_differently pass
+body::test_try_downcast pass
+extract::cached::tests::works pass
+routing::resource::tests::works pass
+tests/debug_handler/fail/argument_not_extractor.rs [should fail to compile] fail
+tests/debug_handler/fail/extract_self_mut.rs [should fail to compile] pass
+tests/debug_handler/fail/extract_self_ref.rs [should fail to compile] pass
+tests/debug_handler/fail/generics.rs [should fail to compile] fail
+tests/debug_handler/fail/invalid_attrs.rs [should fail to compile] pass
+tests/debug_handler/fail/multiple_body_extractors.rs [should fail to compile] pass
+tests/debug_handler/fail/multiple_paths.rs [should fail to compile] pass
+tests/debug_handler/fail/not_a_function.rs [should fail to compile] pass
+tests/debug_handler/fail/not_async.rs [should fail to compile] pass
+tests/debug_handler/fail/not_send.rs [should fail to compile] fail
+tests/debug_handler/fail/request_not_last.rs [should fail to compile] pass
+tests/debug_handler/fail/too_many_extractors.rs [should fail to compile] fail
+tests/debug_handler/fail/wrong_return_type.rs [should fail to compile] fail
+tests/debug_handler/pass/associated_fn_without_self.rs [should pass] pass
+tests/debug_handler/pass/different_request_body_type.rs [should pass] pass
+tests/debug_handler/pass/impl_future.rs [should pass] pass
+tests/debug_handler/pass/impl_into_response.rs [should pass] pass
+tests/debug_handler/pass/multiple_extractors.rs [should pass] pass
+tests/debug_handler/pass/mut_extractor.rs [should pass] pass
+tests/debug_handler/pass/ready.rs [should pass] pass
+tests/debug_handler/pass/request_last.rs [should pass] pass
+tests/debug_handler/pass/result_impl_into_response.rs [should pass] pass
+tests/debug_handler/pass/returns_self.rs [should pass] pass
+tests/debug_handler/pass/self_receiver.rs [should pass] pass
+debug_handler::ui fail
+tests/typed_path/fail/missing_capture.rs [should fail to compile] fail
+tests/typed_path/fail/missing_field.rs [should fail to compile] pass
+tests/typed_path/fail/not_deserialize.rs [should fail to compile] fail
+tests/typed_path/fail/route_not_starting_with_slash.rs [should fail to compile] pass
+tests/typed_path/fail/route_not_starting_with_slash_non_empty.rs [should fail to compile] pass
+tests/typed_path/fail/unit_with_capture.rs [should fail to compile] pass
+tests/typed_path/pass/customize_rejection.rs [should pass] pass
+tests/typed_path/pass/into_uri.rs [should pass] pass
+tests/typed_path/pass/named_fields_struct.rs [should pass] pass
+tests/typed_path/pass/option_result.rs [should pass] pass
+tests/typed_path/pass/tuple_struct.rs [should pass] pass
+tests/typed_path/pass/unit_struct.rs [should pass] pass
+tests/typed_path/pass/url_encoding.rs [should pass] pass
+tests/typed_path/pass/wildcards.rs [should pass] pass
+typed_path::ui fail
+tests/from_request/fail/derive_opt_out_debug_and_display_without_error.rs [should fail to compile] pass
+tests/from_request/fail/derive_opt_out_debug_without_error.rs [should fail to compile] pass
+tests/from_request/fail/derive_opt_out_display_without_error.rs [should fail to compile] pass
+tests/from_request/fail/derive_opt_out_duplicate.rs [should fail to compile] pass
+tests/from_request/fail/double_via_attr.rs [should fail to compile] fail
+tests/from_request/fail/enum_from_request_ident_in_variant.rs [should fail to compile] pass
+tests/from_request/fail/enum_from_request_on_variant.rs [should fail to compile] pass
+tests/from_request/fail/enum_no_via.rs [should fail to compile] pass
+tests/from_request/fail/enum_rejection_derive.rs [should fail to compile] pass
+tests/from_request/fail/generic.rs [should fail to compile] pass
+tests/from_request/fail/not_enum_or_struct.rs [should fail to compile] pass
+tests/from_request/fail/rejection_derive_and_via.rs [should fail to compile] fail
+tests/from_request/fail/unknown_attr_container.rs [should fail to compile] pass
+tests/from_request/fail/unknown_attr_field.rs [should fail to compile] pass
+tests/from_request/fail/via_and_rejection_derive.rs [should fail to compile] fail
+tests/from_request/fail/via_on_container_and_field.rs [should fail to compile] fail
+tests/from_request/pass/container.rs [should pass] pass
+tests/from_request/pass/derive_opt_out.rs [should pass] pass
+tests/from_request/pass/empty_named.rs [should pass] pass
+tests/from_request/pass/empty_tuple.rs [should pass] pass
+tests/from_request/pass/enum_via.rs [should pass] pass
+tests/from_request/pass/named.rs [should pass] pass
+tests/from_request/pass/named_via.rs [should pass] pass
+tests/from_request/pass/tuple.rs [should pass] pass
+tests/from_request/pass/tuple_same_type_twice.rs [should pass] pass
+tests/from_request/pass/tuple_same_type_twice_via.rs [should pass] pass
+tests/from_request/pass/tuple_via.rs [should pass] pass
+tests/from_request/pass/unit.rs [should pass] pass
+from_request::ui fail
+post
+middleware::from_extractor::tests::test_from_extractor pass
+json::tests::consume_body_to_json_requires_json_content_type pass
+routing::tests::nest::wrong_method_nest pass
+routing::tests::not_found_for_missing_trailing_slash pass
+extract::path::tests::captures_dont_match_empty_segments pass
+json::tests::deserialize_body pass
+extract::request_parts::tests::extract_request_parts pass
+routing::tests::nest::outer_middleware_still_see_whole_url pass
+routing::tests::head_with_middleware_applied pass
+response::sse::tests::keep_alive_ends_when_the_stream_ends pass
+routing::tests::merge::nesting_and_seeing_the_right_uri pass
+routing::tests::nest::nest_5 pass
+routing::tests::router_type_doesnt_change pass
+routing::tests::multiple_methods_for_one_handler pass
+routing::tests::merge::nesting_and_seeing_the_right_uri_ors_with_multi_segment_uris pass
+routing::tests::middleware_applies_to_routes_above pass
+json::tests::json_content_types pass
+routing::tests::nest::nested_with_other_route_also_matching_with_route_last pass
+routing::tests::merge::nesting_and_seeing_the_right_uri_at_more_levels_of_nesting pass
+routing::tests::nest::nested_with_other_route_also_matching_with_route_first pass
+routing::tests::merge::basic pass
+routing::tests::merge::nesting_and_seeing_the_right_uri_ors_with_nesting pass
+routing::tests::nest::nested_multiple_routes pass
+routing::tests::nest::nest_2 pass
+routing::tests::merge::middleware_that_return_early pass
+routing::tests::handle_error::handler_multiple_methods_first pass
+routing::tests::merge::multiple_ors_balanced_differently pass
+body::test_try_downcast pass
+extract::cached::tests::works pass
+routing::resource::tests::works pass
+routing::tests::test_tsr pass
+tests/debug_handler/fail/argument_not_extractor.rs [should fail to compile] fail
+tests/debug_handler/fail/extract_self_mut.rs [should fail to compile] pass
+tests/debug_handler/fail/extract_self_ref.rs [should fail to compile] pass
+tests/debug_handler/fail/generics.rs [should fail to compile] fail
+tests/debug_handler/fail/invalid_attrs.rs [should fail to compile] pass
+tests/debug_handler/fail/multiple_body_extractors.rs [should fail to compile] pass
+tests/debug_handler/fail/multiple_paths.rs [should fail to compile] pass
+tests/debug_handler/fail/not_a_function.rs [should fail to compile] pass
+tests/debug_handler/fail/not_async.rs [should fail to compile] pass
+tests/debug_handler/fail/not_send.rs [should fail to compile] fail
+tests/debug_handler/fail/request_not_last.rs [should fail to compile] pass
+tests/debug_handler/fail/too_many_extractors.rs [should fail to compile] fail
+tests/debug_handler/fail/wrong_return_type.rs [should fail to compile] fail
+tests/debug_handler/pass/associated_fn_without_self.rs [should pass] pass
+tests/debug_handler/pass/different_request_body_type.rs [should pass] pass
+tests/debug_handler/pass/impl_future.rs [should pass] pass
+tests/debug_handler/pass/impl_into_response.rs [should pass] pass
+tests/debug_handler/pass/multiple_extractors.rs [should pass] pass
+tests/debug_handler/pass/mut_extractor.rs [should pass] pass
+tests/debug_handler/pass/ready.rs [should pass] pass
+tests/debug_handler/pass/request_last.rs [should pass] pass
+tests/debug_handler/pass/result_impl_into_response.rs [should pass] pass
+tests/debug_handler/pass/returns_self.rs [should pass] pass
+tests/debug_handler/pass/self_receiver.rs [should pass] pass
+debug_handler::ui fail
+tests/typed_path/fail/missing_capture.rs [should fail to compile] fail
+tests/typed_path/fail/missing_field.rs [should fail to compile] pass
+tests/typed_path/fail/not_deserialize.rs [should fail to compile] fail
+tests/typed_path/fail/route_not_starting_with_slash.rs [should fail to compile] pass
+tests/typed_path/fail/route_not_starting_with_slash_non_empty.rs [should fail to compile] pass
+tests/typed_path/fail/unit_with_capture.rs [should fail to compile] pass
+tests/typed_path/pass/customize_rejection.rs [should pass] pass
+tests/typed_path/pass/into_uri.rs [should pass] pass
+tests/typed_path/pass/named_fields_struct.rs [should pass] pass
+tests/typed_path/pass/option_result.rs [should pass] pass
+tests/typed_path/pass/tuple_struct.rs [should pass] pass
+tests/typed_path/pass/unit_struct.rs [should pass] pass
+tests/typed_path/pass/url_encoding.rs [should pass] pass
+tests/typed_path/pass/wildcards.rs [should pass] pass
+typed_path::ui fail
+tests/from_request/fail/derive_opt_out_debug_and_display_without_error.rs [should fail to compile] pass
+tests/from_request/fail/derive_opt_out_debug_without_error.rs [should fail to compile] pass
+tests/from_request/fail/derive_opt_out_display_without_error.rs [should fail to compile] pass
+tests/from_request/fail/derive_opt_out_duplicate.rs [should fail to compile] pass
+tests/from_request/fail/double_via_attr.rs [should fail to compile] fail
+tests/from_request/fail/enum_from_request_ident_in_variant.rs [should fail to compile] pass
+tests/from_request/fail/enum_from_request_on_variant.rs [should fail to compile] pass
+tests/from_request/fail/enum_no_via.rs [should fail to compile] pass
+tests/from_request/fail/enum_rejection_derive.rs [should fail to compile] pass
+tests/from_request/fail/generic.rs [should fail to compile] pass
+tests/from_request/fail/not_enum_or_struct.rs [should fail to compile] pass
+tests/from_request/fail/rejection_derive_and_via.rs [should fail to compile] fail
+tests/from_request/fail/unknown_attr_container.rs [should fail to compile] pass
+tests/from_request/fail/unknown_attr_field.rs [should fail to compile] pass
+tests/from_request/fail/via_and_rejection_derive.rs [should fail to compile] fail
+tests/from_request/fail/via_on_container_and_field.rs [should fail to compile] fail
+tests/from_request/pass/container.rs [should pass] pass
+tests/from_request/pass/derive_opt_out.rs [should pass] pass
+tests/from_request/pass/empty_named.rs [should pass] pass
+tests/from_request/pass/empty_tuple.rs [should pass] pass
+tests/from_request/pass/enum_via.rs [should pass] pass
+tests/from_request/pass/named.rs [should pass] pass
+tests/from_request/pass/named_via.rs [should pass] pass
+tests/from_request/pass/tuple.rs [should pass] pass
+tests/from_request/pass/tuple_same_type_twice.rs [should pass] pass
+tests/from_request/pass/tuple_same_type_twice_via.rs [should pass] pass
+tests/from_request/pass/tuple_via.rs [should pass] pass
+tests/from_request/pass/unit.rs [should pass] pass
+from_request::ui fail
+build success
+release success
+{'routing::tests::not_found_for_missing_trailing_slash', 'routing::tests::not_found_for_extra_trailing_slash', 'routing::tests::test_tsr'}

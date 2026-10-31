@@ -1,0 +1,162 @@
+pre
+[  3%] Built target gmock
+[  9%] Built target fmt
+[ 21%] Built target posix-mock-test
+[ 29%] Built target header-only-test
+[ 37%] Built target test-main
+[ 41%] Built target assert-test
+[ 45%] Built target chrono-test
+[ 52%] Built target core-test
+[ 52%] Built target color-test
+[ 56%] Built target format-impl-test
+[ 60%] Built target grisu-test
+[ 64%] Built target locale-test
+[ 68%] Built target ostream-test
+[ 72%] Built target format-test
+[ 76%] Built target compile-test
+[ 80%] Built target printf-test
+[ 84%] Built target gtest-extra-test
+[ 88%] Built target custom-formatter-test
+[ 92%] Built target scan-test
+[ 96%] Built target ranges-test
+[100%] Built target os-test
+Test project /testbed/build
+      Start  1: assert-test
+ 1/17 Test  #1: assert-test ......................   Passed    0.00 sec
+      Start  2: chrono-test
+ 2/17 Test  #2: chrono-test ......................   Passed    0.00 sec
+      Start  3: color-test
+ 3/17 Test  #3: color-test .......................   Passed    0.00 sec
+      Start  4: core-test
+ 4/17 Test  #4: core-test ........................   Passed    0.00 sec
+      Start  5: grisu-test
+ 5/17 Test  #5: grisu-test .......................   Passed    0.00 sec
+      Start  6: gtest-extra-test
+ 6/17 Test  #6: gtest-extra-test .................   Passed    0.00 sec
+      Start  7: format-test
+ 7/17 Test  #7: format-test ......................   Passed    0.01 sec
+      Start  8: format-impl-test
+ 8/17 Test  #8: format-impl-test .................   Passed    0.00 sec
+      Start  9: locale-test
+ 9/17 Test  #9: locale-test ......................   Passed    0.00 sec
+      Start 10: ostream-test
+10/17 Test #10: ostream-test .....................   Passed    0.00 sec
+      Start 11: compile-test
+11/17 Test #11: compile-test .....................   Passed    0.00 sec
+      Start 12: printf-test
+12/17 Test #12: printf-test ......................   Passed    0.00 sec
+      Start 13: custom-formatter-test
+13/17 Test #13: custom-formatter-test ............   Passed    0.00 sec
+      Start 14: ranges-test
+14/17 Test #14: ranges-test ......................   Passed    0.00 sec
+      Start 15: scan-test
+15/17 Test #15: scan-test ........................   Passed    0.00 sec
+      Start 16: posix-mock-test
+16/17 Test #16: posix-mock-test ..................   Passed    0.00 sec
+      Start 17: os-test
+17/17 Test #17: os-test ..........................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 17
+
+Total Test time (real) =   0.07 sec
+assert-test pass
+chrono-test pass
+color-test pass
+core-test pass
+grisu-test pass
+gtest-extra-test pass
+format-test pass
+format-impl-test pass
+locale-test pass
+ostream-test pass
+compile-test pass
+printf-test pass
+custom-formatter-test pass
+ranges-test pass
+scan-test pass
+posix-mock-test pass
+os-test pass
+post
+[  5%] Built target fmt
+[  9%] Built target gmock
+[ 17%] Built target test-main
+[ 25%] Built target header-only-test
+[ 37%] Built target posix-mock-test
+[ 41%] Built target grisu-test
+[ 43%] Building CXX object test/CMakeFiles/format-impl-test.dir/format-impl-test.cc.o
+[ 47%] Built target assert-test
+[ 50%] Built target gtest-extra-test
+[ 52%] Building CXX object test/CMakeFiles/printf-test.dir/printf-test.cc.o
+[ 58%] Built target core-test
+[ 60%] Built target chrono-test
+[ 64%] Built target locale-test
+[ 68%] Built target format-test
+[ 72%] Built target compile-test
+[ 76%] Built target scan-test
+[ 80%] Built target color-test
+[ 84%] Built target os-test
+[ 88%] Built target ostream-test
+[ 92%] Built target custom-formatter-test
+[ 96%] Built target ranges-test
+[ 98%] Linking CXX executable ../bin/format-impl-test
+[ 98%] Built target format-impl-test
+[100%] Linking CXX executable ../bin/printf-test
+[100%] Built target printf-test
+Test project /testbed/build
+      Start  1: assert-test
+ 1/17 Test  #1: assert-test ......................   Passed    0.00 sec
+      Start  2: chrono-test
+ 2/17 Test  #2: chrono-test ......................   Passed    0.00 sec
+      Start  3: color-test
+ 3/17 Test  #3: color-test .......................   Passed    0.00 sec
+      Start  4: core-test
+ 4/17 Test  #4: core-test ........................   Passed    0.00 sec
+      Start  5: grisu-test
+ 5/17 Test  #5: grisu-test .......................   Passed    0.00 sec
+      Start  6: gtest-extra-test
+ 6/17 Test  #6: gtest-extra-test .................   Passed    0.00 sec
+      Start  7: format-test
+ 7/17 Test  #7: format-test ......................   Passed    0.01 sec
+      Start  8: format-impl-test
+ 8/17 Test  #8: format-impl-test .................   Passed    0.00 sec
+      Start  9: locale-test
+ 9/17 Test  #9: locale-test ......................   Passed    0.00 sec
+      Start 10: ostream-test
+10/17 Test #10: ostream-test .....................   Passed    0.00 sec
+      Start 11: compile-test
+11/17 Test #11: compile-test .....................   Passed    0.00 sec
+      Start 12: printf-test
+12/17 Test #12: printf-test ......................   Passed    0.00 sec
+      Start 13: custom-formatter-test
+13/17 Test #13: custom-formatter-test ............   Passed    0.00 sec
+      Start 14: ranges-test
+14/17 Test #14: ranges-test ......................   Passed    0.00 sec
+      Start 15: scan-test
+15/17 Test #15: scan-test ........................   Passed    0.01 sec
+      Start 16: posix-mock-test
+16/17 Test #16: posix-mock-test ..................   Passed    0.00 sec
+      Start 17: os-test
+17/17 Test #17: os-test ..........................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 17
+
+Total Test time (real) =   0.07 sec
+assert-test pass
+chrono-test pass
+color-test pass
+core-test pass
+grisu-test pass
+gtest-extra-test pass
+format-test pass
+format-impl-test pass
+locale-test pass
+ostream-test pass
+compile-test pass
+printf-test pass
+custom-formatter-test pass
+ranges-test pass
+scan-test pass
+posix-mock-test pass
+os-test pass
+build success
+release failed

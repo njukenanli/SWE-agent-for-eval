@@ -1,0 +1,55 @@
+pre
+make: Entering directory '/testbed/mpy-cross'
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+make: Leaving directory '/testbed/mpy-cross'
+make: Entering directory '/testbed/ports/unix'
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+make: Leaving directory '/testbed/ports/unix'
+run.sh: line 6: X: command not found
+post
+make: Entering directory '/testbed/mpy-cross'
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+GEN build/genhdr/mpversion.h
+GEN build/genhdr/qstr.i.last
+GEN build/genhdr/qstr.split
+GEN build/genhdr/moduledefs.split
+GEN build/genhdr/root_pointers.split
+GEN build/genhdr/moduledefs.collected
+GEN build/genhdr/root_pointers.collected
+GEN build/genhdr/qstrdefs.collected.h
+QSTR not updated
+Root pointer registrations not updated
+Module registrations not updated
+CC ../py/objslice.c
+CC ../py/modsys.c
+CC main.c
+LINK build/mpy-cross
+   text	   data	    bss	    dec	    hex	filename
+ 325246	  13792	    872	 339910	  52fc6	build/mpy-cross
+make: Leaving directory '/testbed/mpy-cross'
+make: Entering directory '/testbed/ports/unix'
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+GEN build-standard/genhdr/mpversion.h
+GEN build-standard/genhdr/qstr.i.last
+GEN build-standard/genhdr/qstr.split
+GEN build-standard/genhdr/moduledefs.split
+GEN build-standard/genhdr/root_pointers.split
+GEN build-standard/genhdr/compressed.split
+GEN build-standard/genhdr/qstrdefs.collected.h
+GEN build-standard/genhdr/moduledefs.collected
+GEN build-standard/genhdr/root_pointers.collected
+GEN build-standard/genhdr/compressed.collected
+Module registrations not updated
+Compressed data not updated
+Root pointer registrations not updated
+QSTR not updated
+CC ../../py/objslice.c
+CC ../../py/modsys.c
+CC ../../extmod/modplatform.c
+CC main.c
+LINK build-standard/micropython
+   text	   data	    bss	    dec	    hex	filename
+ 726724	  67912	   7120	 801756	  c3bdc	build-standard/micropython
+make: Leaving directory '/testbed/ports/unix'
+run.sh: line 6: X: command not found
+build failed

@@ -1,0 +1,7 @@
+pre
+Repository build/test failed in this environment (without modifying repo).
+Build fails at: npm run build (microbundle -> brotli-size -> iltorb missing native binding)
+post
+Repository build/test failed in this environment (without modifying repo).
+Build fails at: npm run build (microbundle -> brotli-size -> iltorb missing native binding)
+build failed

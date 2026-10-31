@@ -1,0 +1,205 @@
+pre
+Replica recover rdb-connection killed pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+valkey-cli make source node ignores NOREPLICAS error when doing the last CLUSTER SETSLOT - setslot pass
+Replica recover main-connection killed pass
+Empty primary will check and delete the dirty slots pass
+Test replication partial resync: ok psync (diskless: yes, disabled, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Replica notice main-connection killed during rdb load callback pass
+diskless loading short read pass
+Test replication partial resync: no backlog (diskless: yes, disabled, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+diskless no replicas drop during rdb pipe pass
+diskless slow replicas drop during rdb pipe pass
+Test replication partial resync: ok after delay (diskless: yes, disabled, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+diskless fast replicas drop during rdb pipe pass
+diskless all replicas drop during rdb pipe pass
+diskless timeout replicas drop during rdb pipe pass
+Test replication partial resync: backlog expired (diskless: yes, disabled, dual-channel: no, reconnect: 1) pass
+diskless replication child being killed is collected pass
+replication child dies when parent is killed - diskless: yes dual-channel-replication-enabled: yes pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, dual-channel: yes, reconnect: 0) pass
+replication child dies when parent is killed - diskless: no dual-channel-replication-enabled: no pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+diskless replication read pipe cleanup pass
+replicaof right after disconnection pass
+Kill rdb child process if its dumping RDB is not useful pass
+Don't disconnect with replicas before loading transferred RDB when full sync with dual-channel-replication yes pass
+Discard cache master before loading transferred RDB when full sync with dual-channel-replication yes pass
+Don't disconnect with replicas before loading transferred RDB when full sync with dual-channel-replication no pass
+Discard cache master before loading transferred RDB when full sync with dual-channel-replication no pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) pass
+replica can handle EINTR if use diskless load pass
+replica do not write the reply to the replication link - SYNC (_addReplyToBufferOrList) pass
+replica do not write the reply to the replication link - SYNC (addReplyDeferredLen) pass
+replica do not write the reply to the replication link - PSYNC (_addReplyToBufferOrList) pass
+replica do not write the reply to the replication link - PSYNC (addReplyDeferredLen) pass
+PSYNC with wrong offset should throw error pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication with lazy expire pass
+replica actually flushes db if use diskless load with flush-before-load dual-channel-replication-enabled=yes pass
+replica actually flushes db if use diskless load with flush-before-load dual-channel-replication-enabled=no pass
+Replica keep the old data if RDB file save fails in disk-based replication pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, dual-channel: no, reconnect: 0) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, dual-channel: no, reconnect: 1) pass
+large memory flag not provided skip
+large memory flag not provided skip
+large memory flag not provided skip
+large memory flag not provided skip
+large memory flag not provided skip
+large memory flag not provided skip
+large memory flag not provided skip
+Active defrag - AOF loading pass
+Active Defrag main dictionary: standalone pass
+Active Defrag eval scripts: standalone pass
+Active Defrag big hash: standalone pass
+Active Defrag big list: standalone pass
+Active Defrag big set: standalone pass
+Active Defrag big zset: standalone pass
+Active Defrag stream: standalone pass
+Active Defrag pubsub: standalone pass
+Active Defrag main dictionary: cluster pass
+Active Defrag eval scripts: cluster pass
+Active Defrag big hash: cluster pass
+Active Defrag big list: cluster pass
+Active Defrag big set: cluster pass
+Active Defrag big zset: cluster pass
+Active Defrag stream: cluster pass
+Active Defrag pubsub: cluster pass
+large memory flag not provided skip
+large memory flag not provided skip
+Multiple primary nodes are down, rank them based on the failed primary pass
+post
+Replica notice main-connection killed during rdb load callback pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, disabled, dual-channel: no, reconnect: 0) pass
+Empty primary will check and delete the dirty slots pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: ok psync (diskless: yes, disabled, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+diskless loading short read pass
+Test replication partial resync: no backlog (diskless: yes, disabled, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+diskless no replicas drop during rdb pipe pass
+diskless slow replicas drop during rdb pipe pass
+Test replication partial resync: ok after delay (diskless: yes, disabled, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+diskless fast replicas drop during rdb pipe pass
+diskless all replicas drop during rdb pipe pass
+Test replication partial resync: backlog expired (diskless: yes, disabled, dual-channel: no, reconnect: 1) pass
+diskless timeout replicas drop during rdb pipe pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, dual-channel: yes, reconnect: 0) pass
+diskless replication child being killed is collected pass
+replication child dies when parent is killed - diskless: yes dual-channel-replication-enabled: yes pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+replication child dies when parent is killed - diskless: no dual-channel-replication-enabled: no pass
+diskless replication read pipe cleanup pass
+replicaof right after disconnection pass
+Kill rdb child process if its dumping RDB is not useful pass
+Don't disconnect with replicas before loading transferred RDB when full sync with dual-channel-replication yes pass
+Discard cache master before loading transferred RDB when full sync with dual-channel-replication yes pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) pass
+Don't disconnect with replicas before loading transferred RDB when full sync with dual-channel-replication no pass
+Discard cache master before loading transferred RDB when full sync with dual-channel-replication no pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+replica can handle EINTR if use diskless load pass
+replica do not write the reply to the replication link - SYNC (_addReplyToBufferOrList) pass
+replica do not write the reply to the replication link - SYNC (addReplyDeferredLen) pass
+replica do not write the reply to the replication link - PSYNC (_addReplyToBufferOrList) pass
+replica do not write the reply to the replication link - PSYNC (addReplyDeferredLen) pass
+PSYNC with wrong offset should throw error pass
+Test replication with lazy expire pass
+replica actually flushes db if use diskless load with flush-before-load dual-channel-replication-enabled=yes pass
+replica actually flushes db if use diskless load with flush-before-load dual-channel-replication-enabled=no pass
+Replica keep the old data if RDB file save fails in disk-based replication pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, dual-channel: no, reconnect: 0) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, dual-channel: no, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, dual-channel: no, reconnect: 1) pass
+large memory flag not provided skip
+large memory flag not provided skip
+large memory flag not provided skip
+large memory flag not provided skip
+large memory flag not provided skip
+large memory flag not provided skip
+large memory flag not provided skip
+Active defrag - AOF loading pass
+Active Defrag main dictionary: standalone pass
+Active Defrag eval scripts: standalone pass
+Active Defrag big hash: standalone pass
+Active Defrag big list: standalone pass
+Active Defrag big set: standalone pass
+Active Defrag big zset: standalone pass
+Active Defrag stream: standalone pass
+Active Defrag pubsub: standalone pass
+Active Defrag main dictionary: cluster pass
+Active Defrag eval scripts: cluster pass
+Active Defrag big hash: cluster pass
+Active Defrag big list: cluster pass
+Active Defrag big set: cluster pass
+Active Defrag big zset: cluster pass
+Active Defrag stream: cluster pass
+Active Defrag pubsub: cluster pass
+large memory flag not provided skip
+large memory flag not provided skip
+Multiple primary nodes are down, rank them based on the failed primary pass
+build success
+release success
+{'Functions are added to new node on valkey-cli cluster add-node', 'Test ACL LOAD works on replica', 'Test ACL LOAD works on primary', 'PSYNC2: Set #4 to replicate from #3', 'PSYNC2: cluster is consistent after load (x = 58279)', 'PSYNC2: cluster is consistent after load (x = 167651)', 'PSYNC2: cluster is consistent after load (x = 225216)', 'PSYNC2: cluster is consistent after load (x = 336206)', 'CLUSTER SLOT-STATS network-bytes-out, for non-slot specific commands.', 'PSYNC2: Set #0 to replicate from #2', 'PSYNC2: cluster is consistent after load (x = 113648)', 'PSYNC2: cluster is consistent after load (x = 282404)', 'PSYNC2: Set #3 to replicate from #4', 'PSYNC2: --- CYCLE 6 ---', 'PSYNC2: [NEW LAYOUT] Set #0 as master'}

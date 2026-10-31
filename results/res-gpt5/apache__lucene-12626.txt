@@ -1,0 +1,204 @@
+pre
+> Task :lucene:backward-codecs:testClasses UP-TO-DATE
+> Task :lucene:analysis:morfologik:classes UP-TO-DATE
+> Task :lucene:analysis:stempel:compileJava UP-TO-DATE
+> Task :lucene:analysis:stempel:classes UP-TO-DATE
+> Task :lucene:analysis:nori:jar UP-TO-DATE
+> Task :lucene:core.tests:compileTestJava UP-TO-DATE
+> Task :lucene:codecs:testClasses UP-TO-DATE
+> Task :lucene:core.tests:testClasses UP-TO-DATE
+> Task :lucene:core:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:opennlp:jar UP-TO-DATE
+> Task :lucene:core:testClasses UP-TO-DATE
+> Task :lucene:facet:testClasses UP-TO-DATE
+> Task :lucene:grouping:testClasses UP-TO-DATE
+> Task :lucene:analysis:smartcn:compileJava UP-TO-DATE
+> Task :lucene:analysis:smartcn:classes UP-TO-DATE
+> Task :lucene:analysis:stempel:jar UP-TO-DATE
+> Task :lucene:join:testClasses UP-TO-DATE
+> Task :lucene:analysis:icu:jar UP-TO-DATE
+> Task :lucene:analysis:phonetic:jar UP-TO-DATE
+> Task :lucene:suggest:jar UP-TO-DATE
+> Task :lucene:expressions:compileTestJava UP-TO-DATE
+> Task :lucene:expressions:testClasses UP-TO-DATE
+> Task :lucene:analysis:morfologik:jar UP-TO-DATE
+> Task :lucene:monitor:compileJava UP-TO-DATE
+> Task :lucene:monitor:classes UP-TO-DATE
+> Task :lucene:demo:compileTestJava UP-TO-DATE
+> Task :lucene:demo:testClasses UP-TO-DATE
+> Task :lucene:analysis:smartcn:jar UP-TO-DATE
+> Task :lucene:classification:compileTestJava UP-TO-DATE
+> Task :lucene:misc:compileTestJava UP-TO-DATE
+> Task :lucene:classification:testClasses UP-TO-DATE
+> Task :lucene:misc:testClasses UP-TO-DATE
+> Task :lucene:spatial-test-fixtures:jar UP-TO-DATE
+> Task :lucene:memory:compileTestJava UP-TO-DATE
+> Task :lucene:benchmark:compileTestJava UP-TO-DATE
+> Task :lucene:memory:testClasses UP-TO-DATE
+> Task :lucene:benchmark:testClasses UP-TO-DATE
+> Task :lucene:replicator:compileTestJava UP-TO-DATE
+> Task :lucene:replicator:testClasses UP-TO-DATE
+> Task :lucene:spatial-test-fixtures:compileTestJava NO-SOURCE
+> Task :lucene:sandbox:compileTestJava UP-TO-DATE
+> Task :lucene:spatial-test-fixtures:testClasses UP-TO-DATE
+> Task :lucene:sandbox:testClasses UP-TO-DATE
+> Task :lucene:queryparser:compileTestJava UP-TO-DATE
+> Task :lucene:queryparser:testClasses UP-TO-DATE
+> Task :lucene:highlighter:compileTestJava UP-TO-DATE
+> Task :lucene:queries:compileTestJava UP-TO-DATE
+> Task :lucene:highlighter:testClasses UP-TO-DATE
+> Task :lucene:queries:testClasses UP-TO-DATE
+> Task :lucene:suggest:compileTestJava UP-TO-DATE
+> Task :lucene:suggest:testClasses UP-TO-DATE
+> Task :lucene:spatial3d:compileTestJava UP-TO-DATE
+> Task :lucene:spatial3d:testClasses UP-TO-DATE
+> Task :lucene:luke:compileJava UP-TO-DATE
+> Task :lucene:analysis.tests:compileTestJava UP-TO-DATE
+> Task :lucene:luke:classes UP-TO-DATE
+> Task :lucene:analysis.tests:testClasses UP-TO-DATE
+> Task :lucene:analysis:morfologik.tests:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:morfologik.tests:testClasses UP-TO-DATE
+> Task :lucene:analysis:opennlp:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:opennlp:testClasses UP-TO-DATE
+> Task :lucene:monitor:compileTestJava UP-TO-DATE
+> Task :lucene:monitor:testClasses UP-TO-DATE
+> Task :lucene:luke:compileTestJava UP-TO-DATE
+> Task :lucene:luke:testClasses UP-TO-DATE
+> Task :lucene:analysis:icu:compileTestJava UP-TO-DATE
+> Task :lucene:test-framework:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:icu:testClasses UP-TO-DATE
+> Task :lucene:test-framework:testClasses UP-TO-DATE
+> Task :lucene:analysis:kuromoji:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:kuromoji:testClasses UP-TO-DATE
+> Task :lucene:analysis:phonetic:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:phonetic:testClasses UP-TO-DATE
+> Task :lucene:analysis:smartcn:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:morfologik:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:nori:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:smartcn:testClasses UP-TO-DATE
+> Task :lucene:analysis:nori:testClasses UP-TO-DATE
+> Task :lucene:analysis:morfologik:testClasses UP-TO-DATE
+> Task :lucene:spatial-extras:compileTestJava UP-TO-DATE
+> Task :lucene:spatial-extras:testClasses UP-TO-DATE
+> Task :lucene:analysis:stempel:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:stempel:testClasses UP-TO-DATE
+> Task :lucene:analysis:common:compileTestJava UP-TO-DATE
+> Task :lucene:analysis:common:testClasses UP-TO-DATE
+
+BUILD SUCCESSFUL in 27s
+159 actionable tasks: 2 executed, 157 up-to-date
+org.apache.lucene.util.TestVersion.testParseExceptions pass
+org.apache.lucene.util.TestVersion.testParse pass
+org.apache.lucene.util.TestVersion.testDeprecations pass
+org.apache.lucene.util.TestVersion.testParseLeniently pass
+org.apache.lucene.util.TestVersion.testParseLenientlyOnAllConstants pass
+org.apache.lucene.util.TestVersion.testParseLenientlyExceptions pass
+org.apache.lucene.util.TestVersion.testOnOrAfter pass
+org.apache.lucene.util.TestVersion.testForwardsCompatibility pass
+org.apache.lucene.util.TestVersion.testToString pass
+org.apache.lucene.util.TestVersion.testNonFloatingPointCompliantVersionNumbers pass
+org.apache.lucene.util.TestVersion.testEqualsHashCode pass
+org.apache.lucene.util.TestVersion.testLatestVersionCommonBuild pass
+post
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :lucene:monitor:testClasses
+> Task :lucene:luke:compileTestJava
+> Task :lucene:luke:testClasses
+
+> Task :lucene:replicator:compileTestJava
+Note: /testbed/lucene/replicator/src/test/org/apache/lucene/replicator/nrt/SimpleTransLog.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :lucene:replicator:testClasses
+> Task :lucene:sandbox:compileTestJava
+> Task :lucene:sandbox:testClasses
+
+> Task :lucene:spatial-extras:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :lucene:spatial-extras:testClasses
+> Task :lucene:queryparser:compileTestJava
+> Task :lucene:queryparser:testClasses
+
+> Task :lucene:backward-codecs:compileTestJava
+Note: /testbed/lucene/backward-codecs/src/test/org/apache/lucene/backward_codecs/lucene90/TestLucene90SegmentInfoFormat.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :lucene:backward-codecs:testClasses
+> Task :lucene:analysis:morfologik:compileTestJava
+> Task :lucene:analysis:morfologik:testClasses
+
+> Task :lucene:highlighter:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :lucene:highlighter:testClasses
+
+> Task :lucene:test-framework:compileTestJava
+Note: /testbed/lucene/test-framework/src/test/org/apache/lucene/tests/util/TestReproduceMessage.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :lucene:test-framework:testClasses
+> Task :lucene:analysis:morfologik.tests:compileTestJava
+> Task :lucene:analysis:morfologik.tests:testClasses
+
+> Task :lucene:facet:compileTestJava
+Note: /testbed/lucene/facet/src/test/org/apache/lucene/facet/taxonomy/TestTaxonomyFacetAssociations.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :lucene:facet:testClasses
+> Task :lucene:spatial3d:compileTestJava
+> Task :lucene:spatial3d:testClasses
+> Task :lucene:analysis:smartcn:compileTestJava
+> Task :lucene:analysis:smartcn:testClasses
+> Task :lucene:analysis:phonetic:compileTestJava
+> Task :lucene:analysis:phonetic:testClasses
+> Task :lucene:analysis:opennlp:compileTestJava
+> Task :lucene:analysis:opennlp:testClasses
+> Task :lucene:analysis:stempel:compileTestJava
+> Task :lucene:analysis:stempel:testClasses
+> Task :lucene:analysis:icu:compileTestJava
+> Task :lucene:analysis:nori:compileTestJava
+> Task :lucene:analysis:icu:testClasses
+> Task :lucene:analysis:nori:testClasses
+
+> Task :lucene:queries:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :lucene:queries:testClasses
+> Task :lucene:analysis:kuromoji:compileTestJava
+> Task :lucene:analysis:kuromoji:testClasses
+
+> Task :lucene:suggest:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :lucene:suggest:testClasses
+> Task :lucene:analysis:common:compileTestJava
+> Task :lucene:analysis:common:testClasses
+> Task :lucene:core:compileTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :lucene:core:testClasses
+
+BUILD SUCCESSFUL in 1m 39s
+159 actionable tasks: 73 executed, 86 up-to-date
+org.apache.lucene.util.TestVersion.testParseLeniently pass
+org.apache.lucene.util.TestVersion.testOnOrAfter pass
+org.apache.lucene.util.TestVersion.testToString pass
+org.apache.lucene.util.TestVersion.testForwardsCompatibility pass
+org.apache.lucene.util.TestVersion.testParse pass
+org.apache.lucene.util.TestVersion.testParseLenientlyOnAllConstants pass
+org.apache.lucene.util.TestVersion.testNonFloatingPointCompliantVersionNumbers pass
+org.apache.lucene.util.TestVersion.testParseExceptions pass
+org.apache.lucene.util.TestVersion.testEqualsHashCode pass
+org.apache.lucene.util.TestVersion.testDeprecations pass
+org.apache.lucene.util.TestVersion.testParseLenientlyExceptions pass
+org.apache.lucene.util.TestVersion.testLatestVersionCommonBuild pass
+build success
+release failed

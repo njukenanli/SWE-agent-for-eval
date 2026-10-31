@@ -1,0 +1,204 @@
+pre
+render() > should unset role if null || undefined :: pass
+render() > should not crash or repeatedly add the same child when replacing a matched vnode with null :: pass
+render() > should reconcile children in right order :: pass
+render() > should reconcile children in right order #2 :: pass
+render() > should reconcile children in right order #3 :: pass
+render() > should reconcile children in right order #4 :: pass
+render() > should not crash or repeatedly add the same child when replacing a matched vnode with null (mixed dom-types) :: pass
+render() > should shrink lists :: pass
+render() > handles shuffled child-ordering :: pass
+render() > dangerouslySetInnerHTML > should support dangerouslySetInnerHTML :: pass
+render() > dangerouslySetInnerHTML > should apply proper mutation for VNodes with dangerouslySetInnerHTML attr :: pass
+render() > dangerouslySetInnerHTML > should not hydrate with dangerouslySetInnerHTML :: pass
+render() > dangerouslySetInnerHTML > should avoid reapplying innerHTML when __html property of dangerouslySetInnerHTML attr remains unchanged :: pass
+render() > dangerouslySetInnerHTML > should unmount dangerouslySetInnerHTML :: pass
+replaceNode parameter in render() > should use replaceNode as render root and not inject into it :: pass
+replaceNode parameter in render() > should not remove siblings of replaceNode :: pass
+replaceNode parameter in render() > should notice prop changes on replaceNode :: pass
+replaceNode parameter in render() > should unmount existing components :: pass
+replaceNode parameter in render() > should unmount existing components in prerendered HTML :: pass
+replaceNode parameter in render() > should render multiple render roots in one parentDom :: pass
+replaceNode parameter in render() > should call unmount when working with replaceNode :: pass
+replaceNode parameter in render() > should double replace :: pass
+replaceNode parameter in render() > should replaceNode after rendering :: pass
+replaceNode parameter in render() > shouldn't remove elements on subsequent renders with replaceNode :: pass
+replaceNode parameter in render() > should remove redundant elements on subsequent renders with replaceNode :: pass
+replaceNode parameter in render() > should set <select> value :: pass
+replaceNode parameter in render() > should set value with selected :: pass
+replaceNode parameter in render() > should work with multiple selected :: pass
+Component spec > defaultProps > should apply default props on initial render :: pass
+Component spec > defaultProps > should apply default props on rerender :: pass
+Component spec > forceUpdate > should force a rerender :: pass
+Component spec > forceUpdate > should add callback to renderCallbacks :: pass
+style attribute > should apply style as String :: pass
+style attribute > should not call CSSStyleDeclaration.setProperty for style strings :: pass
+style attribute > should properly switch from string styles to object styles and back :: pass
+style attribute > should serialize style objects :: pass
+style attribute > should support opacity 0 :: pass
+style attribute > should support animation-iteration-count as number :: pass
+style attribute > should replace previous style objects :: pass
+style attribute > should remove old styles :: pass
+style attribute > should remove empty styles :: pass
+style attribute > should support css custom properties :: pass
+style attribute > should not add "px" suffix for custom properties :: pass
+style attribute > css vars should not be transformed into dash-separated :: pass
+style attribute > should call CSSStyleDeclaration.setProperty for css vars :: pass
+style attribute > should clear css properties when passed an empty string, null, or undefined :: pass
+style attribute > should render SVG to string :: pass
+style attribute > should support svg xlink:href attribute :: pass
+style attribute > should support svg attributes :: pass
+style attribute > should render SVG to DOM :: pass
+style attribute > should render with the correct namespace URI :: pass
+style attribute > should render children with the correct namespace URI :: pass
+style attribute > should inherit correct namespace URI from parent :: pass
+style attribute > should inherit correct namespace URI from parent upon updating :: pass
+style attribute > should use attributes for className :: pass
+style attribute > should still support class attribute :: pass
+style attribute > should still support className attribute :: pass
+style attribute > should switch back to HTML for <foreignObject> :: pass
+style attribute > should render foreignObject as an svg element :: pass
+style attribute > should transition from DOM to SVG and back :: pass
+toChildArray > returns an empty array with no child :: pass
+toChildArray > returns an empty array with null as a child :: pass
+toChildArray > returns an empty array with false as a child :: pass
+toChildArray > returns an empty array with true as a child :: pass
+toChildArray > should skip a function child :: pass
+toChildArray > returns an array containing a VNode with a text child :: pass
+toChildArray > returns an array containing a VNode with a number child :: pass
+toChildArray > returns an array containing a VNode with a DOM node child :: pass
+toChildArray > returns an array containing a VNode with a Component child :: pass
+toChildArray > returns an array with multiple children :: pass
+toChildArray > returns an array with non-renderables removed with a mixed array as children :: pass
+toChildArray > flattens sibling and nested arrays :: pass
+toChildArray > should return a Provider and a Consumer :: pass
+toChildArray > should return a valid Provider Component :: pass
+createElement(jsx) > should return a VNode :: pass
+createElement(jsx) > should set VNode#type property :: pass
+createElement(jsx) > should set VNode.constructor property to prevent json injection :: pass
+createElement(jsx) > should set VNode#props property :: pass
+createElement(jsx) > should set VNode#key property :: pass
+createElement(jsx) > should not set VNode#props.key property :: pass
+createElement(jsx) > should set VNode#ref property :: pass
+createElement(jsx) > should not set VNode#props.ref property :: pass
+createElement(jsx) > should have ordered VNode properties :: pass
+createElement(jsx) > should preserve raw props :: pass
+createElement(jsx) > should support element children :: pass
+createElement(jsx) > should support multiple element children, given as arg list :: pass
+createElement(jsx) > should handle multiple element children, given as an array :: pass
+createElement(jsx) > should support nested children :: pass
+createElement(jsx) > should support text children :: pass
+createElement(jsx) > should override children if null is provided as an argument :: pass
+createElement(jsx) > should NOT set children prop when unspecified :: pass
+createElement(jsx) > should NOT merge adjacent text children :: pass
+createElement(jsx) > should not merge nested adjacent text children :: pass
+createElement(jsx) > should not merge children that are boolean values :: pass
+createElement(jsx) > should not merge children of components :: pass
+createElement(jsx) > should respect defaultProps :: pass
+createElement(jsx) > should override defaultProps :: pass
+createElement(jsx) > should ignore props.children if children are manually specified :: pass
+preact > should be available as named exports :: pass
+preact > should check if the argument is a valid vnode :: pass
+post
+render() > should unset role if null || undefined :: pass
+render() > should not crash or repeatedly add the same child when replacing a matched vnode with null :: pass
+render() > should reconcile children in right order :: pass
+render() > should reconcile children in right order #2 :: pass
+render() > should reconcile children in right order #3 :: pass
+render() > should reconcile children in right order #4 :: pass
+render() > should not crash or repeatedly add the same child when replacing a matched vnode with null (mixed dom-types) :: pass
+render() > should shrink lists :: pass
+render() > handles shuffled child-ordering :: pass
+render() > dangerouslySetInnerHTML > should support dangerouslySetInnerHTML :: pass
+render() > dangerouslySetInnerHTML > should apply proper mutation for VNodes with dangerouslySetInnerHTML attr :: pass
+render() > dangerouslySetInnerHTML > should not hydrate with dangerouslySetInnerHTML :: pass
+render() > dangerouslySetInnerHTML > should avoid reapplying innerHTML when __html property of dangerouslySetInnerHTML attr remains unchanged :: pass
+render() > dangerouslySetInnerHTML > should unmount dangerouslySetInnerHTML :: pass
+replaceNode parameter in render() > should use replaceNode as render root and not inject into it :: pass
+replaceNode parameter in render() > should not remove siblings of replaceNode :: pass
+replaceNode parameter in render() > should notice prop changes on replaceNode :: pass
+replaceNode parameter in render() > should unmount existing components :: pass
+replaceNode parameter in render() > should unmount existing components in prerendered HTML :: pass
+replaceNode parameter in render() > should render multiple render roots in one parentDom :: pass
+replaceNode parameter in render() > should call unmount when working with replaceNode :: pass
+replaceNode parameter in render() > should double replace :: pass
+replaceNode parameter in render() > should replaceNode after rendering :: pass
+replaceNode parameter in render() > shouldn't remove elements on subsequent renders with replaceNode :: pass
+replaceNode parameter in render() > should remove redundant elements on subsequent renders with replaceNode :: pass
+replaceNode parameter in render() > should set <select> value :: pass
+replaceNode parameter in render() > should set value with selected :: pass
+replaceNode parameter in render() > should work with multiple selected :: pass
+Component spec > defaultProps > should apply default props on initial render :: pass
+Component spec > defaultProps > should apply default props on rerender :: pass
+Component spec > forceUpdate > should force a rerender :: pass
+Component spec > forceUpdate > should add callback to renderCallbacks :: pass
+style attribute > should apply style as String :: pass
+style attribute > should not call CSSStyleDeclaration.setProperty for style strings :: pass
+style attribute > should properly switch from string styles to object styles and back :: pass
+style attribute > should serialize style objects :: pass
+style attribute > should support opacity 0 :: pass
+style attribute > should support animation-iteration-count as number :: pass
+style attribute > should replace previous style objects :: pass
+style attribute > should remove old styles :: pass
+style attribute > should remove empty styles :: pass
+style attribute > should support css custom properties :: pass
+style attribute > should not add "px" suffix for custom properties :: pass
+style attribute > css vars should not be transformed into dash-separated :: pass
+style attribute > should call CSSStyleDeclaration.setProperty for css vars :: pass
+style attribute > should clear css properties when passed an empty string, null, or undefined :: pass
+style attribute > should render SVG to string :: pass
+style attribute > should support svg xlink:href attribute :: pass
+style attribute > should support svg attributes :: pass
+style attribute > should render SVG to DOM :: pass
+style attribute > should render with the correct namespace URI :: pass
+style attribute > should render children with the correct namespace URI :: pass
+style attribute > should inherit correct namespace URI from parent :: pass
+style attribute > should inherit correct namespace URI from parent upon updating :: pass
+style attribute > should use attributes for className :: pass
+style attribute > should still support class attribute :: pass
+style attribute > should still support className attribute :: pass
+style attribute > should switch back to HTML for <foreignObject> :: pass
+style attribute > should render foreignObject as an svg element :: pass
+style attribute > should transition from DOM to SVG and back :: pass
+toChildArray > returns an empty array with no child :: pass
+toChildArray > returns an empty array with null as a child :: pass
+toChildArray > returns an empty array with false as a child :: pass
+toChildArray > returns an empty array with true as a child :: pass
+toChildArray > should skip a function child :: pass
+toChildArray > returns an array containing a VNode with a text child :: pass
+toChildArray > returns an array containing a VNode with a number child :: pass
+toChildArray > returns an array containing a VNode with a DOM node child :: pass
+toChildArray > returns an array containing a VNode with a Component child :: pass
+toChildArray > returns an array with multiple children :: pass
+toChildArray > returns an array with non-renderables removed with a mixed array as children :: pass
+toChildArray > flattens sibling and nested arrays :: pass
+toChildArray > should return a Provider and a Consumer :: pass
+toChildArray > should return a valid Provider Component :: pass
+createElement(jsx) > should return a VNode :: pass
+createElement(jsx) > should set VNode#type property :: pass
+createElement(jsx) > should set VNode.constructor property to prevent json injection :: pass
+createElement(jsx) > should set VNode#props property :: pass
+createElement(jsx) > should set VNode#key property :: pass
+createElement(jsx) > should not set VNode#props.key property :: pass
+createElement(jsx) > should set VNode#ref property :: pass
+createElement(jsx) > should not set VNode#props.ref property :: pass
+createElement(jsx) > should have ordered VNode properties :: pass
+createElement(jsx) > should preserve raw props :: pass
+createElement(jsx) > should support element children :: pass
+createElement(jsx) > should support multiple element children, given as arg list :: pass
+createElement(jsx) > should handle multiple element children, given as an array :: pass
+createElement(jsx) > should support nested children :: pass
+createElement(jsx) > should support text children :: pass
+createElement(jsx) > should override children if null is provided as an argument :: pass
+createElement(jsx) > should NOT set children prop when unspecified :: pass
+createElement(jsx) > should NOT merge adjacent text children :: pass
+createElement(jsx) > should not merge nested adjacent text children :: pass
+createElement(jsx) > should not merge children that are boolean values :: pass
+createElement(jsx) > should not merge children of components :: pass
+createElement(jsx) > should respect defaultProps :: pass
+createElement(jsx) > should override defaultProps :: pass
+createElement(jsx) > should ignore props.children if children are manually specified :: pass
+preact > should be available as named exports :: pass
+preact > should check if the argument is a valid vnode :: pass
+build success
+release failed

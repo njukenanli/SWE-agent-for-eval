@@ -1,0 +1,205 @@
+pre
+OrderedSet resets order when a value is deleted pass
+OrderedSet removes correctly pass
+OrderedSet respects order for equality pass
+OrderedSet respects order when unioning pass
+OrderedSet can be zipped pass
+OrderedSet handles `subtract` when Set contains >=32 elements pass
+OrderedSet handles consecutive `subtract` invocations pass
+OrderedSet keeps the Set ordered when updating a value with .map() pass
+IndexedSequence maintains skipped offset pass
+IndexedSequence reverses correctly pass
+IndexedSequence negative indexes correctly pass
+OrderedMap converts from object pass
+OrderedMap constructor provides initial values pass
+OrderedMap provides initial values in a mixed order pass
+OrderedMap constructor accepts sequences pass
+OrderedMap maintains order when new keys are set pass
+OrderedMap resets order when a keys is deleted pass
+OrderedMap removes correctly pass
+OrderedMap respects order for equality pass
+OrderedMap respects order when merging pass
+OrderedMap performs deleteAll correctly after resizing internal list pass
+find find returns notSetValue when match is not found pass
+find findEntry returns notSetValue when match is not found pass
+find findLastEntry returns notSetValue when match is not found pass
+count counts sequences with known lengths pass
+count counts sequences with unknown lengths, resulting in a cached size pass
+count counts sequences with a specific predicate pass
+count countBy counts by keyed sequence pass
+count countBy counts by indexed sequence pass
+count countBy counts by specific keys pass
+count isEmpty is O(1) on sequences with known lengths pass
+count isEmpty lazily evaluates Seq with unknown length pass
+count isEmpty with infinitely long sequences of known length pass
+count isEmpty with infinitely long sequences of unknown length pass
+fromJS convert Array to Immutable.List pass
+fromJS convert plain Object to Immutable.Map pass
+fromJS convert JS (global) Set to Immutable.Set pass
+fromJS convert JS (global) Map to Immutable.Map pass
+fromJS convert iterable to Immutable collection pass
+fromJS does not convert existing Immutable collections pass
+fromJS does not convert strings pass
+fromJS does not convert non-plain Objects pass
+fromJS is iterable outside of a vm pass
+fromJS is iterable inside of a vm pass
+ArraySequence every is true when predicate is true for all entries pass
+ArraySequence some is true when predicate is true for any entry pass
+ArraySequence maps pass
+ArraySequence reduces pass
+ArraySequence efficiently chains iteration methods pass
+ArraySequence counts from the end of the sequence on negative index pass
+ArraySequence handles trailing holes pass
+ArraySequence can be iterated pass
+ArraySequence cannot be mutated after calling toArray pass
+Comparator applied to List when sorting should support the enum as well as numeric return values pass
+Comparator applied to List when retrieving the max value should support the enum as well as numeric return values pass
+Comparator applied to List when retrieving the min value should support the enum as well as numeric return values pass
+Comparator applied to OrderedSet when sorting should support the enum as well as numeric return values pass
+Comparator applied to OrderedSet when retrieving the max value should support the enum as well as numeric return values pass
+Comparator applied to OrderedSet when retrieving the min value should support the enum as well as numeric return values pass
+Comparator applied to Seq.Indexed when sorting should support the enum as well as numeric return values pass
+Comparator applied to Seq.Indexed when retrieving the max value should support the enum as well as numeric return values pass
+Comparator applied to Seq.Indexed when retrieving the min value should support the enum as well as numeric return values pass
+sort sorts a sequence pass
+sort sorts a list pass
+sort sorts undefined values last pass
+sort sorts a keyed sequence pass
+sort sorts an OrderedMap pass
+sort accepts a sort function pass
+sort sorts by using a mapper pass
+sort sorts by using a mapper and a sort function pass
+ObjectSequence maps pass
+ObjectSequence reduces pass
+ObjectSequence extracts keys pass
+ObjectSequence is reversable pass
+ObjectSequence is double reversable pass
+ObjectSequence can be iterated pass
+ObjectSequence cannot be mutated after calling toObject pass
+interpose separates with a value pass
+interpose can be iterated pass
+get gets any index pass
+get gets first pass
+get gets last pass
+get gets any index after reversing pass
+get gets first after reversing pass
+get gets last after reversing pass
+get gets any index when size is unknown pass
+get gets first when size is unknown pass
+get gets last when size is unknown pass
+isImmutable behaves as advertised pass
+isValueObject behaves as advertised pass
+isValueObject works on custom types pass
+Repeat fixed repeat pass
+Repeat does not claim to be equal to undefined pass
+MultiRequire might require two different instances of Immutable skip
+MultiRequire detects sequences pass
+MultiRequire detects records pass
+MultiRequire converts to JS when inter-nested pass
+MultiRequire compares for equality pass
+MultiRequire flattens nested values pass
+MultiRequire detects types pass
+post
+groupBy has groups that can be mapped pass
+find find returns notSetValue when match is not found pass
+find findEntry returns notSetValue when match is not found pass
+find findLastEntry returns notSetValue when match is not found pass
+OrderedSet provides initial values in a mixed order pass
+OrderedSet maintains order when new values are added pass
+OrderedSet resets order when a value is deleted pass
+OrderedSet removes correctly pass
+OrderedSet respects order for equality pass
+OrderedSet respects order when unioning pass
+OrderedSet can be zipped pass
+OrderedSet handles `subtract` when Set contains >=32 elements pass
+OrderedSet handles consecutive `subtract` invocations pass
+OrderedSet keeps the Set ordered when updating a value with .map() pass
+ArraySequence every is true when predicate is true for all entries pass
+ArraySequence some is true when predicate is true for any entry pass
+ArraySequence maps pass
+ArraySequence reduces pass
+ArraySequence efficiently chains iteration methods pass
+ArraySequence counts from the end of the sequence on negative index pass
+ArraySequence handles trailing holes pass
+ArraySequence can be iterated pass
+ArraySequence cannot be mutated after calling toArray pass
+ObjectSequence maps pass
+ObjectSequence reduces pass
+ObjectSequence extracts keys pass
+ObjectSequence is reversable pass
+ObjectSequence is double reversable pass
+ObjectSequence can be iterated pass
+ObjectSequence cannot be mutated after calling toObject pass
+fromJS convert Array to Immutable.List pass
+fromJS convert plain Object to Immutable.Map pass
+fromJS convert JS (global) Set to Immutable.Set pass
+fromJS convert JS (global) Map to Immutable.Map pass
+fromJS convert iterable to Immutable collection pass
+fromJS does not convert existing Immutable collections pass
+fromJS does not convert strings pass
+fromJS does not convert non-plain Objects pass
+fromJS is iterable outside of a vm pass
+fromJS is iterable inside of a vm pass
+count counts sequences with known lengths pass
+count counts sequences with unknown lengths, resulting in a cached size pass
+count counts sequences with a specific predicate pass
+count countBy counts by keyed sequence pass
+count countBy counts by indexed sequence pass
+count countBy counts by specific keys pass
+count isEmpty is O(1) on sequences with known lengths pass
+count isEmpty lazily evaluates Seq with unknown length pass
+count isEmpty with infinitely long sequences of known length pass
+count isEmpty with infinitely long sequences of unknown length pass
+OrderedMap converts from object pass
+OrderedMap constructor provides initial values pass
+OrderedMap provides initial values in a mixed order pass
+OrderedMap constructor accepts sequences pass
+OrderedMap maintains order when new keys are set pass
+OrderedMap resets order when a keys is deleted pass
+OrderedMap removes correctly pass
+OrderedMap respects order for equality pass
+OrderedMap respects order when merging pass
+OrderedMap performs deleteAll correctly after resizing internal list pass
+Comparator applied to List when sorting should support the enum as well as numeric return values pass
+Comparator applied to List when retrieving the max value should support the enum as well as numeric return values pass
+Comparator applied to List when retrieving the min value should support the enum as well as numeric return values pass
+Comparator applied to OrderedSet when sorting should support the enum as well as numeric return values pass
+Comparator applied to OrderedSet when retrieving the max value should support the enum as well as numeric return values pass
+Comparator applied to OrderedSet when retrieving the min value should support the enum as well as numeric return values pass
+Comparator applied to Seq.Indexed when sorting should support the enum as well as numeric return values pass
+Comparator applied to Seq.Indexed when retrieving the max value should support the enum as well as numeric return values pass
+Comparator applied to Seq.Indexed when retrieving the min value should support the enum as well as numeric return values pass
+sort sorts a sequence pass
+sort sorts a list pass
+sort sorts undefined values last pass
+sort sorts a keyed sequence pass
+sort sorts an OrderedMap pass
+sort accepts a sort function pass
+sort sorts by using a mapper pass
+sort sorts by using a mapper and a sort function pass
+get gets any index pass
+get gets first pass
+get gets last pass
+get gets any index after reversing pass
+get gets first after reversing pass
+get gets last after reversing pass
+get gets any index when size is unknown pass
+get gets first when size is unknown pass
+get gets last when size is unknown pass
+interpose separates with a value pass
+interpose can be iterated pass
+isImmutable behaves as advertised pass
+isValueObject behaves as advertised pass
+isValueObject works on custom types pass
+MultiRequire might require two different instances of Immutable skip
+MultiRequire detects sequences pass
+MultiRequire detects records pass
+MultiRequire converts to JS when inter-nested pass
+MultiRequire compares for equality pass
+MultiRequire flattens nested values pass
+MultiRequire detects types pass
+Repeat fixed repeat pass
+Repeat does not claim to be equal to undefined pass
+build success
+release success
+{'Range sliced sequence works even on filtered sequence'}

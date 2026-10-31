@@ -1,0 +1,205 @@
+pre
+options should change only the baseURL of the specified instance :: pass
+options should change only the headers of the specified instance :: pass
+progress events should add a download progress handler :: pass
+progress events should add a upload progress handler :: pass
+progress events should add both upload and download progress handlers :: pass
+progress events should add a download progress handler from instance config :: pass
+progress events should add a upload progress handler from instance config :: pass
+progress events should add upload and download progress handlers from instance config :: pass
+promise should provide succinct object to then :: pass
+promise should support all :: pass
+promise should support spread :: pass
+requests should treat single string arg as url :: pass
+requests should treat method value as lowercase string :: pass
+requests should allow string arg as url, and config arg :: pass
+requests should allow data :: pass
+requests should make an http request :: pass
+requests timeouts should handle timeouts :: pass
+requests timeouts transitional.clarifyTimeoutError should activate throwing ETIMEDOUT instead of ECONNABORTED on request timeouts :: pass
+requests should reject on network errors :: pass
+requests should reject on abort :: pass
+requests should reject when validateStatus returns false :: pass
+requests should resolve when validateStatus returns true :: pass
+requests should resolve when the response status is 0 (i.e. requesting with file protocol) :: pass
+requests should resolve when validateStatus is null :: pass
+requests should resolve when validateStatus is undefined :: pass
+requests should return JSON when rejecting :: pass
+requests should make cross domain http request :: pass
+requests should supply correct response :: pass
+requests should not modify the config url with relative baseURL :: pass
+requests should allow overriding Content-Type header case-insensitive :: pass
+requests should support binary data as array buffer :: pass
+requests should support binary data as array buffer view :: pass
+requests should support array buffer response :: pass
+requests should support URLSearchParams :: pass
+requests should support HTTP protocol :: pass
+requests should support HTTPS protocol :: pass
+requests should return unsupported protocol error message :: pass
+transform should transform JSON to string :: pass
+transform should transform string to JSON :: pass
+transform should throw a SyntaxError if JSON parsing failed and responseType is "json" if silentJSONParsing is false :: pass
+transform should send data as JSON if request content-type is application/json :: pass
+transform should not assume JSON if responseType is not `json` :: pass
+transform should override default transform :: pass
+transform should allow an Array of transformers :: pass
+transform should allowing mutating headers :: pass
+transform should normalize 'content-type' header when using a custom transformRequest :: pass
+utils::extend should be mutable :: pass
+utils::extend should extend properties :: pass
+utils::extend should bind to thisArg :: pass
+utils::forEach should loop over an array :: pass
+utils::forEach should loop over object keys :: pass
+utils::forEach should handle undefined gracefully :: pass
+utils::forEach should make an array out of non-array argument :: pass
+utils::forEach should handle non object prototype gracefully :: pass
+utils::isX should validate Array :: pass
+utils::isX should validate ArrayBuffer :: pass
+utils::isX should validate ArrayBufferView :: pass
+utils::isX should validate FormData :: pass
+utils::isX should validate Blob :: pass
+utils::isX should validate String :: pass
+utils::isX should validate Number :: pass
+utils::isX should validate Undefined :: pass
+utils::isX should validate Object :: pass
+utils::isX should validate plain Object :: pass
+utils::isX should validate Date :: pass
+utils::isX should validate Function :: pass
+utils::isX should validate URLSearchParams :: pass
+utils::isX should validate TypedArray instance :: pass
+utils::merge should be immutable :: pass
+utils::merge should merge properties :: pass
+utils::merge should merge recursively :: pass
+utils::merge should remove all references from nested objects :: pass
+utils::merge handles null and undefined arguments :: pass
+utils::merge should replace properties with null :: pass
+utils::merge should replace properties with arrays :: pass
+utils::merge should replace properties with cloned arrays :: pass
+utils::merge should support caseless option :: pass
+utils::trim should trim spaces :: pass
+utils::trim should trim tabs :: pass
+xsrf should not set xsrf header if cookie is null :: pass
+xsrf should set xsrf header if cookie is set :: pass
+xsrf should not set xsrf header if xsrfCookieName is null :: pass
+xsrf should not read cookies at all if xsrfCookieName is null :: pass
+xsrf should not set xsrf header for cross origin :: pass
+xsrf should not set xsrf header for cross origin when using withCredentials :: pass
+xsrf withXSRFToken option should set xsrf header for cross origin when withXSRFToken = true :: pass
+xsrf withXSRFToken option should not set xsrf header for the same origin when withXSRFToken = false :: pass
+xsrf withXSRFToken option should not set xsrf header for the same origin when withXSRFToken = false :: pass
+xsrf withXSRFToken option should support function resolver :: pass
+test:karma :: fail
+test:dtslint :: pass
+module export should have consistent ESM export :: pass
+module export CommonJS should be able to be loaded with require :: pass
+module export ESM should be able to be loaded with import :: pass
+module export TS should be able to be loaded with import :: pass
+module export TS require('axios') should be able to be loaded with require :: pass
+module export TS require('axios').default should be able to be loaded with require :: pass
+module typings ESM should pass types check :: pass
+module typings CommonJS should pass types check :: pass
+test:exports :: pass
+post
+options should change only the baseURL of the specified instance :: pass
+options should change only the headers of the specified instance :: pass
+progress events should add a download progress handler :: pass
+progress events should add a upload progress handler :: pass
+progress events should add both upload and download progress handlers :: pass
+progress events should add a download progress handler from instance config :: pass
+progress events should add a upload progress handler from instance config :: pass
+progress events should add upload and download progress handlers from instance config :: pass
+promise should provide succinct object to then :: pass
+promise should support all :: pass
+promise should support spread :: pass
+requests should treat single string arg as url :: pass
+requests should treat method value as lowercase string :: pass
+requests should allow string arg as url, and config arg :: pass
+requests should allow data :: pass
+requests should make an http request :: pass
+requests timeouts should handle timeouts :: pass
+requests timeouts transitional.clarifyTimeoutError should activate throwing ETIMEDOUT instead of ECONNABORTED on request timeouts :: pass
+requests should reject on network errors :: pass
+requests should reject on abort :: pass
+requests should reject when validateStatus returns false :: pass
+requests should resolve when validateStatus returns true :: pass
+requests should resolve when the response status is 0 (i.e. requesting with file protocol) :: pass
+requests should resolve when validateStatus is null :: pass
+requests should resolve when validateStatus is undefined :: pass
+requests should return JSON when rejecting :: pass
+requests should make cross domain http request :: pass
+requests should supply correct response :: pass
+requests should not modify the config url with relative baseURL :: pass
+requests should allow overriding Content-Type header case-insensitive :: pass
+requests should support binary data as array buffer :: pass
+requests should support binary data as array buffer view :: pass
+requests should support array buffer response :: pass
+requests should support URLSearchParams :: pass
+requests should support HTTP protocol :: pass
+requests should support HTTPS protocol :: pass
+requests should return unsupported protocol error message :: pass
+transform should transform JSON to string :: pass
+transform should transform string to JSON :: pass
+transform should throw a SyntaxError if JSON parsing failed and responseType is "json" if silentJSONParsing is false :: pass
+transform should send data as JSON if request content-type is application/json :: pass
+transform should not assume JSON if responseType is not `json` :: pass
+transform should override default transform :: pass
+transform should allow an Array of transformers :: pass
+transform should allowing mutating headers :: pass
+transform should normalize 'content-type' header when using a custom transformRequest :: pass
+utils::extend should be mutable :: pass
+utils::extend should extend properties :: pass
+utils::extend should bind to thisArg :: pass
+utils::forEach should loop over an array :: pass
+utils::forEach should loop over object keys :: pass
+utils::forEach should handle undefined gracefully :: pass
+utils::forEach should make an array out of non-array argument :: pass
+utils::forEach should handle non object prototype gracefully :: pass
+utils::isX should validate Array :: pass
+utils::isX should validate ArrayBuffer :: pass
+utils::isX should validate ArrayBufferView :: pass
+utils::isX should validate FormData :: pass
+utils::isX should validate Blob :: pass
+utils::isX should validate String :: pass
+utils::isX should validate Number :: pass
+utils::isX should validate Undefined :: pass
+utils::isX should validate Object :: pass
+utils::isX should validate plain Object :: pass
+utils::isX should validate Date :: pass
+utils::isX should validate Function :: pass
+utils::isX should validate URLSearchParams :: pass
+utils::isX should validate TypedArray instance :: pass
+utils::merge should be immutable :: pass
+utils::merge should merge properties :: pass
+utils::merge should merge recursively :: pass
+utils::merge should remove all references from nested objects :: pass
+utils::merge handles null and undefined arguments :: pass
+utils::merge should replace properties with null :: pass
+utils::merge should replace properties with arrays :: pass
+utils::merge should replace properties with cloned arrays :: pass
+utils::merge should support caseless option :: pass
+utils::trim should trim spaces :: pass
+utils::trim should trim tabs :: pass
+xsrf should not set xsrf header if cookie is null :: pass
+xsrf should set xsrf header if cookie is set :: pass
+xsrf should not set xsrf header if xsrfCookieName is null :: pass
+xsrf should not read cookies at all if xsrfCookieName is null :: pass
+xsrf should not set xsrf header for cross origin :: pass
+xsrf should not set xsrf header for cross origin when using withCredentials :: pass
+xsrf withXSRFToken option should set xsrf header for cross origin when withXSRFToken = true :: pass
+xsrf withXSRFToken option should not set xsrf header for the same origin when withXSRFToken = false :: pass
+xsrf withXSRFToken option should not set xsrf header for the same origin when withXSRFToken = false :: pass
+xsrf withXSRFToken option should support function resolver :: pass
+test:karma :: pass
+test:dtslint :: pass
+module export should have consistent ESM export :: pass
+module export CommonJS should be able to be loaded with require :: pass
+module export ESM should be able to be loaded with import :: pass
+module export TS should be able to be loaded with import :: pass
+module export TS require('axios') should be able to be loaded with require :: pass
+module export TS require('axios').default should be able to be loaded with require :: pass
+module typings ESM should pass types check :: pass
+module typings CommonJS should pass types check :: pass
+test:exports :: pass
+build success
+release success
+{'helpers::isAbsoluteURL should return false if URL is protocol-relative ::', 'Server-Side Request Forgery (SSRF) should not fetch bad server ::', 'test:karma ::', 'FormData should allow FormData posting ::'}

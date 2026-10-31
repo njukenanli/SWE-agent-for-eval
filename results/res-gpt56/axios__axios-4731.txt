@@ -1,0 +1,205 @@
+pre
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors given you add multiple response interceptors and when the response was fulfilled and when the fulfillment-interceptor throws once caught, another following fulfill-interceptor is called again (just like in a promise chain) pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should allow removing interceptors pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should remove async interceptor before making request and execute synchronously pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should execute interceptors before transformers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should modify base URL in request interceptor pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should clear all request interceptors pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should clear all response interceptors pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should default method to get pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should accept headers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should accept params pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should allow overriding default headers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should accept base URL pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should ignore base URL if request URL is absolute pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should change only the baseURL of the specified instance pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should change only the headers of the specified instance pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add a download progress handler pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add a upload progress handler pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add both upload and download progress handlers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add a download progress handler from instance config pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add a upload progress handler from instance config pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add upload and download progress handlers from instance config pass
+Chrome Headless 150.0.0.0 (Linux x86_64): promise should provide succinct object to then pass
+Chrome Headless 150.0.0.0 (Linux x86_64): promise should support all pass
+Chrome Headless 150.0.0.0 (Linux x86_64): promise should support spread pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should treat single string arg as url pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should treat method value as lowercase string pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should allow string arg as url, and config arg pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should allow data pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should make an http request pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests timeouts should handle timeouts pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests timeouts transitional.clarifyTimeoutError should activate throwing ETIMEDOUT instead of ECONNABORTED on request timeouts pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should reject on network errors fail
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should reject on abort pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should reject when validateStatus returns false pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should resolve when validateStatus returns true pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should resolve when the response status is 0 (i.e. requesting with file protocol) pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should resolve when validateStatus is null pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should resolve when validateStatus is undefined pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should return JSON when rejecting pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should make cross domain http request pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should supply correct response pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should not modify the config url with relative baseURL pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should allow overriding Content-Type header case-insensitive pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support binary data as array buffer pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support binary data as array buffer view pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support array buffer response pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support URLSearchParams pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support HTTP protocol pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support HTTPS protocol pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should return unsupported protocol error message pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should transform JSON to string pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should transform string to JSON pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should throw a SyntaxError if JSON parsing failed and responseType is "json" if silentJSONParsing is false pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should send data as JSON if request content-type is application/json pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should not assume JSON if responseType is not `json` pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should override default transform pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should allow an Array of transformers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should allowing mutating headers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::extend should be mutable pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::extend should extend properties pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::extend should bind to thisArg pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::forEach should loop over an array pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::forEach should loop over object keys pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::forEach should handle undefined gracefully pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::forEach should make an array out of non-array argument pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::forEach should handle non object prototype gracefully pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Array pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Buffer pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate ArrayBuffer pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate ArrayBufferView pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate FormData pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Blob pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate String pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Number pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Undefined pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Object pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate plain Object pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Date pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Function pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Stream pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate URLSearchParams pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate TypedArray instance pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should be immutable pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should merge properties pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should merge recursively pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should remove all references from nested objects pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge handles null and undefined arguments pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should replace properties with null pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should replace properties with arrays pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should replace properties with cloned arrays pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::trim should trim spaces pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::trim should trim tabs pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should not set xsrf header if cookie is null pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should set xsrf header if cookie is set pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should not set xsrf header if xsrfCookieName is null pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should not read cookies at all if xsrfCookieName is null pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should not set xsrf header for cross origin pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should set xsrf header for cross origin when using withCredentials pass
+karma runner fail
+typescript definitions fail
+post
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors given you add multiple response interceptors and when the response was fulfilled and when the fulfillment-interceptor throws once caught, another following fulfill-interceptor is called again (just like in a promise chain) pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should allow removing interceptors pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should remove async interceptor before making request and execute synchronously pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should execute interceptors before transformers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should modify base URL in request interceptor pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should clear all request interceptors pass
+Chrome Headless 150.0.0.0 (Linux x86_64): interceptors should clear all response interceptors pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should default method to get pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should accept headers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should accept params pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should allow overriding default headers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should accept base URL pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should ignore base URL if request URL is absolute pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should change only the baseURL of the specified instance pass
+Chrome Headless 150.0.0.0 (Linux x86_64): options should change only the headers of the specified instance pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add a download progress handler pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add a upload progress handler pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add both upload and download progress handlers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add a download progress handler from instance config pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add a upload progress handler from instance config pass
+Chrome Headless 150.0.0.0 (Linux x86_64): progress events should add upload and download progress handlers from instance config pass
+Chrome Headless 150.0.0.0 (Linux x86_64): promise should provide succinct object to then pass
+Chrome Headless 150.0.0.0 (Linux x86_64): promise should support all pass
+Chrome Headless 150.0.0.0 (Linux x86_64): promise should support spread pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should treat single string arg as url pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should treat method value as lowercase string pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should allow string arg as url, and config arg pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should allow data pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should make an http request pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests timeouts should handle timeouts pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests timeouts transitional.clarifyTimeoutError should activate throwing ETIMEDOUT instead of ECONNABORTED on request timeouts pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should reject on network errors fail
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should reject on abort pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should reject when validateStatus returns false pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should resolve when validateStatus returns true pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should resolve when the response status is 0 (i.e. requesting with file protocol) pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should resolve when validateStatus is null pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should resolve when validateStatus is undefined pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should return JSON when rejecting pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should make cross domain http request pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should supply correct response pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should not modify the config url with relative baseURL pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should allow overriding Content-Type header case-insensitive pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support binary data as array buffer pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support binary data as array buffer view pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support array buffer response pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support URLSearchParams pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support HTTP protocol pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should support HTTPS protocol pass
+Chrome Headless 150.0.0.0 (Linux x86_64): requests should return unsupported protocol error message pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should transform JSON to string pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should transform string to JSON pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should throw a SyntaxError if JSON parsing failed and responseType is "json" if silentJSONParsing is false pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should send data as JSON if request content-type is application/json pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should not assume JSON if responseType is not `json` pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should override default transform pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should allow an Array of transformers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): transform should allowing mutating headers pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::extend should be mutable pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::extend should extend properties pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::extend should bind to thisArg pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::forEach should loop over an array pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::forEach should loop over object keys pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::forEach should handle undefined gracefully pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::forEach should make an array out of non-array argument pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::forEach should handle non object prototype gracefully pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Array pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Buffer pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate ArrayBuffer pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate ArrayBufferView pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate FormData pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Blob pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate String pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Number pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Undefined pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Object pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate plain Object pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Date pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Function pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate Stream pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate URLSearchParams pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::isX should validate TypedArray instance pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should be immutable pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should merge properties pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should merge recursively pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should remove all references from nested objects pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge handles null and undefined arguments pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should replace properties with null pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should replace properties with arrays pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::merge should replace properties with cloned arrays pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::trim should trim spaces pass
+Chrome Headless 150.0.0.0 (Linux x86_64): utils::trim should trim tabs pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should not set xsrf header if cookie is null pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should set xsrf header if cookie is set pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should not set xsrf header if xsrfCookieName is null pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should not read cookies at all if xsrfCookieName is null pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should not set xsrf header for cross origin pass
+Chrome Headless 150.0.0.0 (Linux x86_64): xsrf should set xsrf header for cross origin when using withCredentials pass
+karma runner fail
+typescript definitions fail
+build success
+release success
+{'mocha: supports http with nodejs should properly support default max body length (follow-redirects as well)'}

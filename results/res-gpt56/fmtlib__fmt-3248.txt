@@ -1,0 +1,147 @@
+pre
+[  4%] Built target fmt
+[  7%] Built target gtest
+[ 13%] Built target test-main
+[ 23%] Built target format-impl-test
+[ 32%] Built target compile-fp-test
+[ 35%] Built target printf-test
+[ 38%] Built target scan-test
+[ 43%] Built target ranges-test
+[ 46%] Built target std-test
+[ 55%] Built target unicode-test
+[ 58%] Built target xchar-test
+[ 61%] Built target enforce-checks-test
+[ 70%] Built target posix-mock-test
+[ 73%] Built target os-test
+[ 76%] Built target args-test
+[ 79%] Built target assert-test
+[ 82%] Built target chrono-test
+[ 85%] Built target color-test
+[ 88%] Built target core-test
+[ 91%] Built target gtest-extra-test
+[ 94%] Built target format-test
+[ 97%] Built target ostream-test
+[100%] Built target compile-test
+format-impl-test pass
+format-test pass
+os-test pass
+chrono-test pass
+posix-mock-test pass
+printf-test pass
+xchar-test pass
+ostream-test pass
+compile-test pass
+unicode-test pass
+enforce-checks-test pass
+core-test pass
+gtest-extra-test pass
+scan-test pass
+compile-fp-test pass
+std-test pass
+assert-test pass
+ranges-test pass
+color-test pass
+args-test pass
+post
+[  7%] Building CXX object test/CMakeFiles/format-impl-test.dir/format-impl-test.cc.o
+[  8%] Linking CXX static library libfmt.a
+[  8%] Built target fmt
+[ 10%] Building CXX object test/CMakeFiles/compile-fp-test.dir/compile-fp-test.cc.o
+[ 11%] Building CXX object test/CMakeFiles/compile-fp-test.dir/gtest-extra.cc.o
+[ 13%] Building CXX object test/CMakeFiles/format-impl-test.dir/header-only-test.cc.o
+[ 14%] Building CXX object test/CMakeFiles/compile-fp-test.dir/util.cc.o
+[ 16%] Building CXX object test/CMakeFiles/format-impl-test.dir/gtest-extra.cc.o
+[ 17%] Building CXX object test/CMakeFiles/compile-fp-test.dir/__/src/os.cc.o
+[ 19%] Building CXX object test/CMakeFiles/format-impl-test.dir/util.cc.o
+[ 20%] Linking CXX executable ../bin/compile-fp-test
+[ 22%] Built target compile-fp-test
+[ 23%] Building CXX object test/CMakeFiles/unicode-test.dir/unicode-test.cc.o
+[ 25%] Building CXX object test/CMakeFiles/format-impl-test.dir/__/src/os.cc.o
+[ 26%] Linking CXX executable ../bin/format-impl-test
+[ 28%] Built target format-impl-test
+[ 29%] Building CXX object test/CMakeFiles/posix-mock-test.dir/posix-mock-test.cc.o
+[ 31%] Building CXX object test/CMakeFiles/unicode-test.dir/gtest-extra.cc.o
+[ 32%] Building CXX object test/CMakeFiles/posix-mock-test.dir/__/src/format.cc.o
+[ 34%] Building CXX object test/CMakeFiles/unicode-test.dir/util.cc.o
+[ 35%] Building CXX object test/CMakeFiles/posix-mock-test.dir/gtest-extra.cc.o
+[ 37%] Building CXX object test/CMakeFiles/unicode-test.dir/__/src/os.cc.o
+[ 38%] Building CXX object test/CMakeFiles/posix-mock-test.dir/util.cc.o
+[ 40%] Linking CXX executable ../bin/posix-mock-test
+[ 41%] Built target posix-mock-test
+[ 43%] Building CXX object test/CMakeFiles/test-main.dir/gtest-extra.cc.o
+[ 44%] Building CXX object test/CMakeFiles/test-main.dir/util.cc.o
+[ 46%] Linking CXX static library libtest-main.a
+[ 47%] Built target test-main
+[ 49%] Building CXX object test/CMakeFiles/args-test.dir/args-test.cc.o
+[ 50%] Linking CXX executable ../bin/unicode-test
+[ 52%] Built target unicode-test
+[ 53%] Building CXX object test/CMakeFiles/assert-test.dir/assert-test.cc.o
+[ 55%] Linking CXX executable ../bin/args-test
+[ 55%] Built target args-test
+[ 56%] Building CXX object test/CMakeFiles/chrono-test.dir/chrono-test.cc.o
+[ 58%] Linking CXX executable ../bin/assert-test
+[ 58%] Built target assert-test
+[ 59%] Building CXX object test/CMakeFiles/color-test.dir/color-test.cc.o
+[ 61%] Linking CXX executable ../bin/color-test
+[ 61%] Built target color-test
+[ 62%] Building CXX object test/CMakeFiles/core-test.dir/core-test.cc.o
+[ 64%] Linking CXX executable ../bin/core-test
+[ 64%] Built target core-test
+[ 65%] Building CXX object test/CMakeFiles/gtest-extra-test.dir/gtest-extra-test.cc.o
+[ 67%] Linking CXX executable ../bin/chrono-test
+[ 67%] Built target chrono-test
+[ 68%] Building CXX object test/CMakeFiles/format-test.dir/format-test.cc.o
+[ 70%] Linking CXX executable ../bin/gtest-extra-test
+[ 70%] Built target gtest-extra-test
+[ 71%] Building CXX object test/CMakeFiles/ostream-test.dir/ostream-test.cc.o
+[ 73%] Linking CXX executable ../bin/ostream-test
+[ 73%] Built target ostream-test
+[ 74%] Building CXX object test/CMakeFiles/compile-test.dir/compile-test.cc.o
+[ 76%] Linking CXX executable ../bin/compile-test
+[ 76%] Built target compile-test
+[ 77%] Building CXX object test/CMakeFiles/printf-test.dir/printf-test.cc.o
+[ 79%] Linking CXX executable ../bin/format-test
+[ 79%] Built target format-test
+[ 80%] Building CXX object test/CMakeFiles/ranges-test.dir/ranges-test.cc.o
+[ 82%] Building CXX object test/CMakeFiles/ranges-test.dir/ranges-odr-test.cc.o
+[ 83%] Linking CXX executable ../bin/ranges-test
+[ 83%] Built target ranges-test
+[ 85%] Building CXX object test/CMakeFiles/scan-test.dir/scan-test.cc.o
+[ 86%] Linking CXX executable ../bin/scan-test
+[ 86%] Built target scan-test
+[ 88%] Building CXX object test/CMakeFiles/std-test.dir/std-test.cc.o
+[ 89%] Linking CXX executable ../bin/std-test
+[ 89%] Built target std-test
+[ 91%] Building CXX object test/CMakeFiles/xchar-test.dir/xchar-test.cc.o
+[ 92%] Linking CXX executable ../bin/printf-test
+[ 92%] Built target printf-test
+[ 94%] Building CXX object test/CMakeFiles/enforce-checks-test.dir/enforce-checks-test.cc.o
+[ 95%] Linking CXX executable ../bin/xchar-test
+[ 95%] Built target xchar-test
+[ 97%] Building CXX object test/CMakeFiles/os-test.dir/os-test.cc.o
+[ 98%] Linking CXX executable ../bin/enforce-checks-test
+[ 98%] Built target enforce-checks-test
+[100%] Linking CXX executable ../bin/os-test
+[100%] Built target os-test
+format-impl-test pass
+format-test pass
+chrono-test pass
+os-test pass
+posix-mock-test pass
+printf-test pass
+xchar-test pass
+compile-test pass
+unicode-test pass
+ostream-test pass
+enforce-checks-test pass
+core-test pass
+gtest-extra-test pass
+scan-test pass
+color-test pass
+std-test pass
+assert-test pass
+compile-fp-test pass
+ranges-test pass
+args-test pass
+build success
+release failed

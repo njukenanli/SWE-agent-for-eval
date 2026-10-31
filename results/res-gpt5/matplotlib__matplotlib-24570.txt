@@ -1,0 +1,206 @@
+pre
+test_poly3dcollection_closed[png] pass
+test_poly_collection_2d_to_3d_empty pass
+test_poly3dcollection_alpha[png] pass
+test_add_collection3d_zs_array[png] pass
+test_add_collection3d_zs_scalar[png] pass
+test_axes3d_labelpad[png] pass
+test_axes3d_cla[png] pass
+test_axes3d_rotated[png] pass
+test_plotsurface_1d_raises pass
+test_proj_transform pass
+test_proj_axes_cube[png] pass
+test_proj_axes_cube_ortho[png] pass
+test_rot pass
+test_world pass
+test_lines_dists[png] pass
+test_lines_dists_nowarning pass
+test_autoscale pass
+test_unautoscale[True-x] pass
+test_unautoscale[True-y] pass
+test_unautoscale[True-z] pass
+test_unautoscale[False-x] pass
+test_unautoscale[False-y] pass
+test_unautoscale[False-z] pass
+test_unautoscale[None-x] pass
+test_unautoscale[None-y] pass
+test_unautoscale[None-z] pass
+test_axes3d_focal_length_checks pass
+test_axes3d_focal_length[png] pass
+test_axes3d_ortho[png] pass
+test_axes3d_isometric[png] pass
+test_invalid_axes_limits[set_xlim3d-left-inf] pass
+test_invalid_axes_limits[set_xlim3d-left-nan] pass
+test_invalid_axes_limits[set_xlim3d-right-inf] pass
+test_invalid_axes_limits[set_xlim3d-right-nan] pass
+test_invalid_axes_limits[set_ylim3d-bottom-inf] pass
+test_invalid_axes_limits[set_ylim3d-bottom-nan] pass
+test_invalid_axes_limits[set_ylim3d-top-inf] pass
+test_invalid_axes_limits[set_ylim3d-top-nan] pass
+test_invalid_axes_limits[set_zlim3d-bottom-inf] pass
+test_invalid_axes_limits[set_zlim3d-bottom-nan] pass
+test_invalid_axes_limits[set_zlim3d-top-inf] pass
+test_invalid_axes_limits[set_zlim3d-top-nan] pass
+test_simple[png] pass
+test_edge_style[png] pass
+test_named_colors[png] pass
+test_rgb_data[png] pass
+test_alpha[png] pass
+test_xyz[png] pass
+test_calling_conventions pass
+test_line3d_set_get_data_3d pass
+test_inverted[png] pass
+test_inverted_cla pass
+test_ax3d_tickcolour pass
+test_ticklabel_format[png] pass
+test_quiver3D_smoke[png] pass
+test_minor_ticks[png] pass
+test_errorbar3d_errorevery[png] pass
+test_errorbar3d[png] pass
+test_stem3d[png] pass
+test_equal_box_aspect[png] pass
+test_colorbar_pos pass
+test_inverted_zaxis pass
+test_set_zlim pass
+test_shared_axes_retick pass
+test_pan pass
+test_toolbar_zoom_pan[zoom-1-None-expected0] pass
+test_toolbar_zoom_pan[zoom-1-x-expected1] pass
+test_toolbar_zoom_pan[zoom-1-y-expected2] pass
+test_toolbar_zoom_pan[zoom-3-None-expected3] pass
+test_toolbar_zoom_pan[pan-1-None-expected4] pass
+test_toolbar_zoom_pan[pan-1-x-expected5] pass
+test_toolbar_zoom_pan[pan-1-y-expected6] pass
+test_scalarmap_update[png] pass
+test_subfigure_simple pass
+test_computed_zorder[png] pass
+test_format_coord pass
+test_get_axis_position pass
+test_margins pass
+test_margins_errors[ValueError-args0-kwargs0-margin must be greater than -0\\.5] pass
+test_margins_errors[ValueError-args1-kwargs1-margin must be greater than -0\\.5] pass
+test_margins_errors[ValueError-args2-kwargs2-margin must be greater than -0\\.5] pass
+test_margins_errors[ValueError-args3-kwargs3-margin must be greater than -0\\.5] pass
+test_margins_errors[ValueError-args4-kwargs4-margin must be greater than -0\\.5] pass
+test_margins_errors[ValueError-args5-kwargs5-margin must be greater than -0\\.5] pass
+test_margins_errors[TypeError-args6-kwargs6-Cannot pass both positional and keyword] pass
+test_margins_errors[TypeError-args7-kwargs7-Cannot pass both positional and keyword] pass
+test_margins_errors[TypeError-args8-kwargs8-Cannot pass both positional and keyword] pass
+test_margins_errors[TypeError-args9-kwargs9-Must pass a single positional argument for] pass
+test_text_3d[png] pass
+test_draw_single_lines_from_Nx1 pass
+test_pathpatch_3d[png] pass
+test_scatter_spiral[png] pass
+test_Poly3DCollection_get_facecolor pass
+test_Poly3DCollection_get_edgecolor pass
+test_view_init_vertical_axis[z-proj_expected0-axis_lines_expected0-tickdirs_expected0] pass
+test_view_init_vertical_axis[y-proj_expected1-axis_lines_expected1-tickdirs_expected1] pass
+test_view_init_vertical_axis[x-proj_expected2-axis_lines_expected2-tickdirs_expected2] pass
+test_arc_pathpatch[png] pass
+test_panecolor_rcparams[png] pass
+test_mutating_input_arrays_y_and_z[png] pass
+post
+test_poly3dcollection_closed[png] pass
+test_poly_collection_2d_to_3d_empty pass
+test_poly3dcollection_alpha[png] pass
+test_add_collection3d_zs_array[png] pass
+test_add_collection3d_zs_scalar[png] pass
+test_axes3d_labelpad[png] pass
+test_axes3d_cla[png] pass
+test_axes3d_rotated[png] pass
+test_plotsurface_1d_raises pass
+test_proj_transform pass
+test_proj_axes_cube[png] pass
+test_proj_axes_cube_ortho[png] pass
+test_rot pass
+test_world pass
+test_lines_dists[png] pass
+test_lines_dists_nowarning pass
+test_autoscale pass
+test_unautoscale[True-x] pass
+test_unautoscale[True-y] pass
+test_unautoscale[True-z] pass
+test_unautoscale[False-x] pass
+test_unautoscale[False-y] pass
+test_unautoscale[False-z] pass
+test_unautoscale[None-x] pass
+test_unautoscale[None-y] pass
+test_unautoscale[None-z] pass
+test_axes3d_focal_length_checks pass
+test_axes3d_focal_length[png] pass
+test_axes3d_ortho[png] pass
+test_axes3d_isometric[png] pass
+test_invalid_axes_limits[set_xlim3d-left-inf] pass
+test_invalid_axes_limits[set_xlim3d-left-nan] pass
+test_invalid_axes_limits[set_xlim3d-right-inf] pass
+test_invalid_axes_limits[set_xlim3d-right-nan] pass
+test_invalid_axes_limits[set_ylim3d-bottom-inf] pass
+test_invalid_axes_limits[set_ylim3d-bottom-nan] pass
+test_invalid_axes_limits[set_ylim3d-top-inf] pass
+test_invalid_axes_limits[set_ylim3d-top-nan] pass
+test_invalid_axes_limits[set_zlim3d-bottom-inf] pass
+test_invalid_axes_limits[set_zlim3d-bottom-nan] pass
+test_invalid_axes_limits[set_zlim3d-top-inf] pass
+test_invalid_axes_limits[set_zlim3d-top-nan] pass
+test_simple[png] pass
+test_edge_style[png] pass
+test_named_colors[png] pass
+test_rgb_data[png] pass
+test_alpha[png] pass
+test_xyz[png] pass
+test_calling_conventions pass
+test_line3d_set_get_data_3d pass
+test_inverted[png] pass
+test_inverted_cla pass
+test_ax3d_tickcolour pass
+test_ticklabel_format[png] pass
+test_quiver3D_smoke[png] pass
+test_minor_ticks[png] pass
+test_errorbar3d_errorevery[png] pass
+test_errorbar3d[png] pass
+test_stem3d[png] pass
+test_equal_box_aspect[png] pass
+test_colorbar_pos pass
+test_inverted_zaxis pass
+test_set_zlim pass
+test_shared_axes_retick pass
+test_pan pass
+test_toolbar_zoom_pan[zoom-1-None-expected0] pass
+test_toolbar_zoom_pan[zoom-1-x-expected1] pass
+test_toolbar_zoom_pan[zoom-1-y-expected2] pass
+test_toolbar_zoom_pan[zoom-3-None-expected3] pass
+test_toolbar_zoom_pan[pan-1-None-expected4] pass
+test_toolbar_zoom_pan[pan-1-x-expected5] pass
+test_toolbar_zoom_pan[pan-1-y-expected6] pass
+test_scalarmap_update[png] pass
+test_subfigure_simple pass
+test_computed_zorder[png] pass
+test_format_coord pass
+test_get_axis_position pass
+test_margins pass
+test_margins_errors[ValueError-args0-kwargs0-margin must be greater than -0\\.5] pass
+test_margins_errors[ValueError-args1-kwargs1-margin must be greater than -0\\.5] pass
+test_margins_errors[ValueError-args2-kwargs2-margin must be greater than -0\\.5] pass
+test_margins_errors[ValueError-args3-kwargs3-margin must be greater than -0\\.5] pass
+test_margins_errors[ValueError-args4-kwargs4-margin must be greater than -0\\.5] pass
+test_margins_errors[ValueError-args5-kwargs5-margin must be greater than -0\\.5] pass
+test_margins_errors[TypeError-args6-kwargs6-Cannot pass both positional and keyword] pass
+test_margins_errors[TypeError-args7-kwargs7-Cannot pass both positional and keyword] pass
+test_margins_errors[TypeError-args8-kwargs8-Cannot pass both positional and keyword] pass
+test_margins_errors[TypeError-args9-kwargs9-Must pass a single positional argument for] pass
+test_text_3d[png] pass
+test_draw_single_lines_from_Nx1 pass
+test_pathpatch_3d[png] pass
+test_scatter_spiral[png] pass
+test_Poly3DCollection_get_facecolor pass
+test_Poly3DCollection_get_edgecolor pass
+test_view_init_vertical_axis[z-proj_expected0-axis_lines_expected0-tickdirs_expected0] pass
+test_view_init_vertical_axis[y-proj_expected1-axis_lines_expected1-tickdirs_expected1] pass
+test_view_init_vertical_axis[x-proj_expected2-axis_lines_expected2-tickdirs_expected2] pass
+test_arc_pathpatch[png] pass
+test_panecolor_rcparams[png] pass
+test_mutating_input_arrays_y_and_z[png] pass
+(.venv) (.venv) build success
+release success
+{'test_packers[top]', 'test_packers[baseline]', 'test_packers[left]', 'test_packers[bottom]', 'test_packers[center]', 'test_packers[right]'}
+(.venv) (.venv) 

@@ -1,0 +1,65 @@
+pre
+   Compiling red_knot_wasm v0.0.0 (/testbed/crates/red_knot_wasm)
+   Compiling ruff_wasm v0.9.0 (/testbed/crates/ruff_wasm)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 9.08s
+python_version::tests::same_default_as_python_version pass
+hard_links_to_target_outside_workspace skip
+changed_versions_file fail
+hard_links_in_workspace fail
+unix::symlink_target_outside_watched_paths fail
+nested_packages_delete_root fail
+unix::symlink_inside_workspace fail
+unix::symlinked_module_search_path fail
+add_search_path fail
+changed_file fail
+unix::changed_metadata fail
+move_file_to_trash fail
+deleted_file fail
+move_file_to_workspace fail
+rename_file fail
+remove_search_path fail
+directory_moved_to_workspace fail
+new_ignored_file fail
+new_file fail
+directory_deleted fail
+directory_renamed fail
+search_path fail
+directory_moved_to_trash fail
+removed_package fail
+added_package fail
+post
+   Compiling red_knot_wasm v0.0.0 (/testbed/crates/red_knot_wasm)
+   Compiling ruff_linter v0.9.0 (/testbed/crates/ruff_linter)
+   Compiling ruff_graph v0.1.0 (/testbed/crates/ruff_graph)
+   Compiling ruff_workspace v0.0.0 (/testbed/crates/ruff_workspace)
+   Compiling ruff_server v0.2.2 (/testbed/crates/ruff_server)
+   Compiling ruff v0.9.0 (/testbed/crates/ruff)
+   Compiling ruff_dev v0.0.0 (/testbed/crates/ruff_dev)
+   Compiling ruff_wasm v0.9.0 (/testbed/crates/ruff_wasm)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 33.59s
+python_version::tests::same_default_as_python_version pass
+hard_links_to_target_outside_workspace skip
+changed_versions_file fail
+hard_links_in_workspace fail
+unix::symlink_target_outside_watched_paths fail
+unix::symlink_inside_workspace fail
+nested_packages_delete_root fail
+unix::symlinked_module_search_path fail
+changed_file fail
+new_file fail
+add_search_path fail
+move_file_to_trash fail
+deleted_file fail
+rename_file fail
+unix::changed_metadata fail
+remove_search_path fail
+move_file_to_workspace fail
+new_ignored_file fail
+directory_moved_to_workspace fail
+directory_renamed fail
+directory_moved_to_trash fail
+removed_package fail
+directory_deleted fail
+added_package fail
+build success
+release failed

@@ -1,0 +1,205 @@
+pre
+packages/babel-node/test/fixtures.js :: -b pass
+packages/babel-node/test/fixtures.js :: arguments pass
+packages/babel-node/test/fixtures.js :: directory pass
+packages/babel-node/test/fixtures.js :: filename pass
+packages/babel-node/test/fixtures.js :: no-strict pass
+packages/babel-node/test/fixtures.js :: node-execArgv pass
+packages/babel-node/test/fixtures.js :: node_--inspect pass
+packages/babel-node/test/fixtures.js :: node_--no-lazy pass
+packages/babel-node/test/fixtures.js :: node_-gc_alias_--expose-gc pass
+packages/babel-node/test/fixtures.js :: require pass
+packages/babel-node/test/fixtures.js :: subprocess-ipc pass
+packages/babel-node/test/fixtures.js :: subprocess-no-ipc pass
+packages/babel-node/test/fixtures.js :: v8Flag-dashed pass
+packages/babel-node/test/fixtures.js :: v8Flag-dashed-with-param pass
+packages/babel-node/test/fixtures.js :: v8Flag-underscored pass
+packages/babel-node/test/fixtures.js :: v8Flag-underscored-with-param pass
+packages/babel-cli/test/index.js :: --config-file babelrc nocomment pass
+packages/babel-cli/test/index.js :: --copy-files pass
+packages/babel-cli/test/index.js :: --copy-files --include-dotfiles pass
+packages/babel-cli/test/index.js :: --copy-files --include-dotfiles with ignore pass
+packages/babel-cli/test/index.js :: --copy-files --include-dotfiles with ignore in babelrc pass
+packages/babel-cli/test/index.js :: --copy-files --include-dotfiles with only pass
+packages/babel-cli/test/index.js :: --copy-files --no-copy-ignored with babelignore pass
+packages/babel-cli/test/index.js :: --copy-files --no-copy-ignored with ignore pass
+packages/babel-cli/test/index.js :: --copy-files --no-copy-ignored with ignore in babelrc pass
+packages/babel-cli/test/index.js :: --copy-files --no-copy-ignored with only pass
+packages/babel-cli/test/index.js :: --copy-files with ignore pass
+packages/babel-cli/test/index.js :: --copy-files with ignore in babelignore pass
+packages/babel-cli/test/index.js :: --copy-files with ignore in babelrc pass
+packages/babel-cli/test/index.js :: --copy-files with only pass
+packages/babel-cli/test/index.js :: --ignore pass
+packages/babel-cli/test/index.js :: --ignore complete pass
+packages/babel-cli/test/index.js :: --ignore glob pass
+packages/babel-cli/test/index.js :: --minified pass
+packages/babel-cli/test/index.js :: --only pass
+packages/babel-cli/test/index.js :: --only glob pass
+packages/babel-cli/test/index.js :: dir --out-dir pass
+packages/babel-cli/test/index.js :: dir --out-dir --copy-files pass
+packages/babel-cli/test/index.js :: dir --out-dir --keep-file-extension pass
+packages/babel-cli/test/index.js :: dir --out-dir --out-file pass
+packages/babel-cli/test/index.js :: dir --out-dir --out-file-extension pass
+packages/babel-cli/test/index.js :: dir --out-dir --relative pass
+packages/babel-cli/test/index.js :: dir --out-dir --source-maps pass
+packages/babel-cli/test/index.js :: dir --out-dir --source-maps inline pass
+packages/babel-cli/test/index.js :: dir --out-dir --verbose pass
+packages/babel-cli/test/index.js :: dir --out-dir --watch --verbose with external dependencies pass
+packages/babel-cli/test/index.js :: dir --out-dir --watch multiple dir pass
+packages/babel-cli/test/index.js :: dir --out-dir --watch with external dependencies pass
+packages/babel-cli/test/index.js :: dir --out-dir no filenames pass
+packages/babel-cli/test/index.js :: dir --out-file pass
+packages/babel-cli/test/index.js :: dir --out-file --extensions pass
+packages/babel-cli/test/index.js :: dir --skip-initial-build no --watch pass
+packages/babel-cli/test/index.js :: dir --watch no --out-dir no --out-file pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-both pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-false pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-inline pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-inline-cli-false pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-inline-cli-true pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-true pass
+packages/babel-cli/test/index.js :: empty dir --out-dir pass
+packages/babel-cli/test/index.js :: env - SHOW_CONFIG_FOR pass
+packages/babel-cli/test/index.js :: env - SHOW_CONFIG_FOR with ignored file pass
+packages/babel-cli/test/index.js :: env - SHOW_CONFIG_FOR with multiple files pass
+packages/babel-cli/test/index.js :: env - SHOW_CONFIG_FOR with only file pass
+packages/babel-cli/test/index.js :: error - SHOW_CONFIG_FOR is a folder pass
+packages/babel-cli/test/index.js :: error --keep-file-extension --out-file-extension pass
+packages/babel-cli/test/index.js :: error --out-dir pass
+packages/babel-cli/test/index.js :: error --out-dir --out-file pass
+packages/babel-cli/test/index.js :: error --relative pass
+packages/babel-cli/test/index.js :: error --skip-initial-build pass
+packages/babel-cli/test/index.js :: error --watch pass
+packages/babel-cli/test/index.js :: error --watch no filename pass
+packages/babel-cli/test/index.js :: error incorrect options after args pass
+packages/babel-cli/test/index.js :: error incorrect options before args pass
+packages/babel-cli/test/index.js :: error wrong filename pass
+packages/babel-cli/test/index.js :: filename --no-comments pass
+packages/babel-cli/test/index.js :: filename --out-dir pass
+packages/babel-cli/test/index.js :: filename --out-dir --relative pass
+packages/babel-cli/test/index.js :: filename --out-file pass
+packages/babel-cli/test/index.js :: filename --out-file --source-maps inline pass
+packages/babel-cli/test/index.js :: filename --out-file deep pass
+packages/babel-cli/test/index.js :: filename --watch no filenames pass
+packages/babel-cli/test/index.js :: filename babelrc no comments pass
+packages/babel-cli/test/index.js :: filename default comments pass
+packages/babel-cli/test/index.js :: filename does not exist pass
+packages/babel-cli/test/index.js :: filename-sourcemap --out-file --source-maps inline pass
+packages/babel-cli/test/index.js :: filenames --out-file pass
+packages/babel-cli/test/index.js :: filenames --out-file --source-maps pass
+packages/babel-cli/test/index.js :: filenames --out-file --source-maps inline pass
+packages/babel-cli/test/index.js :: filenames-sourcemap-config-both pass
+packages/babel-cli/test/index.js :: stdin pass
+packages/babel-cli/test/index.js :: stdin --filename pass
+packages/babel-cli/test/index.js :: stdin --out-file pass
+packages/babel-cli/test/index.js :: stdin --out-file --source-maps pass
+packages/babel-cli/test/index.js :: stdin --source-maps inline pass
+packages/babel-cli/test/index.js :: --output-type global pass
+packages/babel-cli/test/index.js :: --output-type umd pass
+packages/babel-cli/test/index.js :: --output-type var pass
+packages/babel-cli/test/index.js :: --whitelist pass
+packages/babel-cli/test/index.js :: should warn the user if chmod fails pass
+post
+packages/babel-node/test/fixtures.js :: -b pass
+packages/babel-node/test/fixtures.js :: arguments pass
+packages/babel-node/test/fixtures.js :: directory pass
+packages/babel-node/test/fixtures.js :: filename pass
+packages/babel-node/test/fixtures.js :: no-strict pass
+packages/babel-node/test/fixtures.js :: node-execArgv pass
+packages/babel-node/test/fixtures.js :: node_--inspect pass
+packages/babel-node/test/fixtures.js :: node_--no-lazy pass
+packages/babel-node/test/fixtures.js :: node_-gc_alias_--expose-gc pass
+packages/babel-node/test/fixtures.js :: require pass
+packages/babel-node/test/fixtures.js :: subprocess-ipc pass
+packages/babel-node/test/fixtures.js :: subprocess-no-ipc pass
+packages/babel-node/test/fixtures.js :: v8Flag-dashed pass
+packages/babel-node/test/fixtures.js :: v8Flag-dashed-with-param pass
+packages/babel-node/test/fixtures.js :: v8Flag-underscored pass
+packages/babel-node/test/fixtures.js :: v8Flag-underscored-with-param pass
+packages/babel-cli/test/index.js :: --config-file babelrc nocomment pass
+packages/babel-cli/test/index.js :: --copy-files pass
+packages/babel-cli/test/index.js :: --copy-files --include-dotfiles pass
+packages/babel-cli/test/index.js :: --copy-files --include-dotfiles with ignore pass
+packages/babel-cli/test/index.js :: --copy-files --include-dotfiles with ignore in babelrc pass
+packages/babel-cli/test/index.js :: --copy-files --include-dotfiles with only pass
+packages/babel-cli/test/index.js :: --copy-files --no-copy-ignored with babelignore pass
+packages/babel-cli/test/index.js :: --copy-files --no-copy-ignored with ignore pass
+packages/babel-cli/test/index.js :: --copy-files --no-copy-ignored with ignore in babelrc pass
+packages/babel-cli/test/index.js :: --copy-files --no-copy-ignored with only pass
+packages/babel-cli/test/index.js :: --copy-files with ignore pass
+packages/babel-cli/test/index.js :: --copy-files with ignore in babelignore pass
+packages/babel-cli/test/index.js :: --copy-files with ignore in babelrc pass
+packages/babel-cli/test/index.js :: --copy-files with only pass
+packages/babel-cli/test/index.js :: --ignore pass
+packages/babel-cli/test/index.js :: --ignore complete pass
+packages/babel-cli/test/index.js :: --ignore glob pass
+packages/babel-cli/test/index.js :: --minified pass
+packages/babel-cli/test/index.js :: --only pass
+packages/babel-cli/test/index.js :: --only glob pass
+packages/babel-cli/test/index.js :: dir --out-dir pass
+packages/babel-cli/test/index.js :: dir --out-dir --copy-files pass
+packages/babel-cli/test/index.js :: dir --out-dir --keep-file-extension pass
+packages/babel-cli/test/index.js :: dir --out-dir --out-file pass
+packages/babel-cli/test/index.js :: dir --out-dir --out-file-extension pass
+packages/babel-cli/test/index.js :: dir --out-dir --relative pass
+packages/babel-cli/test/index.js :: dir --out-dir --source-maps pass
+packages/babel-cli/test/index.js :: dir --out-dir --source-maps inline pass
+packages/babel-cli/test/index.js :: dir --out-dir --verbose pass
+packages/babel-cli/test/index.js :: dir --out-dir --watch --verbose with external dependencies pass
+packages/babel-cli/test/index.js :: dir --out-dir --watch multiple dir pass
+packages/babel-cli/test/index.js :: dir --out-dir --watch with external dependencies pass
+packages/babel-cli/test/index.js :: dir --out-dir no filenames pass
+packages/babel-cli/test/index.js :: dir --out-file pass
+packages/babel-cli/test/index.js :: dir --out-file --extensions pass
+packages/babel-cli/test/index.js :: dir --skip-initial-build no --watch pass
+packages/babel-cli/test/index.js :: dir --watch no --out-dir no --out-file pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-both pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-false pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-inline pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-inline-cli-false pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-inline-cli-true pass
+packages/babel-cli/test/index.js :: dir-sourcemap-config-true pass
+packages/babel-cli/test/index.js :: empty dir --out-dir pass
+packages/babel-cli/test/index.js :: env - SHOW_CONFIG_FOR pass
+packages/babel-cli/test/index.js :: env - SHOW_CONFIG_FOR with ignored file pass
+packages/babel-cli/test/index.js :: env - SHOW_CONFIG_FOR with multiple files pass
+packages/babel-cli/test/index.js :: env - SHOW_CONFIG_FOR with only file pass
+packages/babel-cli/test/index.js :: error - SHOW_CONFIG_FOR is a folder pass
+packages/babel-cli/test/index.js :: error --keep-file-extension --out-file-extension pass
+packages/babel-cli/test/index.js :: error --out-dir pass
+packages/babel-cli/test/index.js :: error --out-dir --out-file pass
+packages/babel-cli/test/index.js :: error --relative pass
+packages/babel-cli/test/index.js :: error --skip-initial-build pass
+packages/babel-cli/test/index.js :: error --watch pass
+packages/babel-cli/test/index.js :: error --watch no filename pass
+packages/babel-cli/test/index.js :: error incorrect options after args pass
+packages/babel-cli/test/index.js :: error incorrect options before args pass
+packages/babel-cli/test/index.js :: error wrong filename pass
+packages/babel-cli/test/index.js :: filename --no-comments pass
+packages/babel-cli/test/index.js :: filename --out-dir pass
+packages/babel-cli/test/index.js :: filename --out-dir --relative pass
+packages/babel-cli/test/index.js :: filename --out-file pass
+packages/babel-cli/test/index.js :: filename --out-file --source-maps inline pass
+packages/babel-cli/test/index.js :: filename --out-file deep pass
+packages/babel-cli/test/index.js :: filename --watch no filenames pass
+packages/babel-cli/test/index.js :: filename babelrc no comments pass
+packages/babel-cli/test/index.js :: filename default comments pass
+packages/babel-cli/test/index.js :: filename does not exist pass
+packages/babel-cli/test/index.js :: filename-sourcemap --out-file --source-maps inline pass
+packages/babel-cli/test/index.js :: filenames --out-file pass
+packages/babel-cli/test/index.js :: filenames --out-file --source-maps pass
+packages/babel-cli/test/index.js :: filenames --out-file --source-maps inline pass
+packages/babel-cli/test/index.js :: filenames-sourcemap-config-both pass
+packages/babel-cli/test/index.js :: stdin pass
+packages/babel-cli/test/index.js :: stdin --filename pass
+packages/babel-cli/test/index.js :: stdin --out-file pass
+packages/babel-cli/test/index.js :: stdin --out-file --source-maps pass
+packages/babel-cli/test/index.js :: stdin --source-maps inline pass
+packages/babel-cli/test/index.js :: --output-type global pass
+packages/babel-cli/test/index.js :: --output-type umd pass
+packages/babel-cli/test/index.js :: --output-type var pass
+packages/babel-cli/test/index.js :: --whitelist pass
+packages/babel-cli/test/index.js :: should warn the user if chmod fails pass
+build success
+release success
+{'packages/babel-generator/test/index.js :: inputSourceMap without sourcesContent'}

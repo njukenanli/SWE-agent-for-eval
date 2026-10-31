@@ -1,0 +1,204 @@
+pre
+crates/nu-path/src/path.rs - path::Path::is_relative (line 687) pass
+crates/nu-path/src/path.rs - path::PathBuf::with_capacity (line 1591) pass
+crates/nu-path/src/path.rs - path::Path<Form>::ends_with (line 417) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::push (line 1696) pass
+crates/nu-path/src/path.rs - path::Path::as_mut_os_str (line 643) pass
+crates/nu-path/src/path.rs - path::PathBuf::try_into_absolute (line 1660) pass
+crates/nu-path/src/path.rs - path::Path<Form>::strip_prefix (line 359) pass
+crates/nu-path/src/path.rs - path::Path<Form>::as_relative_std_path (line 819) pass
+crates/nu-path/src/path.rs - path::Path<Form>::as_std_path (line 858) pass
+crates/nu-path/src/path.rs - path::Path<Form>::join (line 746) pass
+crates/nu-path/src/path.rs - path::Path<Form>::file_name (line 338) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::set_extension (line 1775) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::push (line 1706) pass
+crates/nu-path/src/path.rs - path::RelativePath (line 92) pass
+crates/nu-path/src/path.rs - path::Path<Form>::parent (line 270) pass
+crates/nu-path/src/path.rs - path::RelativePath (line 75) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::set_file_name (line 1731) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::into_std_path_buf (line 1837) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::into_relative_std_path_buf (line 1820) pass
+crates/nu-path/src/path.rs - path::Path<Form>::ancestors (line 305) pass
+crates/nu-path/src/path.rs - path::Path<Form>::to_std_path_buf (line 874) pass
+crates/nu-path/src/path.rs - path::RelativePathBuf (line 1323) pass
+crates/nu-path/src/path.rs - path::RelativePathBuf (line 1338) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::as_path (line 1430) pass
+crates/nu-path/src/path.rs - path::Path<Form>::with_file_name (line 766) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::into_any (line 1558) pass
+crates/nu-path/src/path.rs - path::Path<Form>::with_extension (line 787) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::pop (line 1449) pass
+crates/nu-path/src/path.rs - path::PathBuf::as_mut_os_string (line 1612) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::cast_into (line 1538) pass
+crates/nu-path/src/path.rs - path::Path<Form>::iter (line 526) pass
+crates/nu-path/src/path.rs - path::PathBuf (line 1262) pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::eval_closure (line 861) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_current_dir (line 620) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::add_env_var (line 672) - compile pass
+crates/nu-plugin/src/plugin/mod.rs - plugin::Plugin::version (line 102) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_help (line 695) - compile pass
+crates/nu-plugin/src/plugin/mod.rs - plugin::serve_plugin (line 235) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::eval_closure_with_stream (line 784) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_env_vars (line 647) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_config (line 541) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::call_decl (line 919) - compile pass
+crates/nu-plugin/src/lib.rs - (line 18) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_env_var (line 606) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_plugin_config (line 585) - compile pass
+crates/nu-plugin/src/plugin/command.rs - plugin::command::PluginCommand (line 23) pass
+crates/nu-plugin/src/plugin/command.rs - plugin::command::SimplePluginCommand (line 167) pass
+crates/nu-plugin/src/plugin/mod.rs - plugin::Plugin (line 49) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::add_positional (line 43) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::add_flag (line 76) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::has_flag (line 222) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::get_flag_value (line 285) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::get_flag_value (line 306) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::has_flag (line 190) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::get_flag (line 400) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::nth (line 336) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::has_flag (line 174) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::add_named (line 59) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::rest (line 427) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::get_flag (line 383) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::get_flag (line 366) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::has_flag (line 206) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::has_flag (line 238) pass
+crates/nu-plugin-test-support/src/plugin_test.rs - plugin_test::PluginTest::new (line 31) - compile pass
+crates/nu-plugin-test-support/src/plugin_test.rs - plugin_test::PluginTest::eval (line 183) - compile pass
+crates/nu-plugin-test-support/src/plugin_test.rs - plugin_test::PluginTest::test_command_examples (line 278) - compile pass
+crates/nu-plugin-test-support/src/plugin_test.rs - plugin_test::PluginTest::test_examples (line 205) - compile pass
+crates/nu-plugin-test-support/src/plugin_test.rs - plugin_test::PluginTest::eval_with (line 86) - compile pass
+crates/nu-plugin-test-support/src/lib.rs - (line 5) pass
+crates/nu-protocol/src/plugin/metadata.rs - plugin::metadata::PluginMetadata::with_version (line 20) - compile pass
+crates/nu-protocol/src/span.rs - span::ErrSpan::err_span (line 228) - compile pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::with_url (line 101) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::with_label (line 65) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::with_help (line 116) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::from_diagnostic (line 148) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_float (line 287) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::with_code (line 86) pass
+crates/nu-protocol/src/syntax_shape.rs - syntax_shape::SyntaxShape::to_type (line 132) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_string (line 426) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_binary (line 593) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::sort_cols (line 270) pass
+crates/nu-protocol/src/value/into_value.rs - value::into_value::IntoValue (line 37) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_into_binary (line 616) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_str (line 376) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::drain (line 242) pass
+crates/nu-protocol/src/pipeline/list_stream.rs - pipeline::list_stream::ListStream::modify (line 83) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::with_inner (line 131) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::retain_mut (line 150) pass
+crates/nu-protocol/src/engine/stack.rs - engine::stack::Stack::stdout_file (line 659) pass
+crates/nu-protocol/src/span.rs - span::IntoSpanned::into_spanned (line 79) pass
+crates/nu-protocol/src/value/into_value.rs - value::into_value::IntoValue (line 63) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::new (line 45) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::retain (line 124) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_into_string (line 455) pass
+crates/nu-protocol/src/value/from_value.rs - value::from_value::FromValue (line 85) pass
+crates/nu-protocol/src/value/from_value.rs - value::from_value::FromValue (line 54) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::truncate (line 194) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::deserialize (line 313) pass
+crates/nu-term-grid/src/grid.rs - grid (line 7) pass
+Regression test command failed (status 101); full output: /tmp/nushell-regression.y2DGMr
+post
+crates/nu-path/src/path.rs - path::PathBuf<Form>::as_path (line 1430) pass
+crates/nu-path/src/path.rs - path::Path<Form>::as_std_path (line 858) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::into_any (line 1558) pass
+crates/nu-path/src/path.rs - path::RelativePathBuf (line 1323) pass
+crates/nu-path/src/path.rs - path::Path<Form>::iter (line 526) pass
+crates/nu-path/src/path.rs - path::Path<Form>::with_file_name (line 766) pass
+crates/nu-path/src/path.rs - path::Path::new (line 626) pass
+crates/nu-path/src/path.rs - path::RelativePathBuf (line 1338) pass
+crates/nu-path/src/path.rs - path::Path<Form>::cast (line 579) pass
+crates/nu-path/src/path.rs - path::AbsolutePath (line 126) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::set_file_name (line 1731) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::into_std_path_buf (line 1837) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::set_extension (line 1775) pass
+crates/nu-path/src/path.rs - path::Path<Form>::strip_prefix (line 359) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::push (line 1696) pass
+crates/nu-path/src/path.rs - path::Path<Form>::display (line 548) pass
+crates/nu-path/src/path.rs - path::Path<Form>::join (line 746) pass
+crates/nu-path/src/path.rs - path::Path<Form>::is_dir (line 994) - compile pass
+crates/nu-path/src/path.rs - path::Path<Form>::file_name (line 338) pass
+crates/nu-path/src/path.rs - path::CanonicalPath::as_absolute (line 1155) - compile pass
+crates/nu-path/src/path.rs - path::CanonicalPath (line 150) - compile pass
+crates/nu-path/src/path.rs - path::Path::is_absolute (line 670) pass
+crates/nu-path/src/path.rs - path::Path<Form>::is_file (line 963) - compile pass
+crates/nu-path/src/path.rs - path::Path<Form>::read_dir (line 915) - compile pass
+crates/nu-path/src/path.rs - path::AbsolutePath::read_link (line 1063) - compile pass
+crates/nu-path/src/path.rs - path::Path<Form>::metadata (line 894) - compile pass
+crates/nu-path/src/path.rs - path::AbsolutePath::symlink_metadata (line 1137) - compile pass
+crates/nu-path/src/path.rs - path::RelativePath (line 92) pass
+crates/nu-path/src/path.rs - path::PathBuf<Form>::push (line 1706) pass
+crates/nu-path/src/path.rs - path::AbsolutePath (line 114) pass
+crates/nu-path/src/path.rs - path::Path<Form>::as_any (line 599) pass
+crates/nu-path/src/path.rs - path::Path<Form>::to_path_buf (line 250) pass
+crates/nu-plugin/src/plugin/mod.rs - plugin::serve_plugin (line 235) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_env_vars (line 647) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_plugin_config (line 585) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::call_decl (line 919) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::eval_closure (line 861) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_env_var (line 606) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_help (line 695) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_config (line 541) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::eval_closure_with_stream (line 784) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::add_env_var (line 672) - compile pass
+crates/nu-plugin/src/plugin/interface/mod.rs - plugin::interface::EngineInterface::get_current_dir (line 620) - compile pass
+crates/nu-plugin/src/plugin/mod.rs - plugin::Plugin::version (line 102) - compile pass
+crates/nu-plugin/src/lib.rs - (line 18) - compile pass
+crates/nu-plugin/src/plugin/command.rs - plugin::command::SimplePluginCommand (line 167) pass
+crates/nu-plugin/src/plugin/mod.rs - plugin::Plugin (line 49) pass
+crates/nu-plugin/src/plugin/command.rs - plugin::command::PluginCommand (line 23) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::get_flag_value (line 285) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::nth (line 336) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::add_positional (line 43) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::get_flag (line 383) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::has_flag (line 238) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::rest (line 427) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::has_flag (line 190) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::add_named (line 59) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::get_flag (line 400) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::get_flag (line 366) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::has_flag (line 206) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::has_flag (line 174) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::has_flag (line 222) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::get_flag_value (line 306) pass
+crates/nu-plugin-protocol/src/evaluated_call.rs - evaluated_call::EvaluatedCall::add_flag (line 76) pass
+crates/nu-plugin-test-support/src/plugin_test.rs - plugin_test::PluginTest::new (line 31) - compile pass
+crates/nu-plugin-test-support/src/plugin_test.rs - plugin_test::PluginTest::test_examples (line 205) - compile pass
+crates/nu-plugin-test-support/src/plugin_test.rs - plugin_test::PluginTest::test_command_examples (line 278) - compile pass
+crates/nu-plugin-test-support/src/plugin_test.rs - plugin_test::PluginTest::eval (line 183) - compile pass
+crates/nu-plugin-test-support/src/plugin_test.rs - plugin_test::PluginTest::eval_with (line 86) - compile pass
+crates/nu-plugin-test-support/src/lib.rs - (line 5) pass
+crates/nu-protocol/src/plugin/metadata.rs - plugin::metadata::PluginMetadata::with_version (line 20) - compile pass
+crates/nu-protocol/src/span.rs - span::ErrSpan::err_span (line 228) - compile pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::deserialize (line 313) pass
+crates/nu-protocol/src/value/from_value.rs - value::from_value::FromValue (line 54) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::with_code (line 86) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::sort_cols (line 270) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::with_inner (line 131) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::from_diagnostic (line 148) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_string (line 426) pass
+crates/nu-protocol/src/pipeline/list_stream.rs - pipeline::list_stream::ListStream::modify (line 83) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_into_string (line 455) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::new (line 45) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_float (line 287) pass
+crates/nu-protocol/src/syntax_shape.rs - syntax_shape::SyntaxShape::to_type (line 132) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::with_label (line 65) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::with_help (line 116) pass
+crates/nu-protocol/src/errors/labeled_error.rs - errors::labeled_error::LabeledError::with_url (line 101) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::retain (line 124) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_into_binary (line 616) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_str (line 376) pass
+crates/nu-protocol/src/value/from_value.rs - value::from_value::FromValue (line 85) pass
+crates/nu-protocol/src/value/into_value.rs - value::into_value::IntoValue (line 37) pass
+crates/nu-protocol/src/value/mod.rs - value::Value::coerce_binary (line 593) pass
+crates/nu-protocol/src/span.rs - span::IntoSpanned::into_spanned (line 79) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::retain_mut (line 150) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::drain (line 242) pass
+crates/nu-protocol/src/value/record.rs - value::record::Record::truncate (line 194) pass
+crates/nu-protocol/src/value/into_value.rs - value::into_value::IntoValue (line 63) pass
+crates/nu-protocol/src/engine/stack.rs - engine::stack::Stack::stdout_file (line 659) pass
+crates/nu-term-grid/src/grid.rs - grid (line 7) pass
+Regression test command failed (status 101); full output: /tmp/nushell-regression.HbrduL
+build success
+release failed

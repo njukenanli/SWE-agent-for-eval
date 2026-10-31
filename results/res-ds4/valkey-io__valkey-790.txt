@@ -1,0 +1,205 @@
+pre
+diskless replication child being killed is collected :: pass
+replication child dies when parent is killed - diskless: yes dual-channel-replication-enabled: yes :: pass
+Test replication partial resync: no backlog (diskless: yes, disabled, dual-channel: yes, reconnect: 1) :: pass
+replication child dies when parent is killed - diskless: no dual-channel-replication-enabled: no :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+diskless replication read pipe cleanup :: pass
+replicaof right after disconnection :: pass
+Kill rdb child process if its dumping RDB is not useful :: pass
+Don't disconnect with replicas before loading transferred RDB when full sync with dual-channel-replication yes :: pass
+Discard cache master before loading transferred RDB when full sync with dual-channel-replication yes :: pass
+Don't disconnect with replicas before loading transferred RDB when full sync with dual-channel-replication no :: pass
+Discard cache master before loading transferred RDB when full sync with dual-channel-replication no :: pass
+replica can handle EINTR if use diskless load :: pass
+replica do not write the reply to the replication link - SYNC (_addReplyToBufferOrList) :: pass
+replica do not write the reply to the replication link - SYNC (addReplyDeferredLen) :: pass
+replica do not write the reply to the replication link - PSYNC (_addReplyToBufferOrList) :: pass
+replica do not write the reply to the replication link - PSYNC (addReplyDeferredLen) :: pass
+PSYNC with wrong offset should throw error :: pass
+Test replication with lazy expire :: pass
+Test replication partial resync: ok after delay (diskless: yes, disabled, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test dual-channel-replication primary reject set-rdb-client after client killed :: pass
+Test replica unable to join dual channel replication sync after started :: pass
+Test replication partial resync: backlog expired (diskless: yes, disabled, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, disabled, dual-channel: no, reconnect: 0) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Replica recover rdb-connection killed :: pass
+Test replication partial resync: ok psync (diskless: yes, disabled, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no backlog (diskless: yes, disabled, dual-channel: no, reconnect: 1) :: pass
+Replica recover main-connection killed :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok after delay (diskless: yes, disabled, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: backlog expired (diskless: yes, disabled, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, dual-channel: yes, reconnect: 0) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, dual-channel: no, reconnect: 0) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, dual-channel: no, reconnect: 1) :: pass
+XADD one huge field :: skip
+XADD one huge field - 1 :: skip
+several XADD big fields :: skip
+single XADD big fields :: skip
+hash with many big fields :: skip
+hash with one huge field :: skip
+BIT pos larger than UINT_MAX :: skip
+SETBIT values larger than UINT32_MAX and lzf_compress/lzf_decompress correctly :: skip
+Active defrag main dictionary: cluster :: pass
+Active defrag eval scripts: cluster :: pass
+Active defrag big keys: cluster :: pass
+Active defrag - AOF loading :: pass
+Active defrag main dictionary: standalone :: pass
+Active defrag eval scripts: standalone :: pass
+Active defrag big keys: standalone :: pass
+Active defrag big list: standalone :: pass
+Active defrag edge case: standalone :: pass
+Test LPUSH and LPOP on plain nodes over 4GB :: skip
+Test LINDEX and LINSERT on plain nodes over 4GB :: skip
+Test LTRIM on plain nodes over 4GB :: skip
+Test LREM on plain nodes over 4GB :: skip
+Test LSET on plain nodes over 4GB :: skip
+Test LSET on plain nodes with large elements under packed_threshold over 4GB :: skip
+Test LSET splits a quicklist node, and then merge :: skip
+Test LSET splits a LZF compressed quicklist node, and then merge :: skip
+Test LMOVE on plain nodes over 4GB :: skip
+SADD, SCARD, SISMEMBER - large data :: skip
+post
+replication child dies when parent is killed - diskless: no dual-channel-replication-enabled: no :: pass
+diskless replication read pipe cleanup :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test dual-channel-replication primary reject set-rdb-client after client killed :: pass
+replicaof right after disconnection :: pass
+Kill rdb child process if its dumping RDB is not useful :: pass
+Test replica unable to join dual channel replication sync after started :: pass
+Don't disconnect with replicas before loading transferred RDB when full sync with dual-channel-replication yes :: pass
+Discard cache master before loading transferred RDB when full sync with dual-channel-replication yes :: pass
+Don't disconnect with replicas before loading transferred RDB when full sync with dual-channel-replication no :: pass
+Discard cache master before loading transferred RDB when full sync with dual-channel-replication no :: pass
+replica can handle EINTR if use diskless load :: pass
+replica do not write the reply to the replication link - SYNC (_addReplyToBufferOrList) :: pass
+replica do not write the reply to the replication link - SYNC (addReplyDeferredLen) :: pass
+replica do not write the reply to the replication link - PSYNC (_addReplyToBufferOrList) :: pass
+replica do not write the reply to the replication link - PSYNC (addReplyDeferredLen) :: pass
+PSYNC with wrong offset should throw error :: pass
+Test replication with lazy expire :: pass
+Test replication partial resync: no backlog (diskless: yes, disabled, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Replica recover rdb-connection killed :: pass
+Test replication partial resync: ok after delay (diskless: yes, disabled, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Replica recover main-connection killed :: pass
+Test replication partial resync: backlog expired (diskless: yes, disabled, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, disabled, dual-channel: no, reconnect: 0) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok psync (diskless: yes, disabled, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no backlog (diskless: yes, disabled, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok after delay (diskless: yes, disabled, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: backlog expired (diskless: yes, disabled, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, dual-channel: yes, reconnect: 0) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, dual-channel: yes, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, dual-channel: no, reconnect: 0) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, dual-channel: no, reconnect: 1) :: pass
+Slave should be able to synchronize with the master :: pass
+Detect write load to master :: pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, dual-channel: no, reconnect: 1) :: pass
+XADD one huge field :: skip
+XADD one huge field - 1 :: skip
+several XADD big fields :: skip
+single XADD big fields :: skip
+hash with many big fields :: skip
+hash with one huge field :: skip
+BIT pos larger than UINT_MAX :: skip
+SETBIT values larger than UINT32_MAX and lzf_compress/lzf_decompress correctly :: skip
+Active defrag main dictionary: cluster :: pass
+Active defrag eval scripts: cluster :: pass
+Active defrag big keys: cluster :: pass
+Active defrag - AOF loading :: pass
+Active defrag main dictionary: standalone :: pass
+Active defrag eval scripts: standalone :: pass
+Active defrag big keys: standalone :: pass
+Active defrag big list: standalone :: pass
+Active defrag edge case: standalone :: pass
+Test LPUSH and LPOP on plain nodes over 4GB :: skip
+Test LINDEX and LINSERT on plain nodes over 4GB :: skip
+Test LTRIM on plain nodes over 4GB :: skip
+Test LREM on plain nodes over 4GB :: skip
+Test LSET on plain nodes over 4GB :: skip
+Test LSET on plain nodes with large elements under packed_threshold over 4GB :: skip
+Test LSET splits a quicklist node, and then merge :: skip
+Test LSET splits a LZF compressed quicklist node, and then merge :: skip
+Test LMOVE on plain nodes over 4GB :: skip
+SADD, SCARD, SISMEMBER - large data :: skip
+build success
+release success
+{'Verify health as fail for killed node ::', 'Cluster shards response is ok for shard 0 ::', 'Kill a node and tell the replica to immediately takeover ::', 'PSYNC2: Set #1 to replicate from #4 ::', 'Slaves are both able to receive and acknowledge writes ::', 'CLUSTER SHARDS slot response is non-empty when primary node fails ::', 'PSYNC2: Set #3 to replicate from #1 ::', 'PSYNC2: cluster is consistent after load (x = 35977) ::', 'Shebang support for lua engine ::', 'Unfinished MULTI: Server should have logged an error ::', 'PSYNC2: cluster is consistent after load (x = 121237) ::', 'PSYNC2: cluster is consistent after load (x = 231864) ::', 'Short read + command: Server should start ::', 'PSYNC2: Set #1 to replicate from #2 ::', 'PSYNC2: Set #2 to replicate from #1 ::', 'PSYNC2: cluster is consistent after load (x = 158083) ::', 'PSYNC2: cluster is consistent after load (x = 84501) ::', 'PSYNC2: cluster is consistent after load (x = 198850) ::', 'PSYNC2: Set #3 to replicate from #4 ::', 'PSYNC2: Set #2 to replicate from #4 ::', 'PSYNC2: Set #4 to replicate from #0 ::', 'PSYNC2: --- CYCLE 6 --- ::', 'Test change cluster-announce-port and cluster-announce-tls-port at runtime ::', 'Cluster should be down ::', 'PSYNC2: Set #4 to replicate from #1 ::'}

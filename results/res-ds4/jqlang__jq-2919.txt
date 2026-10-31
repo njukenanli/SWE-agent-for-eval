@@ -1,0 +1,39 @@
+pre
+make  all-recursive
+make[1]: Entering directory '/testbed'
+make[2]: Entering directory '/testbed'
+  YACC     src/parser.c
+NOT building parser.c!
+make[2]: Leaving directory '/testbed'
+make[1]: Leaving directory '/testbed'
+tests/mantest pass
+tests/jqtest pass
+tests/shtest pass
+tests/utf8test pass
+tests/base64test pass
+tests/optionaltest pass
+tests/onigtest pass
+tests/manonigtest pass
+post
+mkdir -p src
+  GEN      src/version.h
+make  all-recursive
+make[1]: Entering directory '/testbed'
+make[2]: Entering directory '/testbed'
+  YACC     src/parser.c
+NOT building parser.c!
+  GEN      jq.1
+  CC       src/main.o
+  CCLD     jq
+make[2]: Leaving directory '/testbed'
+make[1]: Leaving directory '/testbed'
+tests/mantest pass
+tests/jqtest pass
+tests/shtest pass
+tests/utf8test pass
+tests/base64test pass
+tests/optionaltest pass
+tests/onigtest pass
+tests/manonigtest pass
+build success
+release failed

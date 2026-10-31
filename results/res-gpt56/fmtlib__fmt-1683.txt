@@ -1,0 +1,98 @@
+pre
+[  8%] Built target gmock
+[  8%] Built target fmt
+[ 14%] Built target noexception-test
+[ 15%] Built target nolocale-test
+[ 22%] Built target test-main
+[ 33%] Built target posix-mock-test
+[ 36%] Built target std-format-test
+[ 43%] Built target header-only-test
+[ 47%] Built target assert-test
+[ 50%] Built target chrono-test
+[ 54%] Built target color-test
+[ 57%] Built target core-test
+[ 61%] Built target grisu-test
+[ 64%] Built target gtest-extra-test
+[ 68%] Built target format-test
+[ 71%] Built target format-impl-test
+[ 75%] Built target locale-test
+[ 78%] Built target ostream-test
+[ 82%] Built target compile-test
+[ 85%] Built target printf-test
+[ 89%] Built target custom-formatter-test
+[ 92%] Built target ranges-test
+[ 96%] Built target scan-test
+[100%] Built target os-test
+assert-test pass
+chrono-test pass
+color-test pass
+core-test pass
+grisu-test pass
+gtest-extra-test pass
+format-test pass
+format-impl-test pass
+locale-test pass
+ostream-test pass
+compile-test pass
+printf-test pass
+custom-formatter-test pass
+ranges-test pass
+scan-test pass
+posix-mock-test pass
+os-test pass
+std-format-test pass
+compile-error-test pass
+find-package-test pass
+add-subdirectory-test pass
+post
+[  8%] Built target fmt
+[  8%] Built target gmock
+[ 12%] Built target noexception-test
+[ 15%] Built target nolocale-test
+[ 29%] Built target test-main
+[ 33%] Built target posix-mock-test
+[ 42%] Built target header-only-test
+[ 43%] Built target std-format-test
+[ 47%] Built target assert-test
+[ 50%] Built target chrono-test
+[ 54%] Built target color-test
+[ 57%] Built target core-test
+[ 64%] Built target gtest-extra-test
+[ 64%] Built target grisu-test
+[ 68%] Built target format-test
+[ 70%] Building CXX object test/CMakeFiles/format-impl-test.dir/format-impl-test.cc.o
+[ 73%] Built target locale-test
+[ 77%] Built target ostream-test
+[ 80%] Built target compile-test
+[ 82%] Building CXX object test/CMakeFiles/printf-test.dir/printf-test.cc.o
+[ 84%] Linking CXX executable ../bin/format-impl-test
+[ 84%] Built target format-impl-test
+[ 87%] Built target custom-formatter-test
+[ 91%] Built target ranges-test
+[ 94%] Built target scan-test
+[ 98%] Built target os-test
+[100%] Linking CXX executable ../bin/printf-test
+[100%] Built target printf-test
+assert-test pass
+chrono-test pass
+color-test pass
+core-test pass
+grisu-test pass
+gtest-extra-test pass
+format-test pass
+format-impl-test pass
+locale-test pass
+ostream-test pass
+compile-test pass
+printf-test pass
+custom-formatter-test pass
+ranges-test pass
+scan-test pass
+posix-mock-test pass
+os-test pass
+std-format-test pass
+compile-error-test pass
+find-package-test pass
+add-subdirectory-test pass
+build success
+release failed

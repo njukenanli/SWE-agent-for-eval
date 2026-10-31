@@ -1,0 +1,206 @@
+pre
+tests.functional.r.redundant_unittest_assert.Tests::test_something skip
+tests.functional.r.redundant_unittest_assert.RegressionWithArgs::test skip
+tests.lint.unittest_expand_modules::test__is_in_ignore_list_re_match pass
+tests.lint.unittest_expand_modules::test__is_in_ignore_list_re_nomatch pass
+tests.lint.unittest_expand_modules::test_expand_modules[files_or_modules0-expected0] pass
+tests.lint.unittest_expand_modules::test_expand_modules[files_or_modules1-expected1] pass
+tests.lint.unittest_lint::test_no_args pass
+tests.lint.unittest_lint::test_one_arg[case0] pass
+tests.lint.unittest_lint::test_one_arg[case1] pass
+tests.lint.unittest_lint::test_one_arg[case2] pass
+tests.lint.unittest_lint::test_one_arg[case3] pass
+tests.lint.unittest_lint::test_one_arg[case4] pass
+tests.lint.unittest_lint::test_two_similar_args[case0] pass
+tests.lint.unittest_lint::test_two_similar_args[case1] pass
+tests.lint.unittest_lint::test_two_similar_args[case2] pass
+tests.lint.unittest_lint::test_two_similar_args[case3] pass
+tests.lint.unittest_lint::test_more_args[case0] pass
+tests.lint.unittest_lint::test_more_args[case1] pass
+tests.lint.unittest_lint::test_more_args[case2] pass
+tests.lint.unittest_lint::test_pylint_visit_method_taken_in_account pass
+tests.lint.unittest_lint::test_enable_message pass
+tests.lint.unittest_lint::test_enable_message_category pass
+tests.lint.unittest_lint::test_message_state_scope pass
+tests.lint.unittest_lint::test_enable_message_block pass
+tests.lint.unittest_lint::test_enable_by_symbol pass
+tests.lint.unittest_lint::test_enable_report pass
+tests.lint.unittest_lint::test_report_output_format_aliased pass
+tests.lint.unittest_lint::test_set_unsupported_reporter pass
+tests.lint.unittest_lint::test_set_option_1 pass
+tests.lint.unittest_lint::test_set_option_2 pass
+tests.lint.unittest_lint::test_enable_checkers pass
+tests.lint.unittest_lint::test_errors_only pass
+tests.lint.unittest_lint::test_disable_similar pass
+tests.lint.unittest_lint::test_disable_alot pass
+tests.lint.unittest_lint::test_addmessage pass
+tests.lint.unittest_lint::test_addmessage_invalid pass
+tests.lint.unittest_lint::test_load_plugin_command_line pass
+tests.lint.unittest_lint::test_load_plugin_config_file pass
+tests.lint.unittest_lint::test_load_plugin_configuration pass
+tests.lint.unittest_lint::test_init_hooks_called_before_load_plugins pass
+tests.lint.unittest_lint::test_analyze_explicit_script pass
+tests.lint.unittest_lint::test_python3_checker_disabled pass
+tests.lint.unittest_lint::test_full_documentation pass
+tests.lint.unittest_lint::test_list_msgs_enabled pass
+tests.lint.unittest_lint::test_pylint_home pass
+tests.lint.unittest_lint::test_pylintrc pass
+tests.lint.unittest_lint::test_pylintrc_parentdir pass
+tests.lint.unittest_lint::test_pylintrc_parentdir_no_package pass
+tests.lint.unittest_lint.TestPreprocessOptions::test_value_equal pass
+tests.lint.unittest_lint.TestPreprocessOptions::test_value_space pass
+tests.lint.unittest_lint.TestPreprocessOptions::test_error_missing_expected_value pass
+tests.lint.unittest_lint.TestPreprocessOptions::test_error_unexpected_value pass
+tests.lint.unittest_lint::test_custom_should_analyze_file pass
+tests.lint.unittest_lint::test_multiprocessing[1] pass
+tests.lint.unittest_lint::test_multiprocessing[2] pass
+tests.lint.unittest_lint::test_filename_with__init__ pass
+tests.lint.unittest_lint::test_by_module_statement_value pass
+tests.message.unittest_message::test_new_message pass
+tests.message.unittest_message_definition::test_create_invalid_message_type[Q1234-Bad message type Q in 'Q1234'] pass
+tests.message.unittest_message_definition::test_create_invalid_message_type[W12345-Invalid message id 'W12345'] pass
+tests.message.unittest_message_definition.TestMessagesDefinition::test_may_be_emitted pass
+tests.message.unittest_message_definition.TestMessagesDefinition::test_repr pass
+tests.message.unittest_message_definition.TestMessagesDefinition::test_str pass
+tests.message.unittest_message_definition.TestMessagesDefinition::test_format_help pass
+tests.message.unittest_message_definition_store::test_register_error[messages0-Inconsistent checker part in message id 'W4321' (expected 'x12xx' because we already had ['W1234']).] pass
+tests.message.unittest_message_definition_store::test_register_error[messages1-Message id 'W1234' cannot have both 'msg-symbol-one' and 'old-symbol' as symbolic name.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages2-Message id 'W1234' cannot have both 'msg-symbol-one' and 'old-symbol' as symbolic name.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages3-Message id 'W1201' cannot have both 'old-symbol-one' and 'old-symbol-two' as symbolic name.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages4-Message symbol 'msg-symbol' cannot be used for 'W1234' and 'W1235' at the same time. If you're creating an 'old_names' use 'old-msg-symbol' as the old symbol.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages5-Message symbol 'msg-symbol-one' cannot be used for 'W1230' and 'W1234' at the same time. If you're creating an 'old_names' use 'old-msg-symbol-one' as the old symbol.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages6-Message symbol 'msg-symbol-one' cannot be used for 'W1230' and 'W1234' at the same time. If you're creating an 'old_names' use 'old-msg-symbol-one' as the old symbol.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages7-Message symbol 'old-symbol-one' cannot be used for 'W1230' and 'W1231' at the same time. If you're creating an 'old_names' use 'old-old-symbol-one' as the old symbol.] pass
+tests.message.unittest_message_definition_store::test_register_error_new_id_duplicate_of_new pass
+tests.message.unittest_message_definition_store::test_format_help pass
+tests.message.unittest_message_definition_store::test_get_msg_display_string pass
+tests.message.unittest_message_definition_store::test_check_message_id pass
+tests.message.unittest_message_definition_store.TestMessageDefinitionStore::test_message_help pass
+tests.message.unittest_message_definition_store.TestMessageDefinitionStore::test_message_help_minmax pass
+tests.message.unittest_message_definition_store::test_list_messages pass
+tests.message.unittest_message_definition_store::test_renamed_message_register pass
+tests.message.unittest_message_definition_store::test_multiple_child_of_old_name pass
+tests.message.unittest_message_id_store::test_len_str pass
+tests.message.unittest_message_id_store::test_get_message_ids pass
+tests.message.unittest_message_id_store::test_get_message_ids_not_existing pass
+tests.message.unittest_message_id_store::test_register_message_definitions pass
+tests.message.unittest_message_id_store::test_add_msgid_and_symbol pass
+tests.message.unittest_message_id_store::test_duplicate_symbol pass
+tests.message.unittest_message_id_store::test_duplicate_msgid pass
+tests.profile.test_profile_against_externals::test_run[numpy-https://github.com/numpy/numpy.git] skip
+tests.testutils.test_output_line::test_output_line pass
+tests.testutils.test_output_line::test_output_line_from_message pass
+tests.testutils.test_output_line::test_output_line_to_csv[confidence0] pass
+tests.testutils.test_output_line::test_output_line_to_csv[confidence1] pass
+tests.testutils.test_output_line::test_output_line_from_csv_error pass
+tests.testutils.test_output_line::test_output_line_from_csv[None-HIGH] pass
+tests.testutils.test_output_line::test_output_line_from_csv[INFERENCE-INFERENCE] pass
+tests.utils.unittest_ast_walker.TestASTWalker::test_check_messages pass
+tests.utils.unittest_ast_walker.TestASTWalker::test_deprecated_methods pass
+tests.utils.unittest_utils::test_decoding_stream_unknown_encoding pass
+tests.utils.unittest_utils::test_decoding_stream_known_encoding pass
+post
+tests.functional.r.redundant_unittest_assert.Tests::test_something skip
+tests.functional.r.redundant_unittest_assert.RegressionWithArgs::test skip
+tests.lint.unittest_expand_modules::test__is_in_ignore_list_re_match pass
+tests.lint.unittest_expand_modules::test__is_in_ignore_list_re_nomatch pass
+tests.lint.unittest_expand_modules::test_expand_modules[files_or_modules0-expected0] pass
+tests.lint.unittest_expand_modules::test_expand_modules[files_or_modules1-expected1] pass
+tests.lint.unittest_lint::test_no_args pass
+tests.lint.unittest_lint::test_one_arg[case0] pass
+tests.lint.unittest_lint::test_one_arg[case1] pass
+tests.lint.unittest_lint::test_one_arg[case2] pass
+tests.lint.unittest_lint::test_one_arg[case3] pass
+tests.lint.unittest_lint::test_one_arg[case4] pass
+tests.lint.unittest_lint::test_two_similar_args[case0] pass
+tests.lint.unittest_lint::test_two_similar_args[case1] pass
+tests.lint.unittest_lint::test_two_similar_args[case2] pass
+tests.lint.unittest_lint::test_two_similar_args[case3] pass
+tests.lint.unittest_lint::test_more_args[case0] pass
+tests.lint.unittest_lint::test_more_args[case1] pass
+tests.lint.unittest_lint::test_more_args[case2] pass
+tests.lint.unittest_lint::test_pylint_visit_method_taken_in_account pass
+tests.lint.unittest_lint::test_enable_message pass
+tests.lint.unittest_lint::test_enable_message_category pass
+tests.lint.unittest_lint::test_message_state_scope pass
+tests.lint.unittest_lint::test_enable_message_block pass
+tests.lint.unittest_lint::test_enable_by_symbol pass
+tests.lint.unittest_lint::test_enable_report pass
+tests.lint.unittest_lint::test_report_output_format_aliased pass
+tests.lint.unittest_lint::test_set_unsupported_reporter pass
+tests.lint.unittest_lint::test_set_option_1 pass
+tests.lint.unittest_lint::test_set_option_2 pass
+tests.lint.unittest_lint::test_enable_checkers pass
+tests.lint.unittest_lint::test_errors_only pass
+tests.lint.unittest_lint::test_disable_similar pass
+tests.lint.unittest_lint::test_disable_alot pass
+tests.lint.unittest_lint::test_addmessage pass
+tests.lint.unittest_lint::test_addmessage_invalid pass
+tests.lint.unittest_lint::test_load_plugin_command_line pass
+tests.lint.unittest_lint::test_load_plugin_config_file pass
+tests.lint.unittest_lint::test_load_plugin_configuration pass
+tests.lint.unittest_lint::test_init_hooks_called_before_load_plugins pass
+tests.lint.unittest_lint::test_analyze_explicit_script pass
+tests.lint.unittest_lint::test_python3_checker_disabled pass
+tests.lint.unittest_lint::test_full_documentation pass
+tests.lint.unittest_lint::test_list_msgs_enabled pass
+tests.lint.unittest_lint::test_pylint_home pass
+tests.lint.unittest_lint::test_pylintrc pass
+tests.lint.unittest_lint::test_pylintrc_parentdir pass
+tests.lint.unittest_lint::test_pylintrc_parentdir_no_package pass
+tests.lint.unittest_lint.TestPreprocessOptions::test_value_equal pass
+tests.lint.unittest_lint.TestPreprocessOptions::test_value_space pass
+tests.lint.unittest_lint.TestPreprocessOptions::test_error_missing_expected_value pass
+tests.lint.unittest_lint.TestPreprocessOptions::test_error_unexpected_value pass
+tests.lint.unittest_lint::test_custom_should_analyze_file pass
+tests.lint.unittest_lint::test_multiprocessing[1] pass
+tests.lint.unittest_lint::test_multiprocessing[2] pass
+tests.lint.unittest_lint::test_filename_with__init__ pass
+tests.lint.unittest_lint::test_by_module_statement_value pass
+tests.message.unittest_message::test_new_message pass
+tests.message.unittest_message_definition::test_create_invalid_message_type[Q1234-Bad message type Q in 'Q1234'] pass
+tests.message.unittest_message_definition::test_create_invalid_message_type[W12345-Invalid message id 'W12345'] pass
+tests.message.unittest_message_definition.TestMessagesDefinition::test_may_be_emitted pass
+tests.message.unittest_message_definition.TestMessagesDefinition::test_repr pass
+tests.message.unittest_message_definition.TestMessagesDefinition::test_str pass
+tests.message.unittest_message_definition.TestMessagesDefinition::test_format_help pass
+tests.message.unittest_message_definition_store::test_register_error[messages0-Inconsistent checker part in message id 'W4321' (expected 'x12xx' because we already had ['W1234']).] pass
+tests.message.unittest_message_definition_store::test_register_error[messages1-Message id 'W1234' cannot have both 'msg-symbol-one' and 'old-symbol' as symbolic name.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages2-Message id 'W1234' cannot have both 'msg-symbol-one' and 'old-symbol' as symbolic name.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages3-Message id 'W1201' cannot have both 'old-symbol-one' and 'old-symbol-two' as symbolic name.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages4-Message symbol 'msg-symbol' cannot be used for 'W1234' and 'W1235' at the same time. If you're creating an 'old_names' use 'old-msg-symbol' as the old symbol.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages5-Message symbol 'msg-symbol-one' cannot be used for 'W1230' and 'W1234' at the same time. If you're creating an 'old_names' use 'old-msg-symbol-one' as the old symbol.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages6-Message symbol 'msg-symbol-one' cannot be used for 'W1230' and 'W1234' at the same time. If you're creating an 'old_names' use 'old-msg-symbol-one' as the old symbol.] pass
+tests.message.unittest_message_definition_store::test_register_error[messages7-Message symbol 'old-symbol-one' cannot be used for 'W1230' and 'W1231' at the same time. If you're creating an 'old_names' use 'old-old-symbol-one' as the old symbol.] pass
+tests.message.unittest_message_definition_store::test_register_error_new_id_duplicate_of_new pass
+tests.message.unittest_message_definition_store::test_format_help pass
+tests.message.unittest_message_definition_store::test_get_msg_display_string pass
+tests.message.unittest_message_definition_store::test_check_message_id pass
+tests.message.unittest_message_definition_store.TestMessageDefinitionStore::test_message_help pass
+tests.message.unittest_message_definition_store.TestMessageDefinitionStore::test_message_help_minmax pass
+tests.message.unittest_message_definition_store::test_list_messages pass
+tests.message.unittest_message_definition_store::test_renamed_message_register pass
+tests.message.unittest_message_definition_store::test_multiple_child_of_old_name pass
+tests.message.unittest_message_id_store::test_len_str pass
+tests.message.unittest_message_id_store::test_get_message_ids pass
+tests.message.unittest_message_id_store::test_get_message_ids_not_existing pass
+tests.message.unittest_message_id_store::test_register_message_definitions pass
+tests.message.unittest_message_id_store::test_add_msgid_and_symbol pass
+tests.message.unittest_message_id_store::test_duplicate_symbol pass
+tests.message.unittest_message_id_store::test_duplicate_msgid pass
+tests.profile.test_profile_against_externals::test_run[numpy-https://github.com/numpy/numpy.git] skip
+tests.testutils.test_output_line::test_output_line pass
+tests.testutils.test_output_line::test_output_line_from_message pass
+tests.testutils.test_output_line::test_output_line_to_csv[confidence0] pass
+tests.testutils.test_output_line::test_output_line_to_csv[confidence1] pass
+tests.testutils.test_output_line::test_output_line_from_csv_error pass
+tests.testutils.test_output_line::test_output_line_from_csv[None-HIGH] pass
+tests.testutils.test_output_line::test_output_line_from_csv[INFERENCE-INFERENCE] pass
+tests.utils.unittest_ast_walker.TestASTWalker::test_check_messages pass
+tests.utils.unittest_ast_walker.TestASTWalker::test_deprecated_methods pass
+tests.utils.unittest_utils::test_decoding_stream_unknown_encoding pass
+tests.utils.unittest_utils::test_decoding_stream_known_encoding pass
+(.venv) (.venv) build success
+release success
+{'tests.unittest_pyreverse_writer::test_infer_node_1', 'tests.unittest_pyreverse_writer::test_get_annotation_annassign[a: Optional[str] = None-Optional[str]]', 'tests.unittest_pyreverse_writer::test_get_annotation_assignattr[def __init__(self, x: str = None): self.x = x-Optional[str]]', "tests.unittest_pyreverse_writer::test_get_annotation_annassign[a: Optional[str] = 'str'-Optional[str]]", "tests.unittest_pyreverse_writer::test_get_annotation_assignattr[def __init__(self, x: str = 'str'): self.x = x-str]", 'tests.unittest_pyreverse_writer::test_get_annotation_assignattr[def __init__(self, x: str): self.x = x-str]', 'tests.unittest_pyreverse_writer::test_get_annotation_assignattr[def __init__(self, x: Optional[str]): self.x = x-Optional[str]]', 'tests.unittest_pyreverse_writer::test_infer_node_2', 'tests.unittest_pyreverse_writer::test_get_annotation_assignattr[def __init__(self, x: Optional[str] = None): self.x = x-Optional[str]]', "tests.unittest_pyreverse_writer::test_get_annotation_assignattr[def __init__(self, x: Optional[str] = 'str'): self.x = x-Optional[str]]", 'tests.unittest_pyreverse_writer::test_get_annotation_annassign[a: str = None-Optional[str]]', "tests.unittest_pyreverse_writer::test_get_annotation_annassign[a: str = 'mystr'-str]"}
+(.venv) (.venv) 

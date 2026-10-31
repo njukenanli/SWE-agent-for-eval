@@ -1,0 +1,205 @@
+pre
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testIsComplete[SingleDimensionShardSpec with empty buckets] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testHasNoData[SingleDimensionShardSpec with empty buckets] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testIsComplete[SingleDimensionShardSpec with missing numCorePartitions] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testHasNoData[SingleDimensionShardSpec with missing numCorePartitions] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testIsComplete[DimensionRangeShardSpec with empty buckets] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testHasNoData[DimensionRangeShardSpec with empty buckets] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testIsComplete[DimensionRangeShardSpec with missing numCorePartitions] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testHasNoData[DimensionRangeShardSpec with missing numCorePartitions] pass
+org.apache.druid.timeline.partition.SingleDimensionPartialShardSpecTest#testSerde pass
+org.apache.druid.timeline.partition.SingleDimensionPartialShardSpecTest#testComplete pass
+org.apache.druid.timeline.partition.SingleDimensionPartialShardSpecTest#testEquals pass
+org.apache.druid.timeline.partition.SingleDimensionRangeBucketShardSpecTest#testSerde pass
+org.apache.druid.timeline.partition.SingleDimensionRangeBucketShardSpecTest#testCreateChunk pass
+org.apache.druid.timeline.partition.SingleDimensionRangeBucketShardSpecTest#testShardSpecLookup pass
+org.apache.druid.timeline.partition.SingleDimensionRangeBucketShardSpecTest#testConvert pass
+org.apache.druid.timeline.partition.SingleDimensionRangeBucketShardSpecTest#testEquals pass
+org.apache.druid.timeline.partition.SingleDimensionShardSpecTest#testPossibleInDomain pass
+org.apache.druid.timeline.partition.SingleDimensionShardSpecTest#testSerde pass
+org.apache.druid.timeline.partition.SingleDimensionShardSpecTest#testSharePartitionSpace pass
+org.apache.druid.timeline.partition.SingleDimensionShardSpecTest#testShardSpecLookup pass
+org.apache.druid.timeline.partition.SingleDimensionShardSpecTest#testDeserialize pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testAbuts pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testIsEnd pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testCompareTo pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testMakeForSingleDimension pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testEquals pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testIsStart pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#compareTo pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#getChunkNumber pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#make pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#abuts pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#isEnd pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#equalsTest pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#getObject pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#minutia pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#isStart pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#getNumCorePartitions pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#possibleInDomain pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#createChunk pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#getDomainDimensions pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#getType pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#equalsTest pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#getLookup pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#getPartitionNum pass
+org.apache.druid.utils.CircularBufferTest#testCircularBufferGetLatest pass
+org.apache.druid.utils.CircularBufferTest#testCircularBufferGet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapInCatch_ioException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndSuppressExceptions_null pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeInCatch_ioException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapInCatch_runtimeException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAll_array_quiet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAll_list_loud pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAll_array_loud pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapInCatch_improper pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeInCatch_runtimeException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapExceptions_quiet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndSuppressExceptions_runtimeException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndSuppressExceptions_ioException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapInCatch_assertionError pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapExceptions_ioException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndSuppressExceptions_assertionError pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapExceptions_assertionError pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndSuppressExceptions_quiet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeInCatch_improper pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeInCatch_quiet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapExceptions_runtimeException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapExceptions_null pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAll_list_quiet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapInCatch_quiet pass
+org.apache.druid.utils.CollectionUtilsTest#testSubtract pass
+org.apache.druid.utils.CollectionUtilsTest#testUnion pass
+org.apache.druid.utils.CollectionUtilsTest#testIntersect pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testTryParseUnknown pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testPosgresDriver pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMySqlFallbackMySqlNoDrivers pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testPostgresInvalidArgs pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMariaDb3xDriverMariaUri pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMariaDb2xDriver pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testThrowForNonAllowedProperties pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMySQLDriver pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testAllowSystemProperties pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#tryParseInvalidMySql pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMatchSystemProperties pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testTryParses pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testEmptyActualProperties pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMySqlInvalidArgs pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMariaDb3xDriver pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#tryParseInvalidPostgres pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMariaFallbackMaria3x pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMariaDbInvalidArgs pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMySqlFallbackMySqlMaria2x pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testAllowedProperties pass
+org.apache.druid.utils.DynamicConfigProviderUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testExtraConfigAndSetObjectMap pass
+org.apache.druid.utils.DynamicConfigProviderUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testExtraConfigAndSetStringMap pass
+org.apache.druid.utils.JvmUtilsTest#testSystemClassPath skip
+org.apache.druid.utils.JvmUtilsTest#testGetMaxDirectMemory pass
+org.apache.druid.utils.ThrowablesTest#testGetCauseOfType_NestedThrowableSubclass pass
+org.apache.druid.utils.ThrowablesTest#testGetCauseOfType_NestedThrowable pass
+org.apache.druid.utils.ThrowablesTest#testGetCauseOfType_Itself pass
+org.apache.druid.utils.ThrowablesTest#testGetCauseOfType_NonTarget pass
+post
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testIsComplete[SingleDimensionShardSpec with empty buckets] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testHasNoData[SingleDimensionShardSpec with empty buckets] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testIsComplete[SingleDimensionShardSpec with missing numCorePartitions] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testHasNoData[SingleDimensionShardSpec with missing numCorePartitions] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testIsComplete[DimensionRangeShardSpec with empty buckets] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testHasNoData[DimensionRangeShardSpec with empty buckets] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testIsComplete[DimensionRangeShardSpec with missing numCorePartitions] pass
+org.apache.druid.timeline.partition.PartitionHolderCompletenessTest#testHasNoData[DimensionRangeShardSpec with missing numCorePartitions] pass
+org.apache.druid.timeline.partition.SingleDimensionPartialShardSpecTest#testSerde pass
+org.apache.druid.timeline.partition.SingleDimensionPartialShardSpecTest#testComplete pass
+org.apache.druid.timeline.partition.SingleDimensionPartialShardSpecTest#testEquals pass
+org.apache.druid.timeline.partition.SingleDimensionRangeBucketShardSpecTest#testSerde pass
+org.apache.druid.timeline.partition.SingleDimensionRangeBucketShardSpecTest#testCreateChunk pass
+org.apache.druid.timeline.partition.SingleDimensionRangeBucketShardSpecTest#testShardSpecLookup pass
+org.apache.druid.timeline.partition.SingleDimensionRangeBucketShardSpecTest#testConvert pass
+org.apache.druid.timeline.partition.SingleDimensionRangeBucketShardSpecTest#testEquals pass
+org.apache.druid.timeline.partition.SingleDimensionShardSpecTest#testPossibleInDomain pass
+org.apache.druid.timeline.partition.SingleDimensionShardSpecTest#testSerde pass
+org.apache.druid.timeline.partition.SingleDimensionShardSpecTest#testSharePartitionSpace pass
+org.apache.druid.timeline.partition.SingleDimensionShardSpecTest#testShardSpecLookup pass
+org.apache.druid.timeline.partition.SingleDimensionShardSpecTest#testDeserialize pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testAbuts pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testIsEnd pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testCompareTo pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testMakeForSingleDimension pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testEquals pass
+org.apache.druid.timeline.partition.StringPartitionChunkTest#testIsStart pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#compareTo pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#getChunkNumber pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#make pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#abuts pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#isEnd pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#equalsTest pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#getObject pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#minutia pass
+org.apache.druid.timeline.partition.TombstonePartitionedChunkTest#isStart pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#getNumCorePartitions pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#possibleInDomain pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#createChunk pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#getDomainDimensions pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#getType pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#equalsTest pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#getLookup pass
+org.apache.druid.timeline.partition.TombstoneShardSpecTest#getPartitionNum pass
+org.apache.druid.utils.CircularBufferTest#testCircularBufferGetLatest pass
+org.apache.druid.utils.CircularBufferTest#testCircularBufferGet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapInCatch_ioException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndSuppressExceptions_null pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeInCatch_ioException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapInCatch_runtimeException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAll_array_quiet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAll_list_loud pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAll_array_loud pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapInCatch_improper pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeInCatch_runtimeException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapExceptions_quiet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndSuppressExceptions_runtimeException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndSuppressExceptions_ioException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapInCatch_assertionError pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapExceptions_ioException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndSuppressExceptions_assertionError pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapExceptions_assertionError pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndSuppressExceptions_quiet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeInCatch_improper pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeInCatch_quiet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapExceptions_runtimeException pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapExceptions_null pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAll_list_quiet pass
+org.apache.druid.utils.CloseableUtilsTest#test_closeAndWrapInCatch_quiet pass
+org.apache.druid.utils.CollectionUtilsTest#testSubtract pass
+org.apache.druid.utils.CollectionUtilsTest#testUnion pass
+org.apache.druid.utils.CollectionUtilsTest#testIntersect pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testTryParseUnknown pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testPosgresDriver pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMySqlFallbackMySqlNoDrivers pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testPostgresInvalidArgs pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMariaDb3xDriverMariaUri pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMariaDb2xDriver pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testThrowForNonAllowedProperties pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMySQLDriver pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testAllowSystemProperties pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#tryParseInvalidMySql pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMatchSystemProperties pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testTryParses pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testEmptyActualProperties pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMySqlInvalidArgs pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMariaDb3xDriver pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#tryParseInvalidPostgres pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMariaFallbackMaria3x pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMariaDbInvalidArgs pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testMySqlFallbackMySqlMaria2x pass
+org.apache.druid.utils.ConnectionUriUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testAllowedProperties pass
+org.apache.druid.utils.DynamicConfigProviderUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testExtraConfigAndSetObjectMap pass
+org.apache.druid.utils.DynamicConfigProviderUtilsTest$ThrowIfURLHasNotAllowedPropertiesTest#testExtraConfigAndSetStringMap pass
+org.apache.druid.utils.JvmUtilsTest#testSystemClassPath skip
+org.apache.druid.utils.JvmUtilsTest#testGetMaxDirectMemory pass
+org.apache.druid.utils.ThrowablesTest#testGetCauseOfType_NestedThrowableSubclass pass
+org.apache.druid.utils.ThrowablesTest#testGetCauseOfType_NestedThrowable pass
+org.apache.druid.utils.ThrowablesTest#testGetCauseOfType_Itself pass
+org.apache.druid.utils.ThrowablesTest#testGetCauseOfType_NonTarget pass
+build success
+release success
+{'[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in', '[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in'}

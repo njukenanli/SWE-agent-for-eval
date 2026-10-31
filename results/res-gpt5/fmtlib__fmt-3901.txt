@@ -1,0 +1,124 @@
+pre
+-- CMake version: 3.28.3
+-- Version: 10.2.2
+-- Build type: Release
+-- Target 'doc' disabled (requires doxygen)
+-- FMT_PEDANTIC: OFF
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /testbed/build
+ninja: Entering directory `build'
+ninja: no work to do.
+args-test pass
+base-test pass
+assert-test pass
+chrono-test pass
+color-test pass
+gtest-extra-test pass
+format-test pass
+format-impl-test pass
+ostream-test pass
+compile-test pass
+compile-fp-test pass
+printf-test pass
+ranges-test pass
+scan-test pass
+std-test pass
+unicode-test pass
+xchar-test pass
+enforce-checks-test pass
+posix-mock-test pass
+os-test pass
+post
+-- CMake version: 3.28.3
+-- Version: 10.2.2
+-- Build type: Release
+-- Target 'doc' disabled (requires doxygen)
+-- FMT_PEDANTIC: OFF
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /testbed/build
+ninja: Entering directory `build'
+[1/61] Building CXX object test/CMakeFiles/test-main.dir/util.cc.o
+[2/61] Building CXX object CMakeFiles/fmt.dir/src/os.cc.o
+[3/61] Building CXX object test/CMakeFiles/test-main.dir/gtest-extra.cc.o
+[4/61] Building CXX object test/CMakeFiles/compile-fp-test.dir/compile-fp-test.cc.o
+[5/61] Building CXX object test/CMakeFiles/ranges-test.dir/ranges-odr-test.cc.o
+[6/61] Building CXX object test/CMakeFiles/args-test.dir/args-test.cc.o
+[7/61] Building CXX object test/CMakeFiles/color-test.dir/color-test.cc.o
+[8/61] Building CXX object test/CMakeFiles/compile-fp-test.dir/__/src/os.cc.o
+[9/61] Building CXX object test/CMakeFiles/gtest-extra-test.dir/gtest-extra-test.cc.o
+[10/61] Building CXX object test/CMakeFiles/format-impl-test.dir/util.cc.o
+[11/61] Building CXX object test/CMakeFiles/compile-fp-test.dir/util.cc.o
+[12/61] Building CXX object CMakeFiles/fmt.dir/src/format.cc.o
+[13/61] Linking CXX static library libfmt.a
+[14/61] Linking CXX static library test/libtest-main.a
+[15/61] Linking CXX executable bin/args-test
+[16/61] Building CXX object test/CMakeFiles/format-impl-test.dir/__/src/os.cc.o
+[17/61] Linking CXX executable bin/base-test
+[18/61] Linking CXX executable bin/assert-test
+[19/61] Linking CXX executable bin/color-test
+[20/61] Linking CXX executable bin/gtest-extra-test
+[21/61] Building CXX object test/CMakeFiles/scan-test.dir/util.cc.o
+[22/61] Building CXX object test/CMakeFiles/ostream-test.dir/ostream-test.cc.o
+[23/61] Building CXX object test/CMakeFiles/format-impl-test.dir/header-only-test.cc.o
+[24/61] Linking CXX executable bin/ostream-test
+[25/61] Building CXX object test/CMakeFiles/format-impl-test.dir/gtest-extra.cc.o
+[26/61] Building CXX object test/CMakeFiles/scan-test.dir/gtest-extra.cc.o
+[27/61] Building CXX object test/CMakeFiles/compile-fp-test.dir/gtest-extra.cc.o
+[28/61] Linking CXX executable bin/compile-fp-test
+[29/61] Building CXX object test/CMakeFiles/posix-mock-test.dir/util.cc.o
+[30/61] Building CXX object test/CMakeFiles/scan-test.dir/__/src/os.cc.o
+[31/61] Building CXX object test/CMakeFiles/posix-mock-test.dir/gtest-extra.cc.o
+[32/61] Building CXX object test/CMakeFiles/scan-test.dir/scan-test.cc.o
+[33/61] Linking CXX executable bin/scan-test
+[34/61] Building CXX object test/CMakeFiles/unicode-test.dir/gtest-extra.cc.o
+[35/61] Building CXX object test/CMakeFiles/posix-mock-test.dir/posix-mock-test.cc.o
+[36/61] Building CXX object test/CMakeFiles/format-impl-test.dir/format-impl-test.cc.o
+[37/61] Linking CXX executable bin/format-impl-test
+[38/61] Building CXX object test/CMakeFiles/unicode-test.dir/unicode-test.cc.o
+[39/61] Building CXX object test/CMakeFiles/unicode-test.dir/util.cc.o
+[40/61] Building CXX object test/CMakeFiles/unicode-test.dir/__/src/os.cc.o
+[41/61] Building CXX object test/CMakeFiles/compile-test.dir/compile-test.cc.o
+[42/61] Building CXX object test/CMakeFiles/os-test.dir/os-test.cc.o
+[43/61] Linking CXX executable bin/unicode-test
+[44/61] Linking CXX executable bin/os-test
+[45/61] Linking CXX executable bin/compile-test
+[46/61] Building CXX object test/CMakeFiles/ranges-test.dir/ranges-test.cc.o
+[47/61] Linking CXX executable bin/ranges-test
+[48/61] Building CXX object test/CMakeFiles/posix-mock-test.dir/__/src/format.cc.o
+[49/61] Linking CXX executable bin/posix-mock-test
+[50/61] Building CXX object test/CMakeFiles/std-test.dir/std-test.cc.o
+[51/61] Linking CXX executable bin/std-test
+[52/61] Building CXX object test/CMakeFiles/enforce-checks-test.dir/enforce-checks-test.cc.o
+[53/61] Linking CXX executable bin/enforce-checks-test
+[54/61] Building CXX object test/CMakeFiles/xchar-test.dir/xchar-test.cc.o
+[55/61] Linking CXX executable bin/xchar-test
+[56/61] Building CXX object test/CMakeFiles/format-test.dir/format-test.cc.o
+[57/61] Linking CXX executable bin/format-test
+[58/61] Building CXX object test/CMakeFiles/chrono-test.dir/chrono-test.cc.o
+[59/61] Linking CXX executable bin/chrono-test
+[60/61] Building CXX object test/CMakeFiles/printf-test.dir/printf-test.cc.o
+[61/61] Linking CXX executable bin/printf-test
+args-test pass
+base-test pass
+assert-test pass
+chrono-test pass
+color-test pass
+gtest-extra-test pass
+format-test pass
+format-impl-test pass
+ostream-test pass
+compile-test pass
+compile-fp-test pass
+printf-test pass
+ranges-test pass
+scan-test pass
+std-test pass
+unicode-test pass
+xchar-test pass
+enforce-checks-test pass
+posix-mock-test pass
+os-test pass
+build success
+release failed

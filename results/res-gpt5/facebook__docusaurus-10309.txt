@@ -1,0 +1,205 @@
+pre
+/testbed/packages/docusaurus/src/server/__tests__/clientModules.test.ts > getAllClientModules > loads both empty and non-empty plugins pass
+/testbed/packages/docusaurus/src/server/__tests__/clientModules.test.ts > getAllClientModules > loads empty and non-empty in a different order pass
+/testbed/packages/docusaurus/src/client/__tests__/normalizeLocation.test.ts > normalizeLocation > rewrites locations with index.html pass
+/testbed/packages/docusaurus/src/client/__tests__/normalizeLocation.test.ts > normalizeLocation > removes html extension pass
+/testbed/packages/docusaurus/src/client/__tests__/normalizeLocation.test.ts > normalizeLocation > does not strip extension if the route location has one pass
+/testbed/packages/docusaurus/src/client/__tests__/normalizeLocation.test.ts > normalizeLocation > leaves pathnames untouched pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > getNamePatterns > resolves plain names pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > getNamePatterns > expands bare scopes pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > getNamePatterns > expands scoped names pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > getNamePatterns > expands deep scoped paths pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > resolveModuleName > resolves longhand pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > resolveModuleName > resolves shorthand pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > resolveModuleName > throws good error message for longhand pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > resolveModuleName > throws good error message for shorthand pass
+/testbed/packages/docusaurus-utils/src/__tests__/shellUtils.test.ts > shellUtils > escapeShellArg pass
+/testbed/packages/docusaurus/src/server/__tests__/siteMetadata.test.ts > loadPluginVersion > detects external packages plugins versions pass
+/testbed/packages/docusaurus/src/server/__tests__/siteMetadata.test.ts > loadPluginVersion > detects project plugins versions pass
+/testbed/packages/docusaurus/src/server/__tests__/siteMetadata.test.ts > loadPluginVersion > detects local packages versions pass
+/testbed/packages/docusaurus/src/server/__tests__/siteMetadata.test.ts > createSiteMetadata > throws if plugin versions mismatch pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns true for empty links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns true for root relative links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns true for relative links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for HTTP links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for HTTPS links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for whatever protocol links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for telephone links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for mailto links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for undefined links pass
+/testbed/packages/docusaurus-utils/src/__tests__/hashUtils.test.ts > hashUtils > simpleHash pass
+/testbed/packages/docusaurus-utils/src/__tests__/hashUtils.test.ts > docuHash > docuHash works pass
+/testbed/packages/docusaurus-utils/src/__tests__/hashUtils.test.ts > docuHash > docuHash works with hashLength option pass
+/testbed/packages/docusaurus-utils/src/__tests__/hashUtils.test.ts > docuHash > docuHash works with hashExtra option pass
+/testbed/packages/docusaurus-utils/src/__tests__/markdownLinks.test.ts > resolveMarkdownLinkPathname > does basic replace pass
+/testbed/packages/docusaurus-utils/src/__tests__/markdownLinks.test.ts > resolveMarkdownLinkPathname > resolves absolute and relative links differently pass
+/testbed/packages/docusaurus-mdx-loader/src/__tests__/format.test.ts > getFormat > uses frontMatter format over anything else pass
+/testbed/packages/docusaurus-mdx-loader/src/__tests__/format.test.ts > getFormat > supports "detects" for front matter pass
+/testbed/packages/docusaurus-mdx-loader/src/__tests__/format.test.ts > getFormat > fallbacks to markdown config format when front matter undefined pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginsUtils.test.ts > mergeGlobalData > no global data pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginsUtils.test.ts > mergeGlobalData > 1 global data pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginsUtils.test.ts > mergeGlobalData > 1 global data - primitive value pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginsUtils.test.ts > mergeGlobalData > 3 distinct plugins global data pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginsUtils.test.ts > mergeGlobalData > 3 plugin instances of same plugin pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginsUtils.test.ts > mergeGlobalData > 3 times the same plugin pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginsUtils.test.ts > mergeGlobalData > 3 times same plugin - including primitive values pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginsUtils.test.ts > mergeGlobalData > real world case pass
+/testbed/packages/docusaurus-utils/src/__tests__/routeUtils.test.ts > flattenRoutes > returns flattened routes without parents pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/createRedirectPageContent.test.ts > createRedirectPageContent > works pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/createRedirectPageContent.test.ts > createRedirectPageContent > encodes uri special chars pass
+/testbed/packages/docusaurus/src/server/__tests__/htmlTags.test.ts > loadHtmlTags > works for an empty plugin pass
+/testbed/packages/docusaurus/src/server/__tests__/htmlTags.test.ts > loadHtmlTags > only injects headTags pass
+/testbed/packages/docusaurus/src/server/__tests__/htmlTags.test.ts > loadHtmlTags > only injects preBodyTags pass
+/testbed/packages/docusaurus/src/server/__tests__/htmlTags.test.ts > loadHtmlTags > only injects postBodyTags pass
+/testbed/packages/docusaurus/src/server/__tests__/htmlTags.test.ts > loadHtmlTags > allows multiple plugins that inject different part of html tags pass
+/testbed/packages/docusaurus/src/server/__tests__/htmlTags.test.ts > loadHtmlTags > allows multiple plugins that might/might not inject html tags pass
+/testbed/packages/docusaurus/src/server/__tests__/htmlTags.test.ts > loadHtmlTags > throws for invalid tag pass
+/testbed/packages/docusaurus/src/server/__tests__/htmlTags.test.ts > loadHtmlTags > throws for invalid tagName pass
+/testbed/packages/docusaurus/src/server/__tests__/htmlTags.test.ts > loadHtmlTags > throws for invalid tag object pass
+/testbed/packages/docusaurus-plugin-content-blog/src/__tests__/authorsProblems.test.ts > duplicate authors > allows duplicated inline authors pass
+/testbed/packages/docusaurus-plugin-content-blog/src/__tests__/authorsProblems.test.ts > duplicate authors > rejects duplicated key authors pass
+/testbed/packages/docusaurus-plugin-content-blog/src/__tests__/authorsProblems.test.ts > inline authors > allows predefined authors pass
+/testbed/packages/docusaurus-plugin-content-blog/src/__tests__/authorsProblems.test.ts > inline authors > rejects inline authors pass
+/testbed/packages/docusaurus-plugin-content-blog/src/__tests__/authorsProblems.test.ts > inline authors > warn inline authors pass
+/testbed/packages/docusaurus/src/server/__tests__/routes.test.ts > handleDuplicateRoutes > works pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > mergeTranslations > works pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > updateTranslationFileMessages > works pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > getPluginI18nPath > gets correct path pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > getPluginI18nPath > gets correct path for default plugin pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > getPluginI18nPath > gets correct path when no sub-paths pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > localizePath > localizes url path with current locale pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > localizePath > localizes fs path with current locale pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > localizePath > localizes path for default locale, if requested pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > localizePath > does not localize path for default locale by default pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > localizePath > localizes path for non-default locale by default pass
+/testbed/packages/docusaurus/src/client/__tests__/flat.test.ts > flat > nested pass
+/testbed/packages/docusaurus/src/client/__tests__/flat.test.ts > flat > primitives pass
+/testbed/packages/docusaurus/src/client/__tests__/flat.test.ts > flat > multiple keys pass
+/testbed/packages/docusaurus/src/client/__tests__/flat.test.ts > flat > empty object pass
+/testbed/packages/docusaurus/src/client/__tests__/flat.test.ts > flat > array pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > removePrefix > is no-op when prefix doesn't exist pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > removePrefix > removes prefix pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > removeSuffix > is no-op when suffix doesn't exist pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > removeSuffix > removes suffix pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > removeSuffix > removes empty suffix pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > addPrefix > is no-op when prefix already exists pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > addPrefix > adds prefix pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > addSuffix > is no-op when suffix already exists pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > addSuffix > adds suffix pass
+/testbed/packages/docusaurus-plugin-content-blog/src/__tests__/props.test.ts > toTagsProp > works pass
+/testbed/packages/docusaurus-plugin-content-blog/src/__tests__/props.test.ts > toTagsProp > filters unlisted tags pass
+/testbed/packages/docusaurus-plugin-content-blog/src/__tests__/props.test.ts > toBlogSidebarProp > creates sidebar prop pass
+/testbed/packages/docusaurus-utils/src/__tests__/webpackUtils.test.ts > getFileLoaderUtils() > plugin svgo/removeViewBox and removeTitle should be disabled pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/regexpUtils.test.ts > isRegexpStringMatch > works pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/tagUtils.test.ts > listTagsByLetters > creates letters list pass
+/testbed/packages/docusaurus-utils/src/__tests__/slugger.test.ts > createSlugger > can create unique slugs pass
+/testbed/packages/docusaurus-utils/src/__tests__/slugger.test.ts > createSlugger > can create unique slugs respecting case pass
+/testbed/website/src/utils/__tests__/jsUtils.test.ts > toggleListItem > removes item already in list pass
+/testbed/website/src/utils/__tests__/jsUtils.test.ts > toggleListItem > appends item not in list pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/errorUtils.test.ts > getErrorCausalChain > works for simple error pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/errorUtils.test.ts > getErrorCausalChain > works for nested errors pass
+/testbed/packages/docusaurus-mdx-loader/src/__tests__/processor.test.ts > md processor > parses simple commonmark pass
+post
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > addPrefix > adds prefix pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > addSuffix > is no-op when suffix already exists pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/stringUtils.test.ts > addSuffix > adds suffix pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/createRedirectPageContent.test.ts > createRedirectPageContent > works pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/createRedirectPageContent.test.ts > createRedirectPageContent > encodes uri special chars pass
+/testbed/packages/docusaurus-plugin-content-docs/src/sidebars/__tests__/normalization.test.ts > normalization > normalizes shorthands pass
+/testbed/packages/docusaurus-plugin-content-docs/src/sidebars/__tests__/normalization.test.ts > normalization > rejects some invalid cases pass
+/testbed/packages/docusaurus-plugin-content-docs/src/sidebars/__tests__/normalization.test.ts > normalization > adds a translatable marker for labels defined in sidebars.js pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > getNamePatterns > resolves plain names pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > getNamePatterns > expands bare scopes pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > getNamePatterns > expands scoped names pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > getNamePatterns > expands deep scoped paths pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > resolveModuleName > resolves longhand pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > resolveModuleName > resolves shorthand pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > resolveModuleName > throws good error message for longhand pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/moduleShorthand.test.ts > resolveModuleName > throws good error message for shorthand pass
+/testbed/packages/docusaurus/src/client/__tests__/flat.test.ts > flat > nested pass
+/testbed/packages/docusaurus/src/client/__tests__/flat.test.ts > flat > primitives pass
+/testbed/packages/docusaurus/src/client/__tests__/flat.test.ts > flat > multiple keys pass
+/testbed/packages/docusaurus/src/client/__tests__/flat.test.ts > flat > empty object pass
+/testbed/packages/docusaurus/src/client/__tests__/flat.test.ts > flat > array pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/regexpUtils.test.ts > isRegexpStringMatch > works pass
+/testbed/packages/docusaurus-utils/src/__tests__/routeUtils.test.ts > flattenRoutes > returns flattened routes without parents pass
+/testbed/packages/docusaurus-plugin-content-docs/src/sidebars/__tests__/postProcessor.test.ts > postProcess > transforms category without subitems pass
+/testbed/packages/docusaurus-plugin-content-docs/src/sidebars/__tests__/postProcessor.test.ts > postProcess > corrects collapsed state inconsistencies pass
+/testbed/packages/docusaurus-plugin-content-docs/src/sidebars/__tests__/postProcessor.test.ts > postProcess > filters draft items pass
+/testbed/packages/docusaurus-utils/src/__tests__/webpackUtils.test.ts > getFileLoaderUtils() > plugin svgo/removeViewBox and removeTitle should be disabled pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > applyTrailingSlash > applies to empty pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > applyTrailingSlash > does not apply to / pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > applyTrailingSlash > does not apply to /baseUrl/ pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > applyTrailingSlash > does not apply to #anchor links pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > applyTrailingSlash > applies to simple paths pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > applyTrailingSlash > applies to path with #anchor pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > applyTrailingSlash > applies to path with ?search pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > applyTrailingSlash > applies to path with ?search#anchor pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > applyTrailingSlash > applies to fully qualified urls pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > addTrailingSlash > is no-op for path with trailing slash pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > addTrailingSlash > adds / for path without trailing slash pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > addLeadingSlash > is no-op for path with leading slash pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > addLeadingSlash > adds / for path without leading slash pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > removeTrailingSlash > is no-op for path without trailing slash pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/applyTrailingSlash.test.ts > removeTrailingSlash > removes / for path with trailing slash pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createToExtensionsRedirects > rejects empty extensions pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createToExtensionsRedirects > rejects extensions with "." pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createToExtensionsRedirects > rejects extensions with / pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createToExtensionsRedirects > rejects extensions with illegal url char pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createToExtensionsRedirects > creates redirects from html/htm extensions pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createToExtensionsRedirects > creates "to" redirects when relativeRoutesPath contains a prefix pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createToExtensionsRedirects > does not create redirection for an empty extension array pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createFromExtensionsRedirects > rejects empty extensions pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createFromExtensionsRedirects > rejects extensions with "." pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createFromExtensionsRedirects > rejects extensions with / pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createFromExtensionsRedirects > rejects extensions with illegal url char pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createFromExtensionsRedirects > creates redirects from html/htm extensions pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createFromExtensionsRedirects > creates "from" redirects when relativeRoutesPath contains a prefix pass
+/testbed/packages/docusaurus-plugin-client-redirects/src/__tests__/extensionRedirects.test.ts > createFromExtensionsRedirects > does not create redirection for an empty extension array pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/tagUtils.test.ts > listTagsByLetters > creates letters list pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns true for empty links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns true for root relative links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns true for relative links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for HTTP links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for HTTPS links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for whatever protocol links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for telephone links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for mailto links pass
+/testbed/packages/docusaurus/src/client/exports/__tests__/isInternalUrl.test.ts > isInternalUrl > returns false for undefined links pass
+/testbed/packages/docusaurus-mdx-loader/src/__tests__/processor.test.ts > md processor > parses simple commonmark pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > mergeTranslations > works pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > updateTranslationFileMessages > works pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > getPluginI18nPath > gets correct path pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > getPluginI18nPath > gets correct path for default plugin pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > getPluginI18nPath > gets correct path when no sub-paths pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > localizePath > localizes url path with current locale pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > localizePath > localizes fs path with current locale pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > localizePath > localizes path for default locale, if requested pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > localizePath > does not localize path for default locale by default pass
+/testbed/packages/docusaurus-utils/src/__tests__/i18nUtils.test.ts > localizePath > localizes path for non-default locale by default pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginIds.test.ts > ensureUniquePluginInstanceIds > accept single instance plugins pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginIds.test.ts > ensureUniquePluginInstanceIds > accept single instance plugins, all with sameId pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginIds.test.ts > ensureUniquePluginInstanceIds > accept multi instance plugins without id pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginIds.test.ts > ensureUniquePluginInstanceIds > reject multi instance plugins without id pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginIds.test.ts > ensureUniquePluginInstanceIds > reject multi instance plugins with same id pass
+/testbed/packages/docusaurus/src/server/plugins/__tests__/pluginIds.test.ts > ensureUniquePluginInstanceIds > reject multi instance plugins with some without id pass
+/testbed/packages/docusaurus/src/server/__tests__/routes.test.ts > handleDuplicateRoutes > works pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/jsUtils.test.ts > duplicates > gets duplicate values pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/jsUtils.test.ts > duplicates > accepts custom comparator pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/jsUtils.test.ts > uniq > remove duplicate primitives pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/jsUtils.test.ts > uniq > remove duplicate objects/arrays by identity pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/jsUtils.test.ts > groupBy > group by name pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/jsUtils.test.ts > groupBy > group by age pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/jsUtils.test.ts > groupBy > group by type pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/jsUtils.test.ts > groupBy > group by name even duplicates pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/errorUtils.test.ts > getErrorCausalChain > works for simple error pass
+/testbed/packages/docusaurus-utils-common/src/__tests__/errorUtils.test.ts > getErrorCausalChain > works for nested errors pass
+/testbed/packages/docusaurus-utils/src/__tests__/slugger.test.ts > createSlugger > can create unique slugs pass
+/testbed/packages/docusaurus-utils/src/__tests__/slugger.test.ts > createSlugger > can create unique slugs respecting case pass
+/testbed/packages/docusaurus-utils/src/__tests__/shellUtils.test.ts > shellUtils > escapeShellArg pass
+/testbed/website/src/utils/__tests__/jsUtils.test.ts > toggleListItem > removes item already in list pass
+/testbed/website/src/utils/__tests__/jsUtils.test.ts > toggleListItem > appends item not in list pass
+/testbed/packages/docusaurus-theme-common/src/utils/__tests__/footerUtils.test.ts > isMultiColumnFooterLinks > works pass
+build success
+release success
+{'/testbed/packages/docusaurus-plugin-content-docs/src/client/__tests__/docsClientUtils.test.ts > docsClientUtils > getActiveVersion > getActiveVersion - docs only without trailing slash', '/testbed/packages/docusaurus-plugin-content-docs/src/client/__tests__/docsClientUtils.test.ts > docsClientUtils > getActiveVersion > getActiveVersion matches first version when same paths', '/testbed/packages/docusaurus-plugin-content-docs/src/client/__tests__/docsClientUtils.test.ts > docsClientUtils > getActiveVersion > getActiveVersion is not sensitive to version order', '/testbed/packages/docusaurus-plugin-content-docs/src/client/__tests__/docsClientUtils.test.ts > docsClientUtils > getActiveVersion > getActiveVersion for regular docs versions', '/testbed/packages/docusaurus-plugin-content-docs/src/client/__tests__/docsClientUtils.test.ts > docsClientUtils > getActiveVersion > getActiveVersion - docs only with trailing slash', '/testbed/packages/docusaurus-plugin-content-docs/src/client/__tests__/docsClientUtils.test.ts > docsClientUtils > getActiveVersion > getActiveVersion is not sensitive to isLast attribute', '/testbed/packages/docusaurus-plugin-content-docs/src/client/__tests__/docsClientUtils.test.ts > docsClientUtils > getActiveVersion > getActiveVersion with trailing slash', '/testbed/packages/docusaurus-plugin-content-docs/src/client/__tests__/docsClientUtils.test.ts > docsClientUtils > getActiveVersion > getActiveVersion without trailing slash'}

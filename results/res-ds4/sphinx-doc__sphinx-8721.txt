@@ -1,0 +1,205 @@
+pre
+tests/test_util_inspect.py::test_iscoroutinefunction pass
+tests/test_util_inspect.py::test_isfunction pass
+tests/test_util_inspect.py::test_isbuiltin pass
+tests/test_util_inspect.py::test_isdescriptor pass
+tests/test_util_inspect.py::test_isattributedescriptor pass
+tests/test_util_inspect.py::test_isproperty pass
+tests/test_util_inspect.py::test_isgenericalias pass
+tests/test_util_inspect.py::test_unpartial pass
+tests/test_util_inspect.py::test_getdoc_inherited_decorated_method pass
+tests/test_util_inspect.py::test_is_builtin_class_method pass
+tests/test_util_inventory.py::test_read_inventory_v1 pass
+tests/test_util_inventory.py::test_read_inventory_v2 pass
+tests/test_util_inventory.py::test_read_inventory_v2_not_having_version pass
+tests/test_util_jsdump.py::test_jsdump pass
+tests/test_util_logging.py::test_info_and_warning pass
+tests/test_util_logging.py::test_Exception pass
+tests/test_util_logging.py::test_verbosity_filter pass
+tests/test_util_logging.py::test_nonl_info_log pass
+tests/test_util_logging.py::test_once_warning_log pass
+tests/test_util_logging.py::test_is_suppressed_warning pass
+tests/test_util_logging.py::test_suppress_warnings pass
+tests/test_util_logging.py::test_warningiserror pass
+tests/test_util_logging.py::test_info_location pass
+tests/test_util_logging.py::test_warning_location pass
+tests/test_util_logging.py::test_suppress_logging pass
+tests/test_util_logging.py::test_pending_warnings pass
+tests/test_util_logging.py::test_colored_logs pass
+tests/test_util_logging.py::test_logging_in_ParallelTasks pass
+tests/test_util_logging.py::test_output_with_unencodable_char pass
+tests/test_util_logging.py::test_skip_warningiserror pass
+tests/test_util_logging.py::test_prefixed_warnings pass
+tests/test_util_matching.py::test_compile_matchers pass
+tests/test_util_matching.py::test_Matcher pass
+tests/test_util_nodes.py::test_NodeMatcher pass
+tests/test_util_nodes.py::test_extract_messages[\n           .. admonition:: admonition title\n\n              admonition body\n           -title-1] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages[\n           .. figure:: foo.jpg\n\n              this is title\n           -caption-1] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages[\n           .. rubric:: spam\n           -rubric-1] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages[\n           | spam\n           | egg\n           -line-2] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages[\n           section\n           =======\n\n           +----------------+\n           | | **Title 1**  |\n           | | Message 1    |\n           +----------------+\n           -line-2] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages[\n           * | **Title 1**\n             | Message 1\n           -line-2] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages_without_rawsource pass
+tests/test_util_nodes.py::test_clean_astext pass
+tests/test_util_nodes.py::test_make_id[--id0] pass
+tests/test_util_nodes.py::test_make_id[term--term-0] pass
+tests/test_util_nodes.py::test_make_id[term-Sphinx-term-Sphinx] pass
+tests/test_util_nodes.py::test_make_id[-io.StringIO-io.StringIO] pass
+tests/test_util_nodes.py::test_make_id[-sphinx.setup_command-sphinx.setup_command] pass
+tests/test_util_nodes.py::test_make_id[-_io.StringIO-io.StringIO] pass
+tests/test_util_nodes.py::test_make_id[-\uff53\uff50\uff48\uff49\uff4e\uff58-sphinx] pass
+tests/test_util_nodes.py::test_make_id[-\u60a0\u597d-id0] pass
+tests/test_util_nodes.py::test_make_id[-Hello=\u60a0\u597d=\u3053\u3093\u306b\u3061\u306f-Hello] pass
+tests/test_util_nodes.py::test_make_id[-f\xfcnf-funf] pass
+tests/test_util_nodes.py::test_make_id[-0sphinx-sphinx] pass
+tests/test_util_nodes.py::test_make_id[-sphinx--sphinx] pass
+tests/test_util_nodes.py::test_make_id_already_registered pass
+tests/test_util_nodes.py::test_make_id_sequential pass
+tests/test_util_nodes.py::test_split_explicit_target[hello-expected0] pass
+tests/test_util_nodes.py::test_split_explicit_target[hello <world>-expected1] PASSED [ 97%] pass
+tests/test_util_nodes.py::test_split_explicit_target[hello <world> <sphinx>-expected2] PASSED [ 97%] pass
+tests/test_util_pycompat.py::test_execfile_python2 pass
+tests/test_util_pycompat.py::test_execfile pass
+tests/test_util_rst.py::test_escape pass
+tests/test_util_rst.py::test_append_epilog pass
+tests/test_util_rst.py::test_prepend_prolog pass
+tests/test_util_rst.py::test_prepend_prolog_with_CR pass
+tests/test_util_rst.py::test_prepend_prolog_without_CR pass
+tests/test_util_rst.py::test_textwidth pass
+tests/test_util_rst.py::test_heading pass
+tests/test_util_template.py::test_ReSTRenderer_escape pass
+tests/test_util_template.py::test_ReSTRenderer_heading pass
+tests/test_util_typing.py::test_restify fail
+tests/test_util_typing.py::test_restify_type_hints_containers pass
+tests/test_util_typing.py::test_restify_type_hints_Callable pass
+tests/test_util_typing.py::test_restify_type_hints_Union pass
+tests/test_util_typing.py::test_restify_type_hints_typevars fail
+tests/test_util_typing.py::test_restify_type_hints_custom_class pass
+tests/test_util_typing.py::test_restify_type_hints_alias pass
+tests/test_util_typing.py::test_restify_type_ForwardRef pass
+tests/test_util_typing.py::test_restify_broken_type_hints pass
+tests/test_util_typing.py::test_stringify pass
+tests/test_util_typing.py::test_stringify_type_hints_containers pass
+tests/test_util_typing.py::test_stringify_Annotated fail
+tests/test_util_typing.py::test_stringify_type_hints_string pass
+tests/test_util_typing.py::test_stringify_type_hints_Callable pass
+tests/test_util_typing.py::test_stringify_type_hints_Union fail
+tests/test_util_typing.py::test_stringify_type_hints_typevars fail
+tests/test_util_typing.py::test_stringify_type_hints_custom_class pass
+tests/test_util_typing.py::test_stringify_type_hints_alias pass
+tests/test_util_typing.py::test_stringify_broken_type_hints pass
+tests/test_versioning.py::test_get_ratio pass
+tests/test_versioning.py::test_add_uids pass
+tests/test_versioning.py::test_picklablility fail
+tests/test_versioning.py::test_modified pass
+tests/test_versioning.py::test_added pass
+tests/test_versioning.py::test_deleted pass
+tests/test_versioning.py::test_deleted_end pass
+tests/test_versioning.py::test_insert pass
+tests/test_versioning.py::test_insert_beginning pass
+tests/test_versioning.py::test_insert_similar pass
+tests/test_writer_latex.py::test_rstdim_to_latexdim pass
+post
+tests/test_util_inspect.py::test_iscoroutinefunction pass
+tests/test_util_inspect.py::test_isfunction pass
+tests/test_util_inspect.py::test_isbuiltin pass
+tests/test_util_inspect.py::test_isdescriptor pass
+tests/test_util_inspect.py::test_isattributedescriptor pass
+tests/test_util_inspect.py::test_isproperty pass
+tests/test_util_inspect.py::test_isgenericalias pass
+tests/test_util_inspect.py::test_unpartial pass
+tests/test_util_inspect.py::test_getdoc_inherited_decorated_method pass
+tests/test_util_inspect.py::test_is_builtin_class_method pass
+tests/test_util_inventory.py::test_read_inventory_v1 pass
+tests/test_util_inventory.py::test_read_inventory_v2 pass
+tests/test_util_inventory.py::test_read_inventory_v2_not_having_version pass
+tests/test_util_jsdump.py::test_jsdump pass
+tests/test_util_logging.py::test_info_and_warning pass
+tests/test_util_logging.py::test_Exception pass
+tests/test_util_logging.py::test_verbosity_filter pass
+tests/test_util_logging.py::test_nonl_info_log pass
+tests/test_util_logging.py::test_once_warning_log pass
+tests/test_util_logging.py::test_is_suppressed_warning pass
+tests/test_util_logging.py::test_suppress_warnings pass
+tests/test_util_logging.py::test_warningiserror pass
+tests/test_util_logging.py::test_info_location pass
+tests/test_util_logging.py::test_warning_location pass
+tests/test_util_logging.py::test_suppress_logging pass
+tests/test_util_logging.py::test_pending_warnings pass
+tests/test_util_logging.py::test_colored_logs pass
+tests/test_util_logging.py::test_logging_in_ParallelTasks pass
+tests/test_util_logging.py::test_output_with_unencodable_char pass
+tests/test_util_logging.py::test_skip_warningiserror pass
+tests/test_util_logging.py::test_prefixed_warnings pass
+tests/test_util_matching.py::test_compile_matchers pass
+tests/test_util_matching.py::test_Matcher pass
+tests/test_util_nodes.py::test_NodeMatcher pass
+tests/test_util_nodes.py::test_extract_messages[\n           .. admonition:: admonition title\n\n              admonition body\n           -title-1] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages[\n           .. figure:: foo.jpg\n\n              this is title\n           -caption-1] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages[\n           .. rubric:: spam\n           -rubric-1] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages[\n           | spam\n           | egg\n           -line-2] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages[\n           section\n           =======\n\n           +----------------+\n           | | **Title 1**  |\n           | | Message 1    |\n           +----------------+\n           -line-2] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages[\n           * | **Title 1**\n             | Message 1\n           -line-2] PASSED [ 96%] pass
+tests/test_util_nodes.py::test_extract_messages_without_rawsource pass
+tests/test_util_nodes.py::test_clean_astext pass
+tests/test_util_nodes.py::test_make_id[--id0] pass
+tests/test_util_nodes.py::test_make_id[term--term-0] pass
+tests/test_util_nodes.py::test_make_id[term-Sphinx-term-Sphinx] pass
+tests/test_util_nodes.py::test_make_id[-io.StringIO-io.StringIO] pass
+tests/test_util_nodes.py::test_make_id[-sphinx.setup_command-sphinx.setup_command] pass
+tests/test_util_nodes.py::test_make_id[-_io.StringIO-io.StringIO] pass
+tests/test_util_nodes.py::test_make_id[-\uff53\uff50\uff48\uff49\uff4e\uff58-sphinx] pass
+tests/test_util_nodes.py::test_make_id[-\u60a0\u597d-id0] pass
+tests/test_util_nodes.py::test_make_id[-Hello=\u60a0\u597d=\u3053\u3093\u306b\u3061\u306f-Hello] pass
+tests/test_util_nodes.py::test_make_id[-f\xfcnf-funf] pass
+tests/test_util_nodes.py::test_make_id[-0sphinx-sphinx] pass
+tests/test_util_nodes.py::test_make_id[-sphinx--sphinx] pass
+tests/test_util_nodes.py::test_make_id_already_registered pass
+tests/test_util_nodes.py::test_make_id_sequential pass
+tests/test_util_nodes.py::test_split_explicit_target[hello-expected0] pass
+tests/test_util_nodes.py::test_split_explicit_target[hello <world>-expected1] PASSED [ 97%] pass
+tests/test_util_nodes.py::test_split_explicit_target[hello <world> <sphinx>-expected2] PASSED [ 97%] pass
+tests/test_util_pycompat.py::test_execfile_python2 pass
+tests/test_util_pycompat.py::test_execfile pass
+tests/test_util_rst.py::test_escape pass
+tests/test_util_rst.py::test_append_epilog pass
+tests/test_util_rst.py::test_prepend_prolog pass
+tests/test_util_rst.py::test_prepend_prolog_with_CR pass
+tests/test_util_rst.py::test_prepend_prolog_without_CR pass
+tests/test_util_rst.py::test_textwidth pass
+tests/test_util_rst.py::test_heading pass
+tests/test_util_template.py::test_ReSTRenderer_escape pass
+tests/test_util_template.py::test_ReSTRenderer_heading pass
+tests/test_util_typing.py::test_restify fail
+tests/test_util_typing.py::test_restify_type_hints_containers pass
+tests/test_util_typing.py::test_restify_type_hints_Callable pass
+tests/test_util_typing.py::test_restify_type_hints_Union pass
+tests/test_util_typing.py::test_restify_type_hints_typevars fail
+tests/test_util_typing.py::test_restify_type_hints_custom_class pass
+tests/test_util_typing.py::test_restify_type_hints_alias pass
+tests/test_util_typing.py::test_restify_type_ForwardRef pass
+tests/test_util_typing.py::test_restify_broken_type_hints pass
+tests/test_util_typing.py::test_stringify pass
+tests/test_util_typing.py::test_stringify_type_hints_containers pass
+tests/test_util_typing.py::test_stringify_Annotated fail
+tests/test_util_typing.py::test_stringify_type_hints_string pass
+tests/test_util_typing.py::test_stringify_type_hints_Callable pass
+tests/test_util_typing.py::test_stringify_type_hints_Union fail
+tests/test_util_typing.py::test_stringify_type_hints_typevars fail
+tests/test_util_typing.py::test_stringify_type_hints_custom_class pass
+tests/test_util_typing.py::test_stringify_type_hints_alias pass
+tests/test_util_typing.py::test_stringify_broken_type_hints pass
+tests/test_versioning.py::test_get_ratio pass
+tests/test_versioning.py::test_add_uids pass
+tests/test_versioning.py::test_picklablility fail
+tests/test_versioning.py::test_modified pass
+tests/test_versioning.py::test_added pass
+tests/test_versioning.py::test_deleted pass
+tests/test_versioning.py::test_deleted_end pass
+tests/test_versioning.py::test_insert pass
+tests/test_versioning.py::test_insert_beginning pass
+tests/test_versioning.py::test_insert_similar pass
+tests/test_writer_latex.py::test_rstdim_to_latexdim pass
+build success
+release success
+{'tests/test_ext_viewcode.py::test_viewcode_epub_enabled', 'tests/test_pycode_ast.py::test_unparse[a >> b-a >> b] PASSED [ 85%]', "tests/test_config.py::test_conf_warning_message[value1-string-annotation0-actual0-The config value `value1' has type `list'; expected `str'.] PASSED [ 43%]", 'tests/test_ext_viewcode.py::test_viewcode_epub_default'}

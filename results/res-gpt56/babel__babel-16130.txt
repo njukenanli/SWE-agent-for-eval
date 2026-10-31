@@ -1,0 +1,203 @@
+pre
+PASS packages/babel-helper-compilation-targets/test/load-browserslistrc/load-browserslistrc.spec.js
+PASS packages/babel-types/test/regressions.js
+PASS packages/babel-types/test/retrievers.js
+PASS packages/babel-preset-react/test/normalize-options.skip-bundled.js
+PASS packages/babel-preset-react/test/index.js
+PASS packages/babel-plugin-transform-member-expression-literals/test/index.js
+PASS packages/babel-plugin-transform-property-literals/test/index.js
+PASS packages/babel-parser/test/error-codes.js
+PASS packages/babel-parser/test/unit/util/identifier.skip-bundled.js
+PASS packages/babel-traverse/test/path/virtual-validators.js
+PASS packages/babel-traverse/test/path/index.js
+PASS packages/babel-types/test/modifications.js
+PASS packages/babel-preset-flow/test/normalize-options.skip-bundled.js
+PASS packages/babel-plugin-transform-runtime/test/regression.js
+PASS packages/babel-helper-compilation-targets/test/utils.skip-bundled.js
+PASS packages/babel-types/test/builders/typescript/exportDefaultDeclaration.js
+PASS packages/babel-parser/test/unit/tokenizer/types.skip-bundled.js
+PASS packages/babel-types/test/builders/es2022/classProperty.js
+PASS packages/babel-types/test/builders/core.js
+PASS eslint/babel-eslint-plugin/test/rules/new-cap.js
+PASS packages/babel-helper-compilation-targets/test/custom-browserslist-env/custom-browserslist-env.spec.js
+PASS packages/babel-traverse/test/hub.js
+PASS packages/babel-parser/test/commonjs.bundled.js
+PASS packages/babel-preset-env/test/get-option-specific-excludes.skip-bundled.js
+PASS packages/babel-helper-validator-option/test/find-suggestion.spec.js
+PASS packages/babel-helper-compilation-targets/test/pretty.skip-bundled.js
+PASS packages/babel-helper-annotate-as-pure/test/index.js
+PASS packages/babel-core/test/esm-cjs-integration.js
+(node:12976) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [process]. Use emitter.setMaxListeners() to increase limit
+FAIL packages/babel-register/test/cache.js
+  ● Test suite failed to run
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Object {}
+    + Object {
+    +   "foo": "bar",
+    + }
+
+      148 |         process.nextTick(() => {
+      149 |           load();
+    > 150 |           expect(get()).toEqual({});
+          |                         ^
+      151 |           expect(consoleWarnSpy.mock.calls[0][0]).toContain(
+      152 |             "Babel could not write cache to file",
+      153 |           );
+
+      at file:/testbed/packages/babel-register/test/cache.js?1785136316906:150:25
+
+Summary of all failing tests
+FAIL packages/babel-register/test/cache.js
+  ● Test suite failed to run
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Object {}
+    + Object {
+    +   "foo": "bar",
+    + }
+
+      148 |         process.nextTick(() => {
+      149 |           load();
+    > 150 |           expect(get()).toEqual({});
+          |                         ^
+      151 |           expect(consoleWarnSpy.mock.calls[0][0]).toContain(
+      152 |             "Babel could not write cache to file",
+      153 |           );
+
+      at file:/testbed/packages/babel-register/test/cache.js?1785136316906:150:25
+
+
+Test Suites: 1 failed, 238 passed, 239 total
+Tests:       23 skipped, 25575 passed, 25598 total
+Snapshots:   204 passed, 204 total
+Time:        64.311 s
+Ran all test suites.
+Test results written to: ../tmp/babel-jest-results.BObzjt.json
+[stdin]:11
+  return;
+  ^^^^^^
+
+SyntaxError: Illegal return statement
+    at new Script (node:vm:94:7)
+    at createScript (node:vm:250:10)
+    at Object.runInThisContext (node:vm:298:10)
+    at node:internal/process/execution:82:21
+    at [stdin]-wrapper:6:24
+    at runScript (node:internal/process/execution:81:62)
+    at evalScript (node:internal/process/execution:103:10)
+    at node:internal/main/eval_stdin:32:5
+    at Socket.<anonymous> (node:internal/process/execution:204:5)
+    at Socket.emit (node:events:529:35)
+
+Node.js v18.19.1
+post
+      153 |           );
+
+      at file:/testbed/packages/babel-register/test/cache.js?1785136402128:150:25
+
+Summary of all failing tests
+FAIL packages/babel-core/test/errors-stacks.js
+@babel/core errors > error inside config file
+    Error: expect(received).toMatchInlineSnapshot(snapshot)
+    
+    Snapshot name: `@babel/core errors error inside config file 1`
+    
+    - Snapshot  - 0
+    + Received  + 2
+    
+    @@ -1,7 +1,9 @@
+      Error: Error inside config!
+          at <CWD>/packages/babel-core/test/fixtures/errors/error-config-file/babel.config.js:_:_
+    +     at Module._extensions..js (... internal node frames ...)
+    +     at Object.require.extensions.<computed> [as .js] (<CWD>/node_modules/ts-node/src/index.ts:_:_)
+          at require (... internal node frames ...)
+          at Module.parseSync (<CWD>/packages/babel-core/src/parse.ts:_:_)
+          at <CWD>/packages/babel-core/test/errors-stacks.js:_:_
+          at expectError (<CWD>/packages/babel-core/test/errors-stacks.js:_:_)
+          at <CWD>/packages/babel-core/test/errors-stacks.js:_:_
+        at file:///testbed/packages/babel-core/test/errors-stacks.js?1785136391618:125:8
+        at async /testbed/node_modules/piscina/src/worker.ts:147:20
+
+@babel/core errors > error inside config file with more frames
+    Error: expect(received).toMatchInlineSnapshot(snapshot)
+    
+    Snapshot name: `@babel/core errors error inside config file with more frames 1`
+    
+    - Snapshot  - 0
+    + Received  + 2
+    
+    @@ -1,9 +1,11 @@
+      Error: Error inside config!
+          at f (<CWD>/packages/babel-core/test/fixtures/errors/error-config-file-more-frames/babel.config.js:_:_)
+          at g (<CWD>/packages/babel-core/test/fixtures/errors/error-config-file-more-frames/babel.config.js:_:_)
+          at <CWD>/packages/babel-core/test/fixtures/errors/error-config-file-more-frames/babel.config.js:_:_
+    +     at Module._extensions..js (... internal node frames ...)
+    +     at Object.require.extensions.<computed> [as .js] (<CWD>/node_modules/ts-node/src/index.ts:_:_)
+          at require (... internal node frames ...)
+          at Module.parseSync (<CWD>/packages/babel-core/src/parse.ts:_:_)
+          at <CWD>/packages/babel-core/test/errors-stacks.js:_:_
+          at expectError (<CWD>/packages/babel-core/test/errors-stacks.js:_:_)
+          at <CWD>/packages/babel-core/test/errors-stacks.js:_:_
+        at file:///testbed/packages/babel-core/test/errors-stacks.js?1785136391618:142:8
+        at async /testbed/node_modules/piscina/src/worker.ts:147:20
+
+FAIL packages/babel-register/test/cache.js
+  ● Test suite failed to run
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Object {}
+    + Object {
+    +   "foo": "bar",
+    + }
+
+      148 |         process.nextTick(() => {
+      149 |           load();
+    > 150 |           expect(get()).toEqual({});
+          |                         ^
+      151 |           expect(consoleWarnSpy.mock.calls[0][0]).toContain(
+      152 |             "Babel could not write cache to file",
+      153 |           );
+
+      at file:/testbed/packages/babel-register/test/cache.js?1785136402128:150:25
+
+
+Snapshot Summary
+ › 2 snapshots failed from 1 test suite. Inspect your code changes or re-run jest with `-u` to update them.
+
+Test Suites: 2 failed, 237 passed, 239 total
+Tests:       2 failed, 23 skipped, 25574 passed, 25599 total
+Snapshots:   2 failed, 202 passed, 204 total
+Time:        67.613 s
+Ran all test suites.
+Test results written to: ../tmp/babel-jest-results.zfrL9Z.json
+[stdin]:11
+  return;
+  ^^^^^^
+
+SyntaxError: Illegal return statement
+    at new Script (node:vm:94:7)
+    at createScript (node:vm:250:10)
+    at Object.runInThisContext (node:vm:298:10)
+    at node:internal/process/execution:82:21
+    at [stdin]-wrapper:6:24
+    at runScript (node:internal/process/execution:81:62)
+    at evalScript (node:internal/process/execution:103:10)
+    at node:internal/main/eval_stdin:32:5
+    at Socket.<anonymous> (node:internal/process/execution:204:5)
+    at Socket.emit (node:events:529:35)
+
+Node.js v18.19.1
+build failed

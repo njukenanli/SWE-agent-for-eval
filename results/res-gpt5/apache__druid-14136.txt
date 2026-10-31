@@ -1,0 +1,92 @@
+pre
+- Executing: Parser.jj
+log4j:WARN No appenders could be found for logger (freemarker.cache).
+log4j:WARN Please initialize the log4j system properly.
+Java Compiler Compiler Version 4.0 (Parser Generator)
+(type "javacc" with no arguments for help)
+Reading from file /testbed/sql/target/generated-sources/javacc/Parser.jj . . .
+Note: UNICODE_INPUT option is specified. Please make sure you create the parser/lexer using a Reader with the correct character encoding.
+Warning: Lookahead adequacy checking not being performed since option LOOKAHEAD is more than 1.  Set option FORCE_LA_CHECK to true to force checking.
+Parser generated with 0 errors and 1 warnings.
+Adding SQL docs...
+Found 15 data types and 181 functions
+Webpacking everything...
+Webpack running in production mode. Will use babel.
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[BABEL] Note: The code generator has deoptimised the styling of /testbed/web-console/node_modules/druid-query-toolkit/dist/druid-query-toolkit.mjs as it exceeds the max of 500KB.
+[BABEL] Note: The code generator has deoptimised the styling of /testbed/web-console/node_modules/ace-builds/src-noconflict/ace.js as it exceeds the max of 500KB.
+assets by path *.woff2 131 KiB 14 assets
+assets by path *.woff 106 KiB
+  asset open-sans-all-400-normal.woff 54 KiB [compared for emit] [from: node_modules/fontsource-open-sans/files/open-sans-all-400-normal.woff] (auxiliary name: web-console)
+  asset open-sans-all-400-italic.woff 51.8 KiB [compared for emit] [from: node_modules/fontsource-open-sans/files/open-sans-all-400-italic.woff] (auxiliary name: web-console)
+asset web-console-27.0.0.js 2.92 MiB [compared for emit] [minimized] [big] (name: web-console) 1 related asset
+orphan modules 3.6 MiB [orphan] 2074 modules
+runtime modules 1.16 KiB 7 modules
+cacheable modules 5.46 MiB
+  modules by path ./node_modules/ 1.81 MiB 496 modules
+  modules by path ./src/ 3.61 MiB
+    modules by path ./src/views/ 52.8 KiB 13 modules
+    modules by path ./src/components/ 19.8 KiB 2 modules
+    modules by path ./src/dialogs/ 14.6 KiB
+      modules by path ./src/dialogs/datasource-table-action-dialog/ 1.06 KiB 2 modules
+    modules by path ./src/ace-modes/*.js 9.88 KiB 2 modules
+    modules by path ./src/*.scss 348 KiB 2 modules
+  modules by path ./lib/*.js 48 KiB
+    ./lib/keywords.js 1.87 KiB [built] [code generated]
+    ./lib/sql-docs.js 46.1 KiB [built] [code generated]
+  os (ignored) 15 bytes [built] [code generated]
+webpack 5.33.2 compiled successfully in 124591 ms
+Done! Have a good day.
+Copying web-console files to /testbed/web-console/target/resources...
+Finished copying web-console files
+org.apache.druid.query.QueryTimeoutExceptionTest.testExceptionHost pass
+org.apache.druid.query.QueryTimeoutExceptionTest.testSerde pass
+post
+- Executing: Parser.jj
+log4j:WARN No appenders could be found for logger (freemarker.cache).
+log4j:WARN Please initialize the log4j system properly.
+Java Compiler Compiler Version 4.0 (Parser Generator)
+(type "javacc" with no arguments for help)
+Reading from file /testbed/sql/target/generated-sources/javacc/Parser.jj . . .
+Note: UNICODE_INPUT option is specified. Please make sure you create the parser/lexer using a Reader with the correct character encoding.
+Warning: Lookahead adequacy checking not being performed since option LOOKAHEAD is more than 1.  Set option FORCE_LA_CHECK to true to force checking.
+Parser generated with 0 errors and 1 warnings.
+Adding SQL docs...
+Found 15 data types and 181 functions
+Webpacking everything...
+Webpack running in production mode. Will use babel.
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[BABEL] Note: The code generator has deoptimised the styling of /testbed/web-console/node_modules/druid-query-toolkit/dist/druid-query-toolkit.mjs as it exceeds the max of 500KB.
+[BABEL] Note: The code generator has deoptimised the styling of /testbed/web-console/node_modules/ace-builds/src-noconflict/ace.js as it exceeds the max of 500KB.
+assets by path *.woff2 131 KiB 14 assets
+assets by path *.woff 106 KiB
+  asset open-sans-all-400-normal.woff 54 KiB [compared for emit] [from: node_modules/fontsource-open-sans/files/open-sans-all-400-normal.woff] (auxiliary name: web-console)
+  asset open-sans-all-400-italic.woff 51.8 KiB [compared for emit] [from: node_modules/fontsource-open-sans/files/open-sans-all-400-italic.woff] (auxiliary name: web-console)
+asset web-console-27.0.0.js 2.92 MiB [compared for emit] [minimized] [big] (name: web-console) 1 related asset
+orphan modules 3.6 MiB [orphan] 2074 modules
+runtime modules 1.16 KiB 7 modules
+cacheable modules 5.46 MiB
+  modules by path ./node_modules/ 1.81 MiB 496 modules
+  modules by path ./src/ 3.61 MiB
+    modules by path ./src/views/ 52.8 KiB 13 modules
+    modules by path ./src/components/ 19.8 KiB 2 modules
+    modules by path ./src/dialogs/ 14.6 KiB
+      modules by path ./src/dialogs/datasource-table-action-dialog/ 1.06 KiB 2 modules
+    modules by path ./src/ace-modes/*.js 9.88 KiB 2 modules
+    modules by path ./src/*.scss 348 KiB 2 modules
+  modules by path ./lib/*.js 48 KiB
+    ./lib/keywords.js 1.87 KiB [built] [code generated]
+    ./lib/sql-docs.js 46.1 KiB [built] [code generated]
+  os (ignored) 15 bytes [built] [code generated]
+webpack 5.33.2 compiled successfully in 124770 ms
+Done! Have a good day.
+Copying web-console files to /testbed/web-console/target/resources...
+Finished copying web-console files
+org.apache.druid.query.QueryTimeoutExceptionTest.testExceptionHost pass
+org.apache.druid.query.QueryTimeoutExceptionTest.testSerde pass
+build success
+release failed

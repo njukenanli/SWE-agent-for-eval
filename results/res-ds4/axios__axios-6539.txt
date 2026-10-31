@@ -1,0 +1,205 @@
+pre
+supports http with nodejs compression algorithms compress decompression should not fail if response content-length header is missing (compress) :: pass
+supports http with nodejs compression algorithms compress decompression should not fail with chunked responses (without Content-Length header) :: pass
+supports http with nodejs compression algorithms compress decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms compress decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms deflate decompression should support decompression :: pass
+supports http with nodejs compression algorithms deflate decompression should not fail if response content-length header is missing (deflate) :: pass
+supports http with nodejs compression algorithms deflate decompression should not fail with chunked responses (without Content-Length header) :: pass
+supports http with nodejs compression algorithms deflate decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms deflate decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms deflate-raw decompression should support decompression :: pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail if response content-length header is missing (deflate) :: pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with chunked responses (without Content-Length header) :: pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms br decompression should support decompression :: pass
+supports http with nodejs compression algorithms br decompression should not fail if response content-length header is missing (br) :: pass
+supports http with nodejs compression algorithms br decompression should not fail with chunked responses (without Content-Length header) :: pass
+supports http with nodejs compression algorithms br decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms br decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs streams should support streams :: pass
+supports http with nodejs streams should pass errors for a failed stream :: pass
+supports http with nodejs streams should destroy the response stream with an error on request stream destroying :: pass
+supports http with nodejs different options for direct proxy configuration (without env variables) hostname and trailing colon in protocol :: pass
+supports http with nodejs different options for direct proxy configuration (without env variables) hostname and no trailing colon in protocol :: pass
+supports http with nodejs different options for direct proxy configuration (without env variables) both hostname and host -> hostname takes precedence :: pass
+supports http with nodejs different options for direct proxy configuration (without env variables) only host and https protocol :: pass
+supports http with nodejs FormData form-data instance (https://www.npmjs.com/package/form-data) should allow passing FormData :: pass
+supports http with nodejs FormData SpecCompliant FormData should allow passing FormData :: pass
+supports http with nodejs FormData toFormData helper should properly serialize nested objects for parsing with multer.js (express.js) :: pass
+supports http with nodejs Blob should support Blob :: pass
+supports http with nodejs URLEncoded Form should post object data as url-encoded form if content-type is application/x-www-form-urlencoded :: pass
+supports http with nodejs Data URL should support requesting data URL as a Buffer :: pass
+supports http with nodejs Data URL should support requesting data URL as a Blob (if supported by the environment) :: pass
+supports http with nodejs Data URL should support requesting data URL as a String (text) :: pass
+supports http with nodejs Data URL should support requesting data URL as a Stream :: pass
+supports http with nodejs progress upload should support upload progress capturing :: pass
+supports http with nodejs progress download should support download progress capturing :: pass
+supports http with nodejs Rate limit should support upload rate limit :: pass
+supports http with nodejs Rate limit should support download rate limit :: pass
+supports http with nodejs request aborting should be able to abort the response stream :: pass
+supports http with nodejs DNS should support a custom DNS lookup function :: pass
+supports http with nodejs DNS should support a custom DNS lookup function with address entry passing :: pass
+supports http with nodejs DNS should support a custom DNS lookup function (async) :: pass
+supports http with nodejs DNS should support a custom DNS lookup function with address entry (async) :: pass
+supports http with nodejs DNS should support a custom DNS lookup function that returns only IP address (async) :: pass
+supports http with nodejs DNS should handle errors :: pass
+Axios handle un-writable error stack should support errors with a defined but un-writable stack :: pass
+Axios handle un-writable error stack should support errors with an undefined and un-writable stack :: pass
+Axios handle un-writable error stack should support errors with a custom getter/setter for the stack property :: pass
+Axios handle un-writable error stack should support errors with a custom getter/setter for the stack property (null case) :: pass
+AxiosHeaders should support headers argument :: pass
+AxiosHeaders should support uppercase name mapping for names overlapped by class methods :: pass
+AxiosHeaders should be caseless :: pass
+AxiosHeaders set should support adding a single header :: pass
+AxiosHeaders set should support adding multiple headers :: pass
+AxiosHeaders set should support adding multiple headers from raw headers string :: pass
+AxiosHeaders set should not rewrite header the header if the value is false :: pass
+AxiosHeaders set should not rewrite the header if its value is false, unless rewrite options is set to true :: pass
+AxiosHeaders get filter should support RegExp :: pass
+AxiosHeaders get filter should support function :: pass
+AxiosHeaders has should return true if the header is defined, otherwise false :: pass
+AxiosHeaders has filter should support RegExp :: pass
+AxiosHeaders has filter should support function :: pass
+AxiosHeaders has filter should support string pattern :: pass
+AxiosHeaders delete should delete the header :: pass
+AxiosHeaders delete should return true if the header has been deleted, otherwise false :: pass
+AxiosHeaders delete should support headers array :: pass
+AxiosHeaders delete filter should support RegExp :: pass
+AxiosHeaders delete filter should support function :: pass
+AxiosHeaders delete filter should support string pattern :: pass
+AxiosHeaders clear should clear all headers :: pass
+AxiosHeaders clear should clear matching headers if a matcher was specified :: pass
+AxiosHeaders toJSON should return headers object with original headers case :: pass
+AxiosHeaders accessors should support get accessor :: pass
+AxiosHeaders accessors should support set accessor :: pass
+AxiosHeaders accessors should support has accessor :: pass
+AxiosHeaders normalize() should support auto-formatting :: pass
+AxiosHeaders normalize() should support external defined values :: pass
+AxiosHeaders normalize() should support array values :: pass
+AxiosHeaders AxiosHeaders.concat should concatenate plain headers into an AxiosHeader instance :: pass
+AxiosHeaders AxiosHeaders.concat should concatenate raw headers into an AxiosHeader instance :: pass
+AxiosHeaders AxiosHeaders.concat should concatenate Axios headers into a new AxiosHeader instance :: pass
+AxiosHeaders toString should serialize AxiosHeader instance to a raw headers string :: pass
+transformResponse 200 request parses json :: pass
+transformResponse 200 request ignores XML :: pass
+transformResponse 204 request does not parse the empty string :: pass
+transformResponse 204 request does not parse undefined :: pass
+helpers::fromDataURI should return buffer from data uri :: pass
+helpers::parseProtocol should parse protocol part if it exists :: pass
+Server-Side Request Forgery (SSRF) obeys proxy settings when following redirects :: pass
+issues 4999 should not fail with query parsing :: pass
+issues 5028 should handle set-cookie headers as an array :: pass
+utils should validate Stream :: pass
+utils should validate Buffer :: pass
+utils utils::isFormData should detect the FormData instance provided by the `form-data` package :: pass
+utils utils::isFormData should not call toString method on built-in objects instances :: pass
+utils utils::isFormData should not call toString method on built-in objects instances, even if append method exists :: pass
+utils utils::isFormData should detect custom FormData instances by toStringTag signature and append method presence :: pass
+utils toJSON should convert to a plain object without circular references :: pass
+utils toJSON should use objects with defined toJSON method without rebuilding :: pass
+post
+supports http with nodejs compression algorithms compress decompression should not fail with chunked responses (without Content-Length header) :: pass
+supports http with nodejs compression algorithms compress decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms compress decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms deflate decompression should support decompression :: pass
+supports http with nodejs compression algorithms deflate decompression should not fail if response content-length header is missing (deflate) :: pass
+supports http with nodejs compression algorithms deflate decompression should not fail with chunked responses (without Content-Length header) :: pass
+supports http with nodejs compression algorithms deflate decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms deflate decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms deflate-raw decompression should support decompression :: pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail if response content-length header is missing (deflate) :: pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with chunked responses (without Content-Length header) :: pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms br decompression should support decompression :: pass
+supports http with nodejs compression algorithms br decompression should not fail if response content-length header is missing (br) :: pass
+supports http with nodejs compression algorithms br decompression should not fail with chunked responses (without Content-Length header) :: pass
+supports http with nodejs compression algorithms br decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs compression algorithms br decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) :: pass
+supports http with nodejs streams should support streams :: pass
+supports http with nodejs streams should pass errors for a failed stream :: pass
+supports http with nodejs streams should destroy the response stream with an error on request stream destroying :: pass
+supports http with nodejs different options for direct proxy configuration (without env variables) hostname and trailing colon in protocol :: pass
+supports http with nodejs different options for direct proxy configuration (without env variables) hostname and no trailing colon in protocol :: pass
+supports http with nodejs different options for direct proxy configuration (without env variables) both hostname and host -> hostname takes precedence :: pass
+supports http with nodejs different options for direct proxy configuration (without env variables) only host and https protocol :: pass
+supports http with nodejs FormData form-data instance (https://www.npmjs.com/package/form-data) should allow passing FormData :: pass
+supports http with nodejs FormData SpecCompliant FormData should allow passing FormData :: pass
+supports http with nodejs FormData toFormData helper should properly serialize nested objects for parsing with multer.js (express.js) :: pass
+supports http with nodejs Blob should support Blob :: pass
+supports http with nodejs URLEncoded Form should post object data as url-encoded form if content-type is application/x-www-form-urlencoded :: pass
+supports http with nodejs Data URL should support requesting data URL as a Buffer :: pass
+supports http with nodejs Data URL should support requesting data URL as a Blob (if supported by the environment) :: pass
+supports http with nodejs Data URL should support requesting data URL as a String (text) :: pass
+supports http with nodejs Data URL should support requesting data URL as a Stream :: pass
+supports http with nodejs progress upload should support upload progress capturing :: pass
+supports http with nodejs progress download should support download progress capturing :: pass
+supports http with nodejs Rate limit should support upload rate limit :: pass
+supports http with nodejs Rate limit should support download rate limit :: pass
+supports http with nodejs request aborting should be able to abort the response stream :: pass
+supports http with nodejs DNS should support a custom DNS lookup function :: pass
+supports http with nodejs DNS should support a custom DNS lookup function with address entry passing :: pass
+supports http with nodejs DNS should support a custom DNS lookup function (async) :: pass
+supports http with nodejs DNS should support a custom DNS lookup function with address entry (async) :: pass
+supports http with nodejs DNS should support a custom DNS lookup function that returns only IP address (async) :: pass
+supports http with nodejs DNS should handle errors :: pass
+Axios handle un-writable error stack should support errors with a defined but un-writable stack :: pass
+Axios handle un-writable error stack should support errors with an undefined and un-writable stack :: pass
+Axios handle un-writable error stack should support errors with a custom getter/setter for the stack property :: pass
+Axios handle un-writable error stack should support errors with a custom getter/setter for the stack property (null case) :: pass
+AxiosHeaders should support headers argument :: pass
+AxiosHeaders should support uppercase name mapping for names overlapped by class methods :: pass
+AxiosHeaders should be caseless :: pass
+AxiosHeaders set should support adding a single header :: pass
+AxiosHeaders set should support adding multiple headers :: pass
+AxiosHeaders set should support adding multiple headers from raw headers string :: pass
+AxiosHeaders set should not rewrite header the header if the value is false :: pass
+AxiosHeaders set should not rewrite the header if its value is false, unless rewrite options is set to true :: pass
+AxiosHeaders get filter should support RegExp :: pass
+AxiosHeaders get filter should support function :: pass
+AxiosHeaders has should return true if the header is defined, otherwise false :: pass
+AxiosHeaders has filter should support RegExp :: pass
+AxiosHeaders has filter should support function :: pass
+AxiosHeaders has filter should support string pattern :: pass
+AxiosHeaders delete should delete the header :: pass
+AxiosHeaders delete should return true if the header has been deleted, otherwise false :: pass
+AxiosHeaders delete should support headers array :: pass
+AxiosHeaders delete filter should support RegExp :: pass
+AxiosHeaders delete filter should support function :: pass
+AxiosHeaders delete filter should support string pattern :: pass
+AxiosHeaders clear should clear all headers :: pass
+AxiosHeaders clear should clear matching headers if a matcher was specified :: pass
+AxiosHeaders toJSON should return headers object with original headers case :: pass
+AxiosHeaders accessors should support get accessor :: pass
+AxiosHeaders accessors should support set accessor :: pass
+AxiosHeaders accessors should support has accessor :: pass
+AxiosHeaders normalize() should support auto-formatting :: pass
+AxiosHeaders normalize() should support external defined values :: pass
+AxiosHeaders normalize() should support array values :: pass
+AxiosHeaders AxiosHeaders.concat should concatenate plain headers into an AxiosHeader instance :: pass
+AxiosHeaders AxiosHeaders.concat should concatenate raw headers into an AxiosHeader instance :: pass
+AxiosHeaders AxiosHeaders.concat should concatenate Axios headers into a new AxiosHeader instance :: pass
+AxiosHeaders toString should serialize AxiosHeader instance to a raw headers string :: pass
+transformResponse 200 request parses json :: pass
+transformResponse 200 request ignores XML :: pass
+transformResponse 204 request does not parse the empty string :: pass
+transformResponse 204 request does not parse undefined :: pass
+helpers::fromDataURI should return buffer from data uri :: pass
+helpers::parseProtocol should parse protocol part if it exists :: pass
+Server-Side Request Forgery (SSRF) obeys proxy settings when following redirects :: pass
+Server-Side Request Forgery (SSRF) should not fetch bad server :: pass
+issues 4999 should not fail with query parsing :: pass
+issues 5028 should handle set-cookie headers as an array :: pass
+utils should validate Stream :: pass
+utils should validate Buffer :: pass
+utils utils::isFormData should detect the FormData instance provided by the `form-data` package :: pass
+utils utils::isFormData should not call toString method on built-in objects instances :: pass
+utils utils::isFormData should not call toString method on built-in objects instances, even if append method exists :: pass
+utils utils::isFormData should detect custom FormData instances by toStringTag signature and append method presence :: pass
+utils toJSON should convert to a plain object without circular references :: pass
+utils toJSON should use objects with defined toJSON method without rebuilding :: pass
+build success
+release success
+{'Server-Side Request Forgery (SSRF) should not fetch bad server ::'}

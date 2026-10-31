@@ -1,0 +1,7 @@
+pre
+run.sh: line 6: go: command not found
+run.sh: line 12: go: command not found
+post
+run.sh: line 6: go: command not found
+run.sh: line 12: go: command not found
+build failed

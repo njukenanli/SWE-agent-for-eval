@@ -1,0 +1,205 @@
+pre
+test RESP3/2 false protocol parsing pass
+test RESP3/2 malformed big number protocol parsing pass
+test RESP3/2 map protocol parsing pass
+test RESP3/2 null protocol parsing pass
+test RESP3/2 set protocol parsing pass
+test RESP3/2 true protocol parsing pass
+test RESP3/2 verbatim protocol parsing pass
+test RESP3/3 big number protocol parsing pass
+test RESP3/3 double protocol parsing pass
+test RESP3/3 false protocol parsing pass
+test RESP3/3 malformed big number protocol parsing pass
+test RESP3/3 map protocol parsing pass
+test RESP3/3 null protocol parsing pass
+test RESP3/3 set protocol parsing pass
+test RESP3/3 true protocol parsing pass
+test RESP3/3 verbatim protocol parsing pass
+test argument rewriting - issue 9598 pass
+test big number parsing pass
+test bool parsing pass
+test large number of args pass
+test old version rdb file pass
+test resp3 attribute protocol parsing pass
+test unixsocket options are set correctly pass
+test various edge cases of repl topology changes with missing pings at the end pass
+test verbatim str parsing pass
+tot-net-out for replica client pass
+trim on SET with big value pass
+unsubscribe inside multi, and publish to self pass
+use previous hostip in "cluster-preferred-endpoint-type unknown-endpoint" mode pass
+valkey-cli -4 --cluster add-node using 127.0.0.1 with cluster-port pass
+valkey-cli -4 --cluster add-node using localhost with cluster-port pass
+valkey-cli -4 --cluster create using 127.0.0.1 with cluster-port pass
+valkey-cli -4 --cluster create using localhost with cluster-port pass
+valkey-cli make source node ignores NOREPLICAS error when doing the last CLUSTER SETSLOT - gossip pass
+valkey-cli make source node ignores NOREPLICAS error when doing the last CLUSTER SETSLOT - setslot pass
+valkey-server command line arguments - allow option value to use the `--` prefix pass
+valkey-server command line arguments - allow passing option name and option value in the same arg pass
+valkey-server command line arguments - dir multiple times pass
+valkey-server command line arguments - error cases pass
+valkey-server command line arguments - option name and option value in the same arg and `--` prefix pass
+valkey-server command line arguments - save with empty input pass
+valkey-server command line arguments - take one bulk string with spaces for MULTI_ARG configs parsing pass
+valkey-server command line arguments - wrong usage that we support anyway pass
+verify reply buffer limits pass
+wait for new failover pass
+write command inside MULTI is QUEUED, EXEC should be REDIRECT pass
+write command inside MULTI is REDIRECT, EXEC should be EXECABORT pass
+write command is QUEUED, then EXEC should be MOVED after failover pass
+ziplist implementation: encoding stress testing pass
+ziplist implementation: value encoding and backlink pass
+zset score double range pass
+zunionInterDiffGenericCommand acts on SET and ZSET pass
+zunionInterDiffGenericCommand at least 1 input key pass
+{cluster} HSCAN with NOVALUES pass
+{cluster} HSCAN with PATTERN pass
+{cluster} HSCAN with encoding hashtable pass
+{cluster} HSCAN with encoding listpack pass
+{cluster} SCAN COUNT pass
+{cluster} SCAN MATCH pass
+{cluster} SCAN MATCH pattern implies cluster slot pass
+{cluster} SCAN TYPE pass
+{cluster} SCAN basic pass
+{cluster} SCAN guarantees check under write load pass
+{cluster} SCAN regression test for issue #4906 pass
+{cluster} SCAN unknown type pass
+{cluster} SCAN with expired keys pass
+{cluster} SCAN with expired keys with TYPE filter pass
+{cluster} SSCAN with PATTERN pass
+{cluster} SSCAN with encoding hashtable pass
+{cluster} SSCAN with encoding intset pass
+{cluster} SSCAN with encoding listpack pass
+{cluster} SSCAN with integer encoded object (issue #1345) pass
+{cluster} ZSCAN scores: regression test for issue #2175 pass
+{cluster} ZSCAN with NOSCORES pass
+{cluster} ZSCAN with PATTERN pass
+{cluster} ZSCAN with encoding listpack pass
+{cluster} ZSCAN with encoding skiplist pass
+{standalone} HSCAN with NOVALUES pass
+{standalone} HSCAN with PATTERN pass
+{standalone} HSCAN with encoding hashtable pass
+{standalone} HSCAN with encoding listpack pass
+{standalone} SCAN COUNT pass
+{standalone} SCAN MATCH pass
+{standalone} SCAN TYPE pass
+{standalone} SCAN basic pass
+{standalone} SCAN guarantees check under write load pass
+{standalone} SCAN regression test for issue #4906 pass
+{standalone} SCAN unknown type pass
+{standalone} SCAN with expired keys pass
+{standalone} SCAN with expired keys with TYPE filter pass
+{standalone} SSCAN with PATTERN pass
+{standalone} SSCAN with encoding hashtable pass
+{standalone} SSCAN with encoding intset pass
+{standalone} SSCAN with encoding listpack pass
+{standalone} SSCAN with integer encoded object (issue #1345) pass
+{standalone} ZSCAN scores: regression test for issue #2175 pass
+{standalone} ZSCAN with NOSCORES pass
+{standalone} ZSCAN with PATTERN pass
+{standalone} ZSCAN with encoding listpack pass
+{standalone} ZSCAN with encoding skiplist pass
+post
+test RESP2/3 map protocol parsing pass
+test RESP2/3 null protocol parsing pass
+test RESP2/3 set protocol parsing pass
+test RESP2/3 true protocol parsing pass
+test RESP2/3 verbatim protocol parsing pass
+test RESP3/2 big number protocol parsing pass
+test RESP3/2 double protocol parsing pass
+test RESP3/2 false protocol parsing pass
+test RESP3/2 malformed big number protocol parsing pass
+test RESP3/2 map protocol parsing pass
+test RESP3/2 null protocol parsing pass
+test RESP3/2 set protocol parsing pass
+test RESP3/2 true protocol parsing pass
+test RESP3/2 verbatim protocol parsing pass
+test RESP3/3 big number protocol parsing pass
+test RESP3/3 double protocol parsing pass
+test RESP3/3 false protocol parsing pass
+test RESP3/3 malformed big number protocol parsing pass
+test RESP3/3 map protocol parsing pass
+test RESP3/3 null protocol parsing pass
+test RESP3/3 set protocol parsing pass
+test RESP3/3 true protocol parsing pass
+test RESP3/3 verbatim protocol parsing pass
+test argument rewriting - issue 9598 pass
+test big number parsing pass
+test bool parsing pass
+test large number of args pass
+test resp3 attribute protocol parsing pass
+test unixsocket options are set correctly pass
+test verbatim str parsing pass
+tot-net-out for replica client pass
+trim on SET with big value pass
+unsubscribe inside multi, and publish to self pass
+use previous hostip in "cluster-preferred-endpoint-type unknown-endpoint" mode pass
+valkey-server command line arguments - allow option value to use the `--` prefix pass
+valkey-server command line arguments - allow passing option name and option value in the same arg pass
+valkey-server command line arguments - dir multiple times pass
+valkey-server command line arguments - error cases pass
+valkey-server command line arguments - option name and option value in the same arg and `--` prefix pass
+valkey-server command line arguments - save with empty input pass
+valkey-server command line arguments - take one bulk string with spaces for MULTI_ARG configs parsing pass
+valkey-server command line arguments - wrong usage that we support anyway pass
+verify reply buffer limits pass
+wait for new failover pass
+write command inside MULTI is QUEUED, EXEC should be REDIRECT pass
+write command inside MULTI is REDIRECT, EXEC should be EXECABORT pass
+write command is QUEUED, then EXEC should be MOVED after failover pass
+ziplist implementation: encoding stress testing pass
+ziplist implementation: value encoding and backlink pass
+zset score double range pass
+zunionInterDiffGenericCommand acts on SET and ZSET pass
+zunionInterDiffGenericCommand at least 1 input key pass
+{cluster} HSCAN with NOVALUES pass
+{cluster} HSCAN with PATTERN pass
+{cluster} HSCAN with encoding hashtable pass
+{cluster} HSCAN with encoding listpack pass
+{cluster} SCAN COUNT pass
+{cluster} SCAN MATCH pass
+{cluster} SCAN MATCH pattern implies cluster slot pass
+{cluster} SCAN TYPE pass
+{cluster} SCAN basic pass
+{cluster} SCAN guarantees check under write load pass
+{cluster} SCAN regression test for issue #4906 pass
+{cluster} SCAN unknown type pass
+{cluster} SCAN with expired keys pass
+{cluster} SCAN with expired keys with TYPE filter pass
+{cluster} SSCAN with PATTERN pass
+{cluster} SSCAN with encoding hashtable pass
+{cluster} SSCAN with encoding intset pass
+{cluster} SSCAN with encoding listpack pass
+{cluster} SSCAN with integer encoded object (issue #1345) pass
+{cluster} ZSCAN scores: regression test for issue #2175 pass
+{cluster} ZSCAN with NOSCORES pass
+{cluster} ZSCAN with PATTERN pass
+{cluster} ZSCAN with encoding listpack pass
+{cluster} ZSCAN with encoding skiplist pass
+{standalone} HSCAN with NOVALUES pass
+{standalone} HSCAN with PATTERN pass
+{standalone} HSCAN with encoding hashtable pass
+{standalone} HSCAN with encoding listpack pass
+{standalone} SCAN COUNT pass
+{standalone} SCAN MATCH pass
+{standalone} SCAN MATCH pattern implies cluster slot pass
+{standalone} SCAN TYPE pass
+{standalone} SCAN basic pass
+{standalone} SCAN guarantees check under write load pass
+{standalone} SCAN regression test for issue #4906 pass
+{standalone} SCAN unknown type pass
+{standalone} SCAN with expired keys pass
+{standalone} SCAN with expired keys with TYPE filter pass
+{standalone} SSCAN with PATTERN pass
+{standalone} SSCAN with encoding hashtable pass
+{standalone} SSCAN with encoding intset pass
+{standalone} SSCAN with encoding listpack pass
+{standalone} SSCAN with integer encoded object (issue #1345) pass
+{standalone} ZSCAN scores: regression test for issue #2175 pass
+{standalone} ZSCAN with NOSCORES pass
+{standalone} ZSCAN with PATTERN pass
+{standalone} ZSCAN with encoding listpack pass
+{standalone} ZSCAN with encoding skiplist pass
+build success
+release success
+{'ZRANDMEMBER with <count> against non existing key - emptyarray', 'client no-evict off', 'maxmemory - policy volatile-lru should only remove volatile keys.', 'All time-to-live(TTL) in commands are propagated as absolute timestamp in milliseconds in AOF', 'ZRANDMEMBER with <count> - listpack', 'TOUCH alters the last access time of a key in no-touch mode', 'ZRANGESTORE BYSCORE REV LIMIT', 'expired key which is created in writeable replicas should be deleted by active expiry', 'ZMPOP propagate as pop with count command to replica', '{standalone} SCAN MATCH pattern implies cluster slot', 'Set many keys'}

@@ -1,0 +1,205 @@
+pre
+warning: `axum` (lib) generated 5 warnings (2 duplicates)
+warning: `axum-extra` (lib) generated 2 warnings
+   Compiling example-oauth v0.1.0 (/testbed/examples/oauth)
+   Compiling example-static-file-server v0.1.0 (/testbed/examples/static-file-server)
+   Compiling example-customize-extractor-error v0.1.0 (/testbed/examples/customize-extractor-error)
+   Compiling example-sse v0.1.0 (/testbed/examples/sse)
+   Compiling example-jwt v0.1.0 (/testbed/examples/jwt)
+   Compiling example-websockets v0.1.0 (/testbed/examples/websockets)
+warning: unused imports: `__composite_rejection` and `__define_rejection`
+   --> axum-core/src/macros.rs:222:21
+    |
+222 |         use crate::{__composite_rejection, __define_rejection};
+    |                     ^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+   Compiling tonic-reflection v0.9.2
+warning: `axum-extra` (lib) generated 1 warning (1 duplicate)
+warning: `axum-macros` (lib test) generated 1 warning (1 duplicate)
+warning: struct `RequiresState` is never constructed
+  --> axum-core/src/ext_traits/mod.rs:33:23
+   |
+33 |     pub(crate) struct RequiresState(pub(crate) String);
+   |                       ^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `axum-core` (lib test) generated 6 warnings (4 duplicates) (run `cargo fix --lib -p axum-core --tests` to apply 1 suggestion)
+warning: `axum-extra` (lib test) generated 2 warnings (2 duplicates)
+warning: struct `Svc` is never constructed
+  --> axum/src/routing/tests/handle_error.rs:16:8
+   |
+16 | struct Svc;
+   |        ^^^
+
+warning: field `0` is never read
+  --> axum/src/test_helpers/mod.rs:13:31
+   |
+13 | pub(crate) struct NotSendSync(*const ());
+   |                   ----------- ^^^^^^^^^
+   |                   |
+   |                   field in this struct
+   |
+   = help: consider removing this field
+
+warning: `axum` (lib test) generated 7 warnings (5 duplicates)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 42.86s
+warning: the following packages contain code that will be rejected by a future version of Rust: sqlx-core v0.6.3
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+     Running unittests src/lib.rs (target/debug/deps/axum-b2efc6e981b23927)
+     Running unittests src/lib.rs (target/debug/deps/axum_core-5fe848ad2fd3d883)
+     Running unittests src/lib.rs (target/debug/deps/axum_extra-84589cc4677f286b)
+     Running unittests src/lib.rs (target/debug/deps/axum_macros-b9b59128b777baf0)
+     Running unittests src/main.rs (target/debug/deps/example_anyhow_error_response-6f43d1dd3574b620)
+     Running unittests src/main.rs (target/debug/deps/example_chat-c56e7e89a2e18659)
+     Running unittests src/main.rs (target/debug/deps/example_consume_body_in_extractor_or_middleware-5a37062cc49d9a41)
+     Running unittests src/main.rs (target/debug/deps/example_cors-310aaa870b8a8e2b)
+     Running unittests src/main.rs (target/debug/deps/example_customize_extractor_error-055c10e623e880a2)
+     Running unittests src/main.rs (target/debug/deps/example_customize_path_rejection-3c1da5368e6ce499)
+     Running unittests src/main.rs (target/debug/deps/example_diesel_async_postgres-09f4aebf5afab156)
+     Running unittests src/main.rs (target/debug/deps/example_diesel_postgres-f538aa92f94fd650)
+     Running unittests src/main.rs (target/debug/deps/example_error_handling_and_dependency_injection-5a3a54cd9804895c)
+     Running unittests src/main.rs (target/debug/deps/example_form-fd77a1b9ccd60076)
+     Running unittests src/main.rs (target/debug/deps/example_global_404_handler-3b8eeda049a890ea)
+     Running unittests src/main.rs (target/debug/deps/example_graceful_shutdown-0b1051f9e51dd2ed)
+     Running unittests src/main.rs (target/debug/deps/example_handle_head_request-cdbc71d3a08dd267)
+     Running unittests src/main.rs (target/debug/deps/example_hello_world-bbffb57f495ed4ad)
+     Running unittests src/main.rs (target/debug/deps/example_http_proxy-f5bf31ff252e07ff)
+     Running unittests src/main.rs (target/debug/deps/example_jwt-0eff901981ab1e16)
+     Running unittests src/main.rs (target/debug/deps/example_key_value_store-27d428485be01835)
+     Running unittests src/main.rs (target/debug/deps/example_low_level_openssl-2160386a9e90d4e9)
+     Running unittests src/main.rs (target/debug/deps/example_low_level_rustls-1a73f64a786aa963)
+     Running unittests src/main.rs (target/debug/deps/example_multipart_form-b8c77485bc92dd14)
+     Running unittests src/main.rs (target/debug/deps/example_oauth-79581e11c9941e53)
+     Running unittests src/main.rs (target/debug/deps/example_parse_body_based_on_content_type-3801e994062958d2)
+     Running unittests src/main.rs (target/debug/deps/example_print_request_response-3f2f2ffe8dc6d97f)
+     Running unittests src/main.rs (target/debug/deps/example_prometheus_metrics-625e9349732aa2f8)
+     Running unittests src/main.rs (target/debug/deps/example_query_params_with_empty_strings-ecc8a7018a14136e)
+     Running unittests src/main.rs (target/debug/deps/example_readme-c8993825cb6e53a6)
+     Running unittests src/main.rs (target/debug/deps/example_rest_grpc_multiplex-3846da02fa2e7b60)
+     Running unittests src/main.rs (target/debug/deps/example_reverse_proxy-af6e730c87270086)
+     Running unittests src/main.rs (target/debug/deps/example_routes_and_handlers_close_together-3a038712cc0e76d4)
+     Running unittests src/main.rs (target/debug/deps/example_simple_router_wasm-9920efb93a1f1128)
+     Running unittests src/main.rs (target/debug/deps/example_sqlx_postgres-19d8a0d5866b0a89)
+     Running unittests src/main.rs (target/debug/deps/example_sse-86e2efcf1b2f1258)
+     Running unittests src/main.rs (target/debug/deps/example_static_file_server-67ff636b1ff7de39)
+     Running unittests src/main.rs (target/debug/deps/example_stream_to_file-366ef18fd5239e2e)
+     Running unittests src/main.rs (target/debug/deps/example_templates-9a54c6b8292fe985)
+     Running unittests src/main.rs (target/debug/deps/example_testing-21c5bf7302f93de7)
+     Running unittests src/main.rs (target/debug/deps/example_testing_websockets-1fed4acf2a18af1a)
+     Running unittests src/main.rs (target/debug/deps/example_tls_rustls-c7ff91c9b8c011df)
+     Running unittests src/main.rs (target/debug/deps/example_todos-85aeb4005fa44eee)
+     Running unittests src/main.rs (target/debug/deps/example_tokio_postgres-ab94be918f2dd529)
+     Running unittests src/main.rs (target/debug/deps/example_tracing_aka_logging-f30cb8e38a2d14e0)
+     Running unittests src/main.rs (target/debug/deps/example_unix_domain_socket-55f63491f131cf91)
+     Running unittests src/main.rs (target/debug/deps/example_validator-edf4a88a16134513)
+     Running unittests src/main.rs (target/debug/deps/example_versioning-a706298bf262a067)
+     Running unittests src/client.rs (target/debug/deps/example_client-2a8d8b4a5a628fce)
+     Running unittests src/main.rs (target/debug/deps/example_websockets-d9516d80ef17a39e)
+     Running unittests src/main.rs (target/debug/deps/listen_multiple_addrs-88eb1b58a40d835c)
+post
+   Compiling example-diesel-async-postgres v0.1.0 (/testbed/examples/diesel-async-postgres)
+   Compiling example-reverse-proxy v0.1.0 (/testbed/examples/reverse-proxy)
+   Compiling example-anyhow-error-response v0.1.0 (/testbed/examples/anyhow-error-response)
+warning: `axum-macros` (lib test) generated 1 warning (1 duplicate)
+warning: `axum-extra` (lib) generated 2 warnings (1 duplicate)
+   Compiling example-websockets v0.1.0 (/testbed/examples/websockets)
+   Compiling example-customize-extractor-error v0.1.0 (/testbed/examples/customize-extractor-error)
+   Compiling example-jwt v0.1.0 (/testbed/examples/jwt)
+   Compiling example-sse v0.1.0 (/testbed/examples/sse)
+   Compiling example-static-file-server v0.1.0 (/testbed/examples/static-file-server)
+   Compiling example-oauth v0.1.0 (/testbed/examples/oauth)
+warning: unused imports: `__composite_rejection` and `__define_rejection`
+   --> axum-core/src/macros.rs:222:21
+    |
+222 |         use crate::{__composite_rejection, __define_rejection};
+    |                     ^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: struct `RequiresState` is never constructed
+  --> axum-core/src/ext_traits/mod.rs:33:23
+   |
+33 |     pub(crate) struct RequiresState(pub(crate) String);
+   |                       ^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `axum-core` (lib test) generated 6 warnings (4 duplicates) (run `cargo fix --lib -p axum-core --tests` to apply 1 suggestion)
+warning: `axum-extra` (lib test) generated 2 warnings (2 duplicates)
+warning: struct `Svc` is never constructed
+  --> axum/src/routing/tests/handle_error.rs:16:8
+   |
+16 | struct Svc;
+   |        ^^^
+
+warning: field `0` is never read
+  --> axum/src/test_helpers/mod.rs:13:31
+   |
+13 | pub(crate) struct NotSendSync(*const ());
+   |                   ----------- ^^^^^^^^^
+   |                   |
+   |                   field in this struct
+   |
+   = help: consider removing this field
+
+warning: `axum` (lib test) generated 7 warnings (5 duplicates)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 37.48s
+warning: the following packages contain code that will be rejected by a future version of Rust: sqlx-core v0.6.3
+note: to see what the problems were, use the option `--future-incompat-report`, or run `cargo report future-incompatibilities --id 1`
+     Running unittests src/lib.rs (target/debug/deps/axum-b2efc6e981b23927)
+     Running unittests src/lib.rs (target/debug/deps/axum_core-5fe848ad2fd3d883)
+     Running unittests src/lib.rs (target/debug/deps/axum_extra-84589cc4677f286b)
+     Running unittests src/lib.rs (target/debug/deps/axum_macros-b9b59128b777baf0)
+     Running unittests src/main.rs (target/debug/deps/example_anyhow_error_response-6f43d1dd3574b620)
+     Running unittests src/main.rs (target/debug/deps/example_chat-c56e7e89a2e18659)
+     Running unittests src/main.rs (target/debug/deps/example_consume_body_in_extractor_or_middleware-5a37062cc49d9a41)
+     Running unittests src/main.rs (target/debug/deps/example_cors-310aaa870b8a8e2b)
+     Running unittests src/main.rs (target/debug/deps/example_customize_extractor_error-055c10e623e880a2)
+     Running unittests src/main.rs (target/debug/deps/example_customize_path_rejection-3c1da5368e6ce499)
+     Running unittests src/main.rs (target/debug/deps/example_diesel_async_postgres-09f4aebf5afab156)
+     Running unittests src/main.rs (target/debug/deps/example_diesel_postgres-f538aa92f94fd650)
+     Running unittests src/main.rs (target/debug/deps/example_error_handling_and_dependency_injection-5a3a54cd9804895c)
+     Running unittests src/main.rs (target/debug/deps/example_form-fd77a1b9ccd60076)
+     Running unittests src/main.rs (target/debug/deps/example_global_404_handler-3b8eeda049a890ea)
+     Running unittests src/main.rs (target/debug/deps/example_graceful_shutdown-0b1051f9e51dd2ed)
+     Running unittests src/main.rs (target/debug/deps/example_handle_head_request-cdbc71d3a08dd267)
+     Running unittests src/main.rs (target/debug/deps/example_hello_world-bbffb57f495ed4ad)
+     Running unittests src/main.rs (target/debug/deps/example_http_proxy-f5bf31ff252e07ff)
+     Running unittests src/main.rs (target/debug/deps/example_jwt-0eff901981ab1e16)
+     Running unittests src/main.rs (target/debug/deps/example_key_value_store-27d428485be01835)
+     Running unittests src/main.rs (target/debug/deps/example_low_level_openssl-2160386a9e90d4e9)
+     Running unittests src/main.rs (target/debug/deps/example_low_level_rustls-1a73f64a786aa963)
+     Running unittests src/main.rs (target/debug/deps/example_multipart_form-b8c77485bc92dd14)
+     Running unittests src/main.rs (target/debug/deps/example_oauth-79581e11c9941e53)
+     Running unittests src/main.rs (target/debug/deps/example_parse_body_based_on_content_type-3801e994062958d2)
+     Running unittests src/main.rs (target/debug/deps/example_print_request_response-3f2f2ffe8dc6d97f)
+     Running unittests src/main.rs (target/debug/deps/example_prometheus_metrics-625e9349732aa2f8)
+     Running unittests src/main.rs (target/debug/deps/example_query_params_with_empty_strings-ecc8a7018a14136e)
+     Running unittests src/main.rs (target/debug/deps/example_readme-c8993825cb6e53a6)
+     Running unittests src/main.rs (target/debug/deps/example_rest_grpc_multiplex-3846da02fa2e7b60)
+     Running unittests src/main.rs (target/debug/deps/example_reverse_proxy-af6e730c87270086)
+     Running unittests src/main.rs (target/debug/deps/example_routes_and_handlers_close_together-3a038712cc0e76d4)
+     Running unittests src/main.rs (target/debug/deps/example_simple_router_wasm-9920efb93a1f1128)
+     Running unittests src/main.rs (target/debug/deps/example_sqlx_postgres-19d8a0d5866b0a89)
+     Running unittests src/main.rs (target/debug/deps/example_sse-86e2efcf1b2f1258)
+     Running unittests src/main.rs (target/debug/deps/example_static_file_server-67ff636b1ff7de39)
+     Running unittests src/main.rs (target/debug/deps/example_stream_to_file-366ef18fd5239e2e)
+     Running unittests src/main.rs (target/debug/deps/example_templates-9a54c6b8292fe985)
+     Running unittests src/main.rs (target/debug/deps/example_testing-21c5bf7302f93de7)
+     Running unittests src/main.rs (target/debug/deps/example_testing_websockets-1fed4acf2a18af1a)
+     Running unittests src/main.rs (target/debug/deps/example_tls_rustls-c7ff91c9b8c011df)
+     Running unittests src/main.rs (target/debug/deps/example_todos-85aeb4005fa44eee)
+     Running unittests src/main.rs (target/debug/deps/example_tokio_postgres-ab94be918f2dd529)
+     Running unittests src/main.rs (target/debug/deps/example_tracing_aka_logging-f30cb8e38a2d14e0)
+     Running unittests src/main.rs (target/debug/deps/example_unix_domain_socket-55f63491f131cf91)
+     Running unittests src/main.rs (target/debug/deps/example_validator-edf4a88a16134513)
+     Running unittests src/main.rs (target/debug/deps/example_versioning-a706298bf262a067)
+     Running unittests src/client.rs (target/debug/deps/example_client-2a8d8b4a5a628fce)
+     Running unittests src/main.rs (target/debug/deps/example_websockets-d9516d80ef17a39e)
+     Running unittests src/main.rs (target/debug/deps/listen_multiple_addrs-88eb1b58a40d835c)
+build success
+release success
+{'routing::tests::fallback::merge_empty_into_router_with_fallback', 'routing::tests::fallback::issue_2072_outer_fallback_before_merge', 'routing::tests::fallback::issue_2072', 'routing::tests::fallback::merging_nested_router_with_fallback_into_router_with_fallback', 'routing::tests::fallback::issue_2072_outer_fallback_after_merge', 'routing::tests::fallback::merge_router_with_fallback_into_empty', 'routing::tests::fallback::merge_router_with_fallback_into_nested_router_with_fallback'}

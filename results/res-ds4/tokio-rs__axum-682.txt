@@ -1,0 +1,205 @@
+pre
+routing::method_routing::tests::get_accepts_head :: pass
+routing::tests::merging_routers_with_fallbacks_panics - should panic :: pass
+routing::tests::routing_to_router_panics - should panic :: pass
+routing::tests::good_error_message_if_using_nest_root - should panic :: pass
+response::sse::tests::basic :: pass
+extract::tests::consume_body :: pass
+extract::typed_header::tests::typed_header :: pass
+routing::tests::service_in_bottom :: pass
+routing::tests::merging_routers_with_same_paths_but_different_methods :: pass
+routing::tests::fallback::nest :: pass
+extract::query::tests::test_query :: pass
+extract::path::tests::captures_dont_match_empty_segments :: pass
+response::sse::tests::keep_alive_ends_when_the_stream_ends :: pass
+routing::method_routing::tests::layer :: pass
+routing::tests::hello_world :: pass
+routing::tests::nest::nested_url_extractor :: pass
+routing::tests::middleware_applies_to_routes_above :: pass
+routing::tests::merge::nested_or :: pass
+routing::tests::nesting_router_with_fallbacks_panics - should panic :: pass
+routing::tests::merge::boxed :: pass
+routing::tests::route_layer :: pass
+extract::request_parts::tests::extract_request_parts :: pass
+response::sse::tests::keep_alive :: pass
+routing::tests::static_and_dynamic_paths :: pass
+routing::tests::nest::outer_middleware_still_see_whole_url :: pass
+routing::tests::with_and_without_trailing_slash :: pass
+routing::tests::merge::layer_and_handle_error :: pass
+routing::tests::multiple_methods_for_one_handler :: pass
+routing::tests::merge::nesting_and_seeing_the_right_uri :: pass
+extract::path::tests::when_extensions_are_missing :: pass
+routing::tests::nest::nested_service_sees_stripped_uri :: pass
+routing::tests::merge::middleware_that_return_early :: pass
+routing::tests::merge::nesting :: pass
+extract::request_parts::tests::multiple_request_extractors :: pass
+routing::tests::middleware_on_single_route :: pass
+routing::tests::merge::nesting_and_seeing_the_right_uri_at_more_levels_of_nesting :: pass
+extract::path::tests::extracting_url_params_multiple_times :: pass
+json::tests::deserialize_body :: pass
+routing::tests::middleware_still_run_for_unmatched_requests :: pass
+routing::tests::routing :: pass
+routing::tests::merge::or_with_route_following :: pass
+extract::path::tests::extracting_url_params :: pass
+routing::tests::without_trailing_slash :: pass
+routing::tests::merge::services :: pass
+routing::tests::different_methods_added_in_different_routes_deeply_nested :: pass
+routing::tests::routing_between_services :: pass
+routing::tests::nest::nesting_router_at_root :: pass
+routing::tests::nest::nested_url_original_extractor :: pass
+routing::tests::wildcard_sees_whole_url :: pass
+json::tests::json_content_types :: pass
+routing::tests::nest::nesting_router_at_empty_path :: pass
+routing::tests::nest::nested_with_other_route_also_matching_with_route_first :: pass
+extract::path::tests::wildcard :: pass
+routing::tests::nest::nested_multiple_routes :: pass
+routing::tests::nest::wrong_method_nest :: pass
+routing::tests::merge::layer :: pass
+routing::tests::merge::basic :: pass
+extract::request_parts::tests::extract_request_parts_doesnt_consume_the_body :: pass
+routing::tests::nest::nesting_handler_at_root :: pass
+routing::tests::with_trailing_slash :: pass
+routing::tests::router_type_doesnt_change :: pass
+routing::tests::wrong_method_service :: pass
+extract::path::tests::supports_128_bit_numbers :: pass
+routing::tests::nest::multiple_top_level_nests :: pass
+routing::tests::wrong_method_handler :: pass
+routing::tests::merge::nesting_and_seeing_the_right_uri_ors_with_nesting :: pass
+routing::tests::merge::many_ors :: pass
+routing::tests::merge::multiple_ors_balanced_differently :: pass
+routing::tests::handle_error::handler_multiple_methods_last :: pass
+routing::tests::handle_error::handler_multiple_methods_middle :: pass
+routing::tests::handle_error::handler :: pass
+routing::tests::handle_error::handler_multiple_methods_first :: pass
+response::headers::tests::invalid_header_name :: pass
+response::headers::tests::invalid_header_value :: pass
+body::test_try_downcast :: pass
+response::headers::tests::vec_of_header_name_and_value :: pass
+response::headers::tests::with_body :: pass
+response::headers::tests::with_status_and_body :: pass
+response::headers::tests::vec_of_strings :: pass
+tests/fail/argument_not_extractor.rs [should fail to compile] :: fail
+tests/fail/extract_self_mut.rs [should fail to compile] :: pass
+tests/fail/extract_self_ref.rs [should fail to compile] :: pass
+tests/fail/generics.rs [should fail to compile] :: fail
+tests/fail/invalid_attrs.rs [should fail to compile] :: pass
+tests/fail/not_a_function.rs [should fail to compile] :: pass
+tests/fail/not_async.rs [should fail to compile] :: pass
+tests/fail/not_send.rs [should fail to compile] :: fail
+tests/fail/too_many_extractors.rs [should fail to compile] :: fail
+tests/fail/wrong_return_type.rs [should fail to compile] :: fail
+tests/pass/associated_fn_without_self.rs [should pass] :: pass
+tests/pass/different_request_body_type.rs [should pass] :: pass
+tests/pass/impl_future.rs [should pass] :: pass
+tests/pass/impl_into_response.rs [should pass] :: pass
+tests/pass/multiple_extractors.rs [should pass] :: pass
+tests/pass/mut_extractor.rs [should pass] :: pass
+tests/pass/ready.rs [should pass] :: pass
+tests/pass/result_impl_into_response.rs [should pass] :: pass
+tests/pass/returns_self.rs [should pass] :: pass
+tests/pass/self_receiver.rs [should pass] :: pass
+ui :: fail
+post
+response::sse::tests::keep_alive :: pass
+routing::method_routing::tests::route_layer :: pass
+json::tests::json_content_types :: pass
+routing::tests::get_to_head::for_handlers::get_handles_head :: pass
+routing::tests::get_to_head::for_services::get_handles_head :: pass
+routing::tests::good_error_message_if_using_nest_root_when_merging - should panic :: pass
+routing::tests::good_error_message_if_using_nest_root - should panic :: pass
+routing::tests::different_methods_added_in_different_routes_deeply_nested :: pass
+routing::tests::fallback::basic :: pass
+routing::tests::different_methods_added_in_different_routes :: pass
+routing::tests::fallback::or :: pass
+routing::tests::fallback::nest :: pass
+routing::tests::merge::basic :: pass
+routing::tests::merge::layer :: pass
+routing::tests::handle_error::handler :: pass
+routing::tests::nest::nest_cannot_contain_wildcards - should panic :: pass
+routing::tests::handle_error::handler_multiple_methods_last :: pass
+routing::tests::handle_error::handler_multiple_methods_first :: pass
+routing::tests::nest::multiple_top_level_nests :: pass
+routing::tests::hello_world :: pass
+routing::tests::middleware_still_run_for_unmatched_requests :: pass
+routing::tests::merging_routers_with_same_paths_but_different_methods :: pass
+routing::tests::nest::nested_multiple_routes :: pass
+routing::tests::nest::nested_url_original_extractor :: pass
+routing::tests::multiple_methods_for_one_handler :: pass
+routing::tests::merge::or_with_route_following :: pass
+routing::tests::merge::nesting_and_seeing_the_right_uri_ors_with_nesting :: pass
+routing::tests::nesting_router_with_fallbacks_panics - should panic :: pass
+routing::tests::merge::nesting_and_seeing_the_right_uri_at_more_levels_of_nesting :: pass
+routing::tests::nest::nesting_router_at_root :: pass
+routing::tests::nest::nesting_handler_at_root :: pass
+routing::tests::nest::outer_middleware_still_see_whole_url :: pass
+routing::tests::middleware_on_single_route :: pass
+routing::tests::nest::wrong_method_nest :: pass
+routing::tests::nest::nesting_router_at_empty_path :: pass
+routing::tests::nest::nest_static_file_server :: pass
+routing::tests::merge::layer_and_handle_error :: pass
+routing::tests::merge::services :: pass
+routing::tests::routing_to_router_panics - should panic :: pass
+routing::tests::merging_routers_with_fallbacks_panics - should panic :: pass
+routing::tests::route_layer :: pass
+routing::tests::service_in_bottom :: pass
+routing::tests::router_type_doesnt_change :: pass
+routing::tests::merge::nesting :: pass
+routing::tests::nest::nested_service_sees_stripped_uri :: pass
+routing::tests::nest::nested_with_other_route_also_matching_with_route_last :: pass
+routing::tests::wildcard_with_trailing_slash :: pass
+routing::tests::without_trailing_slash :: pass
+routing::tests::with_trailing_slash_post :: pass
+routing::tests::without_trailing_slash_post :: pass
+routing::tests::merge::nesting_and_seeing_the_right_uri :: pass
+routing::tests::routing_between_services :: pass
+routing::tests::nest::nested_with_other_route_also_matching_with_route_first :: pass
+routing::tests::static_and_dynamic_paths :: pass
+routing::tests::wrong_method_handler :: pass
+routing::tests::with_and_without_trailing_slash :: pass
+routing::tests::merge::middleware_that_return_early :: pass
+routing::tests::merge::nesting_and_seeing_the_right_uri_ors_with_multi_segment_uris :: pass
+routing::tests::merge::boxed :: pass
+routing::tests::routing :: pass
+routing::tests::wrong_method_service :: pass
+routing::tests::middleware_applies_to_routes_above :: pass
+routing::tests::merge::many_ors :: pass
+routing::tests::nest::nested_url_extractor :: pass
+routing::traits :: pass
+routing::tests::handle_error::handler_multiple_methods_middle :: pass
+routing::tests::with_trailing_slash :: pass
+util::test_try_downcast :: pass
+routing::tests::wildcard_sees_whole_url :: pass
+routing::tests::merge::nested_or :: pass
+routing::tests::nest::nesting_apps :: pass
+routing::tests::merge::multiple_ors_balanced_differently :: pass
+body::test_try_downcast :: pass
+response::headers::tests::invalid_header_name :: pass
+response::headers::tests::invalid_header_value :: pass
+response::headers::tests::vec_of_header_name_and_value :: pass
+response::headers::tests::vec_of_strings :: pass
+response::headers::tests::with_body :: pass
+response::headers::tests::with_status_and_body :: pass
+tests/fail/argument_not_extractor.rs [should fail to compile] :: fail
+tests/fail/extract_self_mut.rs [should fail to compile] :: pass
+tests/fail/extract_self_ref.rs [should fail to compile] :: pass
+tests/fail/generics.rs [should fail to compile] :: fail
+tests/fail/invalid_attrs.rs [should fail to compile] :: pass
+tests/fail/not_a_function.rs [should fail to compile] :: pass
+tests/fail/not_async.rs [should fail to compile] :: pass
+tests/fail/not_send.rs [should fail to compile] :: fail
+tests/fail/too_many_extractors.rs [should fail to compile] :: fail
+tests/fail/wrong_return_type.rs [should fail to compile] :: fail
+tests/pass/associated_fn_without_self.rs [should pass] :: pass
+tests/pass/different_request_body_type.rs [should pass] :: pass
+tests/pass/impl_future.rs [should pass] :: pass
+tests/pass/impl_into_response.rs [should pass] :: pass
+tests/pass/multiple_extractors.rs [should pass] :: pass
+tests/pass/mut_extractor.rs [should pass] :: pass
+tests/pass/ready.rs [should pass] :: pass
+tests/pass/result_impl_into_response.rs [should pass] :: pass
+tests/pass/returns_self.rs [should pass] :: pass
+tests/pass/self_receiver.rs [should pass] :: pass
+ui :: fail
+build success
+release success
+{'routing::tests::with_trailing_slash_post ::', 'routing::tests::without_trailing_slash_post ::'}

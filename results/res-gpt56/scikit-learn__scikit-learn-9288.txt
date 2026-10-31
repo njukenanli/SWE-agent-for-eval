@@ -1,0 +1,16 @@
+pre
+Traceback (most recent call last):
+  File "/testbed/setup.py", line 12, in <module>
+    from pkg_resources import parse_version
+ModuleNotFoundError: No module named 'pkg_resources'
+build_status 1
+test_command_status 1
+post
+Traceback (most recent call last):
+  File "/testbed/setup.py", line 12, in <module>
+    from pkg_resources import parse_version
+ModuleNotFoundError: No module named 'pkg_resources'
+build_status 1
+test_command_status 1
+(.venv) (.venv) build failed
+(.venv) (.venv) 

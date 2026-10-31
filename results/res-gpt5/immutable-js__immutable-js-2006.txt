@@ -1,0 +1,205 @@
+pre
+List filters values pass
+List partitions values pass
+List filters values based on type pass
+List partitions values based on type pass
+List reduces values pass
+List reduces from the right pass
+List takes maximum number pass
+List takes and skips values pass
+List takes and skips no-ops return same reference pass
+List takeLast and skipLast values pass
+List takeLast and skipLast no-ops return same reference pass
+List efficiently chains array methods pass
+List can convert to a map pass
+List reverses pass
+List ensures equality pass
+List works with insert pass
+List forEach iterates in the correct order pass
+List forEach iteration terminates when callback returns false pass
+List concat works like Array.prototype.concat pass
+List concat works like Array.prototype.concat even for IE11 pass
+List concat returns self when no changes pass
+List concat returns arg when concat to empty pass
+List concats a single value pass
+List concat returns List-coerced arg when concat to empty pass
+List concat does not spread in string characters pass
+List allows chained mutations pass
+List allows chained mutations using alternative API pass
+List chained mutations does not result in new empty list instance pass
+List calling `clear` and `setSize` should set all items to undefined pass
+List calling `clear` and `setSize` while mutating should set all items to undefined pass
+List allows size to be set pass
+List discards truncated elements when using slice pass
+List discards truncated elements when using setSize pass
+List can be efficiently sliced pass
+List treats NaN like zero when setting size pass
+List treats Infinity like zero when setting size pass
+List treats -Infinity like zero when setting size pass
+List Does not infinite loop when sliced with NaN #459 pass
+List Accepts NaN for slice and concat #602 pass
+List when slicing considers a NaN begin argument to be zero pass
+List when slicing considers a NaN end argument to be zero pass
+List when slicing considers NaN begin and end arguments to be zero pass
+List when slicing considers a -Infinity begin argument to be zero pass
+List when slicing considers a -Infinity end argument to be zero pass
+List when slicing considers -Infinity begin and end arguments to be zero pass
+List Iterator iterates through List pass
+List Iterator iterates through List in reverse pass
+Map converts from object pass
+Map converts from JS (global) Map pass
+Map constructor provides initial values pass
+Map constructor provides initial values as array of entries pass
+Map constructor provides initial values as sequence pass
+Map constructor provides initial values as list of lists pass
+Map constructor is identity when provided map pass
+Map does not accept a scalar pass
+Map does not accept strings (collection, but scalar) pass
+Map does not accept non-entries array pass
+Map accepts non-collection array-like objects as keyed collections pass
+Map accepts flattened pairs via of() pass
+Map does not accept mismatched flattened pairs via of() pass
+Map converts back to JS object pass
+Map iterates values pass
+Map has the same iterator function for entries pass
+Map merges two maps pass
+Map concatenates two maps (alias for merge) pass
+Map accepts null as a key pass
+Map is persistent to sets pass
+Map is persistent to deletes pass
+Map deletes down to empty map pass
+Map can map many items pass
+Map can use weird keys pass
+Map can map items known to hash collide pass
+Map can progressively add items known to collide pass
+Map maps values pass
+Map maps keys pass
+Map maps no-ops return the same reference pass
+Map provides unmodified original collection as 3rd iter argument pass
+Map filters values pass
+Map filterNots values pass
+Map partitions values pass
+Map derives keys pass
+Map flips keys and values pass
+Map can convert to a list pass
+Map works like an object pass
+Map sets pass
+Map has and get pass
+Map deletes pass
+Map deletes from transient pass
+Map iterates through all entries pass
+Map allows chained mutations pass
+Map chained mutations does not result in new empty map instance pass
+Map expresses value equality with unordered sequences pass
+Map does not equal Record with same values pass
+Map deletes all the provided keys pass
+Map remains unchanged when no keys are provided pass
+Map uses toString on keys and values pass
+Map supports Symbols as tuple keys pass
+Map supports Symbols as object constructor keys pass
+Map Symbol keys are unique pass
+Map mergeDeep with tuple Symbol keys pass
+post
+List determines assignment of unspecified value types pass
+List of provides initial values pass
+List toArray provides a JS array pass
+List does not accept a scalar pass
+List accepts an array pass
+List accepts an array-like pass
+List accepts any array-like collection, including strings pass
+List accepts an indexed Seq pass
+List accepts a keyed Seq as a list of entries pass
+List can set and get a value pass
+List can setIn and getIn a deep value pass
+List can setIn on an inexistant index pass
+List throw when calling setIn on a non data structure pass
+List can update a value pass
+List can updateIn a deep value pass
+List returns undefined when getting a null value pass
+List counts from the end of the list on negative index pass
+List coerces numeric-string keys pass
+List uses not set value for string index pass
+List uses not set value for index {} pass
+List uses not set value for index void 0 pass
+List uses not set value for index undefined pass
+List doesnt coerce empty strings to index 0 pass
+List doesnt contain elements at non-empty string keys pass
+List hasIn doesnt contain elements at non-empty string keys pass
+List hasIn doesnt throw for bad key-path pass
+List setting creates a new instance pass
+List size includes the highest index pass
+List get helpers make for easier to read code pass
+List slice helpers make for easier to read code pass
+List can set at arbitrary indices pass
+List can contain a large number of indices pass
+List describes a dense list pass
+List iterates a dense list pass
+List has the same iterator function for values pass
+List push inserts at highest index pass
+List pushes multiple values to the end pass
+List pop removes the highest index, decrementing size pass
+List pop removes the highest index, just like array pass
+List push adds the next highest index, just like array pass
+List allows popping an empty list pass
+List remove removes any index pass
+List remove removes any index pass
+List shifts values from the front pass
+List unshifts values to the front pass
+List unshifts multiple values to the front pass
+List finds values using indexOf pass
+List finds values using lastIndexOf pass
+List finds values using findIndex pass
+List finds values using findEntry pass
+List maps values pass
+List map no-ops return the same reference pass
+List ensures iter is unmodified pass
+List filters values pass
+List partitions values pass
+List filters values based on type pass
+List partitions values based on type pass
+List reduces values pass
+List reduces from the right pass
+List takes maximum number pass
+List takes and skips values pass
+List takes and skips no-ops return same reference pass
+List takeLast and skipLast values pass
+List takeLast and skipLast no-ops return same reference pass
+List efficiently chains array methods pass
+List can convert to a map pass
+List reverses pass
+List ensures equality pass
+List works with insert pass
+List forEach iterates in the correct order pass
+List forEach iteration terminates when callback returns false pass
+List concat works like Array.prototype.concat pass
+List concat works like Array.prototype.concat even for IE11 pass
+List concat returns self when no changes pass
+List concat returns arg when concat to empty pass
+List concats a single value pass
+List concat returns List-coerced arg when concat to empty pass
+List concat does not spread in string characters pass
+List allows chained mutations pass
+List allows chained mutations using alternative API pass
+List chained mutations does not result in new empty list instance pass
+List calling `clear` and `setSize` should set all items to undefined pass
+List calling `clear` and `setSize` while mutating should set all items to undefined pass
+List allows size to be set pass
+List discards truncated elements when using slice pass
+List discards truncated elements when using setSize pass
+List can be efficiently sliced pass
+List treats NaN like zero when setting size pass
+List treats Infinity like zero when setting size pass
+List treats -Infinity like zero when setting size pass
+List Does not infinite loop when sliced with NaN #459 pass
+List Accepts NaN for slice and concat #602 pass
+List when slicing considers a NaN begin argument to be zero pass
+List when slicing considers a NaN end argument to be zero pass
+List when slicing considers NaN begin and end arguments to be zero pass
+List when slicing considers a -Infinity begin argument to be zero pass
+List when slicing considers a -Infinity end argument to be zero pass
+List when slicing considers -Infinity begin and end arguments to be zero pass
+List Iterator iterates through List pass
+List Iterator iterates through List in reverse pass
+build success
+release success
+{'Range sliced sequence works even on filtered sequence'}

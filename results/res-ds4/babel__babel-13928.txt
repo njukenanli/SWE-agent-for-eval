@@ -1,0 +1,205 @@
+pre
+v8intrinsic/modulo/01 :: pass
+bin/babel-node --config-file :: fail
+bin/babel-node --env-name :: fail
+bin/babel-node --eval :: fail
+bin/babel-node --extensions :: fail
+bin/babel-node --no-babelrc :: fail
+bin/babel-node --presets :: fail
+bin/babel-node --print :: fail
+bin/babel-node --require :: fail
+bin/babel-node --require_node_modules :: fail
+bin/babel-node -b :: fail
+bin/babel-node arguments :: fail
+bin/babel-node directory :: fail
+bin/babel-node filename :: fail
+bin/babel-node no-strict :: fail
+bin/babel-node node-execArgv :: fail
+bin/babel-node node_--inspect :: pass
+bin/babel-node node_--no-lazy :: fail
+bin/babel-node node_-gc_alias_--expose-gc :: fail
+bin/babel-node require :: fail
+bin/babel-node subprocess-ipc :: fail
+bin/babel-node subprocess-no-ipc :: fail
+bin/babel-node v8Flag-dashed :: fail
+bin/babel-node v8Flag-dashed-with-param :: fail
+bin/babel-node v8Flag-underscored :: fail
+bin/babel-node v8Flag-underscored-with-param :: fail
+bin/babel --config-file babelrc nocomment :: fail
+bin/babel --copy-files :: fail
+bin/babel --copy-files --include-dotfiles :: fail
+bin/babel --copy-files --include-dotfiles with ignore :: fail
+bin/babel --copy-files --include-dotfiles with ignore in babelrc :: fail
+bin/babel --copy-files --include-dotfiles with only :: fail
+bin/babel --copy-files --no-copy-ignored with babelignore :: fail
+bin/babel --copy-files --no-copy-ignored with ignore :: fail
+bin/babel --copy-files --no-copy-ignored with ignore in babelrc :: fail
+bin/babel --copy-files --no-copy-ignored with only :: fail
+bin/babel --copy-files with ignore :: fail
+bin/babel --copy-files with ignore in babelignore :: fail
+bin/babel --copy-files with ignore in babelrc :: fail
+bin/babel --copy-files with only :: fail
+bin/babel --ignore :: fail
+bin/babel --ignore complete :: fail
+bin/babel --ignore glob :: fail
+bin/babel --minified :: fail
+bin/babel --only :: fail
+bin/babel --only glob :: fail
+bin/babel dir --out-dir :: fail
+bin/babel dir --out-dir --copy-files :: fail
+bin/babel dir --out-dir --keep-file-extension :: fail
+bin/babel dir --out-dir --out-file :: pass
+bin/babel dir --out-dir --out-file-extension :: fail
+bin/babel dir --out-dir --relative :: fail
+bin/babel dir --out-dir --source-maps :: fail
+bin/babel dir --out-dir --source-maps inline :: fail
+bin/babel dir --out-dir --verbose :: fail
+bin/babel dir --out-dir no filenames :: pass
+bin/babel dir --out-file :: fail
+bin/babel dir --out-file --extensions :: fail
+bin/babel dir --skip-initial-build no --watch :: pass
+bin/babel dir --watch no --out-dir no --out-file :: pass
+bin/babel empty dir --out-dir :: pass
+bin/babel env - SHOW_CONFIG_FOR :: fail
+bin/babel env - SHOW_CONFIG_FOR with ignored file :: pass
+bin/babel env - SHOW_CONFIG_FOR with multiple files :: fail
+bin/babel env - SHOW_CONFIG_FOR with only file :: pass
+bin/babel error - SHOW_CONFIG_FOR is a folder :: pass
+bin/babel error --keep-file-extension --out-file-extension :: pass
+bin/babel error --out-dir :: pass
+bin/babel error --out-dir --out-file :: pass
+bin/babel error --relative :: pass
+bin/babel error --skip-initial-build :: pass
+bin/babel error --watch :: pass
+bin/babel error --watch no filename :: pass
+bin/babel error incorrect options after args :: pass
+bin/babel error incorrect options before args :: pass
+bin/babel error wrong filename :: pass
+bin/babel filename --no-comments :: fail
+bin/babel filename --out-dir :: fail
+bin/babel filename --out-dir --relative :: fail
+bin/babel filename --out-file :: fail
+bin/babel filename --out-file --source-maps inline :: fail
+bin/babel filename --out-file deep :: fail
+bin/babel filename --watch no filenames :: pass
+bin/babel filename babelrc no comments :: fail
+bin/babel filename default comments :: fail
+bin/babel filename does not exist :: pass
+bin/babel filename-sourcemap --out-file --source-maps inline :: fail
+bin/babel filenames --out-file :: fail
+bin/babel filenames --out-file --source-maps :: fail
+bin/babel filenames --out-file --source-maps inline :: fail
+bin/babel stdin :: fail
+bin/babel stdin --filename :: pass
+bin/babel stdin --out-file :: fail
+bin/babel stdin --out-file --source-maps :: fail
+bin/babel stdin --source-maps inline :: fail
+bin/babel-external-helpers --output-type global :: pass
+bin/babel-external-helpers --output-type umd :: pass
+bin/babel-external-helpers --output-type var :: pass
+bin/babel-external-helpers --whitelist :: pass
+util.js chmod should warn the user if chmod fails :: pass
+post
+v8intrinsic/modulo/01 :: pass
+bin/babel-node --config-file :: fail
+bin/babel-node --env-name :: fail
+bin/babel-node --eval :: fail
+bin/babel-node --extensions :: fail
+bin/babel-node --no-babelrc :: fail
+bin/babel-node --presets :: fail
+bin/babel-node --print :: fail
+bin/babel-node --require :: fail
+bin/babel-node --require_node_modules :: fail
+bin/babel-node -b :: fail
+bin/babel-node arguments :: fail
+bin/babel-node directory :: fail
+bin/babel-node filename :: fail
+bin/babel-node no-strict :: fail
+bin/babel-node node-execArgv :: fail
+bin/babel-node node_--inspect :: pass
+bin/babel-node node_--no-lazy :: fail
+bin/babel-node node_-gc_alias_--expose-gc :: fail
+bin/babel-node require :: fail
+bin/babel-node subprocess-ipc :: fail
+bin/babel-node subprocess-no-ipc :: fail
+bin/babel-node v8Flag-dashed :: fail
+bin/babel-node v8Flag-dashed-with-param :: fail
+bin/babel-node v8Flag-underscored :: fail
+bin/babel-node v8Flag-underscored-with-param :: fail
+bin/babel --config-file babelrc nocomment :: fail
+bin/babel --copy-files :: fail
+bin/babel --copy-files --include-dotfiles :: fail
+bin/babel --copy-files --include-dotfiles with ignore :: fail
+bin/babel --copy-files --include-dotfiles with ignore in babelrc :: fail
+bin/babel --copy-files --include-dotfiles with only :: fail
+bin/babel --copy-files --no-copy-ignored with babelignore :: fail
+bin/babel --copy-files --no-copy-ignored with ignore :: fail
+bin/babel --copy-files --no-copy-ignored with ignore in babelrc :: fail
+bin/babel --copy-files --no-copy-ignored with only :: fail
+bin/babel --copy-files with ignore :: fail
+bin/babel --copy-files with ignore in babelignore :: fail
+bin/babel --copy-files with ignore in babelrc :: fail
+bin/babel --copy-files with only :: fail
+bin/babel --ignore :: fail
+bin/babel --ignore complete :: fail
+bin/babel --ignore glob :: fail
+bin/babel --minified :: fail
+bin/babel --only :: fail
+bin/babel --only glob :: fail
+bin/babel dir --out-dir :: fail
+bin/babel dir --out-dir --copy-files :: fail
+bin/babel dir --out-dir --keep-file-extension :: fail
+bin/babel dir --out-dir --out-file :: pass
+bin/babel dir --out-dir --out-file-extension :: fail
+bin/babel dir --out-dir --relative :: fail
+bin/babel dir --out-dir --source-maps :: fail
+bin/babel dir --out-dir --source-maps inline :: fail
+bin/babel dir --out-dir --verbose :: fail
+bin/babel dir --out-dir no filenames :: pass
+bin/babel dir --out-file :: fail
+bin/babel dir --out-file --extensions :: fail
+bin/babel dir --skip-initial-build no --watch :: pass
+bin/babel dir --watch no --out-dir no --out-file :: pass
+bin/babel empty dir --out-dir :: pass
+bin/babel env - SHOW_CONFIG_FOR :: fail
+bin/babel env - SHOW_CONFIG_FOR with ignored file :: pass
+bin/babel env - SHOW_CONFIG_FOR with multiple files :: fail
+bin/babel env - SHOW_CONFIG_FOR with only file :: pass
+bin/babel error - SHOW_CONFIG_FOR is a folder :: pass
+bin/babel error --keep-file-extension --out-file-extension :: pass
+bin/babel error --out-dir :: pass
+bin/babel error --out-dir --out-file :: pass
+bin/babel error --relative :: pass
+bin/babel error --skip-initial-build :: pass
+bin/babel error --watch :: pass
+bin/babel error --watch no filename :: pass
+bin/babel error incorrect options after args :: pass
+bin/babel error incorrect options before args :: pass
+bin/babel error wrong filename :: pass
+bin/babel filename --no-comments :: fail
+bin/babel filename --out-dir :: fail
+bin/babel filename --out-dir --relative :: fail
+bin/babel filename --out-file :: fail
+bin/babel filename --out-file --source-maps inline :: fail
+bin/babel filename --out-file deep :: fail
+bin/babel filename --watch no filenames :: pass
+bin/babel filename babelrc no comments :: fail
+bin/babel filename default comments :: fail
+bin/babel filename does not exist :: pass
+bin/babel filename-sourcemap --out-file --source-maps inline :: fail
+bin/babel filenames --out-file :: fail
+bin/babel filenames --out-file --source-maps :: fail
+bin/babel filenames --out-file --source-maps inline :: fail
+bin/babel stdin :: fail
+bin/babel stdin --filename :: pass
+bin/babel stdin --out-file :: fail
+bin/babel stdin --out-file --source-maps :: fail
+bin/babel stdin --source-maps inline :: fail
+bin/babel-external-helpers --output-type global :: pass
+bin/babel-external-helpers --output-type umd :: pass
+bin/babel-external-helpers --output-type var :: pass
+bin/babel-external-helpers --whitelist :: pass
+util.js chmod should warn the user if chmod fails :: pass
+build success
+release success
+{'NODE_FIELDS contains all fields in babel-parser/test/fixtures/es2017/async-functions/await-following-arrow-inside-params/output.json ::', 'es2015/yield/yield following arrow in params ::', 'es2017/async functions/await following arrow inside params ::', 'NODE_FIELDS contains all fields in babel-parser/test/fixtures/es2015/yield/yield-following-arrow-in-params/output.json ::'}

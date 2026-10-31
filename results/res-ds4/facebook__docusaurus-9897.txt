@@ -1,0 +1,205 @@
+pre
+preview images stryker-mutator.png pass
+preview images stylable.png pass
+preview images svix.png pass
+preview images sweetcode.png pass
+preview images synergies.png pass
+preview images t-regx.png pass
+preview images talentbrick.png pass
+preview images tamalwebsite.png pass
+preview images tasit.png pass
+preview images tauri.png pass
+preview images techharvesting.png pass
+preview images testing-library.png pass
+preview images the-diff.png pass
+preview images tidb-community-book.png pass
+preview images tinaeldevresse.png pass
+preview images tooljet.png pass
+preview images tourmaline.png pass
+preview images tremor.png pass
+preview images trpgengine.png pass
+preview images tuist.png pass
+preview images uniforms.png pass
+preview images unleash.png pass
+preview images unmand.png pass
+preview images verdaccio.png pass
+preview images verida-developers.png pass
+preview images virtual-photography-kit.png pass
+preview images vital.png pass
+preview images vue-nodegui.png pass
+preview images warrant.png pass
+preview images wasp.png pass
+preview images webdriverio.png pass
+preview images webiny.png pass
+preview images whirlcodes.png pass
+preview images wisdom.png pass
+preview images woodpecker.png pass
+preview images yeecord.png pass
+preview images zowe.png pass
+preview images zxuqian.png pass
+prefer-docusaurus-heading valid <Heading as='h1'>heading 1</Heading> pass
+prefer-docusaurus-heading valid <Heading as='h2'>heading 2</Heading> pass
+prefer-docusaurus-heading valid <Heading as='h3'>heading 3</Heading> pass
+prefer-docusaurus-heading valid <Heading as='h4'>heading 4</Heading> pass
+prefer-docusaurus-heading valid <Heading as='h5'>heading 5</Heading> pass
+prefer-docusaurus-heading valid <Heading as='h6'>heading 6</Heading> pass
+prefer-docusaurus-heading invalid <h1>heading 1</h1> pass
+prefer-docusaurus-heading invalid <h2>heading 2</h2> pass
+prefer-docusaurus-heading invalid <h3>heading 3</h3> pass
+prefer-docusaurus-heading invalid <h4>heading 4</h4> pass
+prefer-docusaurus-heading invalid <h5>heading 5</h5> pass
+prefer-docusaurus-heading invalid <h6>heading 6</h6> pass
+string-literal-i18n-messages valid <Translate>text</Translate> pass
+string-literal-i18n-messages valid <Translate> text </Translate> pass
+string-literal-i18n-messages valid <Translate>"text"</Translate> pass
+string-literal-i18n-messages valid <Translate>'text'</Translate> pass
+string-literal-i18n-messages valid <Translate>`text`</Translate> pass
+string-literal-i18n-messages valid <Translate>{"text"}</Translate> pass
+string-literal-i18n-messages valid <Translate>{'text'}</Translate> pass
+string-literal-i18n-messages valid <Translate>{`text`}</Translate> pass
+string-literal-i18n-messages valid <Component>{text}</Component> pass
+string-literal-i18n-messages valid <Component> {text} </Component> pass
+string-literal-i18n-messages valid translate({message: `My page meta title`}) pass
+string-literal-i18n-messages valid <Translate               id="homepage.title"               description="The homepage welcome message">                 Welcome to my website             </Translate> pass
+string-literal-i18n-messages valid <Translate               values={{firstName: 'Sébastien'}}>                 {'Welcome, {firstName}! How are you?'}             </Translate> pass
+string-literal-i18n-messages valid <Translate>{'This'} is {`valid`}</Translate> pass
+string-literal-i18n-messages valid translate({message: 'My page meta title'}) pass
+string-literal-i18n-messages valid translate({message: 'The logo of site {siteName}'}, {siteName: 'Docusaurus'}) pass
+string-literal-i18n-messages valid translate({otherProp: metaTitle}) pass
+string-literal-i18n-messages valid translate({otherProp: `My page meta title`}) pass
+string-literal-i18n-messages invalid <Translate>{text}</Translate> pass
+string-literal-i18n-messages invalid <Translate>Hi {text} my friend</Translate> pass
+string-literal-i18n-messages invalid <Translate> {text} </Translate> pass
+string-literal-i18n-messages invalid <Translate>`{text}`</Translate> pass
+string-literal-i18n-messages invalid <Translate>{`${text}`}</Translate> pass
+string-literal-i18n-messages invalid translate({message: metaTitle}) pass
+sidebar site with wrong sidebar content pass
+sidebar site with wrong sidebar file path pass
+sidebar site with undefined sidebar pass
+sidebar site with disabled sidebar pass
+empty/no docs website no files in docs folder pass
+empty/no docs website docs folder does not exist pass
+simple website extendCli - docsVersion pass
+simple website getPathToWatch pass
+simple website configureWebpack pass
+simple website content fail
+versioned website extendCli - docsVersion pass
+versioned website getPathToWatch pass
+versioned website content fail
+versioned website (community) extendCli - docsVersion pass
+versioned website (community) getPathToWatch pass
+versioned website (community) content pass
+site with doc label label in sidebar.json is used pass
+site with doc label sidebar_label in doc has higher precedence over label in sidebar.json pass
+site with full autogenerated sidebar sidebar is fully autogenerated pass
+site with full autogenerated sidebar docs in fully generated sidebar have correct metadata pass
+site with partial autogenerated sidebars sidebar is partially autogenerated pass
+site with partial autogenerated sidebars docs in partially generated sidebar have correct metadata pass
+site with partial autogenerated sidebars 2 (fix #4638) sidebar is partially autogenerated pass
+site with custom sidebar items generator sidebarItemsGenerator is called with appropriate data pass
+site with custom sidebar items generator sidebar is autogenerated according to a custom sidebarItemsGenerator pass
+site with custom sidebar items generator sidebarItemsGenerator can wrap/enhance/sort/reverse the default sidebar generator pass
+post
+string-literal-i18n-messages valid <Translate>{"text"}</Translate> pass
+string-literal-i18n-messages valid <Translate>{'text'}</Translate> pass
+string-literal-i18n-messages valid <Translate>{`text`}</Translate> pass
+string-literal-i18n-messages valid <Component>{text}</Component> pass
+string-literal-i18n-messages valid <Component> {text} </Component> pass
+string-literal-i18n-messages valid translate({message: `My page meta title`}) pass
+string-literal-i18n-messages valid <Translate               id="homepage.title"               description="The homepage welcome message">                 Welcome to my website             </Translate> pass
+string-literal-i18n-messages valid <Translate               values={{firstName: 'Sébastien'}}>                 {'Welcome, {firstName}! How are you?'}             </Translate> pass
+string-literal-i18n-messages valid <Translate>{'This'} is {`valid`}</Translate> pass
+string-literal-i18n-messages valid translate({message: 'My page meta title'}) pass
+string-literal-i18n-messages valid translate({message: 'The logo of site {siteName}'}, {siteName: 'Docusaurus'}) pass
+string-literal-i18n-messages valid translate({otherProp: metaTitle}) pass
+string-literal-i18n-messages valid translate({otherProp: `My page meta title`}) pass
+string-literal-i18n-messages invalid <Translate>{text}</Translate> pass
+string-literal-i18n-messages invalid <Translate>Hi {text} my friend</Translate> pass
+string-literal-i18n-messages invalid <Translate> {text} </Translate> pass
+string-literal-i18n-messages invalid <Translate>`{text}`</Translate> pass
+string-literal-i18n-messages invalid <Translate>{`${text}`}</Translate> pass
+string-literal-i18n-messages invalid translate({message: metaTitle}) pass
+loadPresets no presets pass
+loadPresets cjs form pass
+loadPresets esm form pass
+loadPresets ts form pass
+loadPresets string form composite pass
+loadPresets array form pass
+loadPresets array form with options pass
+loadPresets array form composite pass
+loadPresets mixed form pass
+loadPresets mixed form with themes pass
+webpack production config simple pass
+webpack production config custom pass
+sidebar site with wrong sidebar content pass
+sidebar site with wrong sidebar file path pass
+sidebar site with undefined sidebar pass
+sidebar site with disabled sidebar pass
+empty/no docs website no files in docs folder pass
+empty/no docs website docs folder does not exist pass
+simple website extendCli - docsVersion pass
+simple website getPathToWatch pass
+simple website configureWebpack pass
+simple website content fail
+versioned website extendCli - docsVersion pass
+versioned website getPathToWatch pass
+versioned website content fail
+versioned website (community) extendCli - docsVersion pass
+versioned website (community) getPathToWatch pass
+versioned website (community) content pass
+site with doc label label in sidebar.json is used pass
+site with doc label sidebar_label in doc has higher precedence over label in sidebar.json pass
+site with full autogenerated sidebar sidebar is fully autogenerated pass
+site with full autogenerated sidebar docs in fully generated sidebar have correct metadata pass
+site with partial autogenerated sidebars sidebar is partially autogenerated pass
+site with partial autogenerated sidebars docs in partially generated sidebar have correct metadata pass
+site with partial autogenerated sidebars 2 (fix #4638) sidebar is partially autogenerated pass
+site with custom sidebar items generator sidebarItemsGenerator is called with appropriate data pass
+site with custom sidebar items generator sidebar is autogenerated according to a custom sidebarItemsGenerator pass
+site with custom sidebar items generator sidebarItemsGenerator can wrap/enhance/sort/reverse the default sidebar generator pass
+simple site readVersionDocs pass
+simple site normal docs pass
+simple site docs with editUrl pass
+simple site docs with custom editUrl & unrelated frontMatter pass
+simple site docs with function editUrl pass
+simple site docs with last update time and author pass
+simple site docs with draft frontmatter pass
+simple site docs with unlisted frontmatter pass
+simple site docs with last_update front matter pass
+simple site docs with only last_update author front matter pass
+simple site docs with only last_update date front matter pass
+simple site docs with last_update front matter disabled pass
+simple site docs with slugs pass
+simple site docs with invalid id pass
+simple site custom pagination - production fail
+simple site custom pagination - development fail
+simple site bad pagination pass
+versioned site next docs pass
+versioned site versioned docs pass
+versioned site next doc slugs pass
+versioned site versioned doc slugs pass
+versioned site doc with editUrl function pass
+versioned site translated doc with editUrl pass
+versioned site translated en doc with editUrl and editCurrentVersion=true pass
+versioned site translated fr doc with editUrl and editLocalizedFiles=true pass
+versioned site translated fr doc with editUrl and editLocalizedFiles=true + editCurrentVersion=true pass
+isConventionalDocIndex supports readme pass
+isConventionalDocIndex supports index pass
+isConventionalDocIndex supports <categoryName>/<categoryName>.md pass
+isConventionalDocIndex reject other cases pass
+getFileLastUpdate existing test file in repository with Git timestamp pass
+getFileLastUpdate existing test file with spaces in path pass
+getFileLastUpdate non-existing file pass
+getFileLastUpdate temporary created file that is not tracked by git pass
+getFileLastUpdate multiple files not tracked by git pass
+getFileLastUpdate git does not exist pass
+getFileCommitDate returns earliest commit date pass
+getFileCommitDate returns latest commit date pass
+getFileCommitDate returns latest commit date with author pass
+getFileCommitDate returns earliest commit date with author pass
+getFileCommitDate throws custom error when file is not tracked pass
+getFileCommitDate throws when file not found pass
+theme translations has base messages files contain EXACTLY all the translations extracted from the theme. Please run "yarn workspace @docusaurus/theme-translations update" to keep base messages files up-to-date pass
+build success
+release success
+{'unwrapMdxCodeBlocks can unwrap a simple mdx code block with CRLF'}

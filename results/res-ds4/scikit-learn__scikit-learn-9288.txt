@@ -1,0 +1,206 @@
+pre
+sklearn/utils/tests/test_utils.py::test_message_with_time[0.2-   0.2s-ABC-abcdefghijklmnopqrstuvwxyz\u1048-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20-  20.0s-ABC-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20-  20.0s-ABCDEF-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20-  20.0s-ABC-abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20-  20.0s-ABCABCABCABCABCABCABCABCABCABC-abcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20-  20.0s-ABC-abcdefghijklmnopqrstuvwxyz\u1048-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[2000-33.3min-ABC-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[2000-33.3min-ABCDEF-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[2000-33.3min-ABC-abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[2000-33.3min-ABCABCABCABCABCABCABCABCABCABC-abcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[2000-33.3min-ABC-abcdefghijklmnopqrstuvwxyz\u1048-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20000-333.3min-ABC-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20000-333.3min-ABCDEF-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20000-333.3min-ABC-abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20000-333.3min-ABCABCABCABCABCABCABCABCABCABC-abcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20000-333.3min-ABC-abcdefghijklmnopqrstuvwxyz\u1048-False] pass
+sklearn/utils/tests/test_utils.py::test_print_elapsed_time[hello-[ABC] ........................................... hello, total=   0.1s\n] pass
+sklearn/utils/tests/test_utils.py::test_print_elapsed_time[-[ABC] ................................................ , total=   0.1s\n] pass
+sklearn/utils/tests/test_utils.py::test_print_elapsed_time[None-] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[nan-True0] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[nan-True1] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[nan-True2] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[value3-True] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[nan-True3] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[0-False] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[0.0-False] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[None-False] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[-False] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[nan-False] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[value10-False] pass
+sklearn/utils/tests/test_utils.py::test_deprecation_joblib_api pass
+sklearn/utils/tests/test_validation.py::test_as_float_array pass
+sklearn/utils/tests/test_validation.py::test_as_float_array_nan[X0] pass
+sklearn/utils/tests/test_validation.py::test_as_float_array_nan[X1] pass
+sklearn/utils/tests/test_validation.py::test_np_matrix pass
+sklearn/utils/tests/test_validation.py::test_memmap pass
+sklearn/utils/tests/test_validation.py::test_ordering pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[asarray-inf-False] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[asarray-nan-allow-nan] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[asarray-nan-False] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[csr_matrix-inf-False] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[csr_matrix-nan-allow-nan] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[csr_matrix-nan-False] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[asarray-inf-True-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[asarray-inf-allow-nan-Input contains infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[asarray-nan-True-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[asarray-nan-allow-inf-force_all_finite should be a bool or "allow-nan"] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[asarray-nan-1-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[csr_matrix-inf-True-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[csr_matrix-inf-allow-nan-Input contains infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[csr_matrix-nan-True-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[csr_matrix-nan-allow-inf-force_all_finite should be a bool or "allow-nan"] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[csr_matrix-nan-1-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_object pass
+sklearn/utils/tests/test_validation.py::test_check_array pass
+sklearn/utils/tests/test_validation.py::test_check_array_pandas_dtype_object_conversion pass
+sklearn/utils/tests/test_validation.py::test_check_array_on_mock_dataframe pass
+sklearn/utils/tests/test_validation.py::test_check_array_dtype_stability pass
+sklearn/utils/tests/test_validation.py::test_check_array_dtype_warning fail
+sklearn/utils/tests/test_validation.py::test_check_array_warn_on_dtype_deprecation pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_sparse_type_exception pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_sparse_no_exception pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_no_exception[csr] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_no_exception[csc] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_no_exception[coo] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_no_exception[bsr] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_raise_exception[csr] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_raise_exception[csc] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_raise_exception[coo] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_raise_exception[bsr] pass
+sklearn/utils/tests/test_validation.py::test_check_array_min_samples_and_features_messages pass
+sklearn/utils/tests/test_validation.py::test_check_array_complex_data_error pass
+sklearn/utils/tests/test_validation.py::test_has_fit_parameter pass
+sklearn/utils/tests/test_validation.py::test_check_symmetric pass
+sklearn/utils/tests/test_validation.py::test_check_is_fitted pass
+sklearn/utils/tests/test_validation.py::test_check_consistent_length pass
+sklearn/utils/tests/test_validation.py::test_check_dataframe_fit_attribute skip
+sklearn/utils/tests/test_validation.py::test_suppress_validation pass
+sklearn/utils/tests/test_validation.py::test_check_array_series skip
+sklearn/utils/tests/test_validation.py::test_check_dataframe_warns_on_dtype skip
+sklearn/utils/tests/test_validation.py::test_check_memory fail
+sklearn/utils/tests/test_validation.py::test_check_array_memmap[True] pass
+sklearn/utils/tests/test_validation.py::test_check_array_memmap[False] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[asarray] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[csr_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[csc_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[coo_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[lil_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[bsr_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[dok_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[dia_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_X_y_informative_error pass
+sklearn/utils/tests/test_validation.py::test_retrieve_samples_from_non_standard_shape pass
+sklearn/utils/tests/test_validation.py::test_check_scalar_valid[3-int-2-5] fail
+sklearn/utils/tests/test_validation.py::test_check_scalar_valid[2.5-float-2-5] fail
+sklearn/utils/tests/test_validation.py::test_check_scalar_invalid[1-test_name1-float-2-4-err_msg0] pass
+sklearn/utils/tests/test_validation.py::test_check_scalar_invalid[1-test_name2-int-2-4-err_msg1] pass
+sklearn/utils/tests/test_validation.py::test_check_scalar_invalid[5-test_name3-int-2-4-err_msg2] pass
+sklearn/utils/tests/test_validation.py::test_check_sample_weight pass
+sklearn/utils/validation.py::sklearn.utils.validation.has_fit_parameter pass
+post
+sklearn/utils/tests/test_utils.py::test_message_with_time[0.2-   0.2s-ABC-abcdefghijklmnopqrstuvwxyz\u1048-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20-  20.0s-ABC-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20-  20.0s-ABCDEF-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20-  20.0s-ABC-abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20-  20.0s-ABCABCABCABCABCABCABCABCABCABC-abcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20-  20.0s-ABC-abcdefghijklmnopqrstuvwxyz\u1048-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[2000-33.3min-ABC-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[2000-33.3min-ABCDEF-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[2000-33.3min-ABC-abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[2000-33.3min-ABCABCABCABCABCABCABCABCABCABC-abcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[2000-33.3min-ABC-abcdefghijklmnopqrstuvwxyz\u1048-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20000-333.3min-ABC-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20000-333.3min-ABCDEF-abcdefghijklmnopqrstuvwxyz-False] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20000-333.3min-ABC-abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20000-333.3min-ABCABCABCABCABCABCABCABCABCABC-abcdefghijklmnopqrstuvwxyz-True] pass
+sklearn/utils/tests/test_utils.py::test_message_with_time[20000-333.3min-ABC-abcdefghijklmnopqrstuvwxyz\u1048-False] pass
+sklearn/utils/tests/test_utils.py::test_print_elapsed_time[hello-[ABC] ........................................... hello, total=   0.1s\n] pass
+sklearn/utils/tests/test_utils.py::test_print_elapsed_time[-[ABC] ................................................ , total=   0.1s\n] pass
+sklearn/utils/tests/test_utils.py::test_print_elapsed_time[None-] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[nan-True0] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[nan-True1] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[nan-True2] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[value3-True] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[nan-True3] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[0-False] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[0.0-False] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[None-False] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[-False] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[nan-False] pass
+sklearn/utils/tests/test_utils.py::test_is_scalar_nan[value10-False] pass
+sklearn/utils/tests/test_utils.py::test_deprecation_joblib_api pass
+sklearn/utils/tests/test_validation.py::test_as_float_array pass
+sklearn/utils/tests/test_validation.py::test_as_float_array_nan[X0] pass
+sklearn/utils/tests/test_validation.py::test_as_float_array_nan[X1] pass
+sklearn/utils/tests/test_validation.py::test_np_matrix pass
+sklearn/utils/tests/test_validation.py::test_memmap pass
+sklearn/utils/tests/test_validation.py::test_ordering pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[asarray-inf-False] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[asarray-nan-allow-nan] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[asarray-nan-False] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[csr_matrix-inf-False] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[csr_matrix-nan-allow-nan] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_valid[csr_matrix-nan-False] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[asarray-inf-True-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[asarray-inf-allow-nan-Input contains infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[asarray-nan-True-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[asarray-nan-allow-inf-force_all_finite should be a bool or "allow-nan"] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[asarray-nan-1-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[csr_matrix-inf-True-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[csr_matrix-inf-allow-nan-Input contains infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[csr_matrix-nan-True-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[csr_matrix-nan-allow-inf-force_all_finite should be a bool or "allow-nan"] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finiteinvalid[csr_matrix-nan-1-Input contains NaN, infinity] pass
+sklearn/utils/tests/test_validation.py::test_check_array_force_all_finite_object pass
+sklearn/utils/tests/test_validation.py::test_check_array pass
+sklearn/utils/tests/test_validation.py::test_check_array_pandas_dtype_object_conversion pass
+sklearn/utils/tests/test_validation.py::test_check_array_on_mock_dataframe pass
+sklearn/utils/tests/test_validation.py::test_check_array_dtype_stability pass
+sklearn/utils/tests/test_validation.py::test_check_array_dtype_warning fail
+sklearn/utils/tests/test_validation.py::test_check_array_warn_on_dtype_deprecation pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_sparse_type_exception pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_sparse_no_exception pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_no_exception[csr] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_no_exception[csc] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_no_exception[coo] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_no_exception[bsr] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_raise_exception[csr] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_raise_exception[csc] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_raise_exception[coo] pass
+sklearn/utils/tests/test_validation.py::test_check_array_accept_large_sparse_raise_exception[bsr] pass
+sklearn/utils/tests/test_validation.py::test_check_array_min_samples_and_features_messages pass
+sklearn/utils/tests/test_validation.py::test_check_array_complex_data_error pass
+sklearn/utils/tests/test_validation.py::test_has_fit_parameter pass
+sklearn/utils/tests/test_validation.py::test_check_symmetric pass
+sklearn/utils/tests/test_validation.py::test_check_is_fitted pass
+sklearn/utils/tests/test_validation.py::test_check_consistent_length pass
+sklearn/utils/tests/test_validation.py::test_check_dataframe_fit_attribute skip
+sklearn/utils/tests/test_validation.py::test_suppress_validation pass
+sklearn/utils/tests/test_validation.py::test_check_array_series skip
+sklearn/utils/tests/test_validation.py::test_check_dataframe_warns_on_dtype skip
+sklearn/utils/tests/test_validation.py::test_check_memory fail
+sklearn/utils/tests/test_validation.py::test_check_array_memmap[True] pass
+sklearn/utils/tests/test_validation.py::test_check_array_memmap[False] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[asarray] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[csr_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[csc_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[coo_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[lil_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[bsr_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[dok_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_non_negative[dia_matrix] pass
+sklearn/utils/tests/test_validation.py::test_check_X_y_informative_error pass
+sklearn/utils/tests/test_validation.py::test_retrieve_samples_from_non_standard_shape pass
+sklearn/utils/tests/test_validation.py::test_check_scalar_valid[3-int-2-5] fail
+sklearn/utils/tests/test_validation.py::test_check_scalar_valid[2.5-float-2-5] fail
+sklearn/utils/tests/test_validation.py::test_check_scalar_invalid[1-test_name1-float-2-4-err_msg0] pass
+sklearn/utils/tests/test_validation.py::test_check_scalar_invalid[1-test_name2-int-2-4-err_msg1] pass
+sklearn/utils/tests/test_validation.py::test_check_scalar_invalid[5-test_name3-int-2-4-err_msg2] pass
+sklearn/utils/tests/test_validation.py::test_check_sample_weight pass
+sklearn/utils/validation.py::sklearn.utils.validation.has_fit_parameter pass
+(.venv) (.venv) build success
+release success
+{'sklearn/cluster/tests/test_k_means.py::test_result_of_kmeans_equal_in_diff_n_jobs'}
+(.venv) (.venv) 

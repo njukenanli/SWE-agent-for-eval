@@ -1,0 +1,205 @@
+pre
+posixPath works pass
+aliasedSitePath works pass
+addTrailingPathSeparator works pass
+normalizeFrontMatterTags normalizes simple string tag pass
+normalizeFrontMatterTags normalizes complex string tag pass
+normalizeFrontMatterTags normalizes simple object tag pass
+normalizeFrontMatterTags normalizes complex string tag with object tag pass
+normalizeFrontMatterTags normalizes string list pass
+normalizeFrontMatterTags succeeds for empty list pass
+normalizeFrontMatterTags normalizes complex mixed list pass
+groupTaggedItems groups items by tag permalink pass
+getTagVisibility works for some unlisted pass
+getTagVisibility works for all unlisted pass
+getTagVisibility works for all listed pass
+createToExtensionsRedirects rejects empty extensions pass
+createToExtensionsRedirects rejects extensions with "." pass
+createToExtensionsRedirects rejects extensions with / pass
+createToExtensionsRedirects rejects extensions with illegal url char pass
+createToExtensionsRedirects creates redirects from html/htm extensions pass
+createToExtensionsRedirects creates "to" redirects when relativeRoutesPath contains a prefix pass
+createToExtensionsRedirects does not create redirection for an empty extension array pass
+createFromExtensionsRedirects rejects empty extensions pass
+createFromExtensionsRedirects rejects extensions with "." pass
+createFromExtensionsRedirects rejects extensions with / pass
+createFromExtensionsRedirects rejects extensions with illegal url char pass
+createFromExtensionsRedirects creates redirects from html/htm extensions pass
+createFromExtensionsRedirects creates "from" redirects when relativeRoutesPath contains a prefix pass
+createFromExtensionsRedirects does not create redirection for an empty extension array pass
+mergeTranslations works pass
+updateTranslationFileMessages works pass
+getPluginI18nPath gets correct path pass
+getPluginI18nPath gets correct path for default plugin pass
+getPluginI18nPath gets correct path when no sub-paths pass
+localizePath localizes url path with current locale pass
+localizePath localizes fs path with current locale pass
+localizePath localizes path for default locale, if requested pass
+localizePath does not localize path for default locale by default pass
+localizePath localizes path for non-default locale by default pass
+isMultiColumnFooterLinks works pass
+getPluginVersion detects external packages plugins versions pass
+getPluginVersion detects project plugins versions pass
+getPluginVersion detects local packages versions pass
+loadSiteMetadata warns about plugin version mismatch pass
+loadHtmlTags works for an empty plugin pass
+loadHtmlTags only injects headTags pass
+loadHtmlTags only injects preBodyTags pass
+loadHtmlTags only injects postBodyTags pass
+loadHtmlTags allows multiple plugins that inject different part of html tags pass
+loadHtmlTags allows multiple plugins that might/might not inject html tags pass
+loadHtmlTags throws for invalid tag pass
+loadHtmlTags throws for invalid tagName pass
+loadHtmlTags throws for invalid tag object pass
+hashUtils simpleHash pass
+docuHash docuHash works pass
+createRedirectPageContent works pass
+createRedirectPageContent encodes uri special chars pass
+isSamePath returns true for compared path without trailing slash pass
+isSamePath returns true for compared path with trailing slash pass
+isSamePath returns true for compared path with different case pass
+isSamePath returns true for compared path with different case + trailing slash pass
+isSamePath returns false for compared path with double trailing slash pass
+isSamePath returns true for twice undefined/null pass
+isSamePath returns false when one undefined pass
+findHomePageRoute returns undefined for no routes pass
+findHomePageRoute returns undefined for no homepage pass
+findHomePageRoute finds top-level homepage pass
+findHomePageRoute finds nested homepage pass
+findHomePageRoute finds nested homepage with baseUrl pass
+normalizeLocation rewrites locations with index.html pass
+normalizeLocation removes html extension pass
+normalizeLocation does not strip extension if the route location has one pass
+normalizeLocation leaves pathnames untouched pass
+shouldQuotifyFrontMatter works pass
+ensureUniquePluginInstanceIds accept single instance plugins pass
+ensureUniquePluginInstanceIds accept single instance plugins, all with sameId pass
+ensureUniquePluginInstanceIds accept multi instance plugins without id pass
+ensureUniquePluginInstanceIds reject multi instance plugins without id pass
+ensureUniquePluginInstanceIds reject multi instance plugins with same id pass
+ensureUniquePluginInstanceIds reject multi instance plugins with some without id pass
+listTagsByLetters creates letters list pass
+flat nested pass
+flat primitives pass
+flat multiple keys pass
+flat empty object pass
+flat array pass
+getFileLoaderUtils() plugin svgo/removeViewBox and removeTitle should be disabled pass
+createSlugger can create unique slugs pass
+createSlugger can create unique slugs respecting case pass
+isInternalUrl returns true for empty links pass
+isInternalUrl returns true for root relative links pass
+isInternalUrl returns true for relative links pass
+isInternalUrl returns false for HTTP links pass
+isInternalUrl returns false for HTTPS links pass
+isInternalUrl returns false for whatever protocol links pass
+isInternalUrl returns false for telephone links pass
+isInternalUrl returns false for mailto links pass
+isInternalUrl returns false for undefined links pass
+getErrorCausalChain works for simple error pass
+getErrorCausalChain works for nested errors pass
+getAllFinalRoutes gets final routes correctly pass
+post
+useLocalPathname works for non-root baseUrl pass
+docVersionSearchTag works pass
+applyRouteTrailingSlash apply to empty pass
+applyRouteTrailingSlash apply to / pass
+applyRouteTrailingSlash apply to /abc pass
+applyRouteTrailingSlash apply to /abc/ pass
+applyRouteTrailingSlash apply to /abc?search#anchor pass
+applyRouteTrailingSlash apply to /abc/?search#anchor pass
+applyRouteTrailingSlash not apply to /abc/?search#anchor when baseUrl=/abc/ pass
+applyRouteTrailingSlash apply to subroutes pass
+applyRouteTrailingSlash apply for complex case pass
+applyRouteTrailingSlash apply for complex case with baseUrl pass
+sortConfig sorts route config correctly pass
+sortConfig sorts route config recursively pass
+sortConfig sorts route config given a baseURL pass
+mergeTranslations works pass
+updateTranslationFileMessages works pass
+getPluginI18nPath gets correct path pass
+getPluginI18nPath gets correct path for default plugin pass
+getPluginI18nPath gets correct path when no sub-paths pass
+localizePath localizes url path with current locale pass
+localizePath localizes fs path with current locale pass
+localizePath localizes path for default locale, if requested pass
+localizePath does not localize path for default locale by default pass
+localizePath localizes path for non-default locale by default pass
+remove-overridden-custom-properties overridden custom properties should be removed pass
+remove-overridden-custom-properties overridden custom properties with `!important` rule should not be removed pass
+normalization normalizes shorthands pass
+normalization rejects some invalid cases pass
+normalization adds a translatable marker for labels defined in sidebars.js pass
+isInternalUrl returns true for empty links pass
+isInternalUrl returns true for root relative links pass
+isInternalUrl returns true for relative links pass
+isInternalUrl returns false for HTTP links pass
+isInternalUrl returns false for HTTPS links pass
+isInternalUrl returns false for whatever protocol links pass
+isInternalUrl returns false for telephone links pass
+isInternalUrl returns false for mailto links pass
+isInternalUrl returns false for undefined links pass
+getPluginVersion detects external packages plugins versions pass
+getPluginVersion detects project plugins versions pass
+getPluginVersion detects local packages versions pass
+loadSiteMetadata warns about plugin version mismatch pass
+normalizeLocation rewrites locations with index.html pass
+normalizeLocation removes html extension pass
+normalizeLocation does not strip extension if the route location has one pass
+normalizeLocation leaves pathnames untouched pass
+loadHtmlTags works for an empty plugin pass
+loadHtmlTags only injects headTags pass
+loadHtmlTags only injects preBodyTags pass
+loadHtmlTags only injects postBodyTags pass
+loadHtmlTags allows multiple plugins that inject different part of html tags pass
+loadHtmlTags allows multiple plugins that might/might not inject html tags pass
+loadHtmlTags throws for invalid tag pass
+loadHtmlTags throws for invalid tagName pass
+loadHtmlTags throws for invalid tag object pass
+isMultiColumnFooterLinks works pass
+getErrorCausalChain works for simple error pass
+getErrorCausalChain works for nested errors pass
+getNamePatterns resolves plain names pass
+getNamePatterns expands bare scopes pass
+getNamePatterns expands scoped names pass
+getNamePatterns expands deep scoped paths pass
+resolveModuleName resolves longhand pass
+resolveModuleName resolves shorthand pass
+resolveModuleName throws good error message for longhand pass
+resolveModuleName throws good error message for shorthand pass
+isSamePath returns true for compared path without trailing slash pass
+isSamePath returns true for compared path with trailing slash pass
+isSamePath returns true for compared path with different case pass
+isSamePath returns true for compared path with different case + trailing slash pass
+isSamePath returns false for compared path with double trailing slash pass
+isSamePath returns true for twice undefined/null pass
+isSamePath returns false when one undefined pass
+findHomePageRoute returns undefined for no routes pass
+findHomePageRoute returns undefined for no homepage pass
+findHomePageRoute finds top-level homepage pass
+findHomePageRoute finds nested homepage pass
+findHomePageRoute finds nested homepage with baseUrl pass
+createRedirectPageContent works pass
+createRedirectPageContent encodes uri special chars pass
+hashUtils simpleHash pass
+docuHash docuHash works pass
+createSlugger can create unique slugs pass
+createSlugger can create unique slugs respecting case pass
+ensureUniquePluginInstanceIds accept single instance plugins pass
+ensureUniquePluginInstanceIds accept single instance plugins, all with sameId pass
+ensureUniquePluginInstanceIds accept multi instance plugins without id pass
+ensureUniquePluginInstanceIds reject multi instance plugins without id pass
+ensureUniquePluginInstanceIds reject multi instance plugins with same id pass
+ensureUniquePluginInstanceIds reject multi instance plugins with some without id pass
+getAllFinalRoutes gets final routes correctly pass
+listTagsByLetters creates letters list pass
+shouldQuotifyFrontMatter works pass
+flat nested pass
+flat primitives pass
+flat multiple keys pass
+flat empty object pass
+flat array pass
+getFileLoaderUtils() plugin svgo/removeViewBox and removeTitle should be disabled pass
+build success
+release success
+{'replaceMarkdownLinks preserves query/hash', 'replaceMarkdownLinks does not replace non-Markdown links', 'replaceMarkdownLinks handles stray spaces', 'replaceMarkdownLinks handles link titles'}

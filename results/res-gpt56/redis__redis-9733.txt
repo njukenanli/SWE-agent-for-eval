@@ -1,0 +1,205 @@
+pre
+client evicted due to client tracking prefixes pass
+client evicted due to output buf pass
+client no-evict on pass
+client no-evict off pass
+avoid client eviction when client is freed by output buffer limit pass
+decrease maxmemory-clients causes client eviction pass
+PSYNC2 #3899 regression: verify consistency pass
+Client output buffer soft limit is enforced if time is overreached pass
+evict clients only until below limit pass
+PSYNC2: Set #3 to replicate from #0 pass
+evict clients in right order (large to small) pass
+Client output buffer soft limit is not enforced too early and is enforced when no traffic pass
+No response for single command if client output buffer hard limit is enforced pass
+PSYNC2: cluster is consistent after load (x = 163103) pass
+PSYNC2: --- CYCLE 4 --- pass
+PSYNC2: [NEW LAYOUT] Set #2 as master pass
+PSYNC2: Set #0 to replicate from #2 pass
+No response for multi commands in pipeline if client output buffer limit is enforced pass
+Execute transactions completely even if client output buffer limit is enforced pass
+Test replication partial resync: backlog expired (diskless: no, disabled, reconnect: 1) pass
+PSYNC2: Set #4 to replicate from #2 pass
+GEOSEARCH fuzzy test - byradius pass
+Test replication partial resync: no reconnection, just sync (diskless: no, swapdb, reconnect: 0) pass
+PSYNC2: Set #1 to replicate from #2 pass
+PSYNC2: Set #3 to replicate from #4 pass
+PSYNC2: cluster is consistent after load (x = 234970) pass
+PSYNC2: --- CYCLE 5 --- pass
+Test replication partial resync: ok psync (diskless: no, swapdb, reconnect: 1) pass
+GEOSEARCH fuzzy test - bybox pass
+GEOSEARCH box edges fuzzy test pass
+Connect multiple replicas at the same time (issue #141), master diskless=no, replica diskless=disabled pass
+Test replication partial resync: no backlog (diskless: no, swapdb, reconnect: 1) pass
+PSYNC2: cluster is consistent after load (x = 302693) pass
+PSYNC2: Bring the master back again for next test pass
+PSYNC2: Partial resync after restart using RDB aux fields pass
+PSYNC2: Replica RDB restart with EVALSHA in backlog issue #4483 pass
+AOF rewrite during write load: RDB preamble=no pass
+slave buffer are counted correctly pass
+Test replication partial resync: ok after delay (diskless: no, swapdb, reconnect: 1) pass
+Turning off AOF kills the background writing child if any pass
+AOF rewrite of list with quicklist encoding, string data pass
+AOF rewrite of list with quicklist encoding, int data pass
+replica buffer don't induce eviction pass
+Don't rehash if used memory exceeds maxmemory after rehash pass
+AOF rewrite of set with intset encoding, string data pass
+AOF rewrite of set with hashtable encoding, string data pass
+client tracking don't cause eviction feedback loop pass
+Fuzzing dense/sparse encoding: Redis should always detect errors pass
+PFADD, PFCOUNT, PFMERGE type checking works pass
+PFMERGE results on the cardinality of union of sets pass
+AOF rewrite of set with intset encoding, int data pass
+AOF rewrite of set with hashtable encoding, int data pass
+AOF rewrite of hash with listpack encoding, string data pass
+Stress tester for #3343-alike bugs pass
+AOF rewrite of hash with hashtable encoding, string data pass
+AOF rewrite of hash with listpack encoding, int data pass
+Test replication partial resync: backlog expired (diskless: no, swapdb, reconnect: 1) pass
+AOF rewrite of hash with hashtable encoding, int data pass
+PFCOUNT multiple-keys merge returns cardinality of union #1 pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, disabled, reconnect: 0) pass
+AOF rewrite of zset with listpack encoding, string data pass
+PFCOUNT multiple-keys merge returns cardinality of union #2 pass
+AOF rewrite of zset with skiplist encoding, string data pass
+PFDEBUG GETREG returns the HyperLogLog raw registers pass
+PFADD / PFCOUNT cache invalidation works pass
+AOF rewrite of zset with listpack encoding, int data pass
+AOF rewrite of zset with skiplist encoding, int data pass
+BGREWRITEAOF is delayed if BGSAVE is in progress pass
+BGREWRITEAOF is refused if already in progress pass
+ziplist implementation: value encoding and backlink pass
+Test replication partial resync: ok psync (diskless: yes, disabled, reconnect: 1) pass
+ziplist implementation: encoding stress testing pass
+Connect multiple replicas at the same time (issue #141), master diskless=no, replica diskless=swapdb pass
+Test replication partial resync: no backlog (diskless: yes, disabled, reconnect: 1) pass
+Test replication partial resync: ok after delay (diskless: yes, disabled, reconnect: 1) pass
+Test replication partial resync: backlog expired (diskless: yes, disabled, reconnect: 1) pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, reconnect: 0) pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, reconnect: 1) pass
+Connect multiple replicas at the same time (issue #141), master diskless=yes, replica diskless=disabled pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, reconnect: 1) pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, reconnect: 1) pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, reconnect: 1) pass
+Connect multiple replicas at the same time (issue #141), master diskless=yes, replica diskless=swapdb pass
+Master stream is correctly processed while the replica has a script in -BUSY state pass
+slave fails full sync and diskless load swapdb recovers it pass
+diskless loading short read pass
+diskless no replicas drop during rdb pipe pass
+diskless slow replicas drop during rdb pipe pass
+diskless fast replicas drop during rdb pipe pass
+diskless all replicas drop during rdb pipe pass
+diskless timeout replicas drop during rdb pipe pass
+diskless replication child being killed is collected pass
+diskless replication read pipe cleanup pass
+replicaof right after disconnection pass
+Kill rdb child process if its dumping RDB is not useful pass
+Don't disconnect with replicas before loading transferred RDB when full sync pass
+Discard cache master before loading transferred RDB when full sync pass
+Active defrag pass
+Active defrag big keys pass
+Active defrag big list pass
+post
+Kill a cluster node and wait for fail state pass
+Verify command got unblocked after cluster failure pass
+client evicted due to client tracking prefixes pass
+client evicted due to output buf pass
+client no-evict on pass
+client no-evict off pass
+avoid client eviction when client is freed by output buffer limit pass
+decrease maxmemory-clients causes client eviction pass
+evict clients only until below limit pass
+evict clients in right order (large to small) pass
+Test replication partial resync: backlog expired (diskless: no, disabled, reconnect: 1) pass
+GEOSEARCH fuzzy test - byradius pass
+PSYNC2: cluster is consistent after load (x = 183422) pass
+PSYNC2: --- CYCLE 4 --- pass
+PSYNC2: [NEW LAYOUT] Set #3 as master pass
+PSYNC2: Set #4 to replicate from #2 pass
+Test replication partial resync: no reconnection, just sync (diskless: no, swapdb, reconnect: 0) pass
+Client output buffer soft limit is not enforced too early and is enforced when no traffic pass
+No response for single command if client output buffer hard limit is enforced pass
+PSYNC2: Set #0 to replicate from #3 pass
+No response for multi commands in pipeline if client output buffer limit is enforced pass
+Execute transactions completely even if client output buffer limit is enforced pass
+PSYNC2: Set #1 to replicate from #3 pass
+PSYNC2: Set #2 to replicate from #3 pass
+Test replication partial resync: ok psync (diskless: no, swapdb, reconnect: 1) pass
+PSYNC2: cluster is consistent after load (x = 248927) pass
+PSYNC2: --- CYCLE 5 --- pass
+PSYNC2: Set #3 to replicate from #2 pass
+GEOSEARCH fuzzy test - bybox pass
+GEOSEARCH box edges fuzzy test pass
+Connect multiple replicas at the same time (issue #141), master diskless=no, replica diskless=disabled pass
+Test replication partial resync: no backlog (diskless: no, swapdb, reconnect: 1) pass
+PSYNC2: cluster is consistent after load (x = 333131) pass
+PSYNC2: Bring the master back again for next test pass
+PSYNC2: Partial resync after restart using RDB aux fields pass
+PSYNC2: Replica RDB restart with EVALSHA in backlog issue #4483 pass
+Test replication partial resync: ok after delay (diskless: no, swapdb, reconnect: 1) pass
+Stress tester for #3343-alike bugs pass
+Fuzzing dense/sparse encoding: Redis should always detect errors pass
+PFADD, PFCOUNT, PFMERGE type checking works pass
+PFMERGE results on the cardinality of union of sets pass
+Test replication partial resync: backlog expired (diskless: no, swapdb, reconnect: 1) pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, disabled, reconnect: 0) pass
+AOF rewrite during write load: RDB preamble=no pass
+PFCOUNT multiple-keys merge returns cardinality of union #1 pass
+PFCOUNT multiple-keys merge returns cardinality of union #2 pass
+PFDEBUG GETREG returns the HyperLogLog raw registers pass
+PFADD / PFCOUNT cache invalidation works pass
+Turning off AOF kills the background writing child if any pass
+ziplist implementation: value encoding and backlink pass
+AOF rewrite of list with quicklist encoding, string data pass
+AOF rewrite of list with quicklist encoding, int data pass
+AOF rewrite of set with intset encoding, string data pass
+Test replication partial resync: ok psync (diskless: yes, disabled, reconnect: 1) pass
+AOF rewrite of set with hashtable encoding, string data pass
+AOF rewrite of set with intset encoding, int data pass
+ziplist implementation: encoding stress testing pass
+AOF rewrite of set with hashtable encoding, int data pass
+AOF rewrite of hash with listpack encoding, string data pass
+AOF rewrite of hash with hashtable encoding, string data pass
+AOF rewrite of hash with listpack encoding, int data pass
+AOF rewrite of hash with hashtable encoding, int data pass
+Connect multiple replicas at the same time (issue #141), master diskless=no, replica diskless=swapdb pass
+AOF rewrite of zset with listpack encoding, string data pass
+Test replication partial resync: no backlog (diskless: yes, disabled, reconnect: 1) pass
+AOF rewrite of zset with skiplist encoding, string data pass
+AOF rewrite of zset with listpack encoding, int data pass
+AOF rewrite of zset with skiplist encoding, int data pass
+BGREWRITEAOF is delayed if BGSAVE is in progress pass
+BGREWRITEAOF is refused if already in progress pass
+slave buffer are counted correctly pass
+Test replication partial resync: ok after delay (diskless: yes, disabled, reconnect: 1) pass
+replica buffer don't induce eviction pass
+Don't rehash if used memory exceeds maxmemory after rehash pass
+client tracking don't cause eviction feedback loop pass
+Test replication partial resync: backlog expired (diskless: yes, disabled, reconnect: 1) pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, reconnect: 0) pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, reconnect: 1) pass
+Connect multiple replicas at the same time (issue #141), master diskless=yes, replica diskless=disabled pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, reconnect: 1) pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, reconnect: 1) pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, reconnect: 1) pass
+Connect multiple replicas at the same time (issue #141), master diskless=yes, replica diskless=swapdb pass
+Master stream is correctly processed while the replica has a script in -BUSY state pass
+slave fails full sync and diskless load swapdb recovers it pass
+diskless loading short read pass
+diskless no replicas drop during rdb pipe pass
+diskless slow replicas drop during rdb pipe pass
+diskless fast replicas drop during rdb pipe pass
+diskless all replicas drop during rdb pipe pass
+diskless timeout replicas drop during rdb pipe pass
+diskless replication child being killed is collected pass
+diskless replication read pipe cleanup pass
+replicaof right after disconnection pass
+Kill rdb child process if its dumping RDB is not useful pass
+Don't disconnect with replicas before loading transferred RDB when full sync pass
+Discard cache master before loading transferred RDB when full sync pass
+Active defrag pass
+Active defrag big keys pass
+Active defrag big list pass
+build success
+release success
+{'COMMAND GETKEYS EVAL without keys', 'PSYNC2: cluster is consistent after load (x = 61004)', 'PSYNC2: cluster is consistent after load (x = 248927)', 'PSYNC2: Set #4 to replicate from #0', 'PSYNC2: Set #2 to replicate from #0', 'PSYNC2: cluster is consistent after load (x = 119498)', 'PSYNC2: Set #0 to replicate from #3', 'PSYNC2: Set #2 to replicate from #3', 'PSYNC2: Set #3 to replicate from #2', 'COMMAND GETKEYS EVAL with keys', 'PSYNC2: cluster is consistent after load (x = 333131)', 'PSYNC2: cluster is consistent after load (x = 183422)'}

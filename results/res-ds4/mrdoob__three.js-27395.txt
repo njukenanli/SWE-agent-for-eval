@@ -1,0 +1,204 @@
+pre
+# TODO Textures > CubeTexture > images skip
+# TODO Textures > CubeTexture > flipY skip
+Textures > CubeTexture > isCubeTexture pass
+Textures > Data3DTexture > Extending pass
+Textures > Data3DTexture > Instancing pass
+# TODO Textures > Data3DTexture > image skip
+# TODO Textures > Data3DTexture > magFilter skip
+# TODO Textures > Data3DTexture > minFilter skip
+# TODO Textures > Data3DTexture > wrapR skip
+# TODO Textures > Data3DTexture > generateMipmaps skip
+# TODO Textures > Data3DTexture > flipY skip
+# TODO Textures > Data3DTexture > unpackAlignment skip
+Textures > Data3DTexture > isData3DTexture pass
+Textures > DataArrayTexture > Extending pass
+Textures > DataArrayTexture > Instancing pass
+# TODO Textures > DataArrayTexture > image skip
+# TODO Textures > DataArrayTexture > magFilter skip
+# TODO Textures > DataArrayTexture > minFilter skip
+# TODO Textures > DataArrayTexture > wrapR skip
+# TODO Textures > DataArrayTexture > generateMipmaps skip
+# TODO Textures > DataArrayTexture > flipY skip
+# TODO Textures > DataArrayTexture > unpackAlignment skip
+Textures > DataArrayTexture > isDataArrayTexture pass
+Textures > DataTexture > Extending pass
+Textures > DataTexture > Instancing pass
+# TODO Textures > DataTexture > image skip
+# TODO Textures > DataTexture > generateMipmaps skip
+# TODO Textures > DataTexture > flipY skip
+# TODO Textures > DataTexture > unpackAlignment skip
+Textures > DataTexture > isDataTexture pass
+Textures > DepthTexture > Extending pass
+Textures > DepthTexture > Instancing pass
+# TODO Textures > DepthTexture > image skip
+# TODO Textures > DepthTexture > magFilter skip
+# TODO Textures > DepthTexture > minFilter skip
+# TODO Textures > DepthTexture > flipY skip
+# TODO Textures > DepthTexture > generateMipmaps skip
+Textures > DepthTexture > isDepthTexture pass
+Textures > FramebufferTexture > Extending pass
+Textures > FramebufferTexture > Instancing pass
+# TODO Textures > FramebufferTexture > format skip
+# TODO Textures > FramebufferTexture > magFilter skip
+# TODO Textures > FramebufferTexture > minFilter skip
+# TODO Textures > FramebufferTexture > generateMipmaps skip
+# TODO Textures > FramebufferTexture > needsUpdate skip
+Textures > FramebufferTexture > isFramebufferTexture pass
+Textures > Source > Instancing pass
+# TODO Textures > Source > data skip
+# TODO Textures > Source > needsUpdate skip
+# TODO Textures > Source > uuid skip
+# TODO Textures > Source > version skip
+Textures > Source > isSource pass
+# TODO Textures > Source > toJSON skip
+Textures > Texture > Extending pass
+Textures > Texture > Instancing pass
+# TODO Textures > Texture > image skip
+# TODO Textures > Texture > id skip
+# TODO Textures > Texture > uuid skip
+# TODO Textures > Texture > name skip
+# TODO Textures > Texture > source skip
+# TODO Textures > Texture > mipmaps skip
+# TODO Textures > Texture > mapping skip
+# TODO Textures > Texture > wrapS skip
+# TODO Textures > Texture > wrapT skip
+# TODO Textures > Texture > magFilter skip
+# TODO Textures > Texture > minFilter skip
+# TODO Textures > Texture > anisotropy skip
+# TODO Textures > Texture > format skip
+# TODO Textures > Texture > internalFormat skip
+# TODO Textures > Texture > type skip
+# TODO Textures > Texture > offset skip
+# TODO Textures > Texture > repeat skip
+# TODO Textures > Texture > center skip
+# TODO Textures > Texture > rotation skip
+# TODO Textures > Texture > matrixAutoUpdate skip
+# TODO Textures > Texture > matrix skip
+# TODO Textures > Texture > generateMipmaps skip
+# TODO Textures > Texture > premultiplyAlpha skip
+# TODO Textures > Texture > flipY skip
+# TODO Textures > Texture > unpackAlignment skip
+# TODO Textures > Texture > colorSpace skip
+# TODO Textures > Texture > userData skip
+# TODO Textures > Texture > version skip
+# TODO Textures > Texture > onUpdate skip
+# TODO Textures > Texture > needsPMREMUpdate skip
+Textures > Texture > isTexture pass
+# TODO Textures > Texture > updateMatrix skip
+# TODO Textures > Texture > clone skip
+# TODO Textures > Texture > copy skip
+# TODO Textures > Texture > toJSON skip
+Textures > Texture > dispose pass
+# TODO Textures > Texture > transformUv skip
+Textures > VideoTexture > Extending pass
+Textures > VideoTexture > Instancing pass
+# TODO Textures > VideoTexture > minFilter skip
+# TODO Textures > VideoTexture > magFilter skip
+# TODO Textures > VideoTexture > generateMipmaps skip
+Textures > VideoTexture > isVideoTexture pass
+# TODO Textures > VideoTexture > clone skip
+# TODO Textures > VideoTexture > update skip
+post
+# TODO Textures > CubeTexture > images skip
+# TODO Textures > CubeTexture > flipY skip
+Textures > CubeTexture > isCubeTexture pass
+Textures > Data3DTexture > Extending pass
+Textures > Data3DTexture > Instancing pass
+# TODO Textures > Data3DTexture > image skip
+# TODO Textures > Data3DTexture > magFilter skip
+# TODO Textures > Data3DTexture > minFilter skip
+# TODO Textures > Data3DTexture > wrapR skip
+# TODO Textures > Data3DTexture > generateMipmaps skip
+# TODO Textures > Data3DTexture > flipY skip
+# TODO Textures > Data3DTexture > unpackAlignment skip
+Textures > Data3DTexture > isData3DTexture pass
+Textures > DataArrayTexture > Extending pass
+Textures > DataArrayTexture > Instancing pass
+# TODO Textures > DataArrayTexture > image skip
+# TODO Textures > DataArrayTexture > magFilter skip
+# TODO Textures > DataArrayTexture > minFilter skip
+# TODO Textures > DataArrayTexture > wrapR skip
+# TODO Textures > DataArrayTexture > generateMipmaps skip
+# TODO Textures > DataArrayTexture > flipY skip
+# TODO Textures > DataArrayTexture > unpackAlignment skip
+Textures > DataArrayTexture > isDataArrayTexture pass
+Textures > DataTexture > Extending pass
+Textures > DataTexture > Instancing pass
+# TODO Textures > DataTexture > image skip
+# TODO Textures > DataTexture > generateMipmaps skip
+# TODO Textures > DataTexture > flipY skip
+# TODO Textures > DataTexture > unpackAlignment skip
+Textures > DataTexture > isDataTexture pass
+Textures > DepthTexture > Extending pass
+Textures > DepthTexture > Instancing pass
+# TODO Textures > DepthTexture > image skip
+# TODO Textures > DepthTexture > magFilter skip
+# TODO Textures > DepthTexture > minFilter skip
+# TODO Textures > DepthTexture > flipY skip
+# TODO Textures > DepthTexture > generateMipmaps skip
+Textures > DepthTexture > isDepthTexture pass
+Textures > FramebufferTexture > Extending pass
+Textures > FramebufferTexture > Instancing pass
+# TODO Textures > FramebufferTexture > format skip
+# TODO Textures > FramebufferTexture > magFilter skip
+# TODO Textures > FramebufferTexture > minFilter skip
+# TODO Textures > FramebufferTexture > generateMipmaps skip
+# TODO Textures > FramebufferTexture > needsUpdate skip
+Textures > FramebufferTexture > isFramebufferTexture pass
+Textures > Source > Instancing pass
+# TODO Textures > Source > data skip
+# TODO Textures > Source > needsUpdate skip
+# TODO Textures > Source > uuid skip
+# TODO Textures > Source > version skip
+Textures > Source > isSource pass
+# TODO Textures > Source > toJSON skip
+Textures > Texture > Extending pass
+Textures > Texture > Instancing pass
+# TODO Textures > Texture > image skip
+# TODO Textures > Texture > id skip
+# TODO Textures > Texture > uuid skip
+# TODO Textures > Texture > name skip
+# TODO Textures > Texture > source skip
+# TODO Textures > Texture > mipmaps skip
+# TODO Textures > Texture > mapping skip
+# TODO Textures > Texture > wrapS skip
+# TODO Textures > Texture > wrapT skip
+# TODO Textures > Texture > magFilter skip
+# TODO Textures > Texture > minFilter skip
+# TODO Textures > Texture > anisotropy skip
+# TODO Textures > Texture > format skip
+# TODO Textures > Texture > internalFormat skip
+# TODO Textures > Texture > type skip
+# TODO Textures > Texture > offset skip
+# TODO Textures > Texture > repeat skip
+# TODO Textures > Texture > center skip
+# TODO Textures > Texture > rotation skip
+# TODO Textures > Texture > matrixAutoUpdate skip
+# TODO Textures > Texture > matrix skip
+# TODO Textures > Texture > generateMipmaps skip
+# TODO Textures > Texture > premultiplyAlpha skip
+# TODO Textures > Texture > flipY skip
+# TODO Textures > Texture > unpackAlignment skip
+# TODO Textures > Texture > colorSpace skip
+# TODO Textures > Texture > userData skip
+# TODO Textures > Texture > version skip
+# TODO Textures > Texture > onUpdate skip
+# TODO Textures > Texture > needsPMREMUpdate skip
+Textures > Texture > isTexture pass
+# TODO Textures > Texture > updateMatrix skip
+# TODO Textures > Texture > clone skip
+# TODO Textures > Texture > copy skip
+# TODO Textures > Texture > toJSON skip
+Textures > Texture > dispose pass
+# TODO Textures > Texture > transformUv skip
+Textures > VideoTexture > Extending pass
+Textures > VideoTexture > Instancing pass
+# TODO Textures > VideoTexture > minFilter skip
+# TODO Textures > VideoTexture > magFilter skip
+# TODO Textures > VideoTexture > generateMipmaps skip
+Textures > VideoTexture > isVideoTexture pass
+# TODO Textures > VideoTexture > clone skip
+# TODO Textures > VideoTexture > update skip
+build success
+release failed

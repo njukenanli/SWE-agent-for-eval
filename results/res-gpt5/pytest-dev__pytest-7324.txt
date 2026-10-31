@@ -1,0 +1,204 @@
+pre
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: attrs>=17.4.0 in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (25.4.0)
+Requirement already satisfied: iniconfig in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (2.3.0)
+Requirement already satisfied: more-itertools>=4.0.0 in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (10.8.0)
+Requirement already satisfied: packaging in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (26.0)
+Requirement already satisfied: pluggy<1.0,>=0.12 in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (0.13.1)
+Requirement already satisfied: py>=1.5.0 in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (1.11.0)
+Requirement already satisfied: argcomplete in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (3.6.3)
+Requirement already satisfied: hypothesis>=3.56 in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (6.151.2)
+Requirement already satisfied: mock in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (5.2.0)
+Requirement already satisfied: nose in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (1.3.7)
+Requirement already satisfied: requests in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (2.32.5)
+Requirement already satisfied: xmlschema in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893) (4.3.1)
+Requirement already satisfied: sortedcontainers<3.0.0,>=2.1.0 in ./.venv/lib/python3.12/site-packages (from hypothesis>=3.56->pytest==5.4.1.dev457+g19ad58893) (2.4.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests->pytest==5.4.1.dev457+g19ad58893) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.12/site-packages (from requests->pytest==5.4.1.dev457+g19ad58893) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.12/site-packages (from requests->pytest==5.4.1.dev457+g19ad58893) (2.6.3)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.12/site-packages (from requests->pytest==5.4.1.dev457+g19ad58893) (2026.1.4)
+Requirement already satisfied: elementpath<6.0.0,>=5.1.0 in ./.venv/lib/python3.12/site-packages (from xmlschema->pytest==5.4.1.dev457+g19ad58893) (5.1.1)
+Checking if build backend supports build_editable: started
+Checking if build backend supports build_editable: finished with status 'done'
+Building wheels for collected packages: pytest
+  Building editable for pytest (pyproject.toml): started
+  Building editable for pytest (pyproject.toml): finished with status 'done'
+  Created wheel for pytest: filename=pytest-5.4.1.dev457+g19ad58893-0.editable-py3-none-any.whl size=5147 sha256=d3df0d887f140c2e38fdfe3c994ef65deaabab9ac512037415cc8597f1ab09d2
+  Stored in directory: /tmp/pip-ephem-wheel-cache-y259mto7/wheels/5d/7e/d4/0611b5e1f6b19283dfc03cca62ebc6a41021c5c464d28aab8f
+Successfully built pytest
+Installing collected packages: pytest
+  Attempting uninstall: pytest
+    Found existing installation: pytest 5.4.1.dev457+g19ad58893
+    Uninstalling pytest-5.4.1.dev457+g19ad58893:
+      Successfully uninstalled pytest-5.4.1.dev457+g19ad58893
+Successfully installed pytest-5.4.1.dev457+g19ad58893
+Traceback (most recent call last):
+  File "/testbed/.venv/bin/pytest", line 8, in <module>
+    sys.exit(console_main())
+             ^^^^^^^^^^^^^^
+  File "/testbed/src/_pytest/config/__init__.py", line 153, in console_main
+    code = main()
+           ^^^^^^
+  File "/testbed/src/_pytest/config/__init__.py", line 111, in main
+    config = _prepareconfig(args, plugins)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/src/_pytest/config/__init__.py", line 281, in _prepareconfig
+    return pluginmanager.hook.pytest_cmdline_parse(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/manager.py", line 84, in <lambda>
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+                                                         ^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/callers.py", line 203, in _multicall
+    gen.send(outcome)
+  File "/testbed/src/_pytest/helpconfig.py", line 99, in pytest_cmdline_parse
+    config = outcome.get_result()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/callers.py", line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/src/_pytest/config/__init__.py", line 875, in pytest_cmdline_parse
+    self.parse(args)
+  File "/testbed/src/_pytest/config/__init__.py", line 1100, in parse
+    self._preparse(args, addopts=addopts)
+  File "/testbed/src/_pytest/config/__init__.py", line 1033, in _preparse
+    self.pluginmanager.load_setuptools_entrypoints("pytest11")
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/manager.py", line 299, in load_setuptools_entrypoints
+    plugin = ep.load()
+             ^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 205, in load
+    module = import_module(match.group('module'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "/testbed/src/_pytest/assertion/rewrite.py", line 159, in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/src/_pytest/assertion/rewrite.py", line 358, in _rewrite_test
+    co = compile(tree, fn_, "exec", dont_inherit=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: required field "lineno" missing from alias
+awk: line 11: syntax error at or near ,
+post
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: attrs>=17.4.0 in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (25.4.0)
+Requirement already satisfied: iniconfig in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (2.3.0)
+Requirement already satisfied: more-itertools>=4.0.0 in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (10.8.0)
+Requirement already satisfied: packaging in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (26.0)
+Requirement already satisfied: pluggy<1.0,>=0.12 in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (0.13.1)
+Requirement already satisfied: py>=1.5.0 in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (1.11.0)
+Requirement already satisfied: argcomplete in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (3.6.3)
+Requirement already satisfied: hypothesis>=3.56 in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (6.151.2)
+Requirement already satisfied: mock in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (5.2.0)
+Requirement already satisfied: nose in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (1.3.7)
+Requirement already satisfied: requests in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (2.32.5)
+Requirement already satisfied: xmlschema in ./.venv/lib/python3.12/site-packages (from pytest==5.4.1.dev457+g19ad58893.d20260126) (4.3.1)
+Requirement already satisfied: sortedcontainers<3.0.0,>=2.1.0 in ./.venv/lib/python3.12/site-packages (from hypothesis>=3.56->pytest==5.4.1.dev457+g19ad58893.d20260126) (2.4.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.12/site-packages (from requests->pytest==5.4.1.dev457+g19ad58893.d20260126) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.12/site-packages (from requests->pytest==5.4.1.dev457+g19ad58893.d20260126) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.12/site-packages (from requests->pytest==5.4.1.dev457+g19ad58893.d20260126) (2.6.3)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.12/site-packages (from requests->pytest==5.4.1.dev457+g19ad58893.d20260126) (2026.1.4)
+Requirement already satisfied: elementpath<6.0.0,>=5.1.0 in ./.venv/lib/python3.12/site-packages (from xmlschema->pytest==5.4.1.dev457+g19ad58893.d20260126) (5.1.1)
+Checking if build backend supports build_editable: started
+Checking if build backend supports build_editable: finished with status 'done'
+Building wheels for collected packages: pytest
+  Building editable for pytest (pyproject.toml): started
+  Building editable for pytest (pyproject.toml): finished with status 'done'
+  Created wheel for pytest: filename=pytest-5.4.1.dev457+g19ad58893.d20260126-0.editable-py3-none-any.whl size=5302 sha256=927c46cc0820edb6a2c60f5493bd4da2dacd1284756978de3b63f56565974b6a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-dk3iyzr4/wheels/5d/7e/d4/0611b5e1f6b19283dfc03cca62ebc6a41021c5c464d28aab8f
+Successfully built pytest
+Installing collected packages: pytest
+  Attempting uninstall: pytest
+    Found existing installation: pytest 5.4.1.dev457+g19ad58893
+    Uninstalling pytest-5.4.1.dev457+g19ad58893:
+      Successfully uninstalled pytest-5.4.1.dev457+g19ad58893
+Successfully installed pytest-5.4.1.dev457+g19ad58893.d20260126
+Traceback (most recent call last):
+  File "/testbed/.venv/bin/pytest", line 8, in <module>
+    sys.exit(console_main())
+             ^^^^^^^^^^^^^^
+  File "/testbed/src/_pytest/config/__init__.py", line 153, in console_main
+    code = main()
+           ^^^^^^
+  File "/testbed/src/_pytest/config/__init__.py", line 111, in main
+    config = _prepareconfig(args, plugins)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/src/_pytest/config/__init__.py", line 281, in _prepareconfig
+    return pluginmanager.hook.pytest_cmdline_parse(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/manager.py", line 84, in <lambda>
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+                                                         ^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/callers.py", line 203, in _multicall
+    gen.send(outcome)
+  File "/testbed/src/_pytest/helpconfig.py", line 99, in pytest_cmdline_parse
+    config = outcome.get_result()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/callers.py", line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/src/_pytest/config/__init__.py", line 875, in pytest_cmdline_parse
+    self.parse(args)
+  File "/testbed/src/_pytest/config/__init__.py", line 1100, in parse
+    self._preparse(args, addopts=addopts)
+  File "/testbed/src/_pytest/config/__init__.py", line 1033, in _preparse
+    self.pluginmanager.load_setuptools_entrypoints("pytest11")
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/manager.py", line 299, in load_setuptools_entrypoints
+    plugin = ep.load()
+             ^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 205, in load
+    module = import_module(match.group('module'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "/testbed/src/_pytest/assertion/rewrite.py", line 159, in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/src/_pytest/assertion/rewrite.py", line 358, in _rewrite_test
+    co = compile(tree, fn_, "exec", dont_inherit=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: required field "lineno" missing from alias
+awk: line 11: syntax error at or near ,
+(.venv) (.venv) build failed
+(.venv) (.venv) 

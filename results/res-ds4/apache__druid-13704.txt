@@ -1,0 +1,7 @@
+pre
+Building repository...
+Build failed, check /tmp/test_output.txt for details.
+post
+Building repository...
+Build failed, check /tmp/test_output.txt for details.
+build failed

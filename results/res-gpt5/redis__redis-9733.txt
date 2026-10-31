@@ -1,0 +1,184 @@
+pre
+make: Entering directory '/testbed/src'
+/bin/sh: 1: pkg-config: not found
+
+Hint: It's a good idea to run 'make test' ;)
+
+make: Leaving directory '/testbed/src'
+unit/printver pass
+unit/type/incr pass
+unit/info pass
+unit/protocol pass
+unit/keyspace pass
+unit/auth pass
+unit/quit pass
+unit/type/stream-cgroups pass
+unit/type/hash pass
+unit/acl pass
+unit/type/set pass
+unit/scan pass
+unit/sort pass
+unit/type/string pass
+unit/other pass
+unit/type/list pass
+unit/expire pass
+unit/latency-monitor pass
+unit/type/list-2 pass
+integration/replication-2 pass
+integration/replication-buffer pass
+integration/convert-zipmap-hash-on-load pass
+integration/convert-ziplist-hash-on-load pass
+integration/convert-ziplist-zset-on-load pass
+integration/rdb pass
+integration/logging pass
+unit/multi pass
+unit/type/zset pass
+unit/dump pass
+integration/aof pass
+unit/type/stream pass
+integration/corrupt-dump pass
+integration/failover pass
+integration/redis-benchmark pass
+unit/pubsub pass
+unit/slowlog pass
+integration/psync2-master-restart pass
+integration/block-repl pass
+integration/redis-cli pass
+unit/introspection pass
+unit/limits pass
+integration/dismiss-mem pass
+unit/scripting pass
+unit/bitfield fail
+unit/introspection-2 pass
+integration/corrupt-dump-fuzzer pass
+unit/bitops pass
+integration/psync2-pingoff pass
+unit/pause pass
+unit/lazyfree pass
+integration/replication-4 pass
+unit/tls pass
+unit/memefficiency pass
+unit/tracking pass
+unit/oom-score-adj pass
+unit/shutdown pass
+unit/wait pass
+unit/querybuf pass
+integration/replication-3 pass
+unit/networking pass
+integration/psync2-reg pass
+unit/cluster pass
+unit/pendingquerybuf pass
+unit/client-eviction pass
+unit/obuf-limits pass
+integration/psync2 pass
+unit/geo pass
+unit/maxmemory pass
+unit/aofrw pass
+unit/hyperloglog pass
+unit/type/list-3 pass
+integration/replication-psync pass
+integration/replication pass
+defrag pass
+post
+    CC module.o
+    CC evict.o
+    CC expire.o
+    CC childinfo.o
+    CC defrag.o
+    CC t_stream.o
+    CC lolwut.o
+    CC lolwut5.o
+    CC lolwut6.o
+    CC acl.o
+    CC tracking.o
+    CC connection.o
+    CC tls.o
+    CC timeout.o
+    CC resp_parser.o
+    CC call_reply.o
+    LINK redis-cli
+    LINK redis-benchmark
+    LINK redis-server
+    INSTALL redis-sentinel
+    INSTALL redis-check-rdb
+    INSTALL redis-check-aof
+
+Hint: It's a good idea to run 'make test' ;)
+
+make: Leaving directory '/testbed/src'
+unit/printver pass
+unit/type/incr pass
+unit/info pass
+unit/protocol pass
+unit/keyspace pass
+unit/auth pass
+unit/quit pass
+unit/type/stream-cgroups pass
+unit/acl pass
+unit/type/hash pass
+unit/type/set pass
+unit/scan pass
+unit/type/string pass
+unit/sort pass
+unit/type/list pass
+unit/other pass
+unit/expire pass
+unit/latency-monitor pass
+unit/type/list-2 pass
+integration/replication-buffer pass
+integration/replication-2 pass
+unit/multi pass
+integration/convert-zipmap-hash-on-load pass
+integration/convert-ziplist-hash-on-load pass
+integration/rdb pass
+integration/convert-ziplist-zset-on-load pass
+integration/logging pass
+integration/aof pass
+unit/dump pass
+unit/type/zset pass
+integration/failover pass
+integration/corrupt-dump pass
+integration/block-repl pass
+unit/type/stream pass
+integration/redis-benchmark pass
+unit/pubsub pass
+integration/psync2-master-restart pass
+unit/slowlog pass
+unit/introspection pass
+unit/limits pass
+integration/redis-cli pass
+integration/dismiss-mem pass
+unit/introspection-2 pass
+integration/psync2-pingoff pass
+unit/bitfield fail
+unit/scripting pass
+unit/lazyfree pass
+unit/bitops pass
+unit/pause pass
+integration/corrupt-dump-fuzzer pass
+unit/memefficiency pass
+unit/tls pass
+unit/wait pass
+integration/psync2-reg pass
+integration/replication-4 pass
+unit/querybuf pass
+unit/shutdown pass
+unit/tracking pass
+unit/oom-score-adj pass
+unit/networking pass
+integration/replication-3 pass
+unit/cluster pass
+unit/pendingquerybuf pass
+unit/client-eviction pass
+unit/obuf-limits pass
+integration/psync2 pass
+unit/geo pass
+unit/aofrw pass
+unit/maxmemory pass
+unit/hyperloglog pass
+unit/type/list-3 pass
+integration/replication-psync pass
+integration/replication pass
+defrag pass
+build success
+release failed

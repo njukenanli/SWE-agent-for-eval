@@ -1,0 +1,205 @@
+pre
+supports http with nodejs compression algorithms br decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms br decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms br decompression should not fail with chunked responses (without Content-Length header) pass
+supports http with nodejs compression algorithms br decompression should support decompression pass
+supports http with nodejs compression algorithms compress decompression should not fail if response content-length header is missing (compress) pass
+supports http with nodejs compression algorithms compress decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms compress decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms compress decompression should not fail with chunked responses (without Content-Length header) pass
+supports http with nodejs compression algorithms compress decompression should support decompression pass
+supports http with nodejs compression algorithms deflate decompression should not fail if response content-length header is missing (deflate) pass
+supports http with nodejs compression algorithms deflate decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms deflate decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms deflate decompression should not fail with chunked responses (without Content-Length header) pass
+supports http with nodejs compression algorithms deflate decompression should support decompression pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail if response content-length header is missing (deflate) pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with chunked responses (without Content-Length header) pass
+supports http with nodejs compression algorithms deflate-raw decompression should support decompression pass
+supports http with nodejs compression algorithms gzip decompression should not fail if response content-length header is missing (gzip) pass
+supports http with nodejs compression algorithms gzip decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms gzip decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms gzip decompression should not fail with chunked responses (without Content-Length header) pass
+supports http with nodejs compression algorithms gzip decompression should support decompression pass
+supports http with nodejs compression should support disabling automatic decompression of response data pass
+supports http with nodejs compression should support gunzip error handling pass
+supports http with nodejs compression should support transparent gunzip pass
+supports http with nodejs different options for direct proxy configuration (without env variables) both hostname and host -> hostname takes precedence pass
+supports http with nodejs different options for direct proxy configuration (without env variables) hostname and no trailing colon in protocol pass
+supports http with nodejs different options for direct proxy configuration (without env variables) hostname and trailing colon in protocol pass
+supports http with nodejs different options for direct proxy configuration (without env variables) only host and https protocol pass
+supports http with nodejs progress download should support download progress capturing pass
+supports http with nodejs progress upload should support upload progress capturing pass
+supports http with nodejs request aborting should be able to abort the response stream pass
+supports http with nodejs should able to cancel multiple requests with CancelToken pass
+supports http with nodejs should allow passing JSON pass
+supports http with nodejs should allow passing JSON with BOM pass
+supports http with nodejs should allow the Content-Length header to be overridden pass
+supports http with nodejs should allow the User-Agent header to be overridden pass
+supports http with nodejs should combine baseURL and url pass
+supports http with nodejs should display error while parsing params pass
+supports http with nodejs should not pass through disabled proxy pass
+supports http with nodejs should not redirect pass
+supports http with nodejs should not use proxy for domains in no_proxy pass
+supports http with nodejs should omit a user-agent if one is explicitly disclaimed pass
+supports http with nodejs should parse the timeout property pass
+supports http with nodejs should preserve the HTTP verb on redirect pass
+supports http with nodejs should properly handle synchronous errors inside the adapter pass
+supports http with nodejs should properly support default max body length (follow-redirects as well) pass
+supports http with nodejs should provides a default User-Agent header pass
+supports http with nodejs should re-evaluate proxy on redirect when proxy set via env var pass
+supports http with nodejs should redirect pass
+supports http with nodejs should respect formSerializer config pass
+supports http with nodejs should respect the timeout property pass
+supports http with nodejs should respect the timeoutErrorMessage property pass
+supports http with nodejs should return malformed URL pass
+supports http with nodejs should return unsupported protocol pass
+supports http with nodejs should supply a user-agent if one is not specified pass
+supports http with nodejs should support HTTP protocol pass
+supports http with nodejs should support HTTP proxies pass
+supports http with nodejs should support HTTP proxy auth pass
+supports http with nodejs should support HTTPS protocol pass
+supports http with nodejs should support HTTPS proxies pass
+supports http with nodejs should support HTTPS proxy set via env var pass
+supports http with nodejs should support UTF8 pass
+supports http with nodejs should support basic auth pass
+supports http with nodejs should support basic auth with a header pass
+supports http with nodejs should support beforeRedirect pass
+supports http with nodejs should support beforeRedirect and proxy with redirect pass
+supports http with nodejs should support buffers pass
+supports http with nodejs should support cancel pass
+supports http with nodejs should support function as paramsSerializer value pass
+supports http with nodejs should support max body length pass
+supports http with nodejs should support max content length pass
+supports http with nodejs should support max content length for redirected pass
+supports http with nodejs should support max redirects pass
+supports http with nodejs should support proxy auth from env pass
+supports http with nodejs should support proxy auth with header pass
+supports http with nodejs should support proxy set via env var pass
+supports http with nodejs should support sockets pass
+supports http with nodejs should throw an error if http server that aborts a chunked request pass
+supports http with nodejs should throw an error if the timeout property is not parsable as a number pass
+supports http with nodejs should use proxy for domains not in no_proxy pass
+supports http with nodejs should wrap HTTP errors and keep stack pass
+supports http with nodejs should wrap interceptor errors and keep stack pass
+supports http with nodejs streams should destroy the response stream with an error on request stream destroying pass
+supports http with nodejs streams should pass errors for a failed stream pass
+supports http with nodejs streams should support streams pass
+transformResponse 200 request ignores XML pass
+transformResponse 200 request parses json pass
+transformResponse 204 request does not parse the empty string pass
+transformResponse 204 request does not parse undefined pass
+utils should validate Buffer pass
+utils should validate Stream pass
+utils toJSON should convert to a plain object without circular references pass
+utils toJSON should use objects with defined toJSON method without rebuilding pass
+utils utils::isFormData should detect custom FormData instances by toStringTag signature and append method presence pass
+utils utils::isFormData should detect the FormData instance provided by the `form-data` package pass
+utils utils::isFormData should not call toString method on built-in objects instances pass
+utils utils::isFormData should not call toString method on built-in objects instances, even if append method exists pass
+post
+supports http with nodejs compression algorithms br decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms br decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms br decompression should not fail with chunked responses (without Content-Length header) pass
+supports http with nodejs compression algorithms br decompression should support decompression pass
+supports http with nodejs compression algorithms compress decompression should not fail if response content-length header is missing (compress) pass
+supports http with nodejs compression algorithms compress decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms compress decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms compress decompression should not fail with chunked responses (without Content-Length header) pass
+supports http with nodejs compression algorithms compress decompression should support decompression pass
+supports http with nodejs compression algorithms deflate decompression should not fail if response content-length header is missing (deflate) pass
+supports http with nodejs compression algorithms deflate decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms deflate decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms deflate decompression should not fail with chunked responses (without Content-Length header) pass
+supports http with nodejs compression algorithms deflate decompression should support decompression pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail if response content-length header is missing (deflate) pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms deflate-raw decompression should not fail with chunked responses (without Content-Length header) pass
+supports http with nodejs compression algorithms deflate-raw decompression should support decompression pass
+supports http with nodejs compression algorithms gzip decompression should not fail if response content-length header is missing (gzip) pass
+supports http with nodejs compression algorithms gzip decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms gzip decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+supports http with nodejs compression algorithms gzip decompression should not fail with chunked responses (without Content-Length header) pass
+supports http with nodejs compression algorithms gzip decompression should support decompression pass
+supports http with nodejs compression should support disabling automatic decompression of response data pass
+supports http with nodejs compression should support gunzip error handling pass
+supports http with nodejs compression should support transparent gunzip pass
+supports http with nodejs different options for direct proxy configuration (without env variables) both hostname and host -> hostname takes precedence pass
+supports http with nodejs different options for direct proxy configuration (without env variables) hostname and no trailing colon in protocol pass
+supports http with nodejs different options for direct proxy configuration (without env variables) hostname and trailing colon in protocol pass
+supports http with nodejs different options for direct proxy configuration (without env variables) only host and https protocol pass
+supports http with nodejs progress download should support download progress capturing pass
+supports http with nodejs progress upload should support upload progress capturing pass
+supports http with nodejs request aborting should be able to abort the response stream pass
+supports http with nodejs should able to cancel multiple requests with CancelToken pass
+supports http with nodejs should allow passing JSON pass
+supports http with nodejs should allow passing JSON with BOM pass
+supports http with nodejs should allow the Content-Length header to be overridden pass
+supports http with nodejs should allow the User-Agent header to be overridden pass
+supports http with nodejs should combine baseURL and url pass
+supports http with nodejs should display error while parsing params pass
+supports http with nodejs should not pass through disabled proxy pass
+supports http with nodejs should not redirect pass
+supports http with nodejs should not use proxy for domains in no_proxy pass
+supports http with nodejs should omit a user-agent if one is explicitly disclaimed pass
+supports http with nodejs should parse the timeout property pass
+supports http with nodejs should preserve the HTTP verb on redirect pass
+supports http with nodejs should properly handle synchronous errors inside the adapter pass
+supports http with nodejs should properly support default max body length (follow-redirects as well) pass
+supports http with nodejs should provides a default User-Agent header pass
+supports http with nodejs should re-evaluate proxy on redirect when proxy set via env var pass
+supports http with nodejs should redirect pass
+supports http with nodejs should respect formSerializer config pass
+supports http with nodejs should respect the timeout property pass
+supports http with nodejs should respect the timeoutErrorMessage property pass
+supports http with nodejs should return malformed URL pass
+supports http with nodejs should return unsupported protocol pass
+supports http with nodejs should supply a user-agent if one is not specified pass
+supports http with nodejs should support HTTP protocol pass
+supports http with nodejs should support HTTP proxies pass
+supports http with nodejs should support HTTP proxy auth pass
+supports http with nodejs should support HTTPS protocol pass
+supports http with nodejs should support HTTPS proxies pass
+supports http with nodejs should support HTTPS proxy set via env var pass
+supports http with nodejs should support UTF8 pass
+supports http with nodejs should support basic auth pass
+supports http with nodejs should support basic auth with a header pass
+supports http with nodejs should support beforeRedirect pass
+supports http with nodejs should support beforeRedirect and proxy with redirect pass
+supports http with nodejs should support buffers pass
+supports http with nodejs should support cancel pass
+supports http with nodejs should support function as paramsSerializer value pass
+supports http with nodejs should support max body length pass
+supports http with nodejs should support max content length pass
+supports http with nodejs should support max content length for redirected pass
+supports http with nodejs should support max redirects pass
+supports http with nodejs should support proxy auth from env pass
+supports http with nodejs should support proxy auth with header pass
+supports http with nodejs should support proxy set via env var pass
+supports http with nodejs should support sockets pass
+supports http with nodejs should throw an error if http server that aborts a chunked request pass
+supports http with nodejs should throw an error if the timeout property is not parsable as a number pass
+supports http with nodejs should use proxy for domains not in no_proxy pass
+supports http with nodejs should wrap HTTP errors and keep stack pass
+supports http with nodejs should wrap interceptor errors and keep stack pass
+supports http with nodejs streams should destroy the response stream with an error on request stream destroying pass
+supports http with nodejs streams should pass errors for a failed stream pass
+supports http with nodejs streams should support streams pass
+transformResponse 200 request ignores XML pass
+transformResponse 200 request parses json pass
+transformResponse 204 request does not parse the empty string pass
+transformResponse 204 request does not parse undefined pass
+utils should validate Buffer pass
+utils should validate Stream pass
+utils toJSON should convert to a plain object without circular references pass
+utils toJSON should use objects with defined toJSON method without rebuilding pass
+utils utils::isFormData should detect custom FormData instances by toStringTag signature and append method presence pass
+utils utils::isFormData should detect the FormData instance provided by the `form-data` package pass
+utils utils::isFormData should not call toString method on built-in objects instances pass
+utils utils::isFormData should not call toString method on built-in objects instances, even if append method exists pass
+build success
+release success
+{'Server-Side Request Forgery (SSRF) should not fetch bad server'}

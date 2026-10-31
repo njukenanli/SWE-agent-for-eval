@@ -1,0 +1,205 @@
+pre
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel without parent listener (local mutation) pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel kebab-case v-model (should not be local) pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel kebab-case update listener (should not be local) pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel default value pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel parent limiting child value pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel has parent value -> no parent value pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel pass modelValue to slot (optimized mode) pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel with modifiers & transformers pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel force local update when setter formats value to the same value pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel set no change value pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel custom getter pass
+packages/runtime-core/__tests__/helpers/useModel.spec.ts :: useModel custom setter pass
+packages/runtime-core/__tests__/helpers/useTemplateRef.spec.ts :: useTemplateRef should work pass
+packages/runtime-core/__tests__/helpers/useTemplateRef.spec.ts :: useTemplateRef should be readonly pass
+packages/runtime-core/__tests__/helpers/useTemplateRef.spec.ts :: useTemplateRef should be updated for ref of dynamic strings pass
+packages/runtime-core/__tests__/helpers/useTemplateRef.spec.ts :: useTemplateRef should warn on duplicate useTemplateRef pass
+packages/runtime-core/__tests__/helpers/withMemo.spec.ts :: v-memo on with external array pass
+packages/runtime-core/__tests__/helpers/withMemo.spec.ts :: v-memo on normal element pass
+packages/runtime-core/__tests__/helpers/withMemo.spec.ts :: v-memo on component pass
+packages/runtime-core/__tests__/helpers/withMemo.spec.ts :: v-memo on v-if pass
+packages/runtime-core/__tests__/helpers/withMemo.spec.ts :: v-memo on v-for pass
+packages/runtime-core/__tests__/helpers/withMemo.spec.ts :: v-memo on v-for /w constant expression pass
+packages/runtime-core/__tests__/helpers/withMemo.spec.ts :: v-memo v-memo dependency is NaN should be equal pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if basic transition fail
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if named transition fail
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if custom transition classes fail
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition with dynamic name pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition events without appear pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if events with arguments pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if onEnterCancelled pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition on appear pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition events with appear pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if css: false pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if no transition detected pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if animations pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if explicit transition type pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition on SVG elements pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if custom transition higher-order component pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition on child components with empty root node pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition with v-if at component root-level pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if wrapping transition + fallthrough attrs pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition + fallthrough attrs (in-out mode) pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if w/ KeepAlive + unmount innerChild pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense async component transition inside Suspense pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense static node transition inside Suspense pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense out-in mode with Suspense pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense Suspense fallback should work with transition pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense children mount should be called after html changes pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense trigger again when transition is not finished pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense trigger again when transition is not finished & correctly anchor pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Teleport apply transition to teleport child pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-show named transition with v-show pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-show transition events with v-show pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-show onLeaveCancelled (v-show only) pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-show transition on appear with v-show pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-show transition events should not call onEnter with v-show false pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition explicit durations single value pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition explicit durations enter with explicit durations pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition explicit durations leave with explicit durations pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition explicit durations separate enter and leave pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition explicit durations warn invalid durations pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition warn when used on multiple elements pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition warn when invalid transition mode pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition HOC w/ merged hooks pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition should work with dev root fragment pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup enter fail
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup leave fail
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup enter + leave fail
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup appear pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup move pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup dynamic name pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup events pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup warn unkeyed children pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup avoid set transition hooks for comment node pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup avoid set transition hooks for text node pass
+packages/vue/__tests__/e2e/commits.spec.ts :: e2e: commits classic pass
+packages/vue/__tests__/e2e/commits.spec.ts :: e2e: commits composition pass
+packages/vue/__tests__/e2e/grid.spec.ts :: e2e: grid classic pass
+packages/vue/__tests__/e2e/grid.spec.ts :: e2e: grid composition pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies idle pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies visible pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies visible (with rootMargin) pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies visible (fragment) pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies media query pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies interaction pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies interaction (fragment) pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies custom pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies custom teardown pass
+packages/vue/__tests__/e2e/markdown.spec.ts :: e2e: markdown classic pass
+packages/vue/__tests__/e2e/markdown.spec.ts :: e2e: markdown composition pass
+packages/vue/__tests__/e2e/ssr-custom-element.spec.ts :: ssr custom element hydration pass
+packages/vue/__tests__/e2e/svg.spec.ts :: e2e: svg classic pass
+packages/vue/__tests__/e2e/svg.spec.ts :: e2e: svg composition pass
+packages/vue/__tests__/e2e/todomvc.spec.ts :: e2e: todomvc classic pass
+packages/vue/__tests__/e2e/todomvc.spec.ts :: e2e: todomvc composition pass
+packages/vue/__tests__/e2e/tree.spec.ts :: e2e: tree classic pass
+packages/vue/__tests__/e2e/tree.spec.ts :: e2e: tree composition pass
+packages/vue/__tests__/e2e/trusted-types.spec.ts :: e2e: trusted types should render the hello world app pass
+packages/vue/__tests__/e2e/trusted-types.spec.ts :: e2e: trusted types should render static vnode without error pass
+packages/vue/__tests__/e2e/trusted-types.spec.ts :: e2e: trusted types should accept v-html with custom policy pass
+post
+packages/runtime-dom/__tests__/directives/vShow.spec.ts :: runtime-dom: v-show directive the value of `display` set by v-show should not be overwritten by the style attribute when updated (object value) pass
+packages/runtime-dom/__tests__/directives/vShow.spec.ts :: runtime-dom: v-show directive the value of `display` set by v-show should not be overwritten by the style attribute when updated (with Transition) pass
+packages/runtime-dom/__tests__/directives/vShow.spec.ts :: runtime-dom: v-show directive should respect the display value when v-show value is true pass
+packages/runtime-dom/__tests__/directives/vShow.spec.ts :: runtime-dom: v-show directive should record display by vShowOldKey only when display exists in style pass
+packages/runtime-dom/__tests__/helpers/useCssModule.spec.ts :: useCssModule basic usage pass
+packages/runtime-dom/__tests__/helpers/useCssModule.spec.ts :: useCssModule basic usage pass
+packages/runtime-dom/__tests__/helpers/useCssModule.spec.ts :: useCssModule warn out of setup usage pass
+packages/runtime-dom/__tests__/helpers/useCssModule.spec.ts :: useCssModule warn missing injection pass
+packages/runtime-dom/__tests__/helpers/useCssModule.spec.ts :: useCssModule warn missing injection pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars basic pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars on fragment root pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars on HOCs pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars on suspense root pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars with v-if & async component & suspense pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars with subTree changed pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars with subTree change inside HOC pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars with createStaticVNode pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars with teleport pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars with teleport in child slot pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars with teleport(change subTree) pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars with teleport(disabled) pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars with string style pass
+packages/runtime-dom/__tests__/helpers/useCssVars.spec.ts :: useCssVars with custom element pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if basic transition pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if named transition pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if custom transition classes pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition with dynamic name pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition events without appear pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if events with arguments pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if onEnterCancelled pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition on appear pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition events with appear pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if css: false pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if no transition detected pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if animations pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if explicit transition type pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition on SVG elements pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if custom transition higher-order component pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition on child components with empty root node pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition with v-if at component root-level pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if wrapping transition + fallthrough attrs pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if transition + fallthrough attrs (in-out mode) pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if w/ KeepAlive + unmount innerChild pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense async component transition inside Suspense pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense static node transition inside Suspense pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense out-in mode with Suspense pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense Suspense fallback should work with transition pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense children mount should be called after html changes pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense trigger again when transition is not finished pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Suspense trigger again when transition is not finished & correctly anchor pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with Teleport apply transition to teleport child pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-show named transition with v-show pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-show transition events with v-show pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-show onLeaveCancelled (v-show only) pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-show transition on appear with v-show pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-show transition events should not call onEnter with v-show false pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition explicit durations single value pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition explicit durations enter with explicit durations pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition explicit durations leave with explicit durations pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition explicit durations separate enter and leave pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition explicit durations warn invalid durations pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition warn when used on multiple elements pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition warn when invalid transition mode pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition HOC w/ merged hooks pass
+packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition should work with dev root fragment pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup enter fail
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup leave pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup enter + leave pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup appear pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup move pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup dynamic name pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup events pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup warn unkeyed children pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup avoid set transition hooks for comment node pass
+packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup avoid set transition hooks for text node pass
+packages/vue/__tests__/e2e/commits.spec.ts :: e2e: commits classic pass
+packages/vue/__tests__/e2e/commits.spec.ts :: e2e: commits composition pass
+packages/vue/__tests__/e2e/grid.spec.ts :: e2e: grid classic pass
+packages/vue/__tests__/e2e/grid.spec.ts :: e2e: grid composition pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies idle fail
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies visible pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies visible (with rootMargin) pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies visible (fragment) pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies media query pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies interaction pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies interaction (fragment) pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies custom pass
+packages/vue/__tests__/e2e/hydrationStrategies.spec.ts :: async component hydration strategies custom teardown pass
+packages/vue/__tests__/e2e/markdown.spec.ts :: e2e: markdown classic pass
+packages/vue/__tests__/e2e/markdown.spec.ts :: e2e: markdown composition pass
+packages/vue/__tests__/e2e/ssr-custom-element.spec.ts :: ssr custom element hydration pass
+packages/vue/__tests__/e2e/svg.spec.ts :: e2e: svg classic pass
+packages/vue/__tests__/e2e/svg.spec.ts :: e2e: svg composition pass
+packages/vue/__tests__/e2e/todomvc.spec.ts :: e2e: todomvc classic pass
+packages/vue/__tests__/e2e/todomvc.spec.ts :: e2e: todomvc composition pass
+packages/vue/__tests__/e2e/tree.spec.ts :: e2e: tree classic pass
+packages/vue/__tests__/e2e/tree.spec.ts :: e2e: tree composition pass
+packages/vue/__tests__/e2e/trusted-types.spec.ts :: e2e: trusted types should render the hello world app pass
+packages/vue/__tests__/e2e/trusted-types.spec.ts :: e2e: trusted types should render static vnode without error pass
+packages/vue/__tests__/e2e/trusted-types.spec.ts :: e2e: trusted types should accept v-html with custom policy pass
+build success
+release success
+{'packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if named transition', 'packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if custom transition classes', 'packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup enter + leave', 'packages/vue/__tests__/e2e/TransitionGroup.spec.ts :: e2e: TransitionGroup leave', 'packages/vue/__tests__/e2e/Transition.spec.ts :: e2e: Transition transition with v-if basic transition', 'packages/runtime-core/__tests__/apiWatch.spec.ts :: api: watch should be executed correctly'}

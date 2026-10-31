@@ -1,0 +1,205 @@
+pre
+tests.pyreverse.test_pyreverse_functional::test_class_diagrams[pep420] pass
+tests.pyreverse.test_utils::test_get_visibility[names0-special] pass
+tests.pyreverse.test_utils::test_get_visibility[names1-private] pass
+tests.pyreverse.test_utils::test_get_visibility[names2-public] pass
+tests.pyreverse.test_utils::test_get_visibility[names3-protected] pass
+tests.pyreverse.test_utils::test_get_annotation_annassign[a: str = None-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_annassign[a: str = 'mystr'-str] pass
+tests.pyreverse.test_utils::test_get_annotation_annassign[a: Optional[str] = 'str'-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_annassign[a: Optional[str] = None-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: str):                   self.x = x-str] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: str = 'str'):           self.x = x-str] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: str = None):            self.x = x-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: Optional[str]):         self.x = x-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: Optional[str] = None):  self.x = x-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: Optional[str] = 'str'): self.x = x-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_label_of_return_type[def f() -&gt; None: pass-None] pass
+tests.pyreverse.test_utils::test_get_annotation_label_of_return_type[def f() -&gt; int: pass-int] pass
+tests.pyreverse.test_utils::test_get_annotation_label_of_return_type[def f(a) -&gt; Optional[int]: return 1 if a else None-Optional[int]] pass
+tests.pyreverse.test_utils::test_get_annotation_label_of_return_type[def f() -&gt; 'MyType': pass-'MyType'] pass
+tests.pyreverse.test_utils::test_infer_node_1 pass
+tests.pyreverse.test_utils::test_infer_node_2 pass
+tests.pyreverse.test_utils::test_infer_node_3 pass
+tests.pyreverse.test_utils::test_infer_node_4 pass
+tests.pyreverse.test_writer::test_dot_files[packages_No_Name.dot] pass
+tests.pyreverse.test_writer::test_dot_files[classes_No_Name.dot] pass
+tests.pyreverse.test_writer::test_colorized_dot_files[packages_colorized.dot] pass
+tests.pyreverse.test_writer::test_colorized_dot_files[classes_colorized.dot] pass
+tests.pyreverse.test_writer::test_no_standalone_dot_files[classes_no_standalone.dot] pass
+tests.pyreverse.test_writer::test_no_standalone_dot_files[packages_no_standalone.dot] pass
+tests.pyreverse.test_writer::test_type_check_imports_dot_files[packages_type_check_imports.dot] pass
+tests.pyreverse.test_writer::test_type_check_imports_dot_files[classes_type_check_imports.dot] pass
+tests.pyreverse.test_writer::test_puml_files[packages_No_Name.puml] pass
+tests.pyreverse.test_writer::test_puml_files[classes_No_Name.puml] pass
+tests.pyreverse.test_writer::test_mmd_files[packages_No_Name.mmd] pass
+tests.pyreverse.test_writer::test_mmd_files[classes_No_Name.mmd] pass
+tests.pyreverse.test_writer::test_html_files[packages_No_Name.html] pass
+tests.pyreverse.test_writer::test_html_files[classes_No_Name.html] pass
+tests.pyreverse.test_writer::test_colorized_puml_files[packages_colorized.puml] pass
+tests.pyreverse.test_writer::test_colorized_puml_files[classes_colorized.puml] pass
+tests.pyreverse.test_writer::test_color_for_stdlib_module pass
+tests.pyreverse.test_writer::test_package_name_with_slash pass
+tests.reporters.unittest_json_reporter::test_simple_json_output_no_score pass
+tests.reporters.unittest_json_reporter::test_simple_json_output_no_score_with_end_line pass
+tests.reporters.unittest_json_reporter::test_serialize_deserialize[everything-defined] pass
+tests.reporters.unittest_reporting::test_template_option pass
+tests.reporters.unittest_reporting::test_template_option_default pass
+tests.reporters.unittest_reporting::test_template_option_end_line pass
+tests.reporters.unittest_reporting::test_template_option_non_existing pass
+tests.reporters.unittest_reporting::test_template_option_with_header pass
+tests.reporters.unittest_reporting::test_parseable_output_deprecated pass
+tests.reporters.unittest_reporting::test_parseable_output_regression pass
+tests.reporters.unittest_reporting::test_multi_format_output pass
+tests.reporters.unittest_reporting::test_multi_reporter_independant_messages pass
+tests.reporters.unittest_reporting::test_display_results_is_renamed pass
+tests.testutils.test_configuration_test::test_get_expected_output pass
+tests.testutils.test_functional_testutils::test_parsing_of_pylintrc_init_hook pass
+tests.testutils.test_functional_testutils::test_get_functional_test_files_from_directory pass
+tests.testutils.test_functional_testutils::test_get_functional_test_files_from_crowded_directory pass
+tests.testutils.test_functional_testutils::test_minimal_messages_config_enabled pass
+tests.testutils.test_functional_testutils::test_minimal_messages_config_excluded_file pass
+tests.testutils.test_lint_module_output_update::test_lint_module_output_update_fail_before pass
+tests.testutils.test_lint_module_output_update::test_lint_module_output_update_effective pass
+tests.testutils.test_lint_module_output_update::test_lint_module_output_update_remove_useless_txt pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/wrong_output_ok_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/broken_output_ok_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/wrong_output_wrong_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/no_output_ok_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/no_output_wrong_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/ok_output_wrong_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/broken_output_wrong_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/ok_output_ok_test] pass
+tests.testutils.test_output_line::test_output_line pass
+tests.testutils.test_output_line::test_output_line_from_message pass
+tests.testutils.test_output_line::test_output_line_to_csv[confidence0] pass
+tests.testutils.test_output_line::test_output_line_to_csv[confidence1] pass
+tests.testutils.test_output_line::test_output_line_from_csv pass
+tests.testutils.test_pyreverse_testutils::test_files_with_leading_underscore_are_ignored pass
+tests.testutils.test_pyreverse_testutils::test_file_with_options pass
+tests.testutils.test_pyreverse_testutils::test_file_without_options pass
+tests.testutils.test_testutils_utils::test__test_sys_path_no_arg pass
+tests.testutils.test_testutils_utils::test__test_sys_path pass
+tests.testutils.test_testutils_utils::test__test_cwd_no_arg pass
+tests.testutils.test_testutils_utils::test__test_cwd pass
+tests.testutils.test_testutils_utils::test__test_environ_pythonpath_no_arg[./oldpath/:] pass
+tests.testutils.test_testutils_utils::test__test_environ_pythonpath_no_arg[None] pass
+tests.testutils.test_testutils_utils::test__test_environ_pythonpath[./oldpath/:] pass
+tests.testutils.test_testutils_utils::test__test_environ_pythonpath[None] pass
+tests.testutils._primer.test_package_to_lint::test_package_to_lint pass
+tests.testutils._primer.test_package_to_lint::test_package_to_lint_default_value pass
+tests.testutils._primer.test_primer::test_primer_launch_bad_args[args0] pass
+tests.testutils._primer.test_primer::test_primer_launch_bad_args[args1] pass
+tests.testutils._primer.test_primer.TestPrimer::test_compare[message_changed] skip
+tests.testutils._primer.test_primer.TestPrimer::test_compare[both_empty] skip
+tests.testutils._primer.test_primer.TestPrimer::test_compare[no_change] skip
+tests.testutils._primer.test_primer.TestPrimer::test_compare_batched skip
+tests.testutils._primer.test_primer.TestPrimer::test_truncated_compare skip
+tests.utils.unittest_ast_walker.TestASTWalker::test_only_required_for_messages pass
+tests.utils.unittest_ast_walker.TestASTWalker::test_deprecated_methods pass
+tests.utils.unittest_utils::test_decoding_stream_unknown_encoding pass
+tests.utils.unittest_utils::test_decoding_stream_known_encoding pass
+post
+tests.pyreverse.test_pyreverse_functional::test_class_diagrams[pep420] pass
+tests.pyreverse.test_utils::test_get_visibility[names0-special] pass
+tests.pyreverse.test_utils::test_get_visibility[names1-private] pass
+tests.pyreverse.test_utils::test_get_visibility[names2-public] pass
+tests.pyreverse.test_utils::test_get_visibility[names3-protected] pass
+tests.pyreverse.test_utils::test_get_annotation_annassign[a: str = None-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_annassign[a: str = 'mystr'-str] pass
+tests.pyreverse.test_utils::test_get_annotation_annassign[a: Optional[str] = 'str'-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_annassign[a: Optional[str] = None-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: str):                   self.x = x-str] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: str = 'str'):           self.x = x-str] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: str = None):            self.x = x-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: Optional[str]):         self.x = x-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: Optional[str] = None):  self.x = x-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_assignattr[def __init__(self, x: Optional[str] = 'str'): self.x = x-Optional[str]] pass
+tests.pyreverse.test_utils::test_get_annotation_label_of_return_type[def f() -&gt; None: pass-None] pass
+tests.pyreverse.test_utils::test_get_annotation_label_of_return_type[def f() -&gt; int: pass-int] pass
+tests.pyreverse.test_utils::test_get_annotation_label_of_return_type[def f(a) -&gt; Optional[int]: return 1 if a else None-Optional[int]] pass
+tests.pyreverse.test_utils::test_get_annotation_label_of_return_type[def f() -&gt; 'MyType': pass-'MyType'] pass
+tests.pyreverse.test_utils::test_infer_node_1 pass
+tests.pyreverse.test_utils::test_infer_node_2 pass
+tests.pyreverse.test_utils::test_infer_node_3 pass
+tests.pyreverse.test_utils::test_infer_node_4 pass
+tests.pyreverse.test_writer::test_dot_files[packages_No_Name.dot] pass
+tests.pyreverse.test_writer::test_dot_files[classes_No_Name.dot] pass
+tests.pyreverse.test_writer::test_colorized_dot_files[packages_colorized.dot] pass
+tests.pyreverse.test_writer::test_colorized_dot_files[classes_colorized.dot] pass
+tests.pyreverse.test_writer::test_no_standalone_dot_files[classes_no_standalone.dot] pass
+tests.pyreverse.test_writer::test_no_standalone_dot_files[packages_no_standalone.dot] pass
+tests.pyreverse.test_writer::test_type_check_imports_dot_files[packages_type_check_imports.dot] pass
+tests.pyreverse.test_writer::test_type_check_imports_dot_files[classes_type_check_imports.dot] pass
+tests.pyreverse.test_writer::test_puml_files[packages_No_Name.puml] pass
+tests.pyreverse.test_writer::test_puml_files[classes_No_Name.puml] pass
+tests.pyreverse.test_writer::test_mmd_files[packages_No_Name.mmd] pass
+tests.pyreverse.test_writer::test_mmd_files[classes_No_Name.mmd] pass
+tests.pyreverse.test_writer::test_html_files[packages_No_Name.html] pass
+tests.pyreverse.test_writer::test_html_files[classes_No_Name.html] pass
+tests.pyreverse.test_writer::test_colorized_puml_files[packages_colorized.puml] pass
+tests.pyreverse.test_writer::test_colorized_puml_files[classes_colorized.puml] pass
+tests.pyreverse.test_writer::test_color_for_stdlib_module pass
+tests.pyreverse.test_writer::test_package_name_with_slash pass
+tests.reporters.unittest_json_reporter::test_simple_json_output_no_score pass
+tests.reporters.unittest_json_reporter::test_simple_json_output_no_score_with_end_line pass
+tests.reporters.unittest_json_reporter::test_serialize_deserialize[everything-defined] pass
+tests.reporters.unittest_reporting::test_template_option pass
+tests.reporters.unittest_reporting::test_template_option_default pass
+tests.reporters.unittest_reporting::test_template_option_end_line pass
+tests.reporters.unittest_reporting::test_template_option_non_existing pass
+tests.reporters.unittest_reporting::test_template_option_with_header pass
+tests.reporters.unittest_reporting::test_parseable_output_deprecated pass
+tests.reporters.unittest_reporting::test_parseable_output_regression pass
+tests.reporters.unittest_reporting::test_multi_format_output pass
+tests.reporters.unittest_reporting::test_multi_reporter_independant_messages pass
+tests.reporters.unittest_reporting::test_display_results_is_renamed pass
+tests.testutils.test_configuration_test::test_get_expected_output pass
+tests.testutils.test_functional_testutils::test_parsing_of_pylintrc_init_hook pass
+tests.testutils.test_functional_testutils::test_get_functional_test_files_from_directory pass
+tests.testutils.test_functional_testutils::test_get_functional_test_files_from_crowded_directory pass
+tests.testutils.test_functional_testutils::test_minimal_messages_config_enabled pass
+tests.testutils.test_functional_testutils::test_minimal_messages_config_excluded_file pass
+tests.testutils.test_lint_module_output_update::test_lint_module_output_update_fail_before pass
+tests.testutils.test_lint_module_output_update::test_lint_module_output_update_effective pass
+tests.testutils.test_lint_module_output_update::test_lint_module_output_update_remove_useless_txt pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/wrong_output_ok_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/broken_output_ok_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/wrong_output_wrong_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/no_output_ok_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/no_output_wrong_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/ok_output_wrong_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/broken_output_wrong_test] pass
+tests.testutils.test_lint_module_output_update::test_update_of_functional_output[/testbed/tests/testutils/data/functional/ok_output_ok_test] pass
+tests.testutils.test_output_line::test_output_line pass
+tests.testutils.test_output_line::test_output_line_from_message pass
+tests.testutils.test_output_line::test_output_line_to_csv[confidence0] pass
+tests.testutils.test_output_line::test_output_line_to_csv[confidence1] pass
+tests.testutils.test_output_line::test_output_line_from_csv pass
+tests.testutils.test_pyreverse_testutils::test_files_with_leading_underscore_are_ignored pass
+tests.testutils.test_pyreverse_testutils::test_file_with_options pass
+tests.testutils.test_pyreverse_testutils::test_file_without_options pass
+tests.testutils.test_testutils_utils::test__test_sys_path_no_arg pass
+tests.testutils.test_testutils_utils::test__test_sys_path pass
+tests.testutils.test_testutils_utils::test__test_cwd_no_arg pass
+tests.testutils.test_testutils_utils::test__test_cwd pass
+tests.testutils.test_testutils_utils::test__test_environ_pythonpath_no_arg[./oldpath/:] pass
+tests.testutils.test_testutils_utils::test__test_environ_pythonpath_no_arg[None] pass
+tests.testutils.test_testutils_utils::test__test_environ_pythonpath[./oldpath/:] pass
+tests.testutils.test_testutils_utils::test__test_environ_pythonpath[None] pass
+tests.testutils._primer.test_package_to_lint::test_package_to_lint pass
+tests.testutils._primer.test_package_to_lint::test_package_to_lint_default_value pass
+tests.testutils._primer.test_primer::test_primer_launch_bad_args[args0] pass
+tests.testutils._primer.test_primer::test_primer_launch_bad_args[args1] pass
+tests.testutils._primer.test_primer.TestPrimer::test_compare[message_changed] skip
+tests.testutils._primer.test_primer.TestPrimer::test_compare[both_empty] skip
+tests.testutils._primer.test_primer.TestPrimer::test_compare[no_change] skip
+tests.testutils._primer.test_primer.TestPrimer::test_compare_batched skip
+tests.testutils._primer.test_primer.TestPrimer::test_truncated_compare skip
+tests.utils.unittest_ast_walker.TestASTWalker::test_only_required_for_messages pass
+tests.utils.unittest_ast_walker.TestASTWalker::test_deprecated_methods pass
+tests.utils.unittest_utils::test_decoding_stream_unknown_encoding pass
+tests.utils.unittest_utils::test_decoding_stream_known_encoding pass
+build success
+release success
+{'tests.config.test_config::test_csv_regex_comma_in_quantifier[foo-expected0]', 'tests.config.test_config::test_csv_regex_comma_in_quantifier[foo, bar-expected2]', 'tests.config.test_config::test_csv_regex_comma_in_quantifier[foo, bar{1,3}-expected3]', 'tests.config.test_config::test_csv_regex_comma_in_quantifier[foo,bar-expected1]'}

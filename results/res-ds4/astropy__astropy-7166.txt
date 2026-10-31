@@ -1,0 +1,6 @@
+pre
+bash: run.sh: No such file or directory
+post
+bash: run.sh: No such file or directory
+(.venv39) (.venv39) build failed
+(.venv39) (.venv39) 

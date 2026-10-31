@@ -1,0 +1,41 @@
+pre
+astropy.config.tests.test_configs::test_paths pass
+astropy.config.tests.test_configs::test_set_temp_config pass
+astropy.config.tests.test_configs::test_set_temp_cache pass
+astropy.config.tests.test_configs::test_set_temp_cache_resets_on_exception pass
+astropy.config.tests.test_configs::test_config_file pass
+astropy.config.tests.test_configs::test_generate_config skip
+astropy.config.tests.test_configs::test_generate_config2 skip
+astropy.config.tests.test_configs::test_create_config_file skip
+astropy.config.tests.test_configs::test_configitem pass
+astropy.config.tests.test_configs::test_configitem_types pass
+astropy.config.tests.test_configs::test_configitem_options pass
+astropy.config.tests.test_configs::test_config_noastropy_fallback pass
+astropy.config.tests.test_configs::test_configitem_setters pass
+astropy.config.tests.test_configs::test_empty_config_file pass
+astropy.config.tests.test_configs.TestAliasRead::test_alias_read pass
+astropy.config.tests.test_configs::test_configitem_unicode pass
+astropy.config.tests.test_configs::test_warning_move_to_top_level pass
+astropy.config.tests.test_configs::test_no_home pass
+post
+astropy.config.tests.test_configs::test_paths pass
+astropy.config.tests.test_configs::test_set_temp_config pass
+astropy.config.tests.test_configs::test_set_temp_cache pass
+astropy.config.tests.test_configs::test_set_temp_cache_resets_on_exception pass
+astropy.config.tests.test_configs::test_config_file pass
+astropy.config.tests.test_configs::test_generate_config skip
+astropy.config.tests.test_configs::test_generate_config2 skip
+astropy.config.tests.test_configs::test_create_config_file skip
+astropy.config.tests.test_configs::test_configitem pass
+astropy.config.tests.test_configs::test_configitem_types pass
+astropy.config.tests.test_configs::test_configitem_options pass
+astropy.config.tests.test_configs::test_config_noastropy_fallback pass
+astropy.config.tests.test_configs::test_configitem_setters pass
+astropy.config.tests.test_configs::test_empty_config_file pass
+astropy.config.tests.test_configs.TestAliasRead::test_alias_read pass
+astropy.config.tests.test_configs::test_configitem_unicode pass
+astropy.config.tests.test_configs::test_warning_move_to_top_level pass
+astropy.config.tests.test_configs::test_no_home pass
+(.venv) (.venv) build success
+release failed
+(.venv) (.venv) 

@@ -1,0 +1,204 @@
+pre
+com.google.gson.stream.JsonReaderTest#testDoubles pass
+com.google.gson.stream.JsonReaderTest#testSkipValueAtObjectEnd pass
+com.google.gson.stream.JsonReaderTest#testNonStrictModeParsesUnescapedControlCharacter pass
+com.google.gson.stream.JsonReaderTest#testStrictNameValueSeparator pass
+com.google.gson.stream.JsonReaderTest#testFailWithPositionOverQuotedString pass
+com.google.gson.stream.JsonReaderTest#testStrictUnquotedNames pass
+com.google.gson.stream.JsonReaderTest#testLenientComments pass
+com.google.gson.stream.JsonReaderTest#testPeekingUnquotedStringsPrefixedWithIntegers pass
+com.google.gson.stream.JsonReaderTest#testFailWithPositionOverCStyleComment pass
+com.google.gson.stream.JsonReaderTest#testStrictSingleQuotedStrings pass
+com.google.gson.stream.JsonReaderTest#testCapitalizedNullFailWhenStrict pass
+com.google.gson.stream.JsonReaderTest#testFailWithPositionOverHashEndOfLineComment pass
+com.google.gson.stream.JsonReaderTest#testStrictQuotedNonFiniteDoubles pass
+com.google.gson.stream.JsonReaderTest#testHasNextEndOfDocument pass
+com.google.gson.stream.JsonReaderTest#testLenientQuotedNonFiniteDoubles pass
+com.google.gson.stream.JsonReaderTest#testFailWithPositionIsOffsetByBom pass
+com.google.gson.stream.JsonReaderTest#testHelloWorld pass
+com.google.gson.stream.JsonReaderTest#testLenientNameValueSeparator pass
+com.google.gson.stream.JsonReaderTest#testStrictNonFiniteDoubles pass
+com.google.gson.stream.JsonReaderTest#testEscapeCharacterQuoteWithoutStrictMode pass
+com.google.gson.stream.JsonReaderTest#testSkipValueAtArrayEnd pass
+com.google.gson.stream.JsonWriterTest#testEmptyArray pass
+com.google.gson.stream.JsonWriterTest#testTwoNames pass
+com.google.gson.stream.JsonWriterTest#testNameWithoutValue pass
+com.google.gson.stream.JsonWriterTest#testBooleans pass
+com.google.gson.stream.JsonWriterTest#testBoxedBooleans pass
+com.google.gson.stream.JsonWriterTest#testNullStringValue pass
+com.google.gson.stream.JsonWriterTest#testDeepNestingArrays pass
+com.google.gson.stream.JsonWriterTest#testLongs pass
+com.google.gson.stream.JsonWriterTest#testNulls pass
+com.google.gson.stream.JsonWriterTest#testNullName pass
+com.google.gson.stream.JsonWriterTest#testArraysInObjects pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteDoublesWhenLenient pass
+com.google.gson.stream.JsonWriterTest#testRepeatedName pass
+com.google.gson.stream.JsonWriterTest#testMalformedNumbers pass
+com.google.gson.stream.JsonWriterTest#testSetLenientFalse pass
+com.google.gson.stream.JsonWriterTest#testTopLevelValueTypes pass
+com.google.gson.stream.JsonWriterTest#testClosedWriterThrowsOnStructure pass
+com.google.gson.stream.JsonWriterTest#testIndentOverwritesFormattingStyle pass
+com.google.gson.stream.JsonWriterTest#testObjectsInArrays pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteNumbersWhenStrict pass
+com.google.gson.stream.JsonWriterTest#testJsonValue pass
+com.google.gson.stream.JsonWriterTest#testWriterCloseIsIdempotent pass
+com.google.gson.stream.JsonWriterTest#testBadNestingObject pass
+com.google.gson.stream.JsonWriterTest#testPrettyPrintArray pass
+com.google.gson.stream.JsonWriterTest#testPrettyPrintObject pass
+com.google.gson.stream.JsonWriterTest#testValueWithoutName pass
+com.google.gson.stream.JsonWriterTest#testDeepNestingObjects pass
+com.google.gson.stream.JsonWriterTest#testEmptyObject pass
+com.google.gson.stream.JsonWriterTest#testDefaultStrictness pass
+com.google.gson.stream.JsonWriterTest#testSetStrictness pass
+com.google.gson.stream.JsonWriterTest#testNumbersCustomClass pass
+com.google.gson.stream.JsonWriterTest#testSetGetFormattingStyle pass
+com.google.gson.stream.JsonWriterTest#testBadNestingArray pass
+com.google.gson.stream.JsonWriterTest#testSetStrictnessNull pass
+com.google.gson.stream.JsonWriterTest#testMultipleTopLevelValues pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteFloatsWhenLenient pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteDoubles pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteNumbersWhenLenient pass
+com.google.gson.stream.JsonWriterTest#testMultipleTopLevelValuesStrict pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteFloatsWhenStrict pass
+com.google.gson.stream.JsonWriterTest#testSetLenientTrue pass
+com.google.gson.stream.JsonWriterTest#testMultipleTopLevelValuesLenient pass
+com.google.gson.stream.JsonWriterTest#testClosedWriterThrowsOnFlush pass
+com.google.gson.stream.JsonWriterTest#testClosedWriterThrowsOnValue pass
+com.google.gson.stream.JsonWriterTest#testFloats pass
+com.google.gson.stream.JsonWriterTest#testNameAsTopLevelValue pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteNumbers pass
+com.google.gson.stream.JsonWriterTest#testNameInArray pass
+com.google.gson.stream.JsonWriterTest#testDoubles pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteFloats pass
+com.google.gson.stream.JsonWriterTest#testClosedWriterThrowsOnName pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteDoublesWhenStrict pass
+com.google.gson.stream.JsonWriterTest#testNumbers pass
+com.google.gson.stream.JsonWriterTest#testStrings pass
+com.google.gson.stream.JsonWriterTest#testUnicodeLineBreaksEscaped pass
+com.google.gson.protobuf.functional.ProtosWithAnnotationsTest#testProtoWithAnnotations_deserializeWithEnumNumbers pass
+com.google.gson.protobuf.functional.ProtosWithAnnotationsTest#testProtoWithAnnotations_deserializeUnrecognizedEnumValue pass
+com.google.gson.protobuf.functional.ProtosWithAnnotationsTest#testProtoWithAnnotations_deserializeUnknownEnumValue pass
+com.google.gson.protobuf.functional.ProtosWithAnnotationsTest#testProtoWithAnnotations_serialize pass
+com.google.gson.protobuf.functional.ProtosWithAnnotationsTest#testProtoWithAnnotations_deserialize pass
+com.google.gson.protobuf.functional.ProtosWithComplexAndRepeatedFieldsTest#testDeserializeRepeatedFieldsProto pass
+com.google.gson.protobuf.functional.ProtosWithComplexAndRepeatedFieldsTest#testDeserializeDifferentCaseFormat pass
+com.google.gson.protobuf.functional.ProtosWithComplexAndRepeatedFieldsTest#testSerializeRepeatedFields pass
+com.google.gson.protobuf.functional.ProtosWithComplexAndRepeatedFieldsTest#testSerializeDifferentCaseFormat pass
+com.google.gson.protobuf.functional.ProtosWithPrimitiveTypesTest#testDeserializeEmptyProto pass
+com.google.gson.protobuf.functional.ProtosWithPrimitiveTypesTest#testSerializeEmptyProto pass
+com.google.gson.protobuf.functional.ProtosWithPrimitiveTypesTest#testDeserializeProto pass
+com.google.gson.protobuf.functional.ProtosWithPrimitiveTypesTest#testSerializeProto pass
+com.google.gson.protobuf.functional.ProtosWithPrimitiveTypesTest#testDeserializeWithExplicitNullValue pass
+com.google.gson.it.ShrinkingIT#testNoSerializedName_NoArgsConstructorNoJdkUnsafe[0: target/proguard-output.jar] pass
+com.google.gson.it.ShrinkingIT#testNoSerializedName_NoArgsConstructor[0: target/proguard-output.jar] pass
+com.google.gson.it.ShrinkingIT#testNoSerializedName_HasArgsConstructor[0: target/proguard-output.jar] pass
+com.google.gson.it.ShrinkingIT#test[0: target/proguard-output.jar] pass
+com.google.gson.it.ShrinkingIT#testUnusedClassRemoved[0: target/proguard-output.jar] skip
+com.google.gson.it.ShrinkingIT#testNoSerializedName_NoArgsConstructorNoJdkUnsafe[1: target/r8-output.jar] pass
+com.google.gson.it.ShrinkingIT#testNoSerializedName_NoArgsConstructor[1: target/r8-output.jar] pass
+com.google.gson.it.ShrinkingIT#testNoSerializedName_HasArgsConstructor[1: target/r8-output.jar] pass
+com.google.gson.it.ShrinkingIT#test[1: target/r8-output.jar] pass
+com.google.gson.it.ShrinkingIT#testUnusedClassRemoved[1: target/r8-output.jar] pass
+post
+com.google.gson.stream.JsonReaderTest#testSkipValueAtObjectEnd pass
+com.google.gson.stream.JsonReaderTest#testNonStrictModeParsesUnescapedControlCharacter pass
+com.google.gson.stream.JsonReaderTest#testStrictNameValueSeparator pass
+com.google.gson.stream.JsonReaderTest#testFailWithPositionOverQuotedString pass
+com.google.gson.stream.JsonReaderTest#testStrictUnquotedNames pass
+com.google.gson.stream.JsonReaderTest#testLenientComments pass
+com.google.gson.stream.JsonReaderTest#testPeekingUnquotedStringsPrefixedWithIntegers pass
+com.google.gson.stream.JsonReaderTest#testFailWithPositionOverCStyleComment pass
+com.google.gson.stream.JsonReaderTest#testStrictSingleQuotedStrings pass
+com.google.gson.stream.JsonReaderTest#testCapitalizedNullFailWhenStrict pass
+com.google.gson.stream.JsonReaderTest#testFailWithPositionOverHashEndOfLineComment pass
+com.google.gson.stream.JsonReaderTest#testStrictQuotedNonFiniteDoubles pass
+com.google.gson.stream.JsonReaderTest#testHasNextEndOfDocument pass
+com.google.gson.stream.JsonReaderTest#testLenientQuotedNonFiniteDoubles pass
+com.google.gson.stream.JsonReaderTest#testFailWithPositionIsOffsetByBom pass
+com.google.gson.stream.JsonReaderTest#testHelloWorld pass
+com.google.gson.stream.JsonReaderTest#testLenientNameValueSeparator pass
+com.google.gson.stream.JsonReaderTest#testStrictNonFiniteDoubles pass
+com.google.gson.stream.JsonReaderTest#testEscapeCharacterQuoteWithoutStrictMode pass
+com.google.gson.stream.JsonReaderTest#testSkipValueAtArrayEnd pass
+com.google.gson.stream.JsonWriterTest#testEmptyArray pass
+com.google.gson.stream.JsonWriterTest#testTwoNames pass
+com.google.gson.stream.JsonWriterTest#testNameWithoutValue pass
+com.google.gson.stream.JsonWriterTest#testBooleans pass
+com.google.gson.stream.JsonWriterTest#testBoxedBooleans pass
+com.google.gson.stream.JsonWriterTest#testNullStringValue pass
+com.google.gson.stream.JsonWriterTest#testDeepNestingArrays pass
+com.google.gson.stream.JsonWriterTest#testLongs pass
+com.google.gson.stream.JsonWriterTest#testNulls pass
+com.google.gson.stream.JsonWriterTest#testNullName pass
+com.google.gson.stream.JsonWriterTest#testArraysInObjects pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteDoublesWhenLenient pass
+com.google.gson.stream.JsonWriterTest#testRepeatedName pass
+com.google.gson.stream.JsonWriterTest#testMalformedNumbers pass
+com.google.gson.stream.JsonWriterTest#testSetLenientFalse pass
+com.google.gson.stream.JsonWriterTest#testTopLevelValueTypes pass
+com.google.gson.stream.JsonWriterTest#testClosedWriterThrowsOnStructure pass
+com.google.gson.stream.JsonWriterTest#testIndentOverwritesFormattingStyle pass
+com.google.gson.stream.JsonWriterTest#testObjectsInArrays pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteNumbersWhenStrict pass
+com.google.gson.stream.JsonWriterTest#testJsonValue pass
+com.google.gson.stream.JsonWriterTest#testWriterCloseIsIdempotent pass
+com.google.gson.stream.JsonWriterTest#testBadNestingObject pass
+com.google.gson.stream.JsonWriterTest#testPrettyPrintArray pass
+com.google.gson.stream.JsonWriterTest#testPrettyPrintObject pass
+com.google.gson.stream.JsonWriterTest#testValueWithoutName pass
+com.google.gson.stream.JsonWriterTest#testDeepNestingObjects pass
+com.google.gson.stream.JsonWriterTest#testEmptyObject pass
+com.google.gson.stream.JsonWriterTest#testDefaultStrictness pass
+com.google.gson.stream.JsonWriterTest#testSetStrictness pass
+com.google.gson.stream.JsonWriterTest#testNumbersCustomClass pass
+com.google.gson.stream.JsonWriterTest#testSetGetFormattingStyle pass
+com.google.gson.stream.JsonWriterTest#testBadNestingArray pass
+com.google.gson.stream.JsonWriterTest#testSetStrictnessNull pass
+com.google.gson.stream.JsonWriterTest#testMultipleTopLevelValues pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteFloatsWhenLenient pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteDoubles pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteNumbersWhenLenient pass
+com.google.gson.stream.JsonWriterTest#testMultipleTopLevelValuesStrict pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteFloatsWhenStrict pass
+com.google.gson.stream.JsonWriterTest#testSetLenientTrue pass
+com.google.gson.stream.JsonWriterTest#testMultipleTopLevelValuesLenient pass
+com.google.gson.stream.JsonWriterTest#testClosedWriterThrowsOnFlush pass
+com.google.gson.stream.JsonWriterTest#testClosedWriterThrowsOnValue pass
+com.google.gson.stream.JsonWriterTest#testFloats pass
+com.google.gson.stream.JsonWriterTest#testNameAsTopLevelValue pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteNumbers pass
+com.google.gson.stream.JsonWriterTest#testNameInArray pass
+com.google.gson.stream.JsonWriterTest#testDoubles pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteFloats pass
+com.google.gson.stream.JsonWriterTest#testClosedWriterThrowsOnName pass
+com.google.gson.stream.JsonWriterTest#testNonFiniteDoublesWhenStrict pass
+com.google.gson.stream.JsonWriterTest#testNumbers pass
+com.google.gson.stream.JsonWriterTest#testStrings pass
+com.google.gson.stream.JsonWriterTest#testUnicodeLineBreaksEscaped pass
+com.google.gson.protobuf.functional.ProtosWithAnnotationsTest#testProtoWithAnnotations_deserializeWithEnumNumbers pass
+com.google.gson.protobuf.functional.ProtosWithAnnotationsTest#testProtoWithAnnotations_deserializeUnrecognizedEnumValue pass
+com.google.gson.protobuf.functional.ProtosWithAnnotationsTest#testProtoWithAnnotations_deserializeUnknownEnumValue pass
+com.google.gson.protobuf.functional.ProtosWithAnnotationsTest#testProtoWithAnnotations_serialize pass
+com.google.gson.protobuf.functional.ProtosWithAnnotationsTest#testProtoWithAnnotations_deserialize pass
+com.google.gson.protobuf.functional.ProtosWithComplexAndRepeatedFieldsTest#testDeserializeRepeatedFieldsProto pass
+com.google.gson.protobuf.functional.ProtosWithComplexAndRepeatedFieldsTest#testDeserializeDifferentCaseFormat pass
+com.google.gson.protobuf.functional.ProtosWithComplexAndRepeatedFieldsTest#testSerializeRepeatedFields pass
+com.google.gson.protobuf.functional.ProtosWithComplexAndRepeatedFieldsTest#testSerializeDifferentCaseFormat pass
+com.google.gson.protobuf.functional.ProtosWithPrimitiveTypesTest#testDeserializeEmptyProto pass
+com.google.gson.protobuf.functional.ProtosWithPrimitiveTypesTest#testSerializeEmptyProto pass
+com.google.gson.protobuf.functional.ProtosWithPrimitiveTypesTest#testDeserializeProto pass
+com.google.gson.protobuf.functional.ProtosWithPrimitiveTypesTest#testSerializeProto pass
+com.google.gson.protobuf.functional.ProtosWithPrimitiveTypesTest#testDeserializeWithExplicitNullValue pass
+com.google.gson.it.ShrinkingIT#testNoSerializedName_NoArgsConstructorNoJdkUnsafe[0: target/proguard-output.jar] pass
+com.google.gson.it.ShrinkingIT#testNoSerializedName_NoArgsConstructor[0: target/proguard-output.jar] pass
+com.google.gson.it.ShrinkingIT#testNoSerializedName_HasArgsConstructor[0: target/proguard-output.jar] pass
+com.google.gson.it.ShrinkingIT#test[0: target/proguard-output.jar] pass
+com.google.gson.it.ShrinkingIT#testUnusedClassRemoved[0: target/proguard-output.jar] skip
+com.google.gson.it.ShrinkingIT#testNoSerializedName_NoArgsConstructorNoJdkUnsafe[1: target/r8-output.jar] pass
+com.google.gson.it.ShrinkingIT#testNoSerializedName_NoArgsConstructor[1: target/r8-output.jar] pass
+com.google.gson.it.ShrinkingIT#testNoSerializedName_HasArgsConstructor[1: target/r8-output.jar] pass
+com.google.gson.it.ShrinkingIT#test[1: target/r8-output.jar] pass
+com.google.gson.it.ShrinkingIT#testUnusedClassRemoved[1: target/r8-output.jar] pass
+maven_test_command fail
+build success
+release failed

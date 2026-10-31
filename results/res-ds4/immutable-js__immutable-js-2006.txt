@@ -1,0 +1,204 @@
+pre
+> immutable@4.3.6 build:stats
+> node ./resources/dist-stats.mjs
+
+  Raw:           172,881 bytes
+  Min:            65,337 bytes 62.2%              -302 bytes
+  Zip:            18,676 bytes 89.19%              +211 bytes
+PASS __tests__/get.ts
+PASS __tests__/OrderedMap.ts
+PASS __tests__/ArraySeq.ts
+PASS __tests__/find.ts
+PASS __tests__/partition.ts
+PASS __tests__/Predicates.ts (5.256 s)
+PASS __tests__/IndexedSeq.ts (5.17 s)
+PASS __tests__/Repeat.ts
+PASS __tests__/flatten.ts (5.221 s)
+PASS __tests__/Comparator.ts (5.454 s)
+PASS __tests__/fromJS.ts (5.117 s)
+PASS __tests__/OrderedSet.ts
+PASS __tests__/transformerProtocol.ts (5.489 s)
+PASS __tests__/ListJS.js (5.483 s)
+PASS __tests__/ObjectSeq.ts
+PASS __tests__/Set.ts (5.184 s)
+PASS __tests__/merge.ts (5.133 s)
+PASS __tests__/getIn.ts (5.2 s)
+PASS __tests__/hash.ts (5.386 s)
+PASS __tests__/MultiRequire.js (5.162 s)
+PASS __tests__/groupBy.ts (5.781 s)
+PASS __tests__/issues.ts (5.789 s)
+PASS __tests__/count.ts (5.618 s)
+PASS __tests__/sort.ts (5.484 s)
+PASS __tests__/interpose.ts (5.769 s)
+PASS __tests__/utils.js
+PASS __tests__/Seq.ts (5.307 s)
+PASS __tests__/Conversion.ts (5.817 s)
+PASS __tests__/concat.ts (5.348 s)
+PASS __tests__/Range.ts (6.079 s)
+PASS __tests__/updateIn.ts (5.423 s)
+PASS __tests__/Record.ts (6.052 s)
+PASS __tests__/KeyedSeq.ts (5.685 s)
+PASS __tests__/hasIn.ts (5.699 s)
+PASS __tests__/splice.ts (6.294 s)
+PASS __tests__/join.ts (6.689 s)
+PASS __tests__/zip.ts (6.079 s)
+PASS __tests__/slice.ts (6.257 s)
+PASS __tests__/RecordJS.js (6.485 s)
+PASS __tests__/Stack.ts (7.088 s)
+PASS __tests__/Equality.ts (7.316 s)
+PASS __tests__/minmax.ts (7.501 s)
+PASS __tests__/List.ts (10.098 s)
+PASS __tests__/Map.ts (10.434 s)
+
+Test Suites: 44 passed, 44 total
+Tests:       1 skipped, 683 passed, 684 total
+Snapshots:   3 passed, 3 total
+Time:        13.187 s
+Ran all test suites.
+get.ts pass
+OrderedMap.ts pass
+ArraySeq.ts pass
+find.ts pass
+partition.ts pass
+Predicates.ts pass
+IndexedSeq.ts pass
+Repeat.ts pass
+flatten.ts pass
+Comparator.ts pass
+fromJS.ts pass
+OrderedSet.ts pass
+transformerProtocol.ts pass
+ListJS.js pass
+ObjectSeq.ts pass
+Set.ts pass
+merge.ts pass
+getIn.ts pass
+hash.ts pass
+MultiRequire.js pass
+groupBy.ts pass
+issues.ts pass
+count.ts pass
+sort.ts pass
+interpose.ts pass
+utils.js pass
+Seq.ts pass
+Conversion.ts pass
+concat.ts pass
+Range.ts pass
+updateIn.ts pass
+Record.ts pass
+KeyedSeq.ts pass
+hasIn.ts pass
+splice.ts pass
+join.ts pass
+zip.ts pass
+slice.ts pass
+RecordJS.js pass
+Stack.ts pass
+Equality.ts pass
+minmax.ts pass
+List.ts pass
+Map.ts pass
+post
+> immutable@4.3.6 build:stats
+> node ./resources/dist-stats.mjs
+
+  Raw:           172,888 bytes
+  Min:            65,341 bytes 62.2%              -298 bytes
+  Zip:            18,673 bytes 89.19%              +208 bytes
+PASS __tests__/Repeat.ts
+PASS __tests__/get.ts
+PASS __tests__/sort.ts
+PASS __tests__/count.ts
+PASS __tests__/fromJS.ts
+PASS __tests__/ObjectSeq.ts
+PASS __tests__/OrderedMap.ts
+PASS __tests__/Comparator.ts
+PASS __tests__/MultiRequire.js
+PASS __tests__/OrderedSet.ts
+PASS __tests__/partition.ts
+PASS __tests__/getIn.ts
+PASS __tests__/ArraySeq.ts
+PASS __tests__/find.ts
+PASS __tests__/Predicates.ts
+PASS __tests__/groupBy.ts
+PASS __tests__/flatten.ts
+PASS __tests__/transformerProtocol.ts
+PASS __tests__/hash.ts
+PASS __tests__/interpose.ts
+PASS __tests__/Seq.ts
+PASS __tests__/Set.ts
+PASS __tests__/IndexedSeq.ts
+PASS __tests__/ListJS.js
+PASS __tests__/concat.ts
+PASS __tests__/Record.ts
+PASS __tests__/hasIn.ts
+PASS __tests__/issues.ts
+PASS __tests__/updateIn.ts
+PASS __tests__/merge.ts
+PASS __tests__/RecordJS.js
+PASS __tests__/Conversion.ts
+PASS __tests__/splice.ts
+PASS __tests__/utils.js
+PASS __tests__/zip.ts
+PASS __tests__/KeyedSeq.ts
+PASS __tests__/Range.ts
+PASS __tests__/slice.ts
+PASS __tests__/Stack.ts (5.527 s)
+PASS __tests__/join.ts (5.711 s)
+PASS __tests__/Equality.ts (6.401 s)
+PASS __tests__/minmax.ts (6.757 s)
+PASS __tests__/List.ts (8.629 s)
+PASS __tests__/Map.ts (9.118 s)
+
+Test Suites: 44 passed, 44 total
+Tests:       1 skipped, 684 passed, 685 total
+Snapshots:   3 passed, 3 total
+Time:        11.211 s
+Ran all test suites.
+Repeat.ts pass
+get.ts pass
+sort.ts pass
+count.ts pass
+fromJS.ts pass
+ObjectSeq.ts pass
+OrderedMap.ts pass
+Comparator.ts pass
+MultiRequire.js pass
+OrderedSet.ts pass
+partition.ts pass
+getIn.ts pass
+ArraySeq.ts pass
+find.ts pass
+Predicates.ts pass
+groupBy.ts pass
+flatten.ts pass
+transformerProtocol.ts pass
+hash.ts pass
+interpose.ts pass
+Seq.ts pass
+Set.ts pass
+IndexedSeq.ts pass
+ListJS.js pass
+concat.ts pass
+Record.ts pass
+hasIn.ts pass
+issues.ts pass
+updateIn.ts pass
+merge.ts pass
+RecordJS.js pass
+Conversion.ts pass
+splice.ts pass
+utils.js pass
+zip.ts pass
+KeyedSeq.ts pass
+Range.ts pass
+slice.ts pass
+Stack.ts pass
+join.ts pass
+Equality.ts pass
+minmax.ts pass
+List.ts pass
+Map.ts pass
+build success
+release failed

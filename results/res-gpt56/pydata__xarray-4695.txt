@@ -1,0 +1,22 @@
+pre
+xarray.tests.test_backends fail
+xarray.tests.test_cftimeindex fail
+xarray.tests.test_coding_times fail
+xarray.tests.test_conventions fail
+xarray.tests.test_cupy skip
+xarray.tests.test_dask fail
+xarray.tests.test_distributed skip
+xarray.tests.test_sparse skip
+xarray.tests.test_utils fail
+post
+xarray.tests.test_backends fail
+xarray.tests.test_cftimeindex fail
+xarray.tests.test_coding_times fail
+xarray.tests.test_conventions fail
+xarray.tests.test_cupy skip
+xarray.tests.test_dask fail
+xarray.tests.test_distributed skip
+xarray.tests.test_sparse skip
+xarray.tests.test_utils fail
+(.venv) (.venv) build failed
+(.venv) (.venv) 

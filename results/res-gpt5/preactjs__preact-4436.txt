@@ -1,0 +1,204 @@
+pre
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "preact-devtools" to dist:
+        232 B: devtools.js.gz
+        196 B: devtools.js.br
+        241 B: devtools.module.js.gz
+        224 B: devtools.module.js.br
+        315 B: devtools.umd.js.gz
+        256 B: devtools.umd.js.br
+Build "jsx-runtime" to dist:
+        945 B: jsxRuntime.js.gz
+        852 B: jsxRuntime.js.br
+        914 B: jsxRuntime.module.js.gz
+        833 B: jsxRuntime.module.js.br
+       1028 B: jsxRuntime.umd.js.gz
+        932 B: jsxRuntime.umd.js.br
+Circular dependency: compat/src/index.js -> compat/src/render.js -> compat/src/index.js
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "preact-hooks" to dist:
+       1494 B: hooks.js.gz
+       1374 B: hooks.js.br
+       1525 B: hooks.module.js.gz
+       1395 B: hooks.module.js.br
+       1569 B: hooks.umd.js.gz
+       1434 B: hooks.umd.js.br
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Circular dependency: compat/src/index.js -> compat/src/render.js -> compat/src/index.js
+Entry module "compat/src/index.js" is using named and default exports together. Consumers of your bundle will have to use `preactCompat["default"]` to access the default export, which may not be what you want. Use `output.exports: "named"` to disable this warning
+Build "preact-debug" to dist:
+       3682 B: debug.js.gz
+       3232 B: debug.js.br
+       3676 B: debug.module.js.gz
+       3221 B: debug.module.js.br
+       3759 B: debug.umd.js.gz
+       3288 B: debug.umd.js.br
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "preact-compat" to dist:
+       4071 B: compat.js.gz
+       3721 B: compat.js.br
+       3988 B: compat.module.js.gz
+       3627 B: compat.module.js.br
+       4125 B: compat.umd.js.gz
+       3741 B: compat.umd.js.br
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "preact" to dist:
+       4635 B: preact.js.gz
+       4255 B: preact.js.br
+       4648 B: preact.module.js.gz
+       4264 B: preact.module.js.br
+       4705 B: preact.umd.js.gz
+       4299 B: preact.umd.js.br
+Build "preact" to dist:
+       4659 B: preact.min.js.gz
+       4271 B: preact.min.js.br
+       4659 B: preact.min.module.js.gz
+       4271 B: preact.min.module.js.br
+       4688 B: preact.min.umd.js.gz
+       4290 B: preact.min.umd.js.br
+       4664 B: preact.min.js.gz
+       4268 B: preact.min.js.br
+
+> preact@10.22.1 postbuild
+> node ./config/node-13-exports.js && node ./config/compat-entries.js
+
+createContext should return a Provider and a Consumer pass
+createContext should return a valid Provider Component pass
+createElement(jsx) should return a VNode pass
+createElement(jsx) should set VNode#type property pass
+createElement(jsx) should set VNode.constructor property to prevent json injection pass
+createElement(jsx) should set VNode#props property pass
+createElement(jsx) should set VNode#key property pass
+createElement(jsx) should not set VNode#props.key property pass
+createElement(jsx) should set VNode#ref property pass
+createElement(jsx) should not set VNode#props.ref property pass
+createElement(jsx) should have ordered VNode properties pass
+createElement(jsx) should preserve raw props pass
+createElement(jsx) should support element children pass
+createElement(jsx) should support multiple element children, given as arg list pass
+createElement(jsx) should handle multiple element children, given as an array pass
+createElement(jsx) should support nested children pass
+createElement(jsx) should support text children pass
+createElement(jsx) should override children if null is provided as an argument pass
+createElement(jsx) should NOT set children prop when unspecified pass
+createElement(jsx) should NOT merge adjacent text children pass
+createElement(jsx) should not merge nested adjacent text children pass
+createElement(jsx) should not merge children that are boolean values pass
+createElement(jsx) should not merge children of components pass
+createElement(jsx) should respect defaultProps pass
+createElement(jsx) should override defaultProps pass
+createElement(jsx) should ignore props.children if children are manually specified pass
+preact should be available as named exports pass
+isValidElement should check if the argument is a valid vnode pass
+build artifact should have exported properties pass
+post
+        256 B: devtools.umd.js.br
+Build "test-utils" to dist:
+        420 B: testUtils.js.gz
+        362 B: testUtils.js.br
+        418 B: testUtils.module.js.gz
+        375 B: testUtils.module.js.br
+        504 B: testUtils.umd.js.gz
+        440 B: testUtils.umd.js.br
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "jsx-runtime" to dist:
+        945 B: jsxRuntime.js.gz
+        852 B: jsxRuntime.js.br
+        914 B: jsxRuntime.module.js.gz
+        833 B: jsxRuntime.module.js.br
+       1028 B: jsxRuntime.umd.js.gz
+        932 B: jsxRuntime.umd.js.br
+Circular dependency: compat/src/index.js -> compat/src/render.js -> compat/src/index.js
+Build "preact-hooks" to dist:
+       1494 B: hooks.js.gz
+       1374 B: hooks.js.br
+       1525 B: hooks.module.js.gz
+       1395 B: hooks.module.js.br
+       1569 B: hooks.umd.js.gz
+       1434 B: hooks.umd.js.br
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Circular dependency: compat/src/index.js -> compat/src/render.js -> compat/src/index.js
+Entry module "compat/src/index.js" is using named and default exports together. Consumers of your bundle will have to use `preactCompat["default"]` to access the default export, which may not be what you want. Use `output.exports: "named"` to disable this warning
+Build "preact-debug" to dist:
+       3682 B: debug.js.gz
+       3232 B: debug.js.br
+       3676 B: debug.module.js.gz
+       3221 B: debug.module.js.br
+       3759 B: debug.umd.js.gz
+       3288 B: debug.umd.js.br
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "preact-compat" to dist:
+       4071 B: compat.js.gz
+       3721 B: compat.js.br
+       3988 B: compat.module.js.gz
+       3627 B: compat.module.js.br
+       4125 B: compat.umd.js.gz
+       3741 B: compat.umd.js.br
+Build "preact" to dist:
+       4635 B: preact.js.gz
+       4255 B: preact.js.br
+       4648 B: preact.module.js.gz
+       4264 B: preact.module.js.br
+       4705 B: preact.umd.js.gz
+       4299 B: preact.umd.js.br
+Circular dependency: src/diff/index.js -> src/component.js -> src/diff/index.js
+Circular dependency: src/diff/index.js -> src/diff/children.js -> src/diff/index.js
+Build "preact" to dist:
+       4659 B: preact.min.js.gz
+       4271 B: preact.min.js.br
+       4659 B: preact.min.module.js.gz
+       4271 B: preact.min.module.js.br
+       4688 B: preact.min.umd.js.gz
+       4290 B: preact.min.umd.js.br
+       4664 B: preact.min.js.gz
+       4268 B: preact.min.js.br
+
+> preact@10.22.1 postbuild
+> node ./config/node-13-exports.js && node ./config/compat-entries.js
+
+createContext should return a Provider and a Consumer pass
+createContext should return a valid Provider Component pass
+createElement(jsx) should return a VNode pass
+createElement(jsx) should set VNode#type property pass
+createElement(jsx) should set VNode.constructor property to prevent json injection pass
+createElement(jsx) should set VNode#props property pass
+createElement(jsx) should set VNode#key property pass
+createElement(jsx) should not set VNode#props.key property pass
+createElement(jsx) should set VNode#ref property pass
+createElement(jsx) should not set VNode#props.ref property pass
+createElement(jsx) should have ordered VNode properties pass
+createElement(jsx) should preserve raw props pass
+createElement(jsx) should support element children pass
+createElement(jsx) should support multiple element children, given as arg list pass
+createElement(jsx) should handle multiple element children, given as an array pass
+createElement(jsx) should support nested children pass
+createElement(jsx) should support text children pass
+createElement(jsx) should override children if null is provided as an argument pass
+createElement(jsx) should NOT set children prop when unspecified pass
+createElement(jsx) should NOT merge adjacent text children pass
+createElement(jsx) should not merge nested adjacent text children pass
+createElement(jsx) should not merge children that are boolean values pass
+createElement(jsx) should not merge children of components pass
+createElement(jsx) should respect defaultProps pass
+createElement(jsx) should override defaultProps pass
+createElement(jsx) should ignore props.children if children are manually specified pass
+preact should be available as named exports pass
+isValidElement should check if the argument is a valid vnode pass
+build artifact should have exported properties pass
+build success
+release failed

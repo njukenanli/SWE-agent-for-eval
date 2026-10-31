@@ -1,0 +1,62 @@
+pre
+make: Entering directory '/testbed/mpy-cross'
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+make: Leaving directory '/testbed/mpy-cross'
+make: Entering directory '/testbed/ports/unix'
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+make: Leaving directory '/testbed/ports/unix'
+run.sh: line 8: foo: command not found
+post
+make: Entering directory '/testbed/mpy-cross'
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+GEN build/genhdr/mpversion.h
+GEN build/genhdr/qstr.i.last
+GEN build/genhdr/qstr.split
+GEN build/genhdr/moduledefs.split
+GEN build/genhdr/root_pointers.split
+GEN build/genhdr/root_pointers.collected
+GEN build/genhdr/moduledefs.collected
+GEN build/genhdr/qstrdefs.collected.h
+Root pointer registrations not updated
+Module registrations not updated
+QSTR not updated
+CC ../py/modsys.c
+CC ../py/bc.c
+CC main.c
+main.c:337:6: warning: conflicting types for ‘mp_import_stat’ due to enum/integer mismatch; have ‘uint(const char *)’ {aka ‘unsigned int(const char *)’} [-Wenum-int-mismatch]
+  337 | uint mp_import_stat(const char *path) {
+      |      ^~~~~~~~~~~~~~
+In file included from main.c:32:
+../py/builtin.h:59:18: note: previous declaration of ‘mp_import_stat’ with type ‘mp_import_stat_t(const char *)’
+   59 | mp_import_stat_t mp_import_stat(const char *path);
+      |                  ^~~~~~~~~~~~~~
+LINK build/mpy-cross
+   text	   data	    bss	    dec	    hex	filename
+ 324277	  13792	    856	 338925	  52bed	build/mpy-cross
+make: Leaving directory '/testbed/mpy-cross'
+make: Entering directory '/testbed/ports/unix'
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+GEN build-standard/genhdr/mpversion.h
+GEN build-standard/genhdr/qstr.i.last
+GEN build-standard/genhdr/qstr.split
+GEN build-standard/genhdr/moduledefs.split
+GEN build-standard/genhdr/root_pointers.split
+GEN build-standard/genhdr/compressed.split
+GEN build-standard/genhdr/qstrdefs.collected.h
+GEN build-standard/genhdr/moduledefs.collected
+GEN build-standard/genhdr/root_pointers.collected
+GEN build-standard/genhdr/compressed.collected
+Root pointer registrations not updated
+Module registrations not updated
+Compressed data not updated
+QSTR not updated
+CC ../../py/modsys.c
+CC ../../py/bc.c
+CC ../../extmod/moduplatform.c
+CC main.c
+LINK build-standard/micropython
+   text	   data	    bss	    dec	    hex	filename
+ 719108	  68008	   7152	 794268	  c1e9c	build-standard/micropython
+make: Leaving directory '/testbed/ports/unix'
+run.sh: line 8: foo: command not found
+build failed

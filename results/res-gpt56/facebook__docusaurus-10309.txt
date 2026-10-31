@@ -1,0 +1,205 @@
+pre
+contentTitle remark plugin extracts data.contentTitle is able to decently serialize Markdown syntax pass
+contentTitle remark plugin returns appropriate content returns content unmodified pass
+contentTitle remark plugin returns appropriate content can strip contentTitle pass
+contentTitle remark plugin returns appropriate content can strip contentTitle alt pass
+usePluralForm returns the right plural pass
+usePluralForm warns against too many plurals pass
+usePluralForm uses the last with not enough plurals pass
+usePluralForm falls back when Intl.PluralForms is not available pass
+getDataFilePath getDataFilePath returns localized Yml path in priority pass
+getDataFilePath getDataFilePath returns localized Json path in priority pass
+getDataFilePath getDataFilePath returns unlocalized Yml path as fallback pass
+getDataFilePath getDataFilePath returns unlocalized Json path as fallback pass
+getDataFilePath getDataFilePath can return undefined (file not found) pass
+getDataFilePath getDataFilePath can return nested path pass
+getDataFileData returns undefined for nonexistent file pass
+getDataFileData read valid yml author file pass
+getDataFileData read valid json author file pass
+getDataFileData fail to read invalid yml pass
+getDataFileData fail to read invalid json pass
+findFolderContainingFile find appropriate folder pass
+findFolderContainingFile return undefined if no folder contain such file pass
+getFolderContainingFile get appropriate folder pass
+getFolderContainingFile throw if no folder contain such file pass
+parseCodeBlockTitle parses double quote delimited title pass
+parseCodeBlockTitle parses single quote delimited title pass
+parseCodeBlockTitle does not parse mismatched quote delimiters pass
+parseCodeBlockTitle parses undefined metastring pass
+parseCodeBlockTitle parses metastring with no title specified pass
+parseCodeBlockTitle parses with multiple metadata title first pass
+parseCodeBlockTitle parses with multiple metadata title last pass
+parseCodeBlockTitle parses double quotes when delimited by single quotes pass
+parseCodeBlockTitle parses single quotes when delimited by double quotes pass
+parseLanguage works pass
+parseLines does not parse content with metastring pass
+parseLines does not parse content with no language pass
+parseLines removes lines correctly pass
+parseLines respects language pass
+parseLines parses multiple types of magic comments pass
+parseLines handles one line with multiple class names pass
+Head does exactly what Helmet does pass
+readComponentNames read theme pass
+getThemeComponents read name pass
+getThemeComponents read all pass
+getThemeComponents getConfig pass
+getThemeComponents getDescription pass
+getThemeComponents getActionStatus pass
+getThemeComponents isSafeAction pass
+getThemeComponents hasAnySafeAction pass
+loadPluginVersion detects external packages plugins versions pass
+loadPluginVersion detects project plugins versions pass
+loadPluginVersion detects local packages versions pass
+createSiteMetadata throws if plugin versions mismatch pass
+createSidebarsUtils getFirstDocIdOfFirstSidebar pass
+createSidebarsUtils getSidebarNameByDocId pass
+createSidebarsUtils getDocNavigation pass
+createSidebarsUtils getCategoryGeneratedIndexNavigation pass
+createSidebarsUtils getCategoryGeneratedIndexList pass
+createSidebarsUtils getFirstLink pass
+collectSidebarDocItems can collect docs pass
+collectSidebarCategories can collect categories pass
+collectSidebarLinks can collect links pass
+collectSidebarsDocIds can collect sidebars doc items pass
+transformSidebarItems can transform sidebar items pass
+toDocNavigationLink with no front matter pass
+toDocNavigationLink with pagination_label front matter pass
+toDocNavigationLink with sidebar_label front matter pass
+toDocNavigationLink with sidebar item label pass
+toDocNavigationLink with pagination_label + sidebar_label front matter pass
+toDocNavigationLink with sidebar_label + sidebar item label pass
+toNavigationLink with doc items pass
+toNavigationLink with category item and doc link pass
+toNavigationLink with category item and generated-index link pass
+readOutputHTMLFile reads both files with trailing slash undefined pass
+readOutputHTMLFile reads only folder with trailing slash true pass
+readOutputHTMLFile reads only file trailing slash false pass
+readOutputHTMLFile reads file ending in .html pass
+readOutputHTMLFile reads file ending in .html in folder containing .html pass
+readOutputHTMLFile throws if file does not exist pass
+generate works with no file and no cache pass
+generate works with existing cache pass
+generate works with existing file but no cache pass
+generate works when force skipping cache pass
+isInternalUrl returns true for empty links pass
+isInternalUrl returns true for root relative links pass
+isInternalUrl returns true for relative links pass
+isInternalUrl returns false for HTTP links pass
+isInternalUrl returns false for HTTPS links pass
+isInternalUrl returns false for whatever protocol links pass
+isInternalUrl returns false for telephone links pass
+isInternalUrl returns false for mailto links pass
+isInternalUrl returns false for undefined links pass
+normalization normalizes shorthands pass
+normalization rejects some invalid cases pass
+normalization adds a translatable marker for labels defined in sidebars.js pass
+md processor parses simple commonmark pass
+isRegexpStringMatch works pass
+getFormat uses frontMatter format over anything else pass
+getFormat supports "detects" for front matter pass
+getFormat fallbacks to markdown config format when front matter undefined pass
+shellUtils escapeShellArg pass
+post
+getPluginI18nPath gets correct path pass
+getPluginI18nPath gets correct path for default plugin pass
+getPluginI18nPath gets correct path when no sub-paths pass
+localizePath localizes url path with current locale pass
+localizePath localizes fs path with current locale pass
+localizePath localizes path for default locale, if requested pass
+localizePath does not localize path for default locale by default pass
+localizePath localizes path for non-default locale by default pass
+createSitemap no items pass
+createSitemap simple item pass
+createSitemap complex item pass
+createSitemap date only lastmod pass
+duplicates gets duplicate values pass
+duplicates accepts custom comparator pass
+uniq remove duplicate primitives pass
+uniq remove duplicate objects/arrays by identity pass
+groupBy group by name pass
+groupBy group by age pass
+groupBy group by type pass
+groupBy group by name even duplicates pass
+flat nested pass
+flat primitives pass
+flat multiple keys pass
+flat empty object pass
+flat array pass
+postProcess transforms category without subitems pass
+postProcess corrects collapsed state inconsistencies pass
+postProcess filters draft items pass
+applyRouteTrailingSlash apply to empty pass
+applyRouteTrailingSlash apply to / pass
+applyRouteTrailingSlash apply to /abc pass
+applyRouteTrailingSlash apply to /abc/ pass
+applyRouteTrailingSlash apply to /abc?search#anchor pass
+applyRouteTrailingSlash apply to /abc/?search#anchor pass
+applyRouteTrailingSlash not apply to /abc/?search#anchor when baseUrl=/abc/ pass
+applyRouteTrailingSlash apply to subroutes pass
+applyRouteTrailingSlash apply for complex case pass
+applyRouteTrailingSlash apply for complex case with baseUrl pass
+sortRoutes sorts route config correctly pass
+sortRoutes sorts route config recursively pass
+sortRoutes sorts route config given a baseURL pass
+sortRoutes sorts parent route configs when one included in another pass
+listTagsByLetters creates letters list pass
+handleDuplicateRoutes works pass
+duplicate authors allows duplicated inline authors pass
+duplicate authors rejects duplicated key authors pass
+inline authors allows predefined authors pass
+inline authors rejects inline authors pass
+inline authors warn inline authors pass
+shellUtils escapeShellArg pass
+removePrefix is no-op when prefix doesn't exist pass
+removePrefix removes prefix pass
+removeSuffix is no-op when suffix doesn't exist pass
+removeSuffix removes suffix pass
+removeSuffix removes empty suffix pass
+addPrefix is no-op when prefix already exists pass
+addPrefix adds prefix pass
+addSuffix is no-op when suffix already exists pass
+addSuffix adds suffix pass
+mergeGlobalData no global data pass
+mergeGlobalData 1 global data pass
+mergeGlobalData 1 global data - primitive value pass
+mergeGlobalData 3 distinct plugins global data pass
+mergeGlobalData 3 plugin instances of same plugin pass
+mergeGlobalData 3 times the same plugin pass
+mergeGlobalData 3 times same plugin - including primitive values pass
+mergeGlobalData real world case pass
+getNamePatterns resolves plain names pass
+getNamePatterns expands bare scopes pass
+getNamePatterns expands scoped names pass
+getNamePatterns expands deep scoped paths pass
+resolveModuleName resolves longhand pass
+resolveModuleName resolves shorthand pass
+resolveModuleName throws good error message for longhand pass
+resolveModuleName throws good error message for shorthand pass
+getAllClientModules loads an empty plugin pass
+getAllClientModules loads a non-empty plugin pass
+getAllClientModules loads multiple non-empty plugins pass
+getAllClientModules loads multiple non-empty plugins in different order pass
+getAllClientModules loads both empty and non-empty plugins pass
+getAllClientModules loads empty and non-empty in a different order pass
+getFileLoaderUtils() plugin svgo/removeViewBox and removeTitle should be disabled pass
+createRedirectPageContent works pass
+createRedirectPageContent encodes uri special chars pass
+createSlugger can create unique slugs pass
+createSlugger can create unique slugs respecting case pass
+getErrorCausalChain works for simple error pass
+getErrorCausalChain works for nested errors pass
+ensureUniquePluginInstanceIds accept single instance plugins pass
+ensureUniquePluginInstanceIds accept single instance plugins, all with sameId pass
+ensureUniquePluginInstanceIds accept multi instance plugins without id pass
+ensureUniquePluginInstanceIds reject multi instance plugins without id pass
+ensureUniquePluginInstanceIds reject multi instance plugins with same id pass
+ensureUniquePluginInstanceIds reject multi instance plugins with some without id pass
+toTagsProp works pass
+toTagsProp filters unlisted tags pass
+toBlogSidebarProp creates sidebar prop pass
+isMultiColumnFooterLinks works pass
+toggleListItem removes item already in list pass
+toggleListItem appends item not in list pass
+build success
+release success
+{'docsClientUtils getActiveVersion getActiveVersion with trailing slash', 'docsClientUtils getActiveVersion getActiveVersion is not sensitive to isLast attribute', 'docsClientUtils getActiveVersion getActiveVersion - docs only with trailing slash', 'docsClientUtils getActiveVersion getActiveVersion is not sensitive to version order', 'docsClientUtils getActiveVersion getActiveVersion for regular docs versions', 'docsClientUtils getActiveVersion getActiveVersion matches first version when same paths', 'docsClientUtils getActiveVersion getActiveVersion without trailing slash', 'docsClientUtils getActiveVersion getActiveVersion - docs only without trailing slash'}

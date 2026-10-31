@@ -1,0 +1,86 @@
+pre
+Obtaining file:///testbed
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: numpy>=1.21 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (1.26.2)
+Requirement already satisfied: pyerfa>=2.0 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (2.0.1.5)
+Requirement already satisfied: PyYAML>=3.13 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (6.0.3)
+Requirement already satisfied: packaging>=19.0 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (26.2)
+Requirement already satisfied: pytest>=7.0 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (9.1.1)
+Requirement already satisfied: pytest-doctestplus>=0.12 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (1.7.1)
+Requirement already satisfied: pytest-astropy-header>=0.2.1 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (0.2.2)
+Requirement already satisfied: pytest-astropy>=0.10 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (0.11.0)
+Requirement already satisfied: pytest-xdist in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (3.8.0)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.12/site-packages (from pytest>=7.0->astropy==0.0.0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.12/site-packages (from pytest>=7.0->astropy==0.0.0) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.12/site-packages (from pytest>=7.0->astropy==0.0.0) (2.20.0)
+Requirement already satisfied: pytest-remotedata>=0.4.1 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (0.4.1)
+Requirement already satisfied: pytest-arraydiff>=0.5 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (0.7.0)
+Requirement already satisfied: pytest-filter-subpackage>=0.1.2 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (0.2.0)
+Requirement already satisfied: pytest-cov>=2.3.1 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (7.1.0)
+Requirement already satisfied: pytest-mock>=2.0 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (3.15.1)
+Requirement already satisfied: attrs>=19.2.0 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (26.1.0)
+Requirement already satisfied: hypothesis>=5.1 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (6.161.5)
+Requirement already satisfied: execnet>=2.1 in ./.venv/lib/python3.12/site-packages (from pytest-xdist->astropy==0.0.0) (2.1.2)
+Requirement already satisfied: sortedcontainers<3.0.0,>=2.1.0 in ./.venv/lib/python3.12/site-packages (from hypothesis>=5.1->pytest-astropy>=0.10->astropy==0.0.0) (2.4.0)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.12/site-packages (from coverage[toml]>=7.10.6->pytest-cov>=2.3.1->pytest-astropy>=0.10->astropy==0.0.0) (7.15.2)
+Checking if build backend supports build_editable: started
+Checking if build backend supports build_editable: finished with status 'done'
+Building wheels for collected packages: astropy
+  Building editable for astropy (pyproject.toml): started
+  Building editable for astropy (pyproject.toml): finished with status 'done'
+  Created wheel for astropy: filename=astropy-0.0.0-0.editable-cp312-cp312-linux_x86_64.whl size=6757 sha256=2a8180c4bd7eaba76a4f6469298b130a6c72360be403490e30f52dd217c3df09
+  Stored in directory: /tmp/pip-ephem-wheel-cache-egxdxfxf/wheels/5d/7e/d4/0611b5e1f6b19283dfc03cca62ebc6a41021c5c464d28aab8f
+Successfully built astropy
+Installing collected packages: astropy
+  Attempting uninstall: astropy
+    Found existing installation: astropy 0.0.0
+    Uninstalling astropy-0.0.0:
+      Successfully uninstalled astropy-0.0.0
+Successfully installed astropy-0.0.0
+post
+Obtaining file:///testbed
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: numpy>=1.21 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (1.26.2)
+Requirement already satisfied: pyerfa>=2.0 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (2.0.1.5)
+Requirement already satisfied: PyYAML>=3.13 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (6.0.3)
+Requirement already satisfied: packaging>=19.0 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (26.2)
+Requirement already satisfied: pytest>=7.0 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (9.1.1)
+Requirement already satisfied: pytest-doctestplus>=0.12 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (1.7.1)
+Requirement already satisfied: pytest-astropy-header>=0.2.1 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (0.2.2)
+Requirement already satisfied: pytest-astropy>=0.10 in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (0.11.0)
+Requirement already satisfied: pytest-xdist in ./.venv/lib/python3.12/site-packages (from astropy==0.0.0) (3.8.0)
+Requirement already satisfied: iniconfig>=1.0.1 in ./.venv/lib/python3.12/site-packages (from pytest>=7.0->astropy==0.0.0) (2.3.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.12/site-packages (from pytest>=7.0->astropy==0.0.0) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.12/site-packages (from pytest>=7.0->astropy==0.0.0) (2.20.0)
+Requirement already satisfied: pytest-remotedata>=0.4.1 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (0.4.1)
+Requirement already satisfied: pytest-arraydiff>=0.5 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (0.7.0)
+Requirement already satisfied: pytest-filter-subpackage>=0.1.2 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (0.2.0)
+Requirement already satisfied: pytest-cov>=2.3.1 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (7.1.0)
+Requirement already satisfied: pytest-mock>=2.0 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (3.15.1)
+Requirement already satisfied: attrs>=19.2.0 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (26.1.0)
+Requirement already satisfied: hypothesis>=5.1 in ./.venv/lib/python3.12/site-packages (from pytest-astropy>=0.10->astropy==0.0.0) (6.161.5)
+Requirement already satisfied: execnet>=2.1 in ./.venv/lib/python3.12/site-packages (from pytest-xdist->astropy==0.0.0) (2.1.2)
+Requirement already satisfied: sortedcontainers<3.0.0,>=2.1.0 in ./.venv/lib/python3.12/site-packages (from hypothesis>=5.1->pytest-astropy>=0.10->astropy==0.0.0) (2.4.0)
+Requirement already satisfied: coverage>=7.10.6 in ./.venv/lib/python3.12/site-packages (from coverage[toml]>=7.10.6->pytest-cov>=2.3.1->pytest-astropy>=0.10->astropy==0.0.0) (7.15.2)
+Checking if build backend supports build_editable: started
+Checking if build backend supports build_editable: finished with status 'done'
+Building wheels for collected packages: astropy
+  Building editable for astropy (pyproject.toml): started
+  Building editable for astropy (pyproject.toml): finished with status 'done'
+  Created wheel for astropy: filename=astropy-0.0.0-0.editable-cp312-cp312-linux_x86_64.whl size=6757 sha256=13589073bdf9c548b2a996153078329bc1c6a79e9f187ac3d377d7b4f7ff8530
+  Stored in directory: /tmp/pip-ephem-wheel-cache-mr3ielk2/wheels/5d/7e/d4/0611b5e1f6b19283dfc03cca62ebc6a41021c5c464d28aab8f
+Successfully built astropy
+Installing collected packages: astropy
+  Attempting uninstall: astropy
+    Found existing installation: astropy 0.0.0
+    Uninstalling astropy-0.0.0:
+      Successfully uninstalled astropy-0.0.0
+Successfully installed astropy-0.0.0
+(.venv) (.venv) build failed
+(.venv) (.venv) 

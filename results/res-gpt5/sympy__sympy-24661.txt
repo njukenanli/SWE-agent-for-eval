@@ -1,0 +1,142 @@
+pre
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: mpmath>=0.19 in ./.venv/lib/python3.12/site-packages (from sympy==1.12.dev0) (1.3.0)
+Building wheels for collected packages: sympy
+  Building editable for sympy (pyproject.toml): started
+  Building editable for sympy (pyproject.toml): finished with status 'done'
+  Created wheel for sympy: filename=sympy-1.12.dev0-0.editable-py3-none-any.whl size=30570 sha256=5bd5fccc54bc1dae0b822f66a508b961ded9fc4809685115fe2f3c74087aa526
+  Stored in directory: /tmp/pip-ephem-wheel-cache-r0ecriii/wheels/5d/7e/d4/0611b5e1f6b19283dfc03cca62ebc6a41021c5c464d28aab8f
+Successfully built sympy
+Installing collected packages: sympy
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.12.dev0
+    Not uninstalling sympy at /testbed, outside environment /testbed/.venv
+    Can't uninstall 'sympy'. No files were found to uninstall.
+Successfully installed sympy-1.12.dev0
+......................                                                   [100%]
+=========================== short test summary info ============================
+PASSED sympy/core/tests/test_basic.py::test__aresame
+PASSED sympy/core/tests/test_basic.py::test_structure
+PASSED sympy/core/tests/test_basic.py::test_immutable
+PASSED sympy/core/tests/test_basic.py::test_equality
+PASSED sympy/core/tests/test_basic.py::test_matches_basic
+PASSED sympy/core/tests/test_basic.py::test_has
+PASSED sympy/core/tests/test_basic.py::test_subs
+PASSED sympy/core/tests/test_basic.py::test_subs_with_unicode_symbols
+PASSED sympy/core/tests/test_basic.py::test_atoms
+PASSED sympy/core/tests/test_basic.py::test_free_symbols_empty
+PASSED sympy/core/tests/test_basic.py::test_doit
+PASSED sympy/core/tests/test_basic.py::test_S
+PASSED sympy/core/tests/test_basic.py::test_xreplace
+PASSED sympy/core/tests/test_basic.py::test_sorted_args
+PASSED sympy/core/tests/test_basic.py::test_call
+PASSED sympy/core/tests/test_basic.py::test_rewrite
+PASSED sympy/core/tests/test_basic.py::test_literal_evalf_is_number_is_zero_is_comparable
+PASSED sympy/core/tests/test_basic.py::test_as_Basic
+PASSED sympy/core/tests/test_basic.py::test_atomic
+PASSED sympy/core/tests/test_basic.py::test_as_dummy
+PASSED sympy/core/tests/test_basic.py::test_canonical_variables
+PASSED sympy/core/tests/test_basic.py::test_replace_exceptions
+22 passed in 0.57s
+sympy/core/tests/test_basic.py::test__aresame pass
+sympy/core/tests/test_basic.py::test_structure pass
+sympy/core/tests/test_basic.py::test_immutable pass
+sympy/core/tests/test_basic.py::test_equality pass
+sympy/core/tests/test_basic.py::test_matches_basic pass
+sympy/core/tests/test_basic.py::test_has pass
+sympy/core/tests/test_basic.py::test_subs pass
+sympy/core/tests/test_basic.py::test_subs_with_unicode_symbols pass
+sympy/core/tests/test_basic.py::test_atoms pass
+sympy/core/tests/test_basic.py::test_free_symbols_empty pass
+sympy/core/tests/test_basic.py::test_doit pass
+sympy/core/tests/test_basic.py::test_S pass
+sympy/core/tests/test_basic.py::test_xreplace pass
+sympy/core/tests/test_basic.py::test_sorted_args pass
+sympy/core/tests/test_basic.py::test_call pass
+sympy/core/tests/test_basic.py::test_rewrite pass
+sympy/core/tests/test_basic.py::test_literal_evalf_is_number_is_zero_is_comparable pass
+sympy/core/tests/test_basic.py::test_as_Basic pass
+sympy/core/tests/test_basic.py::test_atomic pass
+sympy/core/tests/test_basic.py::test_as_dummy pass
+sympy/core/tests/test_basic.py::test_canonical_variables pass
+sympy/core/tests/test_basic.py::test_replace_exceptions pass
+post
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: mpmath>=0.19 in ./.venv/lib/python3.12/site-packages (from sympy==1.12.dev0) (1.3.0)
+Building wheels for collected packages: sympy
+  Building editable for sympy (pyproject.toml): started
+  Building editable for sympy (pyproject.toml): finished with status 'done'
+  Created wheel for sympy: filename=sympy-1.12.dev0-0.editable-py3-none-any.whl size=30570 sha256=e459156c73851c19f43f9c9320c4967ec89aab04fd1b36ec2608c6b262862a5a
+  Stored in directory: /tmp/pip-ephem-wheel-cache-1u5u_10j/wheels/5d/7e/d4/0611b5e1f6b19283dfc03cca62ebc6a41021c5c464d28aab8f
+Successfully built sympy
+Installing collected packages: sympy
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.12.dev0
+    Not uninstalling sympy at /testbed, outside environment /testbed/.venv
+    Can't uninstall 'sympy'. No files were found to uninstall.
+Successfully installed sympy-1.12.dev0
+......................                                                   [100%]
+=========================== short test summary info ============================
+PASSED sympy/core/tests/test_basic.py::test__aresame
+PASSED sympy/core/tests/test_basic.py::test_structure
+PASSED sympy/core/tests/test_basic.py::test_immutable
+PASSED sympy/core/tests/test_basic.py::test_equality
+PASSED sympy/core/tests/test_basic.py::test_matches_basic
+PASSED sympy/core/tests/test_basic.py::test_has
+PASSED sympy/core/tests/test_basic.py::test_subs
+PASSED sympy/core/tests/test_basic.py::test_subs_with_unicode_symbols
+PASSED sympy/core/tests/test_basic.py::test_atoms
+PASSED sympy/core/tests/test_basic.py::test_free_symbols_empty
+PASSED sympy/core/tests/test_basic.py::test_doit
+PASSED sympy/core/tests/test_basic.py::test_S
+PASSED sympy/core/tests/test_basic.py::test_xreplace
+PASSED sympy/core/tests/test_basic.py::test_sorted_args
+PASSED sympy/core/tests/test_basic.py::test_call
+PASSED sympy/core/tests/test_basic.py::test_rewrite
+PASSED sympy/core/tests/test_basic.py::test_literal_evalf_is_number_is_zero_is_comparable
+PASSED sympy/core/tests/test_basic.py::test_as_Basic
+PASSED sympy/core/tests/test_basic.py::test_atomic
+PASSED sympy/core/tests/test_basic.py::test_as_dummy
+PASSED sympy/core/tests/test_basic.py::test_canonical_variables
+PASSED sympy/core/tests/test_basic.py::test_replace_exceptions
+22 passed in 0.57s
+sympy/core/tests/test_basic.py::test__aresame pass
+sympy/core/tests/test_basic.py::test_structure pass
+sympy/core/tests/test_basic.py::test_immutable pass
+sympy/core/tests/test_basic.py::test_equality pass
+sympy/core/tests/test_basic.py::test_matches_basic pass
+sympy/core/tests/test_basic.py::test_has pass
+sympy/core/tests/test_basic.py::test_subs pass
+sympy/core/tests/test_basic.py::test_subs_with_unicode_symbols pass
+sympy/core/tests/test_basic.py::test_atoms pass
+sympy/core/tests/test_basic.py::test_free_symbols_empty pass
+sympy/core/tests/test_basic.py::test_doit pass
+sympy/core/tests/test_basic.py::test_S pass
+sympy/core/tests/test_basic.py::test_xreplace pass
+sympy/core/tests/test_basic.py::test_sorted_args pass
+sympy/core/tests/test_basic.py::test_call pass
+sympy/core/tests/test_basic.py::test_rewrite pass
+sympy/core/tests/test_basic.py::test_literal_evalf_is_number_is_zero_is_comparable pass
+sympy/core/tests/test_basic.py::test_as_Basic pass
+sympy/core/tests/test_basic.py::test_atomic pass
+sympy/core/tests/test_basic.py::test_as_dummy pass
+sympy/core/tests/test_basic.py::test_canonical_variables pass
+sympy/core/tests/test_basic.py::test_replace_exceptions pass
+build success
+release failed

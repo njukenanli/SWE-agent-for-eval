@@ -1,0 +1,205 @@
+pre
+  left: "  │ struct Rectangle {\n  │     width: u32,\n  │     height: u32,\n  │ }\n  │ \n_ │ fn main() {\n  │     let rect1 = Rectangle { width: 30, height: 50 };\n  │ \n  │     println!(\n~ │         \"The perimeter of the rectangle is {} pixels.\",\n~ │         perimeter(&rect1)\n  │     );\n+ │     println!(r#\"This line contains invalid utf8:  \"�����\"#;\n  │ }\n  │ \n  │ fn area(rectangle: &Rectangle) -> u32 {\n  │     rectangle.width * rectangle.height\n  │ }\n+ │ \n+ │ fn perimeter(rectangle: &Rectangle) -> u32 {\n+ │     (rectangle.width + rectangle.height) * 2\n+ │ }\n──┴─────────────────────────────────────────────────────────────────────────────\n"
+ right: ""
+
+---- changes_numbers stdout ----
+"/tmp/bat-tests.3EF53WQbz2eR/sample.rs"
+thread 'changes_numbers' panicked at tests/tester.rs:67:9:
+assertion `left == right` failed
+  left: "   1   struct Rectangle {\n   2       width: u32,\n   3       height: u32,\n   4   }\n   5   \n   6 _ fn main() {\n   7       let rect1 = Rectangle { width: 30, height: 50 };\n   8   \n   9       println!(\n  10 ~         \"The perimeter of the rectangle is {} pixels.\",\n  11 ~         perimeter(&rect1)\n  12       );\n  13 +     println!(r#\"This line contains invalid utf8:  \"�����\"#;\n  14   }\n  15   \n  16   fn area(rectangle: &Rectangle) -> u32 {\n  17       rectangle.width * rectangle.height\n  18   }\n  19 + \n  20 + fn perimeter(rectangle: &Rectangle) -> u32 {\n  21 +     (rectangle.width + rectangle.height) * 2\n  22 + }\n"
+ right: ""
+
+---- changes_header_numbers stdout ----
+"/tmp/bat-tests.HQceTfy6CSeT/sample.rs"
+thread 'changes_header_numbers' panicked at tests/tester.rs:67:9:
+assertion `left == right` failed
+  left: "       File: sample.rs\n   1   struct Rectangle {\n   2       width: u32,\n   3       height: u32,\n   4   }\n   5   \n   6 _ fn main() {\n   7       let rect1 = Rectangle { width: 30, height: 50 };\n   8   \n   9       println!(\n  10 ~         \"The perimeter of the rectangle is {} pixels.\",\n  11 ~         perimeter(&rect1)\n  12       );\n  13 +     println!(r#\"This line contains invalid utf8:  \"�����\"#;\n  14   }\n  15   \n  16   fn area(rectangle: &Rectangle) -> u32 {\n  17       rectangle.width * rectangle.height\n  18   }\n  19 + \n  20 + fn perimeter(rectangle: &Rectangle) -> u32 {\n  21 +     (rectangle.width + rectangle.height) * 2\n  22 + }\n"
+ right: ""
+
+
+failures:
+    changes
+    changes_grid
+    changes_grid_header
+    changes_grid_header_numbers
+    changes_grid_numbers
+    changes_header
+    changes_header_numbers
+    changes_numbers
+    full
+
+test result: FAILED. 8 passed; 9 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.34s
+
+error: test failed, to rerun pass `--test snapshot_tests`
+config::multi_line pass
+config::multiple pass
+inputfile::basic pass
+config::empty pass
+inputfile::utf16le pass
+config::comments pass
+config::quotes pass
+config::single pass
+line_range::test_parse_fail pass
+line_range::test_parse_partial_max pass
+line_range::test_parse_full pass
+line_range::test_ranges_advanced pass
+line_range::test_ranges_open_high pass
+line_range::test_parse_partial_min pass
+line_range::test_ranges_empty pass
+line_range::test_ranges_open_low pass
+line_range::test_ranges_simple pass
+syntax_mapping::basic pass
+util::tests::basic pass
+config_location_test pass
+fail_non_existing pass
+basic pass
+pager_basic pass
+tabs_8_wrapped pass
+concatenate_stdin pass
+line_numbers pass
+concatenate_empty_first_and_last pass
+tabs_4 pass
+concatenate_empty_between pass
+pager_overwrite pass
+line_range_multiple pass
+tabs_8 pass
+stdin pass
+fail_directory pass
+concatenate_single_line pass
+tabs_passthrough pass
+concatenate_empty_last pass
+tabs_numbers pass
+concatenate_empty_both pass
+config_read_arguments_from_file pass
+line_range_last_3 pass
+concatenate pass
+pager_disable pass
+utf16 pass
+tabs_passthrough_wrapped pass
+line_range_first_two pass
+do_not_exit_directory pass
+tabs_4_wrapped pass
+concatenate_empty_first pass
+line_range_2_3 pass
+concatenate_single_line_empty pass
+changes_grid_header fail
+plain pass
+full fail
+changes_header fail
+header_numbers pass
+numbers pass
+changes_grid_header_numbers fail
+grid_header_numbers pass
+changes fail
+grid_header pass
+changes_grid_numbers fail
+header pass
+changes_grid fail
+grid_numbers pass
+changes_numbers fail
+changes_header_numbers fail
+grid pass
+post
+test tabs_8_wrapped ... ok
+test pager_overwrite ... ok
+test line_range_last_3 ... ok
+test tabs_4 ... ok
+test fail_non_existing ... ok
+test stdin ... ok
+test fail_directory ... ok
+test line_range_multiple ... ok
+test config_read_arguments_from_file ... ok
+test does_not_print_unwanted_file_named_cache ... FAILED
+test tabs_passthrough_wrapped ... ok
+test concatenate_single_line ... ok
+test concatenate_stdin ... ok
+test tabs_passthrough ... ok
+test basic ... ok
+test utf16 ... ok
+test pager_basic ... ok
+test line_numbers ... ok
+test line_range_first_two ... ok
+test can_print_file_named_cache ... ok
+test concatenate_empty_both ... ok
+test pager_disable ... ok
+test concatenate_empty_first ... ok
+test tabs_4_wrapped ... ok
+test tabs_numbers ... ok
+test concatenate ... ok
+
+failures:
+
+---- does_not_print_unwanted_file_named_cache stdout ----
+thread 'does_not_print_unwanted_file_named_cache' panicked at /root/.cargo/registry/src/index.crates.io-6f17d22bba15001f/assert_cmd-0.11.1/src/assert.rs:181:13:
+Unexpected success
+command=`cd "tests/examples" && env -u BAT_CONFIG_PATH -u BAT_PAGER -u BAT_STYLE -u BAT_TABS -u BAT_THEME -u PAGER "/testbed/target/debug/bat" "cach"`
+code=0
+stdout=```test
+```
+stderr=``````
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    does_not_print_unwanted_file_named_cache
+
+test result: FAILED. 33 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.58s
+
+error: test failed, to rerun pass `--test integration_tests`
+config::comments pass
+config::empty pass
+config::multiple pass
+config::quotes pass
+config::multi_line pass
+inputfile::basic pass
+inputfile::utf16le pass
+line_range::test_parse_fail pass
+line_range::test_parse_full pass
+config::single pass
+line_range::test_ranges_advanced pass
+line_range::test_ranges_empty pass
+line_range::test_parse_partial_min pass
+line_range::test_parse_partial_max pass
+line_range::test_ranges_open_low pass
+syntax_mapping::basic pass
+line_range::test_ranges_open_high pass
+util::tests::basic pass
+line_range::test_ranges_simple pass
+config_location_test pass
+line_range_2_3 pass
+tabs_8 pass
+concatenate_empty_between pass
+do_not_exit_directory pass
+concatenate_single_line_empty pass
+concatenate_empty_first_and_last pass
+concatenate_empty_last pass
+tabs_8_wrapped pass
+pager_overwrite pass
+line_range_last_3 pass
+tabs_4 pass
+fail_non_existing pass
+stdin pass
+fail_directory pass
+line_range_multiple pass
+config_read_arguments_from_file pass
+does_not_print_unwanted_file_named_cache fail
+tabs_passthrough_wrapped pass
+concatenate_single_line pass
+concatenate_stdin pass
+tabs_passthrough pass
+basic pass
+utf16 pass
+pager_basic pass
+line_numbers pass
+line_range_first_two pass
+can_print_file_named_cache pass
+concatenate_empty_both pass
+pager_disable pass
+concatenate_empty_first pass
+tabs_4_wrapped pass
+tabs_numbers pass
+concatenate pass
+build success
+release success
+{'can_print_file_named_cache'}

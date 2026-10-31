@@ -1,0 +1,205 @@
+pre
+tokio-stream/src/stream_map.rs - stream_map::StreamMap<K,V>::iter_mut (line 209) pass
+tokio-stream/src/stream_map.rs - stream_map::StreamMap<K,V>::values (line 289) pass
+tokio-stream/src/stream_map.rs - stream_map::StreamMap<K,V>::contains_key (line 461) pass
+tokio-stream/src/stream_map.rs - stream_map::StreamMap<K,V>::iter (line 186) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::all (line 678) pass
+tokio-stream/src/empty.rs - empty::empty (line 26) pass
+tokio-stream/src/lib.rs - (line 34) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::then (line 266) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::fold (line 806) pass
+tokio-stream/src/once.rs - once::once (line 22) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::collect (line 873) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::filter (line 401) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::all (line 663) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::take_while (line 563) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::collect (line 856) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::take (line 534) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::map (line 186) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::any (line 722) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::filter_map (line 437) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::next (line 118) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::fuse (line 471) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt (line 78) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::try_next (line 154) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::map_while (line 222) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::chain (line 768) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::skip_while (line 620) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::any (line 737) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::skip (line 589) pass
+tokio-stream/src/wrappers/watch.rs - wrappers::watch::WatchStream (line 18) pass
+tokio-stream/src/wrappers/watch.rs - wrappers::watch::WatchStream (line 34) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::timeout (line 927) pass
+tokio-stream/src/stream_map.rs - stream_map::StreamMap (line 54) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::merge (line 313) pass
+tokio-test/src/macros.rs - macros::assert_elapsed (line 265) pass
+tokio-test/src/macros.rs - macros::assert_ok (line 191) pass
+tokio-test/src/macros.rs - macros::assert_err (line 232) pass
+tokio-test/src/macros.rs - macros::assert_ready (line 15) pass
+tokio-test/src/macros.rs - macros::assert_pending (line 120) pass
+tokio-test/src/macros.rs - macros::assert_ready_err (line 87) pass
+tokio-test/src/macros.rs - macros::assert_ready_ok (line 54) pass
+tokio-test/src/macros.rs - macros::assert_ready_eq (line 159) pass
+tokio-util/src/sync/cancellation_token.rs - sync::cancellation_token::CancellationToken (line 27) skip
+tokio-util/src/sync/cancellation_token.rs - sync::cancellation_token::CancellationToken::child_token (line 175) skip
+tokio-util/src/codec/decoder.rs - codec::decoder::Decoder::decode (line 95) - compile pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue (line 69) - compile pass
+tokio-util/src/codec/mod.rs - codec (line 169) - compile pass
+tokio-util/src/lib.rs - util::poll_write_buf (line 146) - compile pass
+tokio-util/src/codec/mod.rs - codec (line 49) - compile pass
+tokio-util/src/either.rs - either::Either (line 20) - compile fail pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 181) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 115) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 347) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_adjustment (line 832) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 41) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::big_endian (line 682) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::max_frame_length (line 764) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 147) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 225) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new (line 638) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 17) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 271) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::num_skip (line 856) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 310) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_read (line 898) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_framed (line 944) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 81) pass
+tokio-util/src/codec/mod.rs - codec (line 211) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_offset (line 811) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::little_endian (line 706) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_length (line 788) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_write (line 923) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::native_endian (line 730) pass
+tokio-util/src/codec/mod.rs - codec (line 85) pass
+tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec::max_length (line 116) pass
+tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec::max_length (line 123) pass
+tokio-util/src/codec/lines_codec.rs - codec::lines_codec::LinesCodec::max_length (line 82) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_codec (line 876) pass
+tokio-util/src/codec/lines_codec.rs - codec::lines_codec::LinesCodec::max_length (line 75) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::capacity (line 658) pass
+tokio-util/src/codec/bytes_codec.rs - codec::bytes_codec::BytesCodec (line 20) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::new (line 220) pass
+tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec (line 20) pass
+tokio-util/src/either.rs - either::Either (line 40) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::clear (line 630) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::insert_at (line 292) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::insert (line 416) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reserve (line 707) pass
+tokio-util/src/context.rs - context::TokioContext (line 38) pass
+tokio-util/src/context.rs - context::TokioContext<F>::new (line 90) pass
+tokio-util/src/io/read_buf.rs - io::read_buf::read_buf (line 14) pass
+tokio-util/src/io/reader_stream.rs - io::reader_stream::ReaderStream (line 17) pass
+tokio-util/src/context.rs - context::RuntimeExt::wrap (line 155) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::len (line 672) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::with_capacity (line 236) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::remove (line 486) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::is_empty (line 732) pass
+tokio-util/src/io/stream_reader.rs - io::stream_reader::StreamReader (line 15) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reset_at (line 540) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reset (line 600) pass
+tokio-util/src/lib.rs - util::poll_read_buf (line 72) pass
+post
+tokio-stream/src/stream_map.rs - stream_map::StreamMap<K,V>::iter_mut (line 209) pass
+tokio-stream/src/stream_map.rs - stream_map::StreamMap<K,V>::values (line 289) pass
+tokio-stream/src/stream_map.rs - stream_map::StreamMap<K,V>::contains_key (line 461) pass
+tokio-stream/src/stream_map.rs - stream_map::StreamMap<K,V>::iter (line 186) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt (line 78) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::all (line 663) pass
+tokio-stream/src/empty.rs - empty::empty (line 26) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::all (line 678) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::any (line 722) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::chain (line 768) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::fuse (line 471) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::fold (line 806) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::map_while (line 222) pass
+tokio-stream/src/once.rs - once::once (line 22) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::filter (line 401) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::take (line 534) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::collect (line 856) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::any (line 737) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::try_next (line 154) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::take_while (line 563) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::map (line 186) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::skip_while (line 620) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::filter_map (line 437) pass
+tokio-stream/src/lib.rs - (line 34) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::next (line 118) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::collect (line 873) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::skip (line 589) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::then (line 266) pass
+tokio-stream/src/wrappers/watch.rs - wrappers::watch::WatchStream (line 34) pass
+tokio-stream/src/wrappers/watch.rs - wrappers::watch::WatchStream (line 18) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::timeout (line 927) pass
+tokio-stream/src/stream_ext.rs - stream_ext::StreamExt::merge (line 313) pass
+tokio-stream/src/stream_map.rs - stream_map::StreamMap (line 54) pass
+tokio-test/src/macros.rs - macros::assert_elapsed (line 265) pass
+tokio-test/src/macros.rs - macros::assert_ok (line 191) pass
+tokio-test/src/macros.rs - macros::assert_err (line 232) pass
+tokio-test/src/macros.rs - macros::assert_ready (line 15) pass
+tokio-test/src/macros.rs - macros::assert_ready_eq (line 159) pass
+tokio-test/src/macros.rs - macros::assert_ready_err (line 87) pass
+tokio-test/src/macros.rs - macros::assert_ready_ok (line 54) pass
+tokio-test/src/macros.rs - macros::assert_pending (line 120) pass
+tokio-util/src/sync/cancellation_token.rs - sync::cancellation_token::CancellationToken (line 27) skip
+tokio-util/src/sync/cancellation_token.rs - sync::cancellation_token::CancellationToken::child_token (line 175) skip
+tokio-util/src/codec/decoder.rs - codec::decoder::Decoder::decode (line 95) - compile pass
+tokio-util/src/codec/mod.rs - codec (line 49) - compile pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue (line 69) - compile pass
+tokio-util/src/lib.rs - util::poll_write_buf (line 146) - compile pass
+tokio-util/src/either.rs - either::Either (line 20) - compile fail pass
+tokio-util/src/codec/mod.rs - codec (line 169) - compile pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::num_skip (line 856) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::native_endian (line 730) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 347) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 17) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 81) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 147) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 115) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 310) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 225) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::max_frame_length (line 764) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_write (line 923) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_offset (line 811) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::big_endian (line 682) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 181) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 271) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_length (line 788) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::little_endian (line 706) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new (line 638) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_adjustment (line 832) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_read (line 898) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_framed (line 944) pass
+tokio-util/src/codec/mod.rs - codec (line 211) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 41) pass
+tokio-util/src/codec/mod.rs - codec (line 85) pass
+tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec::max_length (line 116) pass
+tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_codec (line 876) pass
+tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec::max_length (line 123) pass
+tokio-util/src/codec/lines_codec.rs - codec::lines_codec::LinesCodec::max_length (line 82) pass
+tokio-util/src/codec/lines_codec.rs - codec::lines_codec::LinesCodec::max_length (line 75) pass
+tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec (line 20) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::new (line 220) pass
+tokio-util/src/codec/bytes_codec.rs - codec::bytes_codec::BytesCodec (line 20) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::capacity (line 658) pass
+tokio-util/src/either.rs - either::Either (line 40) pass
+tokio-util/src/context.rs - context::TokioContext<F>::new (line 90) pass
+tokio-util/src/lib.rs - util::poll_read_buf (line 72) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::clear (line 630) pass
+tokio-util/src/io/reader_stream.rs - io::reader_stream::ReaderStream (line 17) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::with_capacity (line 236) pass
+tokio-util/src/context.rs - context::TokioContext (line 38) pass
+tokio-util/src/context.rs - context::RuntimeExt::wrap (line 155) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::insert (line 416) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::len (line 672) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reserve (line 707) pass
+tokio-util/src/io/read_buf.rs - io::read_buf::read_buf (line 14) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::is_empty (line 732) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reset_at (line 540) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reset (line 600) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::insert_at (line 292) pass
+tokio-util/src/io/stream_reader.rs - io::stream_reader::StreamReader (line 15) pass
+tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::remove (line 486) pass
+build success
+release success
+{'net_types_are_unwind_safe', 'unix_net_types_are_unwind_safe'}

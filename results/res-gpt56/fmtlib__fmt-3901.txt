@@ -1,0 +1,153 @@
+pre
+[  3%] Built target fmt
+[  6%] Built target gtest
+[ 10%] Built target noexception-test
+[ 13%] Built target nolocale-test
+[ 18%] Built target test-main
+[ 27%] Built target format-impl-test
+[ 35%] Built target compile-fp-test
+[ 38%] Built target printf-test
+[ 42%] Built target ranges-test
+[ 50%] Built target scan-test
+[ 52%] Built target std-test
+[ 60%] Built target unicode-test
+[ 63%] Built target xchar-test
+[ 65%] Built target enforce-checks-test
+[ 73%] Built target posix-mock-test
+[ 76%] Built target os-test
+[ 78%] Built target args-test
+[ 81%] Built target base-test
+[ 84%] Built target assert-test
+[ 86%] Built target chrono-test
+[ 89%] Built target color-test
+[ 92%] Built target gtest-extra-test
+[ 94%] Built target format-test
+[ 97%] Built target ostream-test
+[100%] Built target compile-test
+args-test pass
+base-test pass
+assert-test pass
+chrono-test pass
+color-test pass
+gtest-extra-test pass
+format-test pass
+format-impl-test pass
+ostream-test pass
+compile-test pass
+compile-fp-test pass
+printf-test pass
+ranges-test pass
+scan-test pass
+std-test pass
+unicode-test pass
+xchar-test pass
+enforce-checks-test pass
+posix-mock-test pass
+os-test pass
+compile-error-test pass
+find-package-test pass
+add-subdirectory-test pass
+static-export-test pass
+post
+[ 69%] Linking CXX executable ../bin/xchar-test
+[ 69%] Built target xchar-test
+[ 71%] Building CXX object test/CMakeFiles/posix-mock-test.dir/posix-mock-test.cc.o
+[ 72%] Building CXX object test/CMakeFiles/posix-mock-test.dir/__/src/format.cc.o
+[ 73%] Linking CXX executable ../bin/enforce-checks-test
+[ 73%] Built target enforce-checks-test
+[ 75%] Building CXX object test/CMakeFiles/os-test.dir/os-test.cc.o
+[ 76%] Linking CXX executable ../bin/os-test
+[ 76%] Built target os-test
+[ 77%] Building CXX object test/CMakeFiles/args-test.dir/args-test.cc.o
+In file included from /usr/include/stdio.h:44,
+                 from /usr/include/c++/13/cstdio:42,
+                 from /usr/include/c++/13/ext/string_conversions.h:45,
+                 from /usr/include/c++/13/bits/basic_string.h:4109,
+                 from /usr/include/c++/13/string:54,
+                 from /usr/include/c++/13/bits/locale_classes.h:40,
+                 from /usr/include/c++/13/locale:41,
+                 from /testbed/include/fmt/format-inl.h:18,
+                 from /testbed/src/format.cc:8:
+In function ‘int putc_unlocked(int, FILE*)’,
+    inlined from ‘void fmt::v10::detail::glibc_file<F>::init_buffer() [with F = _IO_FILE]’ at /testbed/include/fmt/format-inl.h:1495:18,
+    inlined from ‘fmt::v10::detail::file_print_buffer::file_print_buffer(FILE*)’ at /testbed/include/fmt/format-inl.h:1630:22,
+    inlined from ‘void fmt::v10::vprint_locked(FILE*, string_view, format_args)’ at /testbed/include/fmt/format-inl.h:1687:46:
+/usr/include/x86_64-linux-gnu/bits/stdio.h:103:10: warning: null pointer dereference [-Wnull-dereference]
+  103 |   return __putc_unlocked_body (__c, __stream);
+      |          ^~~~~~~~~~~~~~~~~~~~
+[ 78%] Building CXX object test/CMakeFiles/posix-mock-test.dir/gtest-extra.cc.o
+[ 80%] Building CXX object test/CMakeFiles/posix-mock-test.dir/util.cc.o
+[ 81%] Linking CXX executable ../bin/args-test
+[ 81%] Built target args-test
+[ 82%] Linking CXX executable ../bin/base-test
+[ 84%] Linking CXX executable ../bin/posix-mock-test
+[ 85%] Built target base-test
+[ 86%] Linking CXX executable ../bin/assert-test
+[ 88%] Built target posix-mock-test
+[ 89%] Building CXX object test/CMakeFiles/chrono-test.dir/chrono-test.cc.o
+[ 90%] Built target assert-test
+[ 92%] Building CXX object test/CMakeFiles/color-test.dir/color-test.cc.o
+[ 93%] Linking CXX executable ../bin/color-test
+[ 93%] Built target color-test
+[ 94%] Building CXX object test/CMakeFiles/gtest-extra-test.dir/gtest-extra-test.cc.o
+[ 96%] Linking CXX executable ../bin/gtest-extra-test
+[ 96%] Built target gtest-extra-test
+[ 97%] Building CXX object test/CMakeFiles/format-test.dir/format-test.cc.o
+In file included from /testbed/test/gtest-extra.h:16,
+                 from /testbed/test/format-test.cc:28:
+In constructor ‘testing::internal::StrictMockImpl<MockClass>::StrictMockImpl() [with Base = mock_allocator<int>]’,
+    inlined from ‘testing::StrictMock<MockClass>::StrictMock() [with MockClass = mock_allocator<int>]’ at /testbed/test/gtest/gmock/gmock.h:11579:28,
+    inlined from ‘virtual void util_test_allocator_ref_Test::TestBody()’ at /testbed/test/format-test.cc:216:35:
+/testbed/test/gtest/gmock/gmock.h:11480:61: warning: ‘alloc’ may be used uninitialized [-Wmaybe-uninitialized]
+11480 |   StrictMockImpl() { ::testing::Mock::FailUninterestingCalls(this); }
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/testbed/test/gtest/gmock/gmock.h: In member function ‘virtual void util_test_allocator_ref_Test::TestBody()’:
+/testbed/test/gtest/gmock/gmock.h:8659:15: note: by argument 1 of type ‘const void*’ to ‘static void testing::Mock::FailUninterestingCalls(const void*)’ declared here
+ 8659 |   static void FailUninterestingCalls(const void* mock_obj)
+      |               ^~~~~~~~~~~~~~~~~~~~~~
+/testbed/test/format-test.cc:216:35: note: ‘alloc’ declared here
+  216 |   StrictMock<mock_allocator<int>> alloc;
+      |                                   ^~~~~
+[ 98%] Linking CXX executable ../bin/chrono-test
+[ 98%] Built target chrono-test
+In constructor ‘testing::internal::StrictMockImpl<MockClass>::StrictMockImpl() [with Base = mock_allocator<char>]’,
+    inlined from ‘testing::StrictMock<MockClass>::StrictMock() [with MockClass = mock_allocator<char>]’ at /testbed/test/gtest/gmock/gmock.h:11579:28,
+    inlined from ‘virtual void memory_buffer_test_exception_in_deallocate_Test::TestBody()’ at /testbed/test/format-test.cc:396:36:
+/testbed/test/gtest/gmock/gmock.h:11480:61: warning: ‘alloc’ may be used uninitialized [-Wmaybe-uninitialized]
+11480 |   StrictMockImpl() { ::testing::Mock::FailUninterestingCalls(this); }
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/testbed/test/gtest/gmock/gmock.h: In member function ‘virtual void memory_buffer_test_exception_in_deallocate_Test::TestBody()’:
+/testbed/test/gtest/gmock/gmock.h:8659:15: note: by argument 1 of type ‘const void*’ to ‘static void testing::Mock::FailUninterestingCalls(const void*)’ declared here
+ 8659 |   static void FailUninterestingCalls(const void* mock_obj)
+      |               ^~~~~~~~~~~~~~~~~~~~~~
+/testbed/test/format-test.cc:396:36: note: ‘alloc’ declared here
+  396 |   StrictMock<mock_allocator<char>> alloc;
+      |                                    ^~~~~
+[100%] Linking CXX executable ../bin/format-test
+[100%] Built target format-test
+args-test pass
+base-test pass
+assert-test pass
+chrono-test pass
+color-test pass
+gtest-extra-test pass
+format-test pass
+format-impl-test pass
+ostream-test pass
+compile-test pass
+compile-fp-test pass
+printf-test pass
+ranges-test pass
+scan-test pass
+std-test pass
+unicode-test pass
+xchar-test pass
+enforce-checks-test pass
+posix-mock-test pass
+os-test pass
+compile-error-test pass
+find-package-test pass
+add-subdirectory-test pass
+static-export-test pass
+build success
+release failed

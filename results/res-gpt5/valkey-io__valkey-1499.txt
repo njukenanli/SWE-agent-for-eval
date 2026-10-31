@@ -1,0 +1,38 @@
+pre
+cd src && make all
+make[1]: Entering directory '/testbed/src'
+/bin/sh: 1: pkg-config: not found
+/bin/sh: 1: pkg-config: not found
+/bin/sh: 1: pkg-config: not found
+/bin/sh: 1: pkg-config: not found
+    CC Makefile.dep
+/bin/sh: 1: pkg-config: not found
+/bin/sh: 1: pkg-config: not found
+/bin/sh: 1: pkg-config: not found
+/bin/sh: 1: pkg-config: not found
+
+Hint: It's a good idea to run 'make test' ;)
+
+make[1]: Leaving directory '/testbed/src'
+awk: line 6: syntax error at or near ,
+post
+cd src && make all
+make[1]: Entering directory '/testbed/src'
+/bin/sh: 1: pkg-config: not found
+/bin/sh: 1: pkg-config: not found
+/bin/sh: 1: pkg-config: not found
+/bin/sh: 1: pkg-config: not found
+    CC release.o
+    CC db.o
+    LINK valkey-cli
+    LINK valkey-benchmark
+    LINK valkey-server
+    INSTALL valkey-sentinel
+    INSTALL valkey-check-rdb
+    INSTALL valkey-check-aof
+
+Hint: It's a good idea to run 'make test' ;)
+
+make[1]: Leaving directory '/testbed/src'
+awk: line 6: syntax error at or near ,
+build failed

@@ -1,0 +1,205 @@
+pre
+test_signature_from_str_positionaly_only_args pass
+test_signature_from_str_invalid pass
+test_safe_getattr_with_default pass
+test_safe_getattr_with_exception pass
+test_safe_getattr_with_property_exception pass
+test_safe_getattr_with___dict___override pass
+test_dictionary_sorting pass
+test_set_sorting pass
+test_set_sorting_fallback pass
+test_frozenset_sorting pass
+test_frozenset_sorting_fallback pass
+test_dict_customtype pass
+test_isclassmethod fail
+test_isstaticmethod fail
+test_iscoroutinefunction fail
+test_isfunction fail
+test_isbuiltin fail
+test_isdescriptor fail
+test_isattributedescriptor fail
+test_isproperty fail
+test_unpartial pass
+test_read_inventory_v1 pass
+test_read_inventory_v2 pass
+test_read_inventory_v2_not_having_version pass
+test_jsdump pass
+test_info_and_warning fail
+test_verbosity_filter fail
+test_nonl_info_log fail
+test_once_warning_log fail
+test_is_suppressed_warning pass
+test_suppress_warnings fail
+test_warningiserror fail
+test_info_location fail
+test_warning_location fail
+test_suppress_logging fail
+test_pending_warnings fail
+test_colored_logs fail
+test_logging_in_ParallelTasks fail
+test_output_with_unencodable_char fail
+test_skip_warningiserror fail
+test_prefixed_warnings fail
+test_compile_matchers pass
+test_Matcher pass
+test_NodeMatcher pass
+test_extract_messages[\n           .. admonition:: admonition title\n\n              admonition body\n           -title-1] pass
+test_extract_messages[\n           .. figure:: foo.jpg\n\n              this is title\n           -caption-1] pass
+test_extract_messages[\n           .. rubric:: spam\n           -rubric-1] pass
+test_extract_messages[\n           | spam\n           | egg\n           -line-2] pass
+test_extract_messages[\n           section\n           =======\n\n           +----------------+\n           | | **Title 1**  |\n           | | Message 1    |\n           +----------------+\n           -line-2] pass
+test_extract_messages[\n           * | **Title 1**\n             | Message 1\n           -line-2] pass
+test_extract_messages_without_rawsource pass
+test_clean_astext pass
+test_make_id[--id0] fail
+test_make_id[term--term-0] fail
+test_make_id[term-Sphinx-term-Sphinx] fail
+test_make_id[-io.StringIO-io.StringIO] fail
+test_make_id[-sphinx.setup_command-sphinx.setup_command] fail
+test_make_id[-_io.StringIO-io.StringIO] fail
+test_make_id[-\uff53\uff50\uff48\uff49\uff4e\uff58-sphinx] fail
+test_make_id[-\u60a0\u597d-id0] fail
+test_make_id[-Hello=\u60a0\u597d=\u3053\u3093\u306b\u3061\u306f-Hello] fail
+test_make_id[-f\xfcnf-funf] fail
+test_make_id[-0sphinx-sphinx] fail
+test_make_id[-sphinx--sphinx] fail
+test_make_id_already_registered fail
+test_make_id_sequential fail
+test_split_explicit_target[hello-expected0] pass
+test_split_explicit_target[hello <world>-expected1] pass
+test_split_explicit_target[hello <world> <sphinx>-expected2] pass
+test_execfile_python2 fail
+test_execfile pass
+test_escape pass
+test_append_epilog fail
+test_prepend_prolog fail
+test_prepend_prolog_with_CR fail
+test_prepend_prolog_without_CR fail
+test_textwidth pass
+test_heading pass
+test_ReSTRenderer_escape pass
+test_ReSTRenderer_heading pass
+test_stringify pass
+test_stringify_type_hints_containers fail
+test_stringify_Annotated pass
+test_stringify_type_hints_string fail
+test_stringify_type_hints_Callable pass
+test_stringify_type_hints_Union fail
+test_stringify_type_hints_typevars fail
+test_stringify_type_hints_custom_class pass
+test_stringify_type_hints_alias fail
+test_get_ratio fail
+test_add_uids fail
+test_picklablility fail
+test_modified fail
+test_added fail
+test_deleted fail
+test_deleted_end fail
+test_insert fail
+test_insert_beginning fail
+test_insert_similar fail
+test_rstdim_to_latexdim pass
+post
+test_signature_from_str_positionaly_only_args pass
+test_signature_from_str_invalid pass
+test_safe_getattr_with_default pass
+test_safe_getattr_with_exception pass
+test_safe_getattr_with_property_exception pass
+test_safe_getattr_with___dict___override pass
+test_dictionary_sorting pass
+test_set_sorting pass
+test_set_sorting_fallback pass
+test_frozenset_sorting pass
+test_frozenset_sorting_fallback pass
+test_dict_customtype pass
+test_isclassmethod fail
+test_isstaticmethod fail
+test_iscoroutinefunction fail
+test_isfunction fail
+test_isbuiltin fail
+test_isdescriptor fail
+test_isattributedescriptor fail
+test_isproperty fail
+test_unpartial pass
+test_read_inventory_v1 pass
+test_read_inventory_v2 pass
+test_read_inventory_v2_not_having_version pass
+test_jsdump pass
+test_info_and_warning fail
+test_verbosity_filter fail
+test_nonl_info_log fail
+test_once_warning_log fail
+test_is_suppressed_warning pass
+test_suppress_warnings fail
+test_warningiserror fail
+test_info_location fail
+test_warning_location fail
+test_suppress_logging fail
+test_pending_warnings fail
+test_colored_logs fail
+test_logging_in_ParallelTasks fail
+test_output_with_unencodable_char fail
+test_skip_warningiserror fail
+test_prefixed_warnings fail
+test_compile_matchers pass
+test_Matcher pass
+test_NodeMatcher pass
+test_extract_messages[\n           .. admonition:: admonition title\n\n              admonition body\n           -title-1] pass
+test_extract_messages[\n           .. figure:: foo.jpg\n\n              this is title\n           -caption-1] pass
+test_extract_messages[\n           .. rubric:: spam\n           -rubric-1] pass
+test_extract_messages[\n           | spam\n           | egg\n           -line-2] pass
+test_extract_messages[\n           section\n           =======\n\n           +----------------+\n           | | **Title 1**  |\n           | | Message 1    |\n           +----------------+\n           -line-2] pass
+test_extract_messages[\n           * | **Title 1**\n             | Message 1\n           -line-2] pass
+test_extract_messages_without_rawsource pass
+test_clean_astext pass
+test_make_id[--id0] fail
+test_make_id[term--term-0] fail
+test_make_id[term-Sphinx-term-Sphinx] fail
+test_make_id[-io.StringIO-io.StringIO] fail
+test_make_id[-sphinx.setup_command-sphinx.setup_command] fail
+test_make_id[-_io.StringIO-io.StringIO] fail
+test_make_id[-\uff53\uff50\uff48\uff49\uff4e\uff58-sphinx] fail
+test_make_id[-\u60a0\u597d-id0] fail
+test_make_id[-Hello=\u60a0\u597d=\u3053\u3093\u306b\u3061\u306f-Hello] fail
+test_make_id[-f\xfcnf-funf] fail
+test_make_id[-0sphinx-sphinx] fail
+test_make_id[-sphinx--sphinx] fail
+test_make_id_already_registered fail
+test_make_id_sequential fail
+test_split_explicit_target[hello-expected0] pass
+test_split_explicit_target[hello <world>-expected1] pass
+test_split_explicit_target[hello <world> <sphinx>-expected2] pass
+test_execfile_python2 fail
+test_execfile pass
+test_escape pass
+test_append_epilog fail
+test_prepend_prolog fail
+test_prepend_prolog_with_CR fail
+test_prepend_prolog_without_CR fail
+test_textwidth pass
+test_heading pass
+test_ReSTRenderer_escape pass
+test_ReSTRenderer_heading pass
+test_stringify pass
+test_stringify_type_hints_containers fail
+test_stringify_Annotated pass
+test_stringify_type_hints_string fail
+test_stringify_type_hints_Callable pass
+test_stringify_type_hints_Union fail
+test_stringify_type_hints_typevars fail
+test_stringify_type_hints_custom_class pass
+test_stringify_type_hints_alias fail
+test_get_ratio fail
+test_add_uids fail
+test_picklablility fail
+test_modified fail
+test_added fail
+test_deleted fail
+test_deleted_end fail
+test_insert fail
+test_insert_beginning fail
+test_insert_similar fail
+test_rstdim_to_latexdim pass
+(.venv) (.venv) build success
+release failed
+(.venv) (.venv) 

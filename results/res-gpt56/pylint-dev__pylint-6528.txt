@@ -1,0 +1,206 @@
+pre
+tests/pyreverse/test_main.py::test_graphviz_cant_determine_supported_formats pass
+tests/pyreverse/test_main.py::test_graphviz_unsupported_image_format pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[mode-PUB_ONLY] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[classes-expected_default1] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[show_ancestors-None] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[all_ancestors-None] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[show_associated-None] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[all_associated-None] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[show_builtin-0] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[module_names-None] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[output_format-dot] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[colorized-0] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[max_color_depth-2] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[ignore_list-expected_default11] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[project-] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[output_directory-] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_yes_no pass
+tests/pyreverse/test_main.py::test_class_command pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.TOP_TO_BOTTOM-DotPrinter-rankdir=TB--2] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.BOTTOM_TO_TOP-DotPrinter-rankdir=BT--2] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.LEFT_TO_RIGHT-DotPrinter-rankdir=LR--2] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.RIGHT_TO_LEFT-DotPrinter-rankdir=RL--2] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.TOP_TO_BOTTOM-VCGPrinter-orientation:top_to_bottom--1] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.BOTTOM_TO_TOP-VCGPrinter-orientation:bottom_to_top--1] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.LEFT_TO_RIGHT-VCGPrinter-orientation:left_to_right--1] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.RIGHT_TO_LEFT-VCGPrinter-orientation:right_to_left--1] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.TOP_TO_BOTTOM-PlantUmlPrinter-top to bottom direction--1] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.LEFT_TO_RIGHT-PlantUmlPrinter-left to right direction--1] pass
+tests/pyreverse/test_printer.py::test_unsupported_layout[Layout.BOTTOM_TO_TOP-PlantUmlPrinter] pass
+tests/pyreverse/test_printer.py::test_unsupported_layout[Layout.RIGHT_TO_LEFT-PlantUmlPrinter] pass
+tests/pyreverse/test_printer.py::test_method_arguments_none pass
+tests/pyreverse/test_printer.py::TestPlantUmlPrinter::test_node_without_properties pass
+tests/pyreverse/test_printer_factory.py::test_get_printer_for_filetype[vcg-VCGPrinter] pass
+tests/pyreverse/test_printer_factory.py::test_get_printer_for_filetype[dot-DotPrinter] pass
+tests/pyreverse/test_printer_factory.py::test_get_printer_for_filetype[puml-PlantUmlPrinter] pass
+tests/pyreverse/test_printer_factory.py::test_get_printer_for_filetype[plantuml-PlantUmlPrinter] pass
+tests/pyreverse/test_printer_factory.py::test_get_printer_for_filetype[png-DotPrinter] pass
+tests/pyreverse/test_pyreverse_functional.py::test_class_diagrams[simple_inheritance] pass
+tests/pyreverse/test_pyreverse_functional.py::test_class_diagrams[colorized] pass
+tests/pyreverse/test_pyreverse_functional.py::test_class_diagrams[instance_attributes] pass
+tests/pyreverse/test_utils.py::test_get_visibility[names0-special] pass
+tests/pyreverse/test_utils.py::test_get_visibility[names1-private] pass
+tests/pyreverse/test_utils.py::test_get_visibility[names2-public] pass
+tests/pyreverse/test_utils.py::test_get_visibility[names3-protected] pass
+tests/pyreverse/test_utils.py::test_get_annotation_annassign[a: str = None-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_annassign[a: str = 'mystr'-str] pass
+tests/pyreverse/test_utils.py::test_get_annotation_annassign[a: Optional[str] = 'str'-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_annassign[a: Optional[str] = None-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: str):                   self.x = x-str] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: str = 'str'):           self.x = x-str] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: str = None):            self.x = x-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: Optional[str]):         self.x = x-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: Optional[str] = None):  self.x = x-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: Optional[str] = 'str'): self.x = x-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_label_of_return_type[def f() -> None: pass-None] pass
+tests/pyreverse/test_utils.py::test_get_annotation_label_of_return_type[def f() -> int: pass-int] pass
+tests/pyreverse/test_utils.py::test_get_annotation_label_of_return_type[def f(a) -> Optional[int]: return 1 if a else None-Optional[int]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_label_of_return_type[def f() -> 'MyType': pass-'MyType'] pass
+tests/pyreverse/test_utils.py::test_infer_node_1 pass
+tests/pyreverse/test_utils.py::test_infer_node_2 pass
+tests/pyreverse/test_utils.py::test_infer_node_3 pass
+tests/pyreverse/test_utils.py::test_infer_node_4 pass
+tests/pyreverse/test_writer.py::test_dot_files[packages_No_Name.dot] pass
+tests/pyreverse/test_writer.py::test_dot_files[classes_No_Name.dot] pass
+tests/pyreverse/test_writer.py::test_colorized_dot_files[packages_colorized.dot] pass
+tests/pyreverse/test_writer.py::test_colorized_dot_files[classes_colorized.dot] pass
+tests/pyreverse/test_writer.py::test_vcg_files[packages_No_Name.vcg] pass
+tests/pyreverse/test_writer.py::test_vcg_files[classes_No_Name.vcg] pass
+tests/pyreverse/test_writer.py::test_puml_files[packages_No_Name.puml] pass
+tests/pyreverse/test_writer.py::test_puml_files[classes_No_Name.puml] pass
+tests/pyreverse/test_writer.py::test_mmd_files[packages_No_Name.mmd] pass
+tests/pyreverse/test_writer.py::test_mmd_files[classes_No_Name.mmd] pass
+tests/pyreverse/test_writer.py::test_html_files[packages_No_Name.html] pass
+tests/pyreverse/test_writer.py::test_html_files[classes_No_Name.html] pass
+tests/pyreverse/test_writer.py::test_colorized_puml_files[packages_colorized.puml] pass
+tests/pyreverse/test_writer.py::test_colorized_puml_files[classes_colorized.puml] pass
+tests/pyreverse/test_writer.py::test_color_for_stdlib_module pass
+tests/testutils/test_configuration_test.py::test_get_expected_output pass
+tests/testutils/test_functional_testutils.py::test_parsing_of_pylintrc_init_hook pass
+tests/testutils/test_functional_testutils.py::test_get_functional_test_files_from_directory pass
+tests/testutils/test_functional_testutils.py::test_minimal_messages_config_enabled pass
+tests/testutils/test_functional_testutils.py::test_minimal_messages_config_excluded_file pass
+tests/testutils/test_lint_module_output_update.py::test_not_py38 skip
+tests/testutils/test_lint_module_output_update.py::test_lint_module_output_update_fail_before pass
+tests/testutils/test_lint_module_output_update.py::test_lint_module_output_update_effective pass
+tests/testutils/test_lint_module_output_update.py::test_lint_module_output_update_remove_useless_txt pass
+tests/testutils/test_output_line.py::test_output_line pass
+tests/testutils/test_output_line.py::test_output_line_from_message pass
+tests/testutils/test_output_line.py::test_output_line_to_csv[confidence0] pass
+tests/testutils/test_output_line.py::test_output_line_to_csv[confidence1] pass
+tests/testutils/test_output_line.py::test_output_line_from_csv_error pass
+tests/testutils/test_output_line.py::test_output_line_from_csv_deprecated[None-UNDEFINED] pass
+tests/testutils/test_output_line.py::test_output_line_from_csv_deprecated[INFERENCE-INFERENCE] pass
+tests/testutils/test_output_line.py::test_output_line_from_csv pass
+tests/testutils/test_package_to_lint.py::test_package_to_lint pass
+tests/testutils/test_package_to_lint.py::test_package_to_lint_default_value pass
+tests/utils/unittest_ast_walker.py::TestASTWalker::test_only_required_for_messages pass
+tests/utils/unittest_ast_walker.py::TestASTWalker::test_deprecated_methods pass
+tests/utils/unittest_utils.py::test_decoding_stream_unknown_encoding pass
+tests/utils/unittest_utils.py::test_decoding_stream_known_encoding pass
+post
+tests/pyreverse/test_main.py::test_graphviz_cant_determine_supported_formats pass
+tests/pyreverse/test_main.py::test_graphviz_unsupported_image_format pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[mode-PUB_ONLY] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[classes-expected_default1] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[show_ancestors-None] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[all_ancestors-None] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[show_associated-None] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[all_associated-None] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[show_builtin-0] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[module_names-None] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[output_format-dot] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[colorized-0] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[max_color_depth-2] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[ignore_list-expected_default11] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[project-] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_defaults[output_directory-] pass
+tests/pyreverse/test_main.py::test_command_line_arguments_yes_no pass
+tests/pyreverse/test_main.py::test_class_command pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.TOP_TO_BOTTOM-DotPrinter-rankdir=TB--2] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.BOTTOM_TO_TOP-DotPrinter-rankdir=BT--2] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.LEFT_TO_RIGHT-DotPrinter-rankdir=LR--2] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.RIGHT_TO_LEFT-DotPrinter-rankdir=RL--2] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.TOP_TO_BOTTOM-VCGPrinter-orientation:top_to_bottom--1] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.BOTTOM_TO_TOP-VCGPrinter-orientation:bottom_to_top--1] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.LEFT_TO_RIGHT-VCGPrinter-orientation:left_to_right--1] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.RIGHT_TO_LEFT-VCGPrinter-orientation:right_to_left--1] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.TOP_TO_BOTTOM-PlantUmlPrinter-top to bottom direction--1] pass
+tests/pyreverse/test_printer.py::test_explicit_layout[Layout.LEFT_TO_RIGHT-PlantUmlPrinter-left to right direction--1] pass
+tests/pyreverse/test_printer.py::test_unsupported_layout[Layout.BOTTOM_TO_TOP-PlantUmlPrinter] pass
+tests/pyreverse/test_printer.py::test_unsupported_layout[Layout.RIGHT_TO_LEFT-PlantUmlPrinter] pass
+tests/pyreverse/test_printer.py::test_method_arguments_none pass
+tests/pyreverse/test_printer.py::TestPlantUmlPrinter::test_node_without_properties pass
+tests/pyreverse/test_printer_factory.py::test_get_printer_for_filetype[vcg-VCGPrinter] pass
+tests/pyreverse/test_printer_factory.py::test_get_printer_for_filetype[dot-DotPrinter] pass
+tests/pyreverse/test_printer_factory.py::test_get_printer_for_filetype[puml-PlantUmlPrinter] pass
+tests/pyreverse/test_printer_factory.py::test_get_printer_for_filetype[plantuml-PlantUmlPrinter] pass
+tests/pyreverse/test_printer_factory.py::test_get_printer_for_filetype[png-DotPrinter] pass
+tests/pyreverse/test_pyreverse_functional.py::test_class_diagrams[simple_inheritance] pass
+tests/pyreverse/test_pyreverse_functional.py::test_class_diagrams[colorized] pass
+tests/pyreverse/test_pyreverse_functional.py::test_class_diagrams[instance_attributes] pass
+tests/pyreverse/test_utils.py::test_get_visibility[names0-special] pass
+tests/pyreverse/test_utils.py::test_get_visibility[names1-private] pass
+tests/pyreverse/test_utils.py::test_get_visibility[names2-public] pass
+tests/pyreverse/test_utils.py::test_get_visibility[names3-protected] pass
+tests/pyreverse/test_utils.py::test_get_annotation_annassign[a: str = None-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_annassign[a: str = 'mystr'-str] pass
+tests/pyreverse/test_utils.py::test_get_annotation_annassign[a: Optional[str] = 'str'-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_annassign[a: Optional[str] = None-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: str):                   self.x = x-str] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: str = 'str'):           self.x = x-str] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: str = None):            self.x = x-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: Optional[str]):         self.x = x-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: Optional[str] = None):  self.x = x-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_assignattr[def __init__(self, x: Optional[str] = 'str'): self.x = x-Optional[str]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_label_of_return_type[def f() -> None: pass-None] pass
+tests/pyreverse/test_utils.py::test_get_annotation_label_of_return_type[def f() -> int: pass-int] pass
+tests/pyreverse/test_utils.py::test_get_annotation_label_of_return_type[def f(a) -> Optional[int]: return 1 if a else None-Optional[int]] pass
+tests/pyreverse/test_utils.py::test_get_annotation_label_of_return_type[def f() -> 'MyType': pass-'MyType'] pass
+tests/pyreverse/test_utils.py::test_infer_node_1 pass
+tests/pyreverse/test_utils.py::test_infer_node_2 pass
+tests/pyreverse/test_utils.py::test_infer_node_3 pass
+tests/pyreverse/test_utils.py::test_infer_node_4 pass
+tests/pyreverse/test_writer.py::test_dot_files[packages_No_Name.dot] pass
+tests/pyreverse/test_writer.py::test_dot_files[classes_No_Name.dot] pass
+tests/pyreverse/test_writer.py::test_colorized_dot_files[packages_colorized.dot] pass
+tests/pyreverse/test_writer.py::test_colorized_dot_files[classes_colorized.dot] pass
+tests/pyreverse/test_writer.py::test_vcg_files[packages_No_Name.vcg] pass
+tests/pyreverse/test_writer.py::test_vcg_files[classes_No_Name.vcg] pass
+tests/pyreverse/test_writer.py::test_puml_files[packages_No_Name.puml] pass
+tests/pyreverse/test_writer.py::test_puml_files[classes_No_Name.puml] pass
+tests/pyreverse/test_writer.py::test_mmd_files[packages_No_Name.mmd] pass
+tests/pyreverse/test_writer.py::test_mmd_files[classes_No_Name.mmd] pass
+tests/pyreverse/test_writer.py::test_html_files[packages_No_Name.html] pass
+tests/pyreverse/test_writer.py::test_html_files[classes_No_Name.html] pass
+tests/pyreverse/test_writer.py::test_colorized_puml_files[packages_colorized.puml] pass
+tests/pyreverse/test_writer.py::test_colorized_puml_files[classes_colorized.puml] pass
+tests/pyreverse/test_writer.py::test_color_for_stdlib_module pass
+tests/testutils/test_configuration_test.py::test_get_expected_output pass
+tests/testutils/test_functional_testutils.py::test_parsing_of_pylintrc_init_hook pass
+tests/testutils/test_functional_testutils.py::test_get_functional_test_files_from_directory pass
+tests/testutils/test_functional_testutils.py::test_minimal_messages_config_enabled pass
+tests/testutils/test_functional_testutils.py::test_minimal_messages_config_excluded_file pass
+tests/testutils/test_lint_module_output_update.py::test_not_py38 skip
+tests/testutils/test_lint_module_output_update.py::test_lint_module_output_update_fail_before pass
+tests/testutils/test_lint_module_output_update.py::test_lint_module_output_update_effective pass
+tests/testutils/test_lint_module_output_update.py::test_lint_module_output_update_remove_useless_txt pass
+tests/testutils/test_output_line.py::test_output_line pass
+tests/testutils/test_output_line.py::test_output_line_from_message pass
+tests/testutils/test_output_line.py::test_output_line_to_csv[confidence0] pass
+tests/testutils/test_output_line.py::test_output_line_to_csv[confidence1] pass
+tests/testutils/test_output_line.py::test_output_line_from_csv_error pass
+tests/testutils/test_output_line.py::test_output_line_from_csv_deprecated[None-UNDEFINED] pass
+tests/testutils/test_output_line.py::test_output_line_from_csv_deprecated[INFERENCE-INFERENCE] pass
+tests/testutils/test_output_line.py::test_output_line_from_csv pass
+tests/testutils/test_package_to_lint.py::test_package_to_lint pass
+tests/testutils/test_package_to_lint.py::test_package_to_lint_default_value pass
+tests/utils/unittest_ast_walker.py::TestASTWalker::test_only_required_for_messages pass
+tests/utils/unittest_ast_walker.py::TestASTWalker::test_deprecated_methods pass
+tests/utils/unittest_utils.py::test_decoding_stream_unknown_encoding pass
+tests/utils/unittest_utils.py::test_decoding_stream_known_encoding pass
+(.venv) (.venv) build success
+release success
+{'tests/test_self.py::TestRunTC::test_ignore_pattern_recursive', 'tests/lint/unittest_lint.py::test_recursive_ignore[--ignore-ignored_subdirectory]', 'tests/lint/unittest_lint.py::test_recursive_ignore[--ignore-paths-.*directory/ignored.*]', 'tests/test_self.py::TestRunTC::test_ignore_recursive', 'tests/lint/unittest_lint.py::test_recursive_ignore[--ignore-patterns-failing.*]', 'tests/lint/unittest_lint.py::test_recursive_ignore[--ignore-paths-.*ignored.*/failing.*]', 'tests/lint/unittest_lint.py::test_recursive_ignore[--ignore-failing.py]', 'tests/test_self.py::TestRunTC::test_ignore_path_recursive', 'tests/lint/unittest_lint.py::test_recursive_ignore[--ignore-patterns-ignored_*]'}
+(.venv) (.venv) 

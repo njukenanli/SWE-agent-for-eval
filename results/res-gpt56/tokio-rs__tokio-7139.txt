@@ -1,0 +1,205 @@
+pre
+doctest:tokio_stream::tokio-stream/src/wrappers/mpsc_bounded.rs - wrappers::mpsc_bounded::ReceiverStream (line 10) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/mpsc_unbounded.rs - wrappers::mpsc_unbounded::UnboundedReceiverStream (line 10) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/read_dir.rs - wrappers::read_dir::ReadDirStream (line 11) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/signal_unix.rs - wrappers::signal_unix::SignalStream (line 10) - compile pass
+doctest:tokio_stream::tokio-stream/src/wrappers/split.rs - wrappers::split::SplitStream (line 12) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/tcp_listener.rs - wrappers::tcp_listener::TcpListenerStream (line 13) - compile pass
+doctest:tokio_stream::tokio-stream/src/wrappers/unix_listener.rs - wrappers::unix_listener::UnixListenerStream (line 11) - compile pass
+doctest:tokio_stream::tokio-stream/src/wrappers/watch.rs - wrappers::watch::WatchStream (line 19) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/watch.rs - wrappers::watch::WatchStream (line 35) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/watch.rs - wrappers::watch::WatchStream (line 53) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_elapsed (line 265) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_err (line 232) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_ok (line 191) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_pending (line 120) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_ready (line 15) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_ready_eq (line 159) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_ready_err (line 87) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_ready_ok (line 54) pass
+doctest:tokio_test::tokio-test/src/stream_mock.rs - stream_mock (line 15) pass
+doctest:tokio_test::tokio-test/src/task.rs - task (line 18) pass
+doctest:tokio_util::tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec (line 20) pass
+doctest:tokio_util::tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec::max_length (line 116) pass
+doctest:tokio_util::tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec::max_length (line 123) pass
+doctest:tokio_util::tokio-util/src/codec/bytes_codec.rs - codec::bytes_codec::BytesCodec (line 20) pass
+doctest:tokio_util::tokio-util/src/codec/decoder.rs - codec::decoder::Decoder::decode (line 95) - compile pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 117) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 154) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 17) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 190) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 237) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 286) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 329) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 369) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 41) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 81) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::big_endian (line 721) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_adjustment (line 907) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_length (line 863) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_offset (line 886) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_type (line 826) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_type (line 841) - compile fail pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::little_endian (line 745) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::max_frame_length (line 803) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::native_endian (line 769) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new (line 677) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_codec (line 951) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_framed (line 1023) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_read (line 977) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_write (line 1002) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::num_skip (line 931) pass
+doctest:tokio_util::tokio-util/src/codec/lines_codec.rs - codec::lines_codec::LinesCodec::max_length (line 77) pass
+doctest:tokio_util::tokio-util/src/codec/lines_codec.rs - codec::lines_codec::LinesCodec::max_length (line 84) pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 114) - compile pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 150) pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 17) pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 234) - compile pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 276) pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 49) pass
+doctest:tokio_util::tokio-util/src/context.rs - context::RuntimeExt::wrap (line 155) pass
+doctest:tokio_util::tokio-util/src/context.rs - context::TokioContext (line 38) pass
+doctest:tokio_util::tokio-util/src/context.rs - context::TokioContext<F>::new (line 90) pass
+doctest:tokio_util::tokio-util/src/either.rs - either::Either (line 20) - compile fail pass
+doctest:tokio_util::tokio-util/src/either.rs - either::Either (line 40) pass
+doctest:tokio_util::tokio-util/src/io/read_buf.rs - io::read_buf::read_buf (line 14) pass
+doctest:tokio_util::tokio-util/src/io/reader_stream.rs - io::reader_stream::ReaderStream (line 17) pass
+doctest:tokio_util::tokio-util/src/io/sink_writer.rs - io::sink_writer::SinkWriter (line 30) pass
+doctest:tokio_util::tokio-util/src/io/stream_reader.rs - io::stream_reader::StreamReader (line 108) pass
+doctest:tokio_util::tokio-util/src/io/stream_reader.rs - io::stream_reader::StreamReader (line 18) pass
+doctest:tokio_util::tokio-util/src/io/stream_reader.rs - io::stream_reader::StreamReader (line 59) pass
+doctest:tokio_util::tokio-util/src/sync/cancellation_token.rs - sync::cancellation_token::CancellationToken (line 25) - compile pass
+doctest:tokio_util::tokio-util/src/sync/cancellation_token.rs - sync::cancellation_token::CancellationToken::child_token (line 152) - compile pass
+doctest:tokio_util::tokio-util/src/task/spawn_pinned.rs - task::spawn_pinned::LocalPoolHandle (line 24) pass
+doctest:tokio_util::tokio-util/src/task/spawn_pinned.rs - task::spawn_pinned::LocalPoolHandle::spawn_pinned (line 96) pass
+doctest:tokio_util::tokio-util/src/task/spawn_pinned.rs - task::spawn_pinned::LocalPoolHandle::spawn_pinned_by_idx (line 146) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker (line 64) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker (line 90) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker::clone (line 584) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker::ptr_eq (line 549) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker::track_future (line 489) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker::track_future (line 502) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue (line 73) - compile pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::capacity (line 1036) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::clear (line 1008) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::compact (line 892) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::deadline (line 686) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::insert (line 631) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::insert_at (line 511) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::is_empty (line 1115) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::len (line 1050) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::new (line 439) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::peek (line 925) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::remove (line 737) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reserve (line 1085) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reset (line 977) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reset_at (line 835) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::try_remove (line 791) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::with_capacity (line 455) pass
+doctest:tokio_util::tokio-util/src/time/mod.rs - time::FutureExt::timeout (line 29) pass
+doctest:tokio_util::tokio-util/src/util/poll_buf.rs - util::poll_buf::poll_read_buf (line 15) pass
+doctest:tokio_util::tokio-util/src/util/poll_buf.rs - util::poll_buf::poll_write_buf (line 92) - compile pass
+post
+doctest:tokio_stream::tokio-stream/src/wrappers/mpsc_bounded.rs - wrappers::mpsc_bounded::ReceiverStream (line 10) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/mpsc_unbounded.rs - wrappers::mpsc_unbounded::UnboundedReceiverStream (line 10) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/read_dir.rs - wrappers::read_dir::ReadDirStream (line 11) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/signal_unix.rs - wrappers::signal_unix::SignalStream (line 10) - compile pass
+doctest:tokio_stream::tokio-stream/src/wrappers/split.rs - wrappers::split::SplitStream (line 12) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/tcp_listener.rs - wrappers::tcp_listener::TcpListenerStream (line 13) - compile pass
+doctest:tokio_stream::tokio-stream/src/wrappers/unix_listener.rs - wrappers::unix_listener::UnixListenerStream (line 11) - compile pass
+doctest:tokio_stream::tokio-stream/src/wrappers/watch.rs - wrappers::watch::WatchStream (line 19) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/watch.rs - wrappers::watch::WatchStream (line 35) pass
+doctest:tokio_stream::tokio-stream/src/wrappers/watch.rs - wrappers::watch::WatchStream (line 53) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_elapsed (line 265) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_err (line 232) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_ok (line 191) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_pending (line 120) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_ready (line 15) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_ready_eq (line 159) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_ready_err (line 87) pass
+doctest:tokio_test::tokio-test/src/macros.rs - macros::assert_ready_ok (line 54) pass
+doctest:tokio_test::tokio-test/src/stream_mock.rs - stream_mock (line 15) pass
+doctest:tokio_test::tokio-test/src/task.rs - task (line 18) pass
+doctest:tokio_util::tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec (line 20) pass
+doctest:tokio_util::tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec::max_length (line 116) pass
+doctest:tokio_util::tokio-util/src/codec/any_delimiter_codec.rs - codec::any_delimiter_codec::AnyDelimiterCodec::max_length (line 123) pass
+doctest:tokio_util::tokio-util/src/codec/bytes_codec.rs - codec::bytes_codec::BytesCodec (line 20) pass
+doctest:tokio_util::tokio-util/src/codec/decoder.rs - codec::decoder::Decoder::decode (line 95) - compile pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 117) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 154) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 17) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 190) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 237) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 286) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 329) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 369) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 41) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited (line 81) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::big_endian (line 721) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_adjustment (line 907) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_length (line 863) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_offset (line 886) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_type (line 826) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::length_field_type (line 841) - compile fail pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::little_endian (line 745) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::max_frame_length (line 803) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::native_endian (line 769) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new (line 677) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_codec (line 951) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_framed (line 1023) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_read (line 977) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::new_write (line 1002) pass
+doctest:tokio_util::tokio-util/src/codec/length_delimited.rs - codec::length_delimited::Builder::num_skip (line 931) pass
+doctest:tokio_util::tokio-util/src/codec/lines_codec.rs - codec::lines_codec::LinesCodec::max_length (line 77) pass
+doctest:tokio_util::tokio-util/src/codec/lines_codec.rs - codec::lines_codec::LinesCodec::max_length (line 84) pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 114) - compile pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 150) pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 17) pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 234) - compile pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 276) pass
+doctest:tokio_util::tokio-util/src/codec/mod.rs - codec (line 49) pass
+doctest:tokio_util::tokio-util/src/context.rs - context::RuntimeExt::wrap (line 155) pass
+doctest:tokio_util::tokio-util/src/context.rs - context::TokioContext (line 38) pass
+doctest:tokio_util::tokio-util/src/context.rs - context::TokioContext<F>::new (line 90) pass
+doctest:tokio_util::tokio-util/src/either.rs - either::Either (line 20) - compile fail pass
+doctest:tokio_util::tokio-util/src/either.rs - either::Either (line 40) pass
+doctest:tokio_util::tokio-util/src/io/read_buf.rs - io::read_buf::read_buf (line 14) pass
+doctest:tokio_util::tokio-util/src/io/reader_stream.rs - io::reader_stream::ReaderStream (line 17) pass
+doctest:tokio_util::tokio-util/src/io/sink_writer.rs - io::sink_writer::SinkWriter (line 30) pass
+doctest:tokio_util::tokio-util/src/io/stream_reader.rs - io::stream_reader::StreamReader (line 108) pass
+doctest:tokio_util::tokio-util/src/io/stream_reader.rs - io::stream_reader::StreamReader (line 18) pass
+doctest:tokio_util::tokio-util/src/io/stream_reader.rs - io::stream_reader::StreamReader (line 59) pass
+doctest:tokio_util::tokio-util/src/sync/cancellation_token.rs - sync::cancellation_token::CancellationToken (line 25) - compile pass
+doctest:tokio_util::tokio-util/src/sync/cancellation_token.rs - sync::cancellation_token::CancellationToken::child_token (line 152) - compile pass
+doctest:tokio_util::tokio-util/src/task/spawn_pinned.rs - task::spawn_pinned::LocalPoolHandle (line 24) pass
+doctest:tokio_util::tokio-util/src/task/spawn_pinned.rs - task::spawn_pinned::LocalPoolHandle::spawn_pinned (line 96) pass
+doctest:tokio_util::tokio-util/src/task/spawn_pinned.rs - task::spawn_pinned::LocalPoolHandle::spawn_pinned_by_idx (line 146) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker (line 64) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker (line 90) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker::clone (line 584) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker::ptr_eq (line 549) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker::track_future (line 489) pass
+doctest:tokio_util::tokio-util/src/task/task_tracker.rs - task::task_tracker::TaskTracker::track_future (line 502) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue (line 73) - compile pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::capacity (line 1036) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::clear (line 1008) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::compact (line 892) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::deadline (line 686) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::insert (line 631) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::insert_at (line 511) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::is_empty (line 1115) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::len (line 1050) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::new (line 439) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::peek (line 925) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::remove (line 737) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reserve (line 1085) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reset (line 977) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::reset_at (line 835) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::try_remove (line 791) pass
+doctest:tokio_util::tokio-util/src/time/delay_queue.rs - time::delay_queue::DelayQueue<T>::with_capacity (line 455) pass
+doctest:tokio_util::tokio-util/src/time/mod.rs - time::FutureExt::timeout (line 29) pass
+doctest:tokio_util::tokio-util/src/util/poll_buf.rs - util::poll_buf::poll_read_buf (line 15) pass
+doctest:tokio_util::tokio-util/src/util/poll_buf.rs - util::poll_buf::poll_write_buf (line 92) - compile pass
+build success
+release success
+{'tests/fs_file.rs::empty_read'}

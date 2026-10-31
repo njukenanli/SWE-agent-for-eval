@@ -1,0 +1,205 @@
+pre
+slave buffer are counted correctly pass
+replica buffer don't induce eviction pass
+Don't rehash if used memory exceeds maxmemory after rehash pass
+client tracking don't cause eviction feedback loop pass
+propagation with eviction pass
+Connect multiple replicas at the same time (issue #141), master diskless=yes, replica diskless=disabled pass
+propagation with eviction in MULTI pass
+Test replication partial resync: backlog expired (diskless: no, swapdb, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, disabled, reconnect: 0) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Fuzzing dense/sparse encoding: Redis should always detect errors pass
+PFADD, PFCOUNT, PFMERGE type checking works pass
+PFMERGE results on the cardinality of union of sets pass
+PFMERGE on missing source keys will create an empty destkey pass
+PFMERGE with one empty input key, create an empty destkey pass
+PFMERGE with one non-empty input key, dest key is actually one of the source keys pass
+Test replication partial resync: ok psync (diskless: yes, disabled, reconnect: 1) pass
+PFCOUNT multiple-keys merge returns cardinality of union #1 pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+PFCOUNT multiple-keys merge returns cardinality of union #2 pass
+PFDEBUG GETREG returns the HyperLogLog raw registers pass
+PFADD / PFCOUNT cache invalidation works pass
+Connect multiple replicas at the same time (issue #141), master diskless=yes, replica diskless=swapdb pass
+Test replication partial resync: no backlog (diskless: yes, disabled, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: ok after delay (diskless: yes, disabled, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Master stream is correctly processed while the replica has a script in -BUSY state pass
+Diskless load swapdb (different replid): new database is exposed after swapping pass
+Diskless load swapdb (different replid): replica enter loading pass
+Diskless load swapdb (different replid): old database is exposed after replication fails pass
+Diskless load swapdb (async_loading): new database is exposed after swapping pass
+Test replication partial resync: backlog expired (diskless: yes, disabled, reconnect: 1) pass
+Diskless load swapdb (async_loading): replica enter async_loading pass
+Diskless load swapdb (async_loading): old database is exposed while async replication is in progress pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, reconnect: 0) pass
+Busy script during async loading pass
+Blocked commands and configs during async-loading pass
+Diskless load swapdb (async_loading): old database is exposed after async replication fails pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, reconnect: 1) pass
+diskless loading short read pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+diskless no replicas drop during rdb pipe pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+diskless slow replicas drop during rdb pipe pass
+diskless fast replicas drop during rdb pipe pass
+diskless all replicas drop during rdb pipe pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, reconnect: 1) pass
+diskless timeout replicas drop during rdb pipe pass
+diskless replication child being killed is collected pass
+replication child dies when parent is killed - diskless: yes pass
+replication child dies when parent is killed - diskless: no pass
+diskless replication read pipe cleanup pass
+replicaof right after disconnection pass
+Kill rdb child process if its dumping RDB is not useful pass
+Don't disconnect with replicas before loading transferred RDB when full sync pass
+Discard cache master before loading transferred RDB when full sync pass
+replica can handle EINTR if use diskless load pass
+replica do not write the reply to the replication link - SYNC (_addReplyToBufferOrList) pass
+replica do not write the reply to the replication link - SYNC (addReplyDeferredLen) pass
+replica do not write the reply to the replication link - PSYNC (_addReplyToBufferOrList) pass
+replica do not write the reply to the replication link - PSYNC (addReplyDeferredLen) pass
+PSYNC with wrong offset should throw error pass
+Test replication with lazy expire pass
+Test LPUSH and LPOP on plain nodes over 4GB skip
+Test LINDEX and LINSERT on plain nodes over 4GB skip
+Test LTRIM on plain nodes over 4GB skip
+Test LREM on plain nodes over 4GB skip
+Test LSET on plain nodes over 4GB skip
+Test LMOVE on plain nodes over 4GB skip
+SADD, SCARD, SISMEMBER - large data skip
+BIT pos larger than UINT_MAX skip
+SETBIT values larger than UINT32_MAX and lzf_compress/lzf_decompress correctly skip
+Active defrag pass
+Active defrag eval scripts pass
+Active defrag big keys pass
+Active defrag big list pass
+Active defrag edge case pass
+XADD one huge field skip
+XADD one huge field - 1 skip
+several XADD big fields skip
+single XADD big fields skip
+hash with many big fields skip
+hash with one huge field skip
+post
+Detect write load to master pass
+replica buffer don't induce eviction pass
+Don't rehash if used memory exceeds maxmemory after rehash pass
+client tracking don't cause eviction feedback loop pass
+propagation with eviction pass
+propagation with eviction in MULTI pass
+Connect multiple replicas at the same time (issue #141), master diskless=yes, replica diskless=disabled pass
+Test replication partial resync: backlog expired (diskless: no, swapdb, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, disabled, reconnect: 0) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Fuzzing dense/sparse encoding: Redis should always detect errors pass
+PFADD, PFCOUNT, PFMERGE type checking works pass
+PFMERGE results on the cardinality of union of sets pass
+PFMERGE on missing source keys will create an empty destkey pass
+PFMERGE with one empty input key, create an empty destkey pass
+PFMERGE with one non-empty input key, dest key is actually one of the source keys pass
+Test replication partial resync: ok psync (diskless: yes, disabled, reconnect: 1) pass
+PFCOUNT multiple-keys merge returns cardinality of union #1 pass
+PFCOUNT multiple-keys merge returns cardinality of union #2 pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+PFDEBUG GETREG returns the HyperLogLog raw registers pass
+PFADD / PFCOUNT cache invalidation works pass
+Connect multiple replicas at the same time (issue #141), master diskless=yes, replica diskless=swapdb pass
+Test replication partial resync: no backlog (diskless: yes, disabled, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: ok after delay (diskless: yes, disabled, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: backlog expired (diskless: yes, disabled, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no reconnection, just sync (diskless: yes, swapdb, reconnect: 0) pass
+Master stream is correctly processed while the replica has a script in -BUSY state pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Diskless load swapdb (different replid): new database is exposed after swapping pass
+Diskless load swapdb (different replid): replica enter loading pass
+Diskless load swapdb (different replid): old database is exposed after replication fails pass
+Diskless load swapdb (async_loading): new database is exposed after swapping pass
+Diskless load swapdb (async_loading): replica enter async_loading pass
+Diskless load swapdb (async_loading): old database is exposed while async replication is in progress pass
+Test replication partial resync: ok psync (diskless: yes, swapdb, reconnect: 1) pass
+Busy script during async loading pass
+Blocked commands and configs during async-loading pass
+Diskless load swapdb (async_loading): old database is exposed after async replication fails pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+Test replication partial resync: no backlog (diskless: yes, swapdb, reconnect: 1) pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+diskless loading short read pass
+Test replication partial resync: ok after delay (diskless: yes, swapdb, reconnect: 1) pass
+diskless no replicas drop during rdb pipe pass
+Slave should be able to synchronize with the master pass
+Detect write load to master pass
+diskless slow replicas drop during rdb pipe pass
+diskless fast replicas drop during rdb pipe pass
+Test replication partial resync: backlog expired (diskless: yes, swapdb, reconnect: 1) pass
+diskless all replicas drop during rdb pipe pass
+diskless timeout replicas drop during rdb pipe pass
+diskless replication child being killed is collected pass
+replication child dies when parent is killed - diskless: yes pass
+replication child dies when parent is killed - diskless: no pass
+diskless replication read pipe cleanup pass
+replicaof right after disconnection pass
+Kill rdb child process if its dumping RDB is not useful pass
+Don't disconnect with replicas before loading transferred RDB when full sync pass
+Discard cache master before loading transferred RDB when full sync pass
+replica can handle EINTR if use diskless load pass
+replica do not write the reply to the replication link - SYNC (_addReplyToBufferOrList) pass
+replica do not write the reply to the replication link - SYNC (addReplyDeferredLen) pass
+replica do not write the reply to the replication link - PSYNC (_addReplyToBufferOrList) pass
+replica do not write the reply to the replication link - PSYNC (addReplyDeferredLen) pass
+PSYNC with wrong offset should throw error pass
+Test replication with lazy expire pass
+Test LPUSH and LPOP on plain nodes over 4GB skip
+Test LINDEX and LINSERT on plain nodes over 4GB skip
+Test LTRIM on plain nodes over 4GB skip
+Test LREM on plain nodes over 4GB skip
+Test LSET on plain nodes over 4GB skip
+Test LMOVE on plain nodes over 4GB skip
+SADD, SCARD, SISMEMBER - large data skip
+BIT pos larger than UINT_MAX skip
+SETBIT values larger than UINT32_MAX and lzf_compress/lzf_decompress correctly skip
+Active defrag pass
+Active defrag eval scripts pass
+Active defrag big keys pass
+Active defrag big list pass
+Active defrag edge case pass
+XADD one huge field skip
+XADD one huge field - 1 skip
+several XADD big fields skip
+single XADD big fields skip
+hash with many big fields skip
+hash with one huge field skip
+build success
+release success
+{'PSYNC2: cluster is consistent after load (x = 343745)', 'PSYNC2: cluster is consistent after load (x = 215110)', 'GEOSEARCH with small distance', 'PSYNC2: cluster is consistent after load (x = 139137)', 'PSYNC2: Set #3 to replicate from #4', 'PSYNC2: Set #2 to replicate from #4', 'PSYNC2: cluster is consistent after load (x = 63038)', 'PSYNC2: cluster is consistent after load (x = 286928)', 'PSYNC2: Set #4 to replicate from #1', 'PSYNC2: cluster is consistent after load (x = 423655)', 'PSYNC2: Set #1 to replicate from #3', 'PSYNC2: Set #0 to replicate from #3', 'PSYNC2: [NEW LAYOUT] Set #1 as master'}

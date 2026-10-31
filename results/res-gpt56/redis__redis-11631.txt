@@ -1,0 +1,205 @@
+pre
+CONFIG SET oom score restored on disable pass
+CONFIG SET oom score relative and absolute pass
+CONFIG SET out-of-range oom score pass
+GEOSEARCH fuzzy test - byradius pass
+query buffer resized correctly pass
+query buffer resized correctly when not idle pass
+Temp rdb will be deleted if we use bg_unlink when shutdown pass
+SHUTDOWN ABORT can cancel SIGTERM pass
+CONFIG SET port number pass
+Temp rdb will be deleted in signal handle pass
+RDB save will be failed in shutdown pass
+CONFIG SET bind address pass
+SHUTDOWN will abort if rdb save failed on signal pass
+SHUTDOWN will abort if rdb save failed on shutdown command pass
+SHUTDOWN can proceed if shutdown command was with nosave pass
+Clean up rdb same named folder pass
+client evicted due to large argv pass
+client evicted due to large query buf pass
+client evicted due to percentage of maxmemory pass
+client evicted due to large multi buf pass
+CONFIG SET bind-source-addr pass
+client evicted due to watched key list pass
+Default bind address configuration handling pass
+Protected mode works as expected pass
+SORT adds integer field to list pass
+verify reply buffer limits pass
+client evicted due to pubsub subscriptions pass
+client evicted due to tracking redirection pass
+client evicted due to client tracking prefixes pass
+client evicted due to output buf pass
+client no-evict on pass
+client no-evict off pass
+Key lazy expires during key migration pass
+avoid client eviction when client is freed by output buffer limit pass
+decrease maxmemory-clients causes client eviction pass
+evict clients only until below limit pass
+evict clients in right order (large to small) pass
+client total memory grows during client no-evict pass
+client total memory grows during maxmemory-clients disabled pass
+Eval scripts with shebangs and functions default to no cross slots pass
+Cross slot commands are allowed by default for eval scripts and with allow-cross-slot-keys flag pass
+Cross slot commands are also blocked if they disagree with pre-declared keys pass
+Function no-cluster flag pass
+Script no-cluster flag pass
+Create 3 node cluster pass
+Run blocking command on cluster node3 pass
+Perform a Resharding pass
+Verify command got unblocked after resharding pass
+Wait for cluster to be stable pass
+Sanity test push cmd after resharding pass
+Run blocking command again on cluster node1 pass
+GEOSEARCH fuzzy test - bybox pass
+GEOSEARCH box edges fuzzy test pass
+Kill a cluster node and wait for fail state pass
+Verify command got unblocked after cluster failure pass
+Set cluster hostnames and verify they are propagated pass
+Update hostnames and make sure they are all eventually propagated pass
+Remove hostnames and make sure they are all eventually propagated pass
+Verify cluster-preferred-endpoint-type behavior for redirects and info pass
+Continuous slots distribution pass
+ADDSLOTSRANGE command with several boundary conditions test suite pass
+DELSLOTSRANGE command with several boundary conditions test suite pass
+Functions are added to new node on redis-cli cluster add-node pass
+Verify the nodes configured with prefer hostname only show hostname for new nodes pass
+Test restart will keep hostname information pass
+Test hostname validation pass
+Verify that slot ownership transfer through gossip propagates deletes to replicas pass
+Migrate the last slot away from a node using redis-cli pass
+redis-cli --cluster create with cluster-port pass
+redis-cli --cluster add-node with cluster-port pass
+Fuzzing dense/sparse encoding: Redis should always detect errors pass
+PFADD, PFCOUNT, PFMERGE type checking works pass
+PFMERGE results on the cardinality of union of sets pass
+PFMERGE on missing source keys will create an empty destkey pass
+PFMERGE with one empty input key, create an empty destkey pass
+PFMERGE with one non-empty input key, dest key is actually one of the source keys pass
+PFCOUNT multiple-keys merge returns cardinality of union #1 pass
+PFCOUNT multiple-keys merge returns cardinality of union #2 pass
+PFDEBUG GETREG returns the HyperLogLog raw registers pass
+PFADD / PFCOUNT cache invalidation works pass
+Test LPUSH and LPOP on plain nodes over 4GB skip
+Test LINDEX and LINSERT on plain nodes over 4GB skip
+Test LTRIM on plain nodes over 4GB skip
+Test LREM on plain nodes over 4GB skip
+Test LSET on plain nodes over 4GB skip
+Test LMOVE on plain nodes over 4GB skip
+SADD, SCARD, SISMEMBER - large data skip
+BIT pos larger than UINT_MAX skip
+SETBIT values larger than UINT32_MAX and lzf_compress/lzf_decompress correctly skip
+Active defrag pass
+Active defrag eval scripts pass
+Active defrag big keys in tests/unit/memefficiency.tcl fail
+Active defrag big list pass
+Active defrag edge case pass
+XADD one huge field skip
+XADD one huge field - 1 skip
+several XADD big fields skip
+single XADD big fields skip
+hash with many big fields skip
+hash with one huge field skip
+post
+CLIENT TRACKINGINFO provides reasonable results when tracking off pass
+CLIENT TRACKINGINFO provides reasonable results when tracking on pass
+CLIENT TRACKINGINFO provides reasonable results when tracking on with options pass
+CLIENT TRACKINGINFO provides reasonable results when tracking optin pass
+CLIENT TRACKINGINFO provides reasonable results when tracking optout pass
+CLIENT TRACKINGINFO provides reasonable results when tracking bcast mode pass
+CLIENT TRACKINGINFO provides reasonable results when tracking redir broken pass
+SHUTDOWN ABORT can cancel SIGTERM pass
+Temp rdb will be deleted in signal handle pass
+RDB save will be failed in shutdown pass
+CONFIG SET port number pass
+SHUTDOWN will abort if rdb save failed on signal pass
+SHUTDOWN will abort if rdb save failed on shutdown command pass
+SHUTDOWN can proceed if shutdown command was with nosave pass
+Clean up rdb same named folder pass
+client evicted due to large argv pass
+CONFIG SET bind address pass
+client evicted due to large query buf pass
+client evicted due to percentage of maxmemory pass
+client evicted due to large multi buf pass
+client evicted due to watched key list pass
+CONFIG SET bind-source-addr pass
+Default bind address configuration handling pass
+Protected mode works as expected pass
+SORT adds integer field to list pass
+client evicted due to pubsub subscriptions pass
+verify reply buffer limits pass
+client evicted due to tracking redirection pass
+client evicted due to client tracking prefixes pass
+client evicted due to output buf pass
+client no-evict on pass
+client no-evict off pass
+avoid client eviction when client is freed by output buffer limit pass
+Key lazy expires during key migration pass
+decrease maxmemory-clients causes client eviction pass
+evict clients only until below limit pass
+evict clients in right order (large to small) pass
+client total memory grows during client no-evict pass
+client total memory grows during maxmemory-clients disabled pass
+GEOSEARCH fuzzy test - bybox pass
+GEOSEARCH box edges fuzzy test pass
+Create 3 node cluster pass
+Run blocking command on cluster node3 pass
+Eval scripts with shebangs and functions default to no cross slots pass
+Cross slot commands are allowed by default for eval scripts and with allow-cross-slot-keys flag pass
+Cross slot commands are also blocked if they disagree with pre-declared keys pass
+Function no-cluster flag pass
+Script no-cluster flag pass
+Perform a Resharding pass
+Verify command got unblocked after resharding pass
+Wait for cluster to be stable pass
+Sanity test push cmd after resharding pass
+Run blocking command again on cluster node1 pass
+Kill a cluster node and wait for fail state pass
+Verify command got unblocked after cluster failure pass
+Continuous slots distribution pass
+ADDSLOTSRANGE command with several boundary conditions test suite pass
+DELSLOTSRANGE command with several boundary conditions test suite pass
+Set cluster hostnames and verify they are propagated pass
+Update hostnames and make sure they are all eventually propagated pass
+Remove hostnames and make sure they are all eventually propagated pass
+Verify cluster-preferred-endpoint-type behavior for redirects and info pass
+Verify the nodes configured with prefer hostname only show hostname for new nodes pass
+Test restart will keep hostname information pass
+Test hostname validation pass
+Functions are added to new node on redis-cli cluster add-node pass
+Verify that slot ownership transfer through gossip propagates deletes to replicas pass
+Migrate the last slot away from a node using redis-cli pass
+redis-cli --cluster create with cluster-port pass
+redis-cli --cluster add-node with cluster-port pass
+Fuzzing dense/sparse encoding: Redis should always detect errors pass
+PFADD, PFCOUNT, PFMERGE type checking works pass
+PFMERGE results on the cardinality of union of sets pass
+PFMERGE on missing source keys will create an empty destkey pass
+PFMERGE with one empty input key, create an empty destkey pass
+PFMERGE with one non-empty input key, dest key is actually one of the source keys pass
+PFCOUNT multiple-keys merge returns cardinality of union #1 pass
+PFCOUNT multiple-keys merge returns cardinality of union #2 pass
+PFDEBUG GETREG returns the HyperLogLog raw registers pass
+PFADD / PFCOUNT cache invalidation works pass
+Test LPUSH and LPOP on plain nodes over 4GB skip
+Test LINDEX and LINSERT on plain nodes over 4GB skip
+Test LTRIM on plain nodes over 4GB skip
+Test LREM on plain nodes over 4GB skip
+Test LSET on plain nodes over 4GB skip
+Test LMOVE on plain nodes over 4GB skip
+SADD, SCARD, SISMEMBER - large data skip
+BIT pos larger than UINT_MAX skip
+SETBIT values larger than UINT32_MAX and lzf_compress/lzf_decompress correctly skip
+Active defrag in tests/unit/memefficiency.tcl fail
+Active defrag eval scripts pass
+Active defrag big keys in tests/unit/memefficiency.tcl fail
+Active defrag big list in tests/unit/memefficiency.tcl fail
+Active defrag edge case pass
+XADD one huge field skip
+XADD one huge field - 1 skip
+several XADD big fields skip
+single XADD big fields skip
+hash with many big fields skip
+hash with one huge field skip
+build success
+release success
+{'PSYNC2: cluster is consistent after load (x = 58869)', 'PSYNC2: Set #4 to replicate from #0', 'PSYNC2: cluster is consistent after load (x = 107131)', 'PSYNC2: [NEW LAYOUT] Set #2 as master', 'GEOSEARCH with small distance', 'PSYNC2: [NEW LAYOUT] Set #1 as master', 'PSYNC2: cluster is consistent after load (x = 167678)', 'PSYNC2: Set #0 to replicate from #1', 'PSYNC2: Set #4 to replicate from #3', 'PSYNC2: cluster is consistent after load (x = 207884)', 'PSYNC2: --- CYCLE 6 ---', 'PSYNC2: cluster is consistent after load (x = 259190)', 'PSYNC2: Set #0 to replicate from #4', 'PSYNC2: cluster is consistent after load (x = 317267)'}

@@ -1,0 +1,205 @@
+pre
+axum/src/json.rs - json::Json (line 61) pass
+axum/src/middleware/map_request.rs - middleware::map_request::map_request (line 60) pass
+axum/src/middleware/map_request.rs - middleware::map_request::map_request (line 26) pass
+axum/src/routing/mod.rs - routing::Router::into_make_service_with_connect_info (line 425) pass
+axum/src/routing/mod.rs - routing::Router<S>::merge (line 227) pass
+axum/src/routing/mod.rs - routing::Router<S>::route (line 249) pass
+axum/src/middleware/mod.rs - middleware (line 399) pass
+axum/src/routing/mod.rs - routing::Router<S>::with_state (line 317) pass
+axum/src/routing/method_routing.rs - routing::method_routing::MethodRouter<S,E>::route_layer (line 920) pass
+axum/src/routing/mod.rs - routing::Router<S>::route_layer (line 256) pass
+axum/src/error_handling/mod.rs - error_handling (line 147) pass
+axum/src/middleware/map_response.rs - middleware::map_response::map_response (line 48) pass
+axum/src/middleware/from_fn.rs - middleware::from_fn::from_fn (line 61) pass
+axum/src/extract/state.rs - extract::state::State (line 60) pass
+axum/src/middleware/mod.rs - middleware (line 141) pass
+axum/src/extract/connect_info.rs - extract::connect_info::MockConnectInfo (line 159) pass
+axum/src/middleware/mod.rs - middleware (line 472) pass
+axum/src/routing/mod.rs - routing::Router<S>::with_state (line 485) pass
+axum/src/response/redirect.rs - response::redirect::Redirect (line 8) pass
+axum/src/routing/mod.rs - routing::Router<S>::nest (line 259) pass
+axum/src/routing/mod.rs - routing::Router<S>::with_state (line 431) pass
+axum/src/middleware/map_response.rs - middleware::map_response::map_response_with_state (line 109) pass
+axum/src/middleware/map_request.rs - middleware::map_request::map_request_with_state (line 127) pass
+axum/src/routing/mod.rs - routing::Router<S>::route (line 221) pass
+axum/src/extract/matched_path.rs - extract::matched_path::MatchedPath (line 60) pass
+axum/src/routing/mod.rs - routing::Router<S>::nest (line 216) pass
+axum/src/middleware/mod.rs - middleware (line 298) pass
+axum/src/extract/matched_path.rs - extract::matched_path::MatchedPath (line 33) pass
+axum/src/middleware/from_fn.rs - middleware::from_fn::from_fn_with_state (line 119) pass
+axum/src/middleware/from_fn.rs - middleware::from_fn::from_fn (line 30) pass
+axum/src/middleware/map_request.rs - middleware::map_request::map_request (line 92) pass
+axum/src/routing/mod.rs - routing::Router<S>::nest (line 297) pass
+axum/src/routing/mod.rs - routing::Router<S>::layer (line 241) pass
+axum/src/middleware/mod.rs - middleware (line 39) pass
+axum/src/extract/request_parts.rs - extract::request_parts::OriginalUri (line 40) pass
+axum/src/routing/mod.rs - routing::Router<S>::layer (line 257) pass
+axum-core/src/response/append_headers.rs - response::append_headers::AppendHeaders (line 10) pass
+axum-core/src/response/mod.rs - response::Result (line 31) pass
+axum-core/src/ext_traits/request_parts.rs - ext_traits::request_parts::RequestPartsExt::extract (line 18) pass
+axum-core/src/response/into_response_parts.rs - response::into_response_parts::IntoResponseParts (line 12) pass
+axum-core/src/ext_traits/request_parts.rs - ext_traits::request_parts::RequestPartsExt::extract_with_state (line 67) pass
+axum-core/src/response/mod.rs - response::Result (line 83) pass
+axum-core/src/ext_traits/request.rs - ext_traits::request::RequestExt::extract (line 22) pass
+axum-core/src/ext_traits/request.rs - ext_traits::request::RequestExt::extract_parts_with_state (line 193) pass
+axum-core/src/ext_traits/request.rs - ext_traits::request::RequestExt::extract_with_state (line 85) pass
+axum-core/src/ext_traits/request.rs - ext_traits::request::RequestExt::extract_parts (line 139) pass
+axum-core/src/response/into_response.rs - response::into_response::IntoResponse (line 69) pass
+axum-core/src/extract/default_body_limit.rs - extract::default_body_limit::DefaultBodyLimit (line 28) pass
+axum-core/src/response/into_response.rs - response::into_response::IntoResponse (line 29) pass
+axum-core/src/extract/default_body_limit.rs - extract::default_body_limit::DefaultBodyLimit::max (line 132) pass
+axum-core/src/extract/default_body_limit.rs - extract::default_body_limit::DefaultBodyLimit (line 46) pass
+axum-core/src/extract/default_body_limit.rs - extract::default_body_limit::DefaultBodyLimit::disable (line 97) pass
+axum-extra/src/typed_header.rs - typed_header::TypedHeader (line 19) - compile pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 98) - compile fail pass
+axum-extra/src/extract/cached.rs - extract::cached::Cached (line 19) pass
+axum-extra/src/extract/cookie/mod.rs - extract::cookie::CookieJar::remove (line 166) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 73) pass
+axum-extra/src/extract/cookie/mod.rs - extract::cookie::CookieJar::add (line 186) pass
+axum-extra/src/typed_header.rs - typed_header::TypedHeader (line 39) pass
+axum-extra/src/extract/cookie/private.rs - extract::cookie::private::PrivateCookieJar<K>::add (line 234) pass
+axum-extra/src/extract/cookie/private.rs - extract::cookie::private::PrivateCookieJar<K>::get (line 196) pass
+axum-extra/src/extract/cookie/private.rs - extract::cookie::private::PrivateCookieJar<K>::remove (line 214) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 191) pass
+axum-extra/src/extract/cookie/private.rs - extract::cookie::private::PrivateCookieJar (line 80) pass
+axum-extra/src/extract/cookie/mod.rs - extract::cookie::CookieJar::get (line 148) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 111) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 152) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath::with_query_params (line 240) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 128) pass
+axum-extra/src/either.rs - either (line 5) pass
+axum-extra/src/either.rs - either (line 62) pass
+axum-extra/src/routing/resource.rs - routing::resource::Resource (line 11) pass
+axum-extra/src/handler/mod.rs - handler::HandlerCallWithExtractors::or (line 46) pass
+axum-extra/src/extract/optional_path.rs - extract::optional_path::OptionalPath (line 15) pass
+axum-extra/src/routing/mod.rs - routing::RouterExt::route_with_tsr (line 148) pass
+axum-extra/src/extract/cookie/mod.rs - extract::cookie::CookieJar (line 40) pass
+axum-extra/src/extract/with_rejection.rs - extract::with_rejection::WithRejection (line 22) pass
+axum-extra/src/middleware.rs - middleware::option_layer (line 12) pass
+axum-extra/src/extract/cookie/private.rs - extract::cookie::private::PrivateCookieJar (line 22) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 14) pass
+axum-macros/src/lib.rs - derive_from_request (line 354) - compile fail pass
+axum-macros/src/from_request.rs - from_request::test_field_doesnt_impl_from_request (line 1050) - compile fail pass
+axum-macros/src/lib.rs - derive_from_request (line 102) - compile fail pass
+axum-macros/src/lib.rs - derive_from_request_parts (line 401) - compile fail pass
+axum-macros/src/lib.rs - debug_handler (line 441) - compile fail pass
+axum-macros/src/lib.rs - debug_handler (line 422) - compile fail pass
+axum-macros/src/lib.rs - debug_handler (line 537) - compile fail pass
+axum-macros/src/lib.rs - derive_from_request (line 154) pass
+axum-macros/src/lib.rs - debug_handler (line 493) pass
+axum-macros/src/lib.rs - derive_from_request_parts (line 376) pass
+axum-macros/src/lib.rs - derive_from_request (line 241) pass
+axum-macros/src/lib.rs - derive_from_request (line 193) pass
+axum-macros/src/lib.rs - debug_handler (line 509) pass
+axum-macros/src/lib.rs - derive_from_request (line 120) pass
+axum-macros/src/lib.rs - derive_from_request (line 166) pass
+axum-macros/src/lib.rs - derive_from_request (line 260) pass
+axum-macros/src/lib.rs - derive_from_request (line 307) pass
+axum-macros/src/lib.rs - derive_from_request (line 72) pass
+axum-macros/src/lib.rs - debug_handler (line 469) pass
+axum-macros/src/lib.rs - derive_from_ref (line 605) pass
+post
+axum/src/middleware/map_request.rs - middleware::map_request::map_request (line 26) pass
+axum/src/routing/method_routing.rs - routing::method_routing::get (line 389) pass
+axum/src/error_handling/mod.rs - error_handling (line 106) pass
+axum/src/routing/method_routing.rs - routing::method_routing::on_service (line 294) pass
+axum/src/middleware/mod.rs - middleware (line 472) pass
+axum/src/middleware/mod.rs - middleware (line 86) pass
+axum/src/response/redirect.rs - response::redirect::Redirect (line 8) pass
+axum/src/routing/method_routing.rs - routing::method_routing::MethodRouter<S,E>::get_service (line 863) pass
+axum/src/routing/mod.rs - routing::Router<S>::with_state (line 348) pass
+axum/src/routing/mod.rs - routing::Router<S>::with_state (line 492) pass
+axum/src/routing/mod.rs - routing::Router<S>::with_state (line 438) pass
+axum/src/routing/mod.rs - routing::Router<S>::route (line 222) pass
+axum/src/extract/connect_info.rs - extract::connect_info::MockConnectInfo (line 159) pass
+axum/src/middleware/map_request.rs - middleware::map_request::map_request_with_state (line 127) pass
+axum/src/routing/method_routing.rs - routing::method_routing::MethodRouter<S,E>::fallback_service (line 871) pass
+axum/src/routing/mod.rs - routing::Router<S>::nest (line 190) pass
+axum/src/json.rs - json::Json (line 61) pass
+axum/src/extract/mod.rs - extract (line 575) pass
+axum/src/routing/mod.rs - routing::Router<S>::with_state (line 324) pass
+axum/src/middleware/from_fn.rs - middleware::from_fn::from_fn (line 30) pass
+axum/src/routing/method_routing.rs - routing::method_routing::MethodRouter<S,E>::route_layer (line 920) pass
+axum/src/middleware/mod.rs - middleware (line 298) pass
+axum/src/middleware/mod.rs - middleware (line 399) pass
+axum/src/routing/mod.rs - routing::Router<S>::route_layer (line 263) pass
+axum/src/routing/mod.rs - routing::Router<S>::nest (line 260) pass
+axum/src/routing/mod.rs - routing::Router<S>::with_state (line 409) pass
+axum/src/middleware/map_response.rs - middleware::map_response::map_response_with_state (line 109) pass
+axum/src/middleware/from_fn.rs - middleware::from_fn::from_fn_with_state (line 119) pass
+axum/src/middleware/from_fn.rs - middleware::from_fn::from_fn (line 61) pass
+axum/src/extract/matched_path.rs - extract::matched_path::MatchedPath (line 33) pass
+axum/src/routing/mod.rs - routing::Router<S>::layer (line 248) pass
+axum/src/routing/mod.rs - routing::Router<S>::with_state (line 376) pass
+axum/src/routing/mod.rs - routing::Router<S>::nest (line 298) pass
+axum/src/middleware/mod.rs - middleware (line 39) pass
+axum/src/extract/request_parts.rs - extract::request_parts::OriginalUri (line 40) pass
+axum/src/routing/mod.rs - routing::Router<S>::layer (line 264) pass
+axum-core/src/response/mod.rs - response::Result (line 31) pass
+axum-core/src/ext_traits/request_parts.rs - ext_traits::request_parts::RequestPartsExt::extract (line 18) pass
+axum-core/src/response/into_response_parts.rs - response::into_response_parts::IntoResponseParts (line 12) pass
+axum-core/src/response/mod.rs - response::Result (line 83) pass
+axum-core/src/response/append_headers.rs - response::append_headers::AppendHeaders (line 10) pass
+axum-core/src/ext_traits/request_parts.rs - ext_traits::request_parts::RequestPartsExt::extract_with_state (line 67) pass
+axum-core/src/ext_traits/request.rs - ext_traits::request::RequestExt::extract_with_state (line 85) pass
+axum-core/src/ext_traits/request.rs - ext_traits::request::RequestExt::extract (line 22) pass
+axum-core/src/ext_traits/request.rs - ext_traits::request::RequestExt::extract_parts_with_state (line 193) pass
+axum-core/src/ext_traits/request.rs - ext_traits::request::RequestExt::extract_parts (line 139) pass
+axum-core/src/response/into_response.rs - response::into_response::IntoResponse (line 69) pass
+axum-core/src/response/into_response.rs - response::into_response::IntoResponse (line 29) pass
+axum-core/src/extract/default_body_limit.rs - extract::default_body_limit::DefaultBodyLimit (line 28) pass
+axum-core/src/extract/default_body_limit.rs - extract::default_body_limit::DefaultBodyLimit (line 46) pass
+axum-core/src/extract/default_body_limit.rs - extract::default_body_limit::DefaultBodyLimit::max (line 132) pass
+axum-core/src/extract/default_body_limit.rs - extract::default_body_limit::DefaultBodyLimit::disable (line 97) pass
+axum-extra/src/typed_header.rs - typed_header::TypedHeader (line 19) - compile pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 98) - compile fail pass
+axum-extra/src/extract/cookie/private.rs - extract::cookie::private::PrivateCookieJar (line 80) pass
+axum-extra/src/typed_header.rs - typed_header::TypedHeader (line 39) pass
+axum-extra/src/extract/cookie/mod.rs - extract::cookie::CookieJar::remove (line 166) pass
+axum-extra/src/extract/cookie/mod.rs - extract::cookie::CookieJar::add (line 186) pass
+axum-extra/src/extract/cookie/private.rs - extract::cookie::private::PrivateCookieJar<K>::remove (line 214) pass
+axum-extra/src/extract/cookie/mod.rs - extract::cookie::CookieJar::get (line 148) pass
+axum-extra/src/extract/cookie/private.rs - extract::cookie::private::PrivateCookieJar<K>::add (line 234) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 191) pass
+axum-extra/src/extract/cookie/private.rs - extract::cookie::private::PrivateCookieJar<K>::get (line 196) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 73) pass
+axum-extra/src/extract/cached.rs - extract::cached::Cached (line 19) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 152) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 111) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 128) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath::with_query_params (line 240) pass
+axum-extra/src/either.rs - either (line 5) pass
+axum-extra/src/either.rs - either (line 62) pass
+axum-extra/src/extract/optional_path.rs - extract::optional_path::OptionalPath (line 15) pass
+axum-extra/src/routing/mod.rs - routing::RouterExt::route_with_tsr (line 148) pass
+axum-extra/src/extract/cookie/mod.rs - extract::cookie::CookieJar (line 40) pass
+axum-extra/src/extract/with_rejection.rs - extract::with_rejection::WithRejection (line 22) pass
+axum-extra/src/handler/mod.rs - handler::HandlerCallWithExtractors::or (line 46) pass
+axum-extra/src/extract/cookie/private.rs - extract::cookie::private::PrivateCookieJar (line 22) pass
+axum-extra/src/middleware.rs - middleware::option_layer (line 12) pass
+axum-extra/src/routing/resource.rs - routing::resource::Resource (line 11) pass
+axum-extra/src/routing/typed.rs - routing::typed::TypedPath (line 14) pass
+axum-macros/src/lib.rs - derive_from_request (line 354) - compile fail pass
+axum-macros/src/from_request.rs - from_request::test_field_doesnt_impl_from_request (line 1050) - compile fail pass
+axum-macros/src/lib.rs - derive_from_request_parts (line 401) - compile fail pass
+axum-macros/src/lib.rs - debug_handler (line 441) - compile fail pass
+axum-macros/src/lib.rs - debug_handler (line 422) - compile fail pass
+axum-macros/src/lib.rs - derive_from_request (line 102) - compile fail pass
+axum-macros/src/lib.rs - debug_handler (line 537) - compile fail pass
+axum-macros/src/lib.rs - derive_from_request (line 154) pass
+axum-macros/src/lib.rs - debug_handler (line 509) pass
+axum-macros/src/lib.rs - debug_handler (line 493) pass
+axum-macros/src/lib.rs - derive_from_request (line 193) pass
+axum-macros/src/lib.rs - derive_from_request (line 260) pass
+axum-macros/src/lib.rs - derive_from_request (line 241) pass
+axum-macros/src/lib.rs - derive_from_request (line 166) pass
+axum-macros/src/lib.rs - derive_from_request_parts (line 376) pass
+axum-macros/src/lib.rs - derive_from_request (line 120) pass
+axum-macros/src/lib.rs - derive_from_request (line 72) pass
+axum-macros/src/lib.rs - derive_from_request (line 307) pass
+axum-macros/src/lib.rs - debug_handler (line 469) pass
+axum-macros/src/lib.rs - derive_from_ref (line 605) pass
+build success
+release success
+{'axum/src/routing/mod.rs - routing::Router<S>::as_service (line 338) - compile fail', 'routing::tests::fallback::merge_router_with_fallback_into_nested_router_with_fallback', 'axum/src/routing/mod.rs - routing::Router<S>::route_layer (line 263)', 'axum/src/routing/mod.rs - routing::Router<S>::with_state (line 301)', 'axum/src/routing/mod.rs - routing::Router<S>::nest (line 298)', 'axum/src/routing/mod.rs - routing::Router<S>::fallback (line 315)', 'axum/src/routing/mod.rs - routing::Router<S>::route (line 222)', 'axum/src/routing/mod.rs - routing::Router<S>::nest (line 260)', 'axum/src/routing/mod.rs - routing::Router<S>::nest (line 190)', 'axum/src/routing/mod.rs - routing::Router<S>::nest (line 156)', 'axum/src/routing/mod.rs - routing::Router<S>::route (line 205)', 'routing::tests::fallback::merge_empty_into_router_with_fallback', 'axum/src/routing/mod.rs - routing::Router<S>::route_service (line 185)', 'axum/src/routing/mod.rs - routing::Router<S>::route (line 250)', 'axum/src/routing/mod.rs - routing::Router<S>::nest (line 217)', 'routing::tests::fallback::merge_router_with_fallback_into_empty', 'axum/src/routing/mod.rs - routing::Router<S>::route (line 187)', 'axum/src/routing/mod.rs - routing::Router<S>::as_service (line 357)', 'axum/src/routing/mod.rs - routing::Router<S>::with_state (line 492)', 'axum/src/routing/mod.rs - routing::Router<S>::route_service (line 132) - compile', 'axum/src/routing/mod.rs - routing::Router<S>::with_state (line 348)', 'axum/src/routing/mod.rs - routing::Router<S>::fallback (line 272)', 'routing::tests::fallback::issue_2072', 'axum/src/routing/mod.rs - routing::Router::into_make_service_with_connect_info (line 432)', 'axum/src/routing/mod.rs - routing::Router<S>::merge (line 228)', 'routing::tests::fallback::merging_nested_router_with_fallback_into_router_with_fallback', 'axum/src/routing/mod.rs - routing::Router<S>::with_state (line 324)', 'axum/src/routing/mod.rs - routing::Router::into_make_service (line 403)', 'axum/src/routing/mod.rs - routing::Router<S>::merge (line 188)', 'axum/src/routing/mod.rs - routing::Router<S>::with_state (line 376)', 'routing::tests::fallback::issue_2072_outer_fallback_after_merge', 'axum/src/routing/mod.rs - routing::Router::into_make_service_with_connect_info (line 454)', 'axum/src/routing/mod.rs - routing::Router<S>::with_state (line 409)', 'axum/src/routing/mod.rs - routing::Router<S>::nest (line 238)', 'axum/src/routing/mod.rs - routing::Router<S>::fallback (line 300)', 'axum/src/routing/mod.rs - routing::Router<S>::layer (line 248)', 'axum/src/routing/mod.rs - routing::Router<S>::with_state (line 438)', 'routing::tests::fallback::issue_2072_outer_fallback_before_merge', 'axum/src/routing/mod.rs - routing::Router<S>::with_state (line 467) - compile fail', 'axum/src/routing/mod.rs - routing::Router<S>::with_state (line 519)', 'axum/src/routing/mod.rs - routing::Router<S>::layer (line 264)'}

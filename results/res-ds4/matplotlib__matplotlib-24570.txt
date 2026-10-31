@@ -1,0 +1,14 @@
+pre
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.7.0.dev821+g8f0003ae9
+    Uninstalling matplotlib-3.7.0.dev821+g8f0003ae9:
+      Successfully uninstalled matplotlib-3.7.0.dev821+g8f0003ae9
+Successfully installed matplotlib-3.7.0.dev821+g8f0003ae9
+post
+  Attempting uninstall: matplotlib
+    Found existing installation: matplotlib 3.7.0.dev821+g8f0003ae9
+    Uninstalling matplotlib-3.7.0.dev821+g8f0003ae9:
+      Successfully uninstalled matplotlib-3.7.0.dev821+g8f0003ae9
+Successfully installed matplotlib-3.7.0.dev821+g8f0003ae9.d20260726
+(.venv) (.venv) build failed
+(.venv) (.venv) 

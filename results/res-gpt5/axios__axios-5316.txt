@@ -1,0 +1,149 @@
+pre
+mocha-unit supports http with nodejs compression should support gunzip error handling pass
+mocha-unit supports http with nodejs compression should support disabling automatic decompression of response data pass
+mocha-unit supports http with nodejs compression algorithms gzip decompression should support decompression pass
+mocha-unit supports http with nodejs compression algorithms gzip decompression should not fail if response content-length header is missing (gzip) pass
+mocha-unit supports http with nodejs compression algorithms gzip decompression should not fail with chunked responses (without Content-Length header) pass
+mocha-unit supports http with nodejs compression algorithms gzip decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+mocha-unit supports http with nodejs compression algorithms gzip decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+mocha-unit supports http with nodejs compression algorithms compress decompression should support decompression pass
+mocha-unit supports http with nodejs compression algorithms compress decompression should not fail if response content-length header is missing (compress) pass
+mocha-unit supports http with nodejs compression algorithms compress decompression should not fail with chunked responses (without Content-Length header) pass
+mocha-unit supports http with nodejs compression algorithms compress decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+mocha-unit supports http with nodejs compression algorithms compress decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+mocha-unit supports http with nodejs compression algorithms deflate decompression should support decompression pass
+mocha-unit supports http with nodejs compression algorithms deflate decompression should not fail if response content-length header is missing (deflate) pass
+mocha-unit supports http with nodejs compression algorithms deflate decompression should not fail with chunked responses (without Content-Length header) pass
+mocha-unit supports http with nodejs compression algorithms deflate decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+mocha-unit supports http with nodejs compression algorithms deflate decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+mocha-unit supports http with nodejs compression algorithms deflate-raw decompression should support decompression pass
+mocha-unit supports http with nodejs compression algorithms deflate-raw decompression should not fail if response content-length header is missing (deflate) pass
+mocha-unit supports http with nodejs compression algorithms deflate-raw decompression should not fail with chunked responses (without Content-Length header) pass
+mocha-unit supports http with nodejs compression algorithms deflate-raw decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+mocha-unit supports http with nodejs compression algorithms deflate-raw decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+mocha-unit supports http with nodejs compression algorithms br decompression should support decompression pass
+mocha-unit supports http with nodejs compression algorithms br decompression should not fail if response content-length header is missing (br) pass
+mocha-unit supports http with nodejs compression algorithms br decompression should not fail with chunked responses (without Content-Length header) pass
+mocha-unit supports http with nodejs compression algorithms br decompression should not fail with an empty response without content-length header (Z_BUF_ERROR) pass
+mocha-unit supports http with nodejs compression algorithms br decompression should not fail with an empty response with content-length header (Z_BUF_ERROR) pass
+mocha-unit supports http with nodejs streams should support streams pass
+mocha-unit supports http with nodejs streams should pass errors for a failed stream pass
+mocha-unit supports http with nodejs streams should destroy the response stream with an error on request stream destroying pass
+mocha-unit supports http with nodejs different options for direct proxy configuration (without env variables) hostname and trailing colon in protocol pass
+mocha-unit supports http with nodejs different options for direct proxy configuration (without env variables) hostname and no trailing colon in protocol pass
+mocha-unit supports http with nodejs different options for direct proxy configuration (without env variables) both hostname and host -> hostname takes precedence pass
+mocha-unit supports http with nodejs different options for direct proxy configuration (without env variables) only host and https protocol pass
+mocha-unit supports http with nodejs FormData should allow passing FormData pass
+mocha-unit supports http with nodejs FormData toFormData helper should properly serialize nested objects for parsing with multer.js (express.js) pass
+mocha-unit supports http with nodejs URLEncoded Form should post object data as url-encoded form if content-type is application/x-www-form-urlencoded pass
+mocha-unit supports http with nodejs Data URL should support requesting data URL as a Buffer pass
+mocha-unit supports http with nodejs Data URL should support requesting data URL as a Blob (if supported by the environment) pass
+mocha-unit supports http with nodejs Data URL should support requesting data URL as a String (text) pass
+mocha-unit supports http with nodejs Data URL should support requesting data URL as a Stream pass
+mocha-unit supports http with nodejs progress upload should support upload progress capturing pass
+mocha-unit supports http with nodejs progress download should support download progress capturing pass
+mocha-unit supports http with nodejs Rate limit should support upload rate limit pass
+mocha-unit supports http with nodejs Rate limit should support download rate limit pass
+mocha-unit supports http with nodejs request aborting should be able to abort the response stream pass
+mocha-unit AxiosHeaders should support headers argument pass
+mocha-unit AxiosHeaders should be caseless pass
+mocha-unit AxiosHeaders set should support adding a single header pass
+mocha-unit AxiosHeaders set should support adding multiple headers pass
+mocha-unit AxiosHeaders set should support adding multiple headers from raw headers string pass
+mocha-unit AxiosHeaders set should not rewrite header the header if the value is false pass
+mocha-unit AxiosHeaders set should not rewrite the header if its value is false, unless rewrite options is set to true pass
+mocha-unit AxiosHeaders get filter should support RegExp pass
+mocha-unit AxiosHeaders get filter should support function pass
+mocha-unit AxiosHeaders has should return true if the header is defined, otherwise false pass
+mocha-unit AxiosHeaders has filter should support RegExp pass
+mocha-unit AxiosHeaders has filter should support function pass
+mocha-unit AxiosHeaders has filter should support string pattern pass
+mocha-unit AxiosHeaders delete should delete the header pass
+mocha-unit AxiosHeaders delete should return true if the header has been deleted, otherwise false pass
+mocha-unit AxiosHeaders delete should support headers array pass
+mocha-unit AxiosHeaders delete filter should support RegExp pass
+mocha-unit AxiosHeaders delete filter should support function pass
+mocha-unit AxiosHeaders delete filter should support string pattern pass
+mocha-unit AxiosHeaders clear should clear all headers pass
+mocha-unit AxiosHeaders clear should clear matching headers if a matcher was specified pass
+mocha-unit AxiosHeaders toJSON should return headers object with original headers case pass
+mocha-unit AxiosHeaders accessors should support get accessor pass
+mocha-unit AxiosHeaders accessors should support set accessor pass
+mocha-unit AxiosHeaders accessors should support has accessor pass
+mocha-unit AxiosHeaders normalize() should support auto-formatting pass
+mocha-unit AxiosHeaders normalize() should support external defined values pass
+mocha-unit AxiosHeaders normalize() should support array values pass
+mocha-unit AxiosHeaders AxiosHeaders.concat should concatenate plain headers into an AxiosHeader instance pass
+mocha-unit AxiosHeaders AxiosHeaders.concat should concatenate raw headers into an AxiosHeader instance pass
+mocha-unit AxiosHeaders AxiosHeaders.concat should concatenate Axios headers into a new AxiosHeader instance pass
+mocha-unit AxiosHeaders toString should serialize AxiosHeader instance to a raw headers string pass
+mocha-unit transformResponse 200 request parses json pass
+mocha-unit transformResponse 200 request ignores XML pass
+mocha-unit transformResponse 204 request does not parse the empty string pass
+mocha-unit transformResponse 204 request does not parse undefined pass
+mocha-unit helpers::fromDataURI should return buffer from data uri pass
+mocha-unit helpers::parseProtocol should parse protocol part if it exists pass
+mocha-unit Server-Side Request Forgery (SSRF) obeys proxy settings when following redirects pass
+mocha-unit issues 4999 should not fail with query parsing pass
+mocha-unit issues 5028 should handle set-cookie headers as an array pass
+mocha-unit utils should validate Stream pass
+mocha-unit utils should validate Buffer pass
+mocha-unit utils utils::isFormData should detect the FormData instance provided by the `form-data` package pass
+mocha-unit utils toJSON should convert to a plain object without circular references pass
+mocha-unit utils toJSON should use objects with defined toJSON method without rebuilding pass
+mocha-exports module export should have consistent ESM export pass
+mocha-exports module export CommonJS should be able to be loaded with require pass
+mocha-exports module export ESM should be able to be loaded with import pass
+mocha-exports module export TS should be able to be loaded with import pass
+mocha-exports module export TS require('axios') should be able to be loaded with require pass
+mocha-exports module export TS require('axios').default should be able to be loaded with require pass
+mocha-exports module typings ESM should pass types check pass
+mocha-exports module typings CommonJS should pass types check pass
+post
+
+> axios@1.2.6 build
+> gulp clear && cross-env NODE_ENV=production rollup -c -m
+
+[01:20:15] Using gulpfile /testbed/gulpfile.js
+[01:20:15] Starting 'clear'...
+[01:20:15] Finished 'clear' after 18 ms
+
+./index.js → dist/esm/axios.js...
+created dist/esm/axios.js in 667ms
+
+./index.js → dist/esm/axios.min.js...
+Created bundle axios.min.js: 28.81 kB → 11.13 kB (gzip)
+created dist/esm/axios.min.js in 2s
+
+./lib/axios.js → dist/axios.js...
+created dist/axios.js in 3.4s
+
+./lib/axios.js → dist/axios.min.js...
+Created bundle axios.min.js: 31.48 kB → 11.74 kB (gzip)
+created dist/axios.min.js in 3s
+
+./lib/axios.js → dist/browser/axios.cjs...
+created dist/browser/axios.cjs in 375ms
+
+./lib/axios.js → dist/node/axios.cjs...
+created dist/node/axios.cjs in 456ms
+
+> axios@1.2.6 test:mocha
+> node bin/ssl_hotfix.js mocha test/unit/**/*.js --timeout 30000 --exit --reporter json --reporter-options output=/tmp/mocha-unit.json
+
+Running mocha test/unit/adapters/http.js test/unit/core/AxiosHeaders.js test/unit/defaults/transformReponse.js test/unit/helpers/fromDataURI.js test/unit/helpers/parseProtocol.js test/unit/regression/SNYK-JS-AXIOS-1038255.js test/unit/regression/bugs.js test/unit/utils/utils.js --timeout 30000 --exit --reporter json --reporter-options output=/tmp/mocha-unit.json on v18.19.1
+
+Setting --openssl-legacy-provider as ssl hotfix
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'formdata-node' imported from /testbed/test/unit/adapters/http.js
+    at new NodeError (node:internal/errors:405:5)
+    at packageResolve (node:internal/modules/esm/resolve:916:9)
+    at moduleResolve (node:internal/modules/esm/resolve:973:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1193:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:403:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:372:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:249:38)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:76:39)
+    at link (node:internal/modules/esm/module_job:75:36)
+build success
+release failed

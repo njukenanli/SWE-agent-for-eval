@@ -1,0 +1,119 @@
+pre
+make  all-recursive
+make[1]: Entering directory '/testbed'
+Making all in modules/oniguruma
+make[2]: Entering directory '/testbed/modules/oniguruma'
+Making all in src
+make[3]: Entering directory '/testbed/modules/oniguruma/src'
+make  all-am
+make[4]: Entering directory '/testbed/modules/oniguruma/src'
+make[4]: Leaving directory '/testbed/modules/oniguruma/src'
+make[3]: Leaving directory '/testbed/modules/oniguruma/src'
+Making all in test
+make[3]: Entering directory '/testbed/modules/oniguruma/test'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/testbed/modules/oniguruma/test'
+Making all in sample
+make[3]: Entering directory '/testbed/modules/oniguruma/sample'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/testbed/modules/oniguruma/sample'
+make[3]: Entering directory '/testbed/modules/oniguruma'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/testbed/modules/oniguruma'
+make[2]: Leaving directory '/testbed/modules/oniguruma'
+make[2]: Entering directory '/testbed'
+  LEX      src/lexer.c
+NOT building lexer.c!
+make[2]: Leaving directory '/testbed'
+make[1]: Leaving directory '/testbed'
+modules/oniguruma/sample/bug_fix pass
+modules/oniguruma/sample/callback_each_match pass
+modules/oniguruma/sample/callout pass
+modules/oniguruma/sample/count pass
+modules/oniguruma/sample/echo pass
+modules/oniguruma/sample/encode pass
+modules/oniguruma/sample/listcap pass
+modules/oniguruma/sample/names pass
+modules/oniguruma/sample/regset pass
+modules/oniguruma/sample/scan pass
+modules/oniguruma/sample/simple pass
+modules/oniguruma/sample/sql pass
+modules/oniguruma/sample/syntax pass
+modules/oniguruma/sample/user_property pass
+modules/oniguruma/test/test_back pass
+modules/oniguruma/test/test_options pass
+modules/oniguruma/test/test_regset pass
+modules/oniguruma/test/test_syntax pass
+modules/oniguruma/test/test_utf8 pass
+modules/oniguruma/test/testc pass
+modules/oniguruma/test/testcu pass
+tests/base64test pass
+tests/jqtest pass
+tests/manonigtest pass
+tests/mantest pass
+tests/onigtest pass
+tests/optionaltest pass
+tests/shtest pass
+tests/utf8test pass
+post
+make  all-recursive
+make[1]: Entering directory '/testbed'
+Making all in modules/oniguruma
+make[2]: Entering directory '/testbed/modules/oniguruma'
+Making all in src
+make[3]: Entering directory '/testbed/modules/oniguruma/src'
+make  all-am
+make[4]: Entering directory '/testbed/modules/oniguruma/src'
+make[4]: Leaving directory '/testbed/modules/oniguruma/src'
+make[3]: Leaving directory '/testbed/modules/oniguruma/src'
+Making all in test
+make[3]: Entering directory '/testbed/modules/oniguruma/test'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/testbed/modules/oniguruma/test'
+Making all in sample
+make[3]: Entering directory '/testbed/modules/oniguruma/sample'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/testbed/modules/oniguruma/sample'
+make[3]: Entering directory '/testbed/modules/oniguruma'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/testbed/modules/oniguruma'
+make[2]: Leaving directory '/testbed/modules/oniguruma'
+make[2]: Entering directory '/testbed'
+  LEX      src/lexer.c
+NOT building lexer.c!
+  GEN      jq.1
+  CC       src/main.o
+  CCLD     jq
+make[2]: Leaving directory '/testbed'
+make[1]: Leaving directory '/testbed'
+modules/oniguruma/sample/bug_fix pass
+modules/oniguruma/sample/callback_each_match pass
+modules/oniguruma/sample/callout pass
+modules/oniguruma/sample/count pass
+modules/oniguruma/sample/echo pass
+modules/oniguruma/sample/encode pass
+modules/oniguruma/sample/listcap pass
+modules/oniguruma/sample/names pass
+modules/oniguruma/sample/regset pass
+modules/oniguruma/sample/scan pass
+modules/oniguruma/sample/simple pass
+modules/oniguruma/sample/sql pass
+modules/oniguruma/sample/syntax pass
+modules/oniguruma/sample/user_property pass
+modules/oniguruma/test/test_back pass
+modules/oniguruma/test/test_options pass
+modules/oniguruma/test/test_regset pass
+modules/oniguruma/test/test_syntax pass
+modules/oniguruma/test/test_utf8 pass
+modules/oniguruma/test/testc pass
+modules/oniguruma/test/testcu pass
+tests/base64test pass
+tests/jqtest pass
+tests/manonigtest pass
+tests/mantest pass
+tests/onigtest pass
+tests/optionaltest pass
+tests/shtest pass
+tests/utf8test pass
+build success
+release failed

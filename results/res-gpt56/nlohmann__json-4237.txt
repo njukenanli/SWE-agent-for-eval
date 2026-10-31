@@ -1,0 +1,204 @@
+pre
+[ 76%] Built target test-type_traits_cpp11
+[ 77%] Built target test-udt_cpp11
+[ 78%] Built target test-udl_cpp11
+[ 79%] Built target test-udt_macro_cpp11
+[ 80%] Built target test-unicode1_cpp11
+[ 81%] Built target test-unicode3_cpp11
+[ 83%] Built target test-unicode2_cpp11
+[ 84%] Built target test-unicode4_cpp11
+[ 85%] Built target test-user_defined_input_cpp11
+[ 86%] Built target test-windows_h_cpp11
+[ 88%] Built target abi_config_default
+[ 89%] Built target abi_config_custom
+[ 90%] Built target abi_config_noversion
+[ 93%] Built target test-wstring_cpp11
+[ 94%] Built target test-unicode5_cpp11
+[100%] Built target abi_compat_inline_ns
+[100%] Built target test-comparison_legacy_cpp11
+[100%] Built target abi_compat_diag
+test-abi_config_default pass
+test-abi_config_noversion pass
+test-abi_config_custom pass
+test-abi_compat_inline_ns pass
+test-abi_compat_diag pass
+cmake_target_include_directories_configure pass
+cmake_import_minver_configure pass
+cmake_import_configure pass
+cmake_add_subdirectory_configure pass
+download_test_data pass
+cmake_target_include_directories_build pass
+cmake_import_minver_build pass
+cmake_import_build pass
+cmake_add_subdirectory_build pass
+test-algorithms_cpp11 pass
+test-allocator_cpp11 pass
+test-alt-string_cpp11 pass
+test-assert_macro_cpp11 pass
+test-binary_formats_cpp11 pass
+test-bson_cpp11 pass
+test-byte_container_with_subtype_cpp11 pass
+test-capacity_cpp11 pass
+test-class_const_iterator_cpp11 pass
+test-class_iterator_cpp11 pass
+test-class_lexer_cpp11 pass
+test-comparison_cpp11 pass
+test-concepts_cpp11 pass
+test-constructor1_cpp11 pass
+test-constructor2_cpp11 pass
+test-convenience_cpp11 pass
+test-conversions_cpp11 pass
+test-custom-base-class_cpp11 pass
+test-deserialization_cpp11 pass
+test-diagnostics_cpp11 pass
+test-disabled_exceptions_cpp11 pass
+test-element_access1_cpp11 pass
+test-element_access2_cpp11 pass
+test-hash_cpp11 pass
+test-items_cpp11 pass
+test-iterators1_cpp11 pass
+test-iterators2_cpp11 pass
+test-json_patch_cpp11 pass
+test-json_pointer_cpp11 pass
+test-merge_patch_cpp11 pass
+test-meta_cpp11 pass
+test-modifiers_cpp11 pass
+test-no-mem-leak-on-adl-serialize_cpp11 pass
+test-noexcept_cpp11 pass
+test-ordered_json_cpp11 pass
+test-ordered_map_cpp11 pass
+test-pointer_access_cpp11 pass
+test-readme_cpp11 pass
+test-reference_access_cpp11 pass
+test-regression2_cpp11 pass
+test-serialization_cpp11 pass
+test-to_chars_cpp11 pass
+test-type_traits_cpp11 pass
+test-udl_cpp11 pass
+test-udt_cpp11 pass
+test-udt_macro_cpp11 pass
+test-unicode1_cpp11 pass
+test-unicode2_cpp11 pass
+test-unicode3_cpp11 pass
+test-unicode4_cpp11 pass
+test-unicode5_cpp11 pass
+test-user_defined_input_cpp11 pass
+test-windows_h_cpp11 pass
+test-wstring_cpp11 pass
+test-comparison_legacy_cpp11 pass
+test-testsuites_cpp11 pass
+test-class_parser_cpp11 pass
+cmake_fetch_content_configure pass
+test-ubjson_cpp11 pass
+cmake_fetch_content2_configure pass
+test-msgpack_cpp11 pass
+cmake_fetch_content_build pass
+cmake_fetch_content2_build pass
+test-bjdata_cpp11 pass
+test-cbor_cpp11 pass
+test-large_json_cpp11 pass
+test-inspection_cpp11 pass
+test-regression1_cpp11 pass
+post
+[ 94%] Linking CXX executable test-ubjson_cpp11
+[ 94%] Built target test-ubjson_cpp11
+[ 95%] Linking CXX executable test-regression2_cpp11
+[ 95%] Built target test-regression2_cpp11
+[ 95%] Linking CXX executable test-cbor_cpp11
+[ 95%] Built target test-cbor_cpp11
+[ 95%] Linking CXX executable test-conversions_cpp11
+[ 95%] Built target test-conversions_cpp11
+[ 96%] Linking CXX executable test-regression1_cpp11
+[ 96%] Built target test-regression1_cpp11
+[ 96%] Linking CXX executable test-element_access2_cpp11
+[ 96%] Built target test-element_access2_cpp11
+[ 97%] Linking CXX executable test-class_parser_cpp11
+[ 97%] Built target test-class_parser_cpp11
+[ 98%] Linking CXX executable test-bjdata_cpp11
+[ 98%] Built target test-bjdata_cpp11
+[100%] Linking CXX executable test-deserialization_cpp11
+[100%] Built target test-deserialization_cpp11
+test-abi_config_default pass
+test-abi_config_noversion pass
+test-abi_config_custom pass
+test-abi_compat_diag pass
+test-abi_compat_inline_ns pass
+cmake_import_minver_configure pass
+cmake_target_include_directories_configure pass
+cmake_import_configure pass
+cmake_add_subdirectory_configure pass
+download_test_data pass
+test-algorithms_cpp11 pass
+test-allocator_cpp11 pass
+test-alt-string_cpp11 pass
+test-assert_macro_cpp11 pass
+test-binary_formats_cpp11 pass
+test-bson_cpp11 pass
+test-byte_container_with_subtype_cpp11 pass
+test-capacity_cpp11 pass
+test-class_const_iterator_cpp11 pass
+test-class_iterator_cpp11 pass
+test-class_lexer_cpp11 pass
+test-comparison_cpp11 pass
+test-concepts_cpp11 pass
+test-constructor1_cpp11 pass
+test-constructor2_cpp11 pass
+test-convenience_cpp11 pass
+test-conversions_cpp11 pass
+test-custom-base-class_cpp11 pass
+test-deserialization_cpp11 pass
+test-diagnostics_cpp11 pass
+test-disabled_exceptions_cpp11 pass
+test-element_access1_cpp11 pass
+test-element_access2_cpp11 pass
+test-hash_cpp11 pass
+test-items_cpp11 pass
+test-iterators1_cpp11 pass
+test-iterators2_cpp11 pass
+test-json_patch_cpp11 pass
+test-json_pointer_cpp11 pass
+test-merge_patch_cpp11 pass
+test-meta_cpp11 pass
+test-modifiers_cpp11 pass
+test-no-mem-leak-on-adl-serialize_cpp11 pass
+test-noexcept_cpp11 pass
+test-ordered_json_cpp11 pass
+test-ordered_map_cpp11 pass
+test-pointer_access_cpp11 pass
+test-readme_cpp11 pass
+test-reference_access_cpp11 pass
+test-regression2_cpp11 pass
+test-serialization_cpp11 pass
+test-to_chars_cpp11 pass
+test-type_traits_cpp11 pass
+test-udl_cpp11 pass
+test-udt_cpp11 pass
+test-udt_macro_cpp11 pass
+test-unicode1_cpp11 pass
+test-unicode2_cpp11 pass
+test-unicode3_cpp11 pass
+test-unicode4_cpp11 pass
+test-unicode5_cpp11 pass
+test-user_defined_input_cpp11 pass
+test-windows_h_cpp11 pass
+test-wstring_cpp11 pass
+test-comparison_legacy_cpp11 pass
+test-testsuites_cpp11 pass
+test-class_parser_cpp11 pass
+cmake_fetch_content_configure pass
+cmake_fetch_content2_configure pass
+test-msgpack_cpp11 pass
+cmake_fetch_content_build pass
+cmake_fetch_content2_build pass
+test-cbor_cpp11 pass
+test-ubjson_cpp11 pass
+test-bjdata_cpp11 pass
+test-large_json_cpp11 pass
+test-inspection_cpp11 pass
+test-regression1_cpp11 pass
+cmake_import_minver_build pass
+cmake_import_build pass
+cmake_add_subdirectory_build pass
+cmake_target_include_directories_build pass
+build success
+release failed

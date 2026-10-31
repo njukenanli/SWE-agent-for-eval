@@ -1,0 +1,162 @@
+pre
+
+> immutable@5.0.0-beta.5 build:dist
+> rollup -c ./resources/rollup-config.mjs
+
+
+/testbed/src/Immutable.js → dist/immutable.js, dist/immutable.min.js, dist/es...
+(!) Circular dependencies
+src/Seq.js -> src/Collection.js -> src/Seq.js
+src/Map.js -> src/Operations.js -> src/Map.js
+src/OrderedMap.js -> src/Map.js -> src/Operations.js -> src/OrderedMap.js
+...and 6 more
+created dist/immutable.js, dist/immutable.min.js, dist/es in 2.6s
+
+> immutable@5.0.0-beta.5 build:types
+> cpy ./type-definitions/immutable.* dist
+
+ArraySeq.ts pass
+Repeat.ts pass
+fromJS.ts pass
+interpose.ts pass
+groupBy.ts pass
+MultiRequire.js pass
+issues.ts pass
+getIn.ts pass
+ListJS.js pass
+Predicates.ts pass
+find.ts pass
+get.ts pass
+sort.ts pass
+hash.ts pass
+partition.ts pass
+hasIn.ts pass
+Comparator.ts pass
+OrderedMap.ts pass
+RecordJS.js pass
+count.ts pass
+Seq.ts pass
+flatten.ts pass
+transformerProtocol.ts pass
+Record.ts pass
+ObjectSeq.ts pass
+merge.ts pass
+updateIn.ts pass
+Range.ts pass
+Set.ts pass
+splice.ts pass
+zip.ts pass
+IndexedSeq.ts pass
+KeyedSeq.ts pass
+concat.ts pass
+utils.js pass
+Conversion.ts pass
+OrderedSet.ts pass
+slice.ts pass
+join.ts pass
+Equality.ts pass
+Stack.ts pass
+minmax.ts pass
+Map.ts pass
+List.ts pass
+covariance pass
+deepCopy pass
+empty pass
+es6-collections pass
+exports pass
+from-js pass
+functional pass
+groupBy pass
+list pass
+map pass
+ordered-map pass
+ordered-set pass
+partition pass
+range pass
+record pass
+repeat pass
+seq pass
+set pass
+stack pass
+post
+
+> immutable@5.0.0-beta.5 build:dist
+> rollup -c ./resources/rollup-config.mjs
+
+
+/testbed/src/Immutable.js → dist/immutable.js, dist/immutable.min.js, dist/es...
+(!) Circular dependencies
+src/Seq.js -> src/Collection.js -> src/Seq.js
+src/Map.js -> src/Operations.js -> src/Map.js
+src/OrderedMap.js -> src/Map.js -> src/Operations.js -> src/OrderedMap.js
+...and 6 more
+created dist/immutable.js, dist/immutable.min.js, dist/es in 2.5s
+
+> immutable@5.0.0-beta.5 build:types
+> cpy ./type-definitions/immutable.* dist
+
+OrderedMap.ts pass
+get.ts pass
+sort.ts pass
+MultiRequire.js pass
+Predicates.ts pass
+hasIn.ts pass
+find.ts pass
+groupBy.ts pass
+transformerProtocol.ts pass
+flatten.ts pass
+ObjectSeq.ts pass
+Repeat.ts pass
+updateIn.ts pass
+count.ts pass
+interpose.ts pass
+IndexedSeq.ts pass
+partition.ts pass
+concat.ts pass
+Comparator.ts pass
+Record.ts pass
+OrderedSet.ts pass
+fromJS.ts pass
+getIn.ts pass
+issues.ts pass
+ArraySeq.ts pass
+RecordJS.js pass
+Seq.ts pass
+zip.ts pass
+hash.ts pass
+ListJS.js pass
+merge.ts pass
+Set.ts pass
+Range.ts pass
+KeyedSeq.ts pass
+splice.ts pass
+slice.ts pass
+Conversion.ts pass
+utils.js pass
+join.ts pass
+Equality.ts pass
+minmax.ts pass
+Stack.ts pass
+Map.ts pass
+List.ts pass
+covariance pass
+deepCopy pass
+empty pass
+es6-collections pass
+exports pass
+from-js pass
+functional pass
+groupBy pass
+list pass
+map pass
+ordered-map pass
+ordered-set pass
+partition pass
+range pass
+record pass
+repeat pass
+seq pass
+set pass
+stack pass
+build success
+release failed

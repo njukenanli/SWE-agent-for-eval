@@ -1,0 +1,205 @@
+pre
+OptionValidator validateTopLevelOptions should throw when option key is not found pass
+OptionValidator validateTopLevelOptions should throw when option key is an own property but not found pass
+OptionValidator validateBooleanOption `undefined` option returns false pass
+OptionValidator validateBooleanOption `false` option returns false pass
+OptionValidator validateBooleanOption `true` option returns true pass
+OptionValidator validateBooleanOption array option is invalid pass
+OptionValidator validateStringOption `undefined` option default pass
+OptionValidator validateStringOption `value` option returns value pass
+OptionValidator validateStringOption no default returns undefined pass
+OptionValidator validateStringOption array option is invalid pass
+pass env to configs used with extends pass
+getLineInfo reports correct position pass
+getLineInfo reports correct position for first line pass
+getLineInfo supports %0A line ending pass
+getLineInfo supports %0D line ending pass
+getLineInfo supports %u2028 line ending pass
+getLineInfo supports %u2029 line ending pass
+getLineInfo supports %0D%0A line ending pass
+builders typescript tsTypeParameter accept name as argument for tsTypeParameter pass
+builders typescript tsTypeParameter throws when name is missing pass
+normalize options Babel 8 should throw on unknown options skip
+normalize options Babel 8 should throw on Babel 7 `allowDeclareFields` option skip
+normalize options Babel 8 should throw when `"all"` is not a boolean skip
+normalize options Babel 8 should not throw when options is not defined skip
+normalize options Babel 8 default values skip
+normalize options Babel 7 should not throw on unknown options pass
+normalize options Babel 7 should not throw when `"all"` is not a boolean pass
+normalize options Babel 7 should not throw when `"allowDeclareFields"` is not a boolean pass
+normalize options Babel 7 default values pass
+error codes raises an error with BABEL_PARSER_SOURCETYPE_MODULE_REQUIRED and reasonCode pass
+error codes raises an error with BABEL_PARSER_SYNTAX_ERROR and reasonCode pass
+error codes consistent reasonCode between Flow and TypeScript in Babel 8 pass
+utils semverify returns pass
+utils semverify throws pass
+normalize options Babel 8 should throw on unknown options skip
+normalize options Babel 8 should throw when `"allExtensions"` is not a boolean skip
+normalize options Babel 8 should throw when `"allowNamespaces"` is not a boolean skip
+normalize options Babel 8 should throw when `"isTSX"` is not a boolean skip
+normalize options Babel 8 should throw when `"onlyRemoveTypeImports"` is not a boolean skip
+normalize options Babel 8 should throw when `"optimizeConstEnums"` is not a boolean skip
+normalize options Babel 8 should throw when `"jsxPragma"` is not a string skip
+normalize options Babel 8 should throw when `"jsxPragmaFrag"` is not a string skip
+normalize options Babel 8 should not throw when options is not defined skip
+normalize options Babel 8 default values skip
+normalize options Babel 7 should not throw on unknown options pass
+normalize options Babel 7 should not throw when `"allowDeclareFields"` is not a boolean pass
+normalize options Babel 7 should not throw when `"allowNamespaces"` is not a boolean pass
+normalize options Babel 7 should not throw when `"onlyRemoveTypeImports"` is not a boolean pass
+normalize options Babel 7 should throw when `"jsxPragma"` is not a string pass
+normalize options Babel 7 should throw when `"allExtensions"` is not a boolean pass
+normalize options Babel 7 should throw when `"isTSX"` is not a boolean pass
+normalize options Babel 7 should throw when `"optimizeConstEnums"` is not a boolean pass
+normalize options Babel 7 should throw when `"jsxPragmaFrag"` is not a string pass
+normalize options Babel 7 default values pass
+allows custom browserslist env pass
+module.exports.default is correctly updated pass
+loads browserslistrc pass
+loads browserslistrc and respects browserslistEnv pass
+targetsSupported returns false if no targets are specified pass
+targetsSupported returns false if plugin feature is not implemented in one or more targets pass
+targetsSupported returns true if plugin feature is implemented by lower than target pass
+targetsSupported returns true if plugin feature is implemented is equal to target pass
+targetsSupported returns false if plugin feature is implemented is greater than target pass
+targetsSupported returns when target is a decimal pass
+targetsSupported throws an error if target version is invalid pass
+pretty prettifyVersion returns pass
+pretty prettifyTargets returns pass
+isIdentifierName returns false if provided string is empty pass
+isIdentifierName returns true if provided string "hello" is an IdentifierName pass
+isIdentifierName returns true if provided string "$" is an IdentifierName pass
+isIdentifierName returns true if provided string "ゆゆ式" is an IdentifierName pass
+isIdentifierName returns true if provided string "$20" is an IdentifierName pass
+isIdentifierName returns true if provided string "hello20" is an IdentifierName pass
+isIdentifierName returns true if provided string "_" is an IdentifierName pass
+isIdentifierName returns true if provided string "if" is an IdentifierName pass
+isIdentifierName returns true if provided string "_‌" is an IdentifierName pass
+isIdentifierName returns true if provided string "_‍" is an IdentifierName pass
+isIdentifierName returns false if provided string "+hello" is not an IdentifierName pass
+isIdentifierName returns false if provided string "0$" is not an IdentifierName pass
+isIdentifierName returns false if provided string "-ゆゆ式" is not an IdentifierName pass
+isIdentifierName returns false if provided string "#_" is not an IdentifierName pass
+isIdentifierName returns false if provided string "_#" is not an IdentifierName pass
+isIdentifierName returns false if provided string "��" is not an IdentifierName pass
+isIdentifierName supports astral symbols pass
+isIdentifierName supports Unicode 14 pass
+isIdentifierName supports Unicode 13 pass
+isIdentifierName supports Unicode 12 pass
+isIdentifierName supports Unicode 11 pass
+defaults getOptionSpecificExcludesFor should return correct excludes for `loose` mode pass
+defaults getOptionSpecificExcludesFor shouldn't return excludes for non-`loose` mode pass
+identifier isKeyword break is a keyword pass
+identifier isKeyword const is a keyword pass
+identifier isKeyword super is a keyword pass
+identifier isKeyword let is not a keyword pass
+identifier isKeyword abc is not a keyword pass
+identifier keywordRelationalOperator in is true pass
+identifier keywordRelationalOperator instanceof is true pass
+identifier keywordRelationalOperator stanceof is false pass
+identifier keywordRelationalOperator instance is false pass
+identifier keywordRelationalOperator abc is false pass
+post
+regressions .valueToNode works with objects from different contexts pass
+normalize options Babel 8 should throw on unknown options skip
+normalize options Babel 8 should throw when `"development"` is not a boolean skip
+normalize options Babel 8 should throw when `"pure"` is not a boolean skip
+normalize options Babel 8 should throw when `"throwIfNamespace"` is not a boolean skip
+normalize options Babel 8 should throw when `"importSource"` is not a string skip
+normalize options Babel 8 should throw when `"pragma"` is not a string skip
+normalize options Babel 8 should throw when `"pragmaFrag"` is not a string skip
+normalize options Babel 8 should throw when `"runtime"` is not a string skip
+normalize options Babel 8 should throw on Babel 7 'useBuiltIns' option skip
+normalize options Babel 8 should throw on Babel 7 'useSpread' option skip
+normalize options Babel 8 should throw on unknown 'runtime' option skip
+normalize options Babel 8 should not throw when options are not defined skip
+normalize options Babel 8 default values skip
+normalize options Babel 7 should not throw on unknown options pass
+normalize options Babel 7 should not throw when `"development"` is not a boolean pass
+normalize options Babel 7 should not throw when `"pure"` is not a boolean pass
+normalize options Babel 7 should not throw when `"throwIfNamespace"` is not a boolean pass
+normalize options Babel 7 should throw when `"importSource"` is not a string pass
+normalize options Babel 7 should throw when `"pragma"` is not a string pass
+normalize options Babel 7 should throw when `"pragmaFrag"` is not a string pass
+normalize options Babel 7 should throw when `"runtime"` is not a string pass
+normalize options Babel 7 default values pass
+loads browserslistrc pass
+loads browserslistrc and respects browserslistEnv pass
+targetsSupported returns false if no targets are specified pass
+targetsSupported returns false if plugin feature is not implemented in one or more targets pass
+targetsSupported returns true if plugin feature is implemented by lower than target pass
+targetsSupported returns true if plugin feature is implemented is equal to target pass
+targetsSupported returns false if plugin feature is implemented is greater than target pass
+targetsSupported returns when target is a decimal pass
+targetsSupported throws an error if target version is invalid pass
+isIdentifierName returns false if provided string is empty pass
+isIdentifierName returns true if provided string "hello" is an IdentifierName pass
+isIdentifierName returns true if provided string "$" is an IdentifierName pass
+isIdentifierName returns true if provided string "ゆゆ式" is an IdentifierName pass
+isIdentifierName returns true if provided string "$20" is an IdentifierName pass
+isIdentifierName returns true if provided string "hello20" is an IdentifierName pass
+isIdentifierName returns true if provided string "_" is an IdentifierName pass
+isIdentifierName returns true if provided string "if" is an IdentifierName pass
+isIdentifierName returns true if provided string "_‌" is an IdentifierName pass
+isIdentifierName returns true if provided string "_‍" is an IdentifierName pass
+isIdentifierName returns false if provided string "+hello" is not an IdentifierName pass
+isIdentifierName returns false if provided string "0$" is not an IdentifierName pass
+isIdentifierName returns false if provided string "-ゆゆ式" is not an IdentifierName pass
+isIdentifierName returns false if provided string "#_" is not an IdentifierName pass
+isIdentifierName returns false if provided string "_#" is not an IdentifierName pass
+isIdentifierName returns false if provided string "��" is not an IdentifierName pass
+isIdentifierName supports astral symbols pass
+isIdentifierName supports Unicode 14 pass
+isIdentifierName supports Unicode 13 pass
+isIdentifierName supports Unicode 12 pass
+isIdentifierName supports Unicode 11 pass
+module.exports.default is correctly updated pass
+error codes raises an error with BABEL_PARSER_SOURCETYPE_MODULE_REQUIRED and reasonCode pass
+error codes raises an error with BABEL_PARSER_SYNTAX_ERROR and reasonCode pass
+error codes consistent reasonCode between Flow and TypeScript in Babel 8 pass
+@babel/helper-annotate-as-pure will add leading comment pass
+@babel/helper-annotate-as-pure will not add an extra leading comment pass
+OptionValidator validateTopLevelOptions should throw when option key is not found pass
+OptionValidator validateTopLevelOptions should throw when option key is an own property but not found pass
+OptionValidator validateBooleanOption `undefined` option returns false pass
+OptionValidator validateBooleanOption `false` option returns false pass
+OptionValidator validateBooleanOption `true` option returns true pass
+OptionValidator validateBooleanOption array option is invalid pass
+OptionValidator validateStringOption `undefined` option default pass
+OptionValidator validateStringOption `value` option returns value pass
+OptionValidator validateStringOption no default returns undefined pass
+OptionValidator validateStringOption array option is invalid pass
+pretty prettifyVersion returns pass
+pretty prettifyTargets returns pass
+options strictMode sourceType module default parses as strict mode pass
+options strictMode sourceType module false parses as sloppy mode pass
+options strictMode sourceType module true parses as strict mode pass
+options strictMode sourceType script default parses as sloppy mode pass
+options strictMode sourceType script false parses as sloppy mode pass
+options strictMode sourceType script true parses as strict mode pass
+normalize options Babel 8 should throw on unknown options skip
+normalize options Babel 8 should throw on Babel 7 `allowDeclareFields` option skip
+normalize options Babel 8 should throw when `"all"` is not a boolean skip
+normalize options Babel 8 should not throw when options is not defined skip
+normalize options Babel 8 default values skip
+normalize options Babel 7 should not throw on unknown options pass
+normalize options Babel 7 should not throw when `"all"` is not a boolean pass
+normalize options Babel 7 should not throw when `"allowDeclareFields"` is not a boolean pass
+normalize options Babel 7 default values pass
+getLineInfo reports correct position pass
+getLineInfo reports correct position for first line pass
+getLineInfo supports %0A line ending pass
+getLineInfo supports %0D line ending pass
+getLineInfo supports %u2028 line ending pass
+getLineInfo supports %u2029 line ending pass
+getLineInfo supports %0D%0A line ending pass
+loads packageJson.browserslist pass
+utils semverify returns pass
+utils semverify throws pass
+findSuggestion findSuggestion("cat", ["cow", "dog", "pig"]) returns "cow" pass
+findSuggestion findSuggestion("uglifyjs", []) returns undefined pass
+defaults getOptionSpecificExcludesFor should return correct excludes for `loose` mode pass
+defaults getOptionSpecificExcludesFor shouldn't return excludes for non-`loose` mode pass
+build success
+release success
+{'NODE_FIELDS contains all fields in babel-parser/test/fixtures/es2017/async-functions/await-following-arrow-inside-params/output.json', 'es2015/yield/yield following arrow in params', 'es2017/async functions/await following arrow inside params', '[16:06:04] Compiling', 'NODE_FIELDS contains all fields in babel-parser/test/fixtures/es2015/yield/yield-following-arrow-in-params/output.json'}

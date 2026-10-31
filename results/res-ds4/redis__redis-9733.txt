@@ -1,0 +1,205 @@
+pre
+lazy free a stream with all types of metadata pass
+lazy free a stream with deleted cgroup pass
+Setup slave pass
+WAIT should acknowledge 1 additional copy of the data pass
+WAIT should not acknowledge 2 additional copies of the data pass
+WAIT should not acknowledge 1 additional copy if slave is blocked pass
+WAIT implicitly blocks on client pause since ACKs aren't sent pass
+Test read commands are not blocked by client pause pass
+Test write commands are paused by RO pass
+Test special commands are paused by RO pass
+Test read/admin mutli-execs are not blocked by pause RO pass
+Test write mutli-execs are blocked by pause RO pass
+Test scripts are blocked by pause RO pass
+Test multiple clients can be queued up and unblocked pass
+Test clients with syntax errors will get responses immediately pass
+Test both active and passive expires are skipped during client pause pass
+Test that client pause starts at the end of a transaction pass
+Test when replica paused, offset would not grow pass
+Test replica offset would grow after unpause pass
+query buffer resized correctly pass
+query buffer resized correctly when not idle pass
+pending querybuf pass
+Clients are able to enable tracking and redirect it pass
+The other connection is able to get invalidations pass
+The client is now able to disable tracking pass
+Clients can enable the BCAST mode with the empty prefix pass
+The connection gets invalidation messages about all the keys pass
+Clients can enable the BCAST mode with prefixes pass
+Adding prefixes to BCAST mode works pass
+Tracking NOLOOP mode pass
+Tracking NOLOOP mode pass
+Tracking gets notification of expired keys pass
+Tracking gets notification of lazy expired keys pass
+HELLO 3 reply is correct pass
+HELLO without protover pass
+RESP3 based basic invalidation pass
+RESP3 tracking redirection pass
+Invalidations of previous keys can be redirected after switching to RESP3 pass
+Invalidations of new keys can be redirected after switching to RESP3 pass
+RESP3 Client gets tracking-redir-broken push message after cached key changed when rediretion client is terminated pass
+Different clients can redirect to the same connection pass
+Different clients using different protocols can track the same key pass
+No invalidation message when using OPTIN option pass
+Invalidation message sent when using OPTIN option with CLIENT CACHING yes pass
+Invalidation message sent when using OPTOUT option pass
+No invalidation message when using OPTOUT option with CLIENT CACHING no pass
+Able to redirect to a RESP3 client pass
+After switching from normal tracking to BCAST mode, no invalidation message is produced for pre-BCAST keys pass
+BCAST with prefix collisions throw errors pass
+hdel deliver invlidate message after response pass
+Tracking invalidation message is not interleaved with multiple keys response pass
+Tracking invalidation message is not interleaved with transaction response pass
+Tracking invalidation message of eviction keys should be before response pass
+Unblocked BLMOVE gets notification after response pass
+Tracking gets notification on tracking table key eviction pass
+Invalidation message received for flushall pass
+Invalidation message received for flushdb pass
+Test ASYNC flushall pass
+Server is able to evacuate enough keys when num of keys surpasses limit by more than defined initial effort pass
+Tracking info is correct pass
+CLIENT GETREDIR provides correct client id pass
+CLIENT TRACKINGINFO provides reasonable results when tracking off pass
+CLIENT TRACKINGINFO provides reasonable results when tracking on pass
+CLIENT TRACKINGINFO provides reasonable results when tracking on with options pass
+CLIENT TRACKINGINFO provides reasonable results when tracking optin pass
+CLIENT TRACKINGINFO provides reasonable results when tracking optout pass
+CLIENT TRACKINGINFO provides reasonable results when tracking bcast mode pass
+CLIENT TRACKINGINFO provides reasonable results when tracking redir broken pass
+CONFIG SET oom-score-adj works as expected pass
+Temp rdb will be deleted if we use bg_unlink when shutdown pass
+Temp rdb will be deleted pass
+CONFIG SET port number pass
+CONFIG SET bind address pass
+CONFIG SET bind-source-addr pass
+Default bind address configuration handling pass
+Protected mode works as expected pass
+Create 3 node cluster pass
+Run blocking command on cluster node3 pass
+Perform a Resharding pass
+Verify command got unblocked after resharding pass
+Wait for cluster to be stable pass
+Sanity test push cmd after resharding pass
+Run blocking command again on cluster node1 pass
+Kill a cluster node and wait for fail state pass
+Verify command got unblocked after cluster failure pass
+client evicted due to large argv pass
+client evicted due to large query buf pass
+client evicted due to percentage of maxmemory pass
+client evicted due to large multi buf pass
+client evicted due to watched key list pass
+client evicted due to pubsub subscriptions pass
+client evicted due to tracking redirection pass
+client evicted due to client tracking prefixes pass
+client evicted due to output buf pass
+client no-evict on pass
+client no-evict off pass
+avoid client eviction when client is freed by output buffer limit pass
+decrease maxmemory-clients causes client eviction pass
+evict clients only until below limit pass
+evict clients pass
+post
+lazy free a stream with all types of metadata pass
+lazy free a stream with deleted cgroup pass
+Setup slave pass
+WAIT should acknowledge 1 additional copy of the data pass
+WAIT should not acknowledge 2 additional copies of the data pass
+WAIT should not acknowledge 1 additional copy if slave is blocked pass
+WAIT implicitly blocks on client pause since ACKs aren't sent pass
+Test read commands are not blocked by client pause pass
+Test write commands are paused by RO pass
+Test special commands are paused by RO pass
+Test read/admin mutli-execs are not blocked by pause RO pass
+Test write mutli-execs are blocked by pause RO pass
+Test scripts are blocked by pause RO pass
+Test multiple clients can be queued up and unblocked pass
+Test clients with syntax errors will get responses immediately pass
+Test both active and passive expires are skipped during client pause pass
+Test that client pause starts at the end of a transaction pass
+Test when replica paused, offset would not grow pass
+Test replica offset would grow after unpause pass
+query buffer resized correctly pass
+query buffer resized correctly when not idle pass
+pending querybuf pass
+Clients are able to enable tracking and redirect it pass
+The other connection is able to get invalidations pass
+The client is now able to disable tracking pass
+Clients can enable the BCAST mode with the empty prefix pass
+The connection gets invalidation messages about all the keys pass
+Clients can enable the BCAST mode with prefixes pass
+Adding prefixes to BCAST mode works pass
+Tracking NOLOOP mode pass
+Tracking NOLOOP mode pass
+Tracking gets notification of expired keys pass
+Tracking gets notification of lazy expired keys pass
+HELLO 3 reply is correct pass
+HELLO without protover pass
+RESP3 based basic invalidation pass
+RESP3 tracking redirection pass
+Invalidations of previous keys can be redirected after switching to RESP3 pass
+Invalidations of new keys can be redirected after switching to RESP3 pass
+RESP3 Client gets tracking-redir-broken push message after cached key changed when rediretion client is terminated pass
+Different clients can redirect to the same connection pass
+Different clients using different protocols can track the same key pass
+No invalidation message when using OPTIN option pass
+Invalidation message sent when using OPTIN option with CLIENT CACHING yes pass
+Invalidation message sent when using OPTOUT option pass
+No invalidation message when using OPTOUT option with CLIENT CACHING no pass
+Able to redirect to a RESP3 client pass
+After switching from normal tracking to BCAST mode, no invalidation message is produced for pre-BCAST keys pass
+BCAST with prefix collisions throw errors pass
+hdel deliver invlidate message after response pass
+Tracking invalidation message is not interleaved with multiple keys response pass
+Tracking invalidation message is not interleaved with transaction response pass
+Tracking invalidation message of eviction keys should be before response pass
+Unblocked BLMOVE gets notification after response pass
+Tracking gets notification on tracking table key eviction pass
+Invalidation message received for flushall pass
+Invalidation message received for flushdb pass
+Test ASYNC flushall pass
+Server is able to evacuate enough keys when num of keys surpasses limit by more than defined initial effort pass
+Tracking info is correct pass
+CLIENT GETREDIR provides correct client id pass
+CLIENT TRACKINGINFO provides reasonable results when tracking off pass
+CLIENT TRACKINGINFO provides reasonable results when tracking on pass
+CLIENT TRACKINGINFO provides reasonable results when tracking on with options pass
+CLIENT TRACKINGINFO provides reasonable results when tracking optin pass
+CLIENT TRACKINGINFO provides reasonable results when tracking optout pass
+CLIENT TRACKINGINFO provides reasonable results when tracking bcast mode pass
+CLIENT TRACKINGINFO provides reasonable results when tracking redir broken pass
+CONFIG SET oom-score-adj works as expected pass
+Temp rdb will be deleted if we use bg_unlink when shutdown pass
+Temp rdb will be deleted pass
+CONFIG SET port number pass
+CONFIG SET bind address pass
+CONFIG SET bind-source-addr pass
+Default bind address configuration handling pass
+Protected mode works as expected pass
+Create 3 node cluster pass
+Run blocking command on cluster node3 pass
+Perform a Resharding pass
+Verify command got unblocked after resharding pass
+Wait for cluster to be stable pass
+Sanity test push cmd after resharding pass
+Run blocking command again on cluster node1 pass
+Kill a cluster node and wait for fail state pass
+Verify command got unblocked after cluster failure pass
+client evicted due to large argv pass
+client evicted due to large query buf pass
+client evicted due to percentage of maxmemory pass
+client evicted due to large multi buf pass
+client evicted due to watched key list pass
+client evicted due to pubsub subscriptions pass
+client evicted due to tracking redirection pass
+client evicted due to client tracking prefixes pass
+client evicted due to output buf pass
+client no-evict on pass
+client no-evict off pass
+avoid client eviction when client is freed by output buffer limit pass
+decrease maxmemory-clients causes client eviction pass
+evict clients only until below limit pass
+evict clients pass
+build success
+release success
+{'COMMAND GETKEYS EVAL with keys', 'COMMAND GETKEYS EVAL without keys'}

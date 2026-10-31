@@ -1,0 +1,204 @@
+pre
+useCssModule basic usage pass
+useCssModule basic usage pass
+useCssModule warn out of setup usage pass
+useCssModule warn missing injection pass
+useCssModule warn missing injection pass
+useCssVars basic pass
+useCssVars on fragment root pass
+useCssVars on HOCs pass
+useCssVars on suspense root pass
+useCssVars with v-if & async component & suspense pass
+useCssVars with subTree changed pass
+useCssVars with subTree change inside HOC pass
+useCssVars with createStaticVNode pass
+useCssVars with teleport pass
+useCssVars with teleport in child slot pass
+useCssVars with teleport(change subTree) pass
+useCssVars with teleport(disabled) pass
+useCssVars with string style pass
+useCssVars with custom element pass
+e2e: Transition transition with v-if basic transition skip
+e2e: Transition transition with v-if named transition skip
+e2e: Transition transition with v-if custom transition classes skip
+e2e: Transition transition with v-if transition with dynamic name skip
+e2e: Transition transition with v-if transition events without appear skip
+e2e: Transition transition with v-if events with arguments skip
+e2e: Transition transition with v-if onEnterCancelled skip
+e2e: Transition transition with v-if transition on appear skip
+e2e: Transition transition with v-if transition events with appear skip
+e2e: Transition transition with v-if css: false skip
+e2e: Transition transition with v-if no transition detected skip
+e2e: Transition transition with v-if animations skip
+e2e: Transition transition with v-if explicit transition type skip
+e2e: Transition transition with v-if transition on SVG elements skip
+e2e: Transition transition with v-if custom transition higher-order component skip
+e2e: Transition transition with v-if transition on child components with empty root node skip
+e2e: Transition transition with v-if transition with v-if at component root-level skip
+e2e: Transition transition with v-if wrapping transition + fallthrough attrs skip
+e2e: Transition transition with v-if transition + fallthrough attrs (in-out mode) skip
+e2e: Transition transition with KeepAlive unmount innerChild (out-in mode) skip
+e2e: Transition transition with KeepAlive switch child then update include (out-in mode) skip
+e2e: Transition transition with KeepAlive switch and update child then update include (out-in mode) skip
+e2e: Transition transition with Suspense async component transition inside Suspense skip
+e2e: Transition transition with Suspense static node transition inside Suspense skip
+e2e: Transition transition with Suspense out-in mode with Suspense skip
+e2e: Transition transition with Suspense Suspense fallback should work with transition skip
+e2e: Transition transition with Suspense children mount should be called after html changes skip
+e2e: Transition transition with Suspense trigger again when transition is not finished skip
+e2e: Transition transition with Suspense trigger again when transition is not finished & correctly anchor skip
+e2e: Transition transition with Suspense switch between Async and Sync child when transition is not finished skip
+e2e: Transition transition with Teleport apply transition to teleport child skip
+e2e: Transition transition with v-show named transition with v-show skip
+e2e: Transition transition with v-show transition events with v-show skip
+e2e: Transition transition with v-show onLeaveCancelled (v-show only) skip
+e2e: Transition transition with v-show transition on appear with v-show skip
+e2e: Transition transition with v-show transition events should not call onEnter with v-show false skip
+e2e: Transition explicit durations single value skip
+e2e: Transition explicit durations enter with explicit durations skip
+e2e: Transition explicit durations leave with explicit durations skip
+e2e: Transition explicit durations separate enter and leave skip
+e2e: Transition explicit durations warn invalid durations skip
+e2e: Transition warn when used on multiple elements skip
+e2e: Transition warn when invalid transition mode skip
+e2e: Transition HOC w/ merged hooks skip
+e2e: Transition should work with dev root fragment skip
+e2e: TransitionGroup enter skip
+e2e: TransitionGroup leave skip
+e2e: TransitionGroup enter + leave skip
+e2e: TransitionGroup appear skip
+e2e: TransitionGroup move skip
+e2e: TransitionGroup dynamic name skip
+e2e: TransitionGroup events skip
+e2e: TransitionGroup warn unkeyed children skip
+e2e: TransitionGroup avoid set transition hooks for comment node skip
+e2e: TransitionGroup avoid set transition hooks for text node skip
+e2e: commits classic skip
+e2e: commits composition skip
+e2e: grid classic skip
+e2e: grid composition skip
+async component hydration strategies idle skip
+async component hydration strategies visible skip
+async component hydration strategies visible (with rootMargin) skip
+async component hydration strategies visible (fragment) skip
+async component hydration strategies media query skip
+async component hydration strategies interaction skip
+async component hydration strategies interaction (fragment) skip
+async component hydration strategies custom skip
+async component hydration strategies custom teardown skip
+e2e: markdown classic skip
+e2e: markdown composition skip
+ssr custom element hydration skip
+pass key to custom element skip
+e2e: svg classic skip
+e2e: svg composition skip
+e2e: todomvc classic skip
+e2e: todomvc composition skip
+e2e: tree classic skip
+e2e: tree composition skip
+e2e: trusted types should render the hello world app skip
+e2e: trusted types should render static vnode without error skip
+e2e: trusted types should accept v-html with custom policy skip
+post
+useCssModule basic usage pass
+useCssModule basic usage pass
+useCssModule warn out of setup usage pass
+useCssModule warn missing injection pass
+useCssModule warn missing injection pass
+useCssVars basic pass
+useCssVars on fragment root pass
+useCssVars on HOCs pass
+useCssVars on suspense root pass
+useCssVars with v-if & async component & suspense pass
+useCssVars with subTree changed pass
+useCssVars with subTree change inside HOC pass
+useCssVars with createStaticVNode pass
+useCssVars with teleport pass
+useCssVars with teleport in child slot pass
+useCssVars with teleport(change subTree) pass
+useCssVars with teleport(disabled) pass
+useCssVars with string style pass
+useCssVars with custom element pass
+e2e: Transition transition with v-if basic transition skip
+e2e: Transition transition with v-if named transition skip
+e2e: Transition transition with v-if custom transition classes skip
+e2e: Transition transition with v-if transition with dynamic name skip
+e2e: Transition transition with v-if transition events without appear skip
+e2e: Transition transition with v-if events with arguments skip
+e2e: Transition transition with v-if onEnterCancelled skip
+e2e: Transition transition with v-if transition on appear skip
+e2e: Transition transition with v-if transition events with appear skip
+e2e: Transition transition with v-if css: false skip
+e2e: Transition transition with v-if no transition detected skip
+e2e: Transition transition with v-if animations skip
+e2e: Transition transition with v-if explicit transition type skip
+e2e: Transition transition with v-if transition on SVG elements skip
+e2e: Transition transition with v-if custom transition higher-order component skip
+e2e: Transition transition with v-if transition on child components with empty root node skip
+e2e: Transition transition with v-if transition with v-if at component root-level skip
+e2e: Transition transition with v-if wrapping transition + fallthrough attrs skip
+e2e: Transition transition with v-if transition + fallthrough attrs (in-out mode) skip
+e2e: Transition transition with KeepAlive unmount innerChild (out-in mode) skip
+e2e: Transition transition with KeepAlive switch child then update include (out-in mode) skip
+e2e: Transition transition with KeepAlive switch and update child then update include (out-in mode) skip
+e2e: Transition transition with Suspense async component transition inside Suspense skip
+e2e: Transition transition with Suspense static node transition inside Suspense skip
+e2e: Transition transition with Suspense out-in mode with Suspense skip
+e2e: Transition transition with Suspense Suspense fallback should work with transition skip
+e2e: Transition transition with Suspense children mount should be called after html changes skip
+e2e: Transition transition with Suspense trigger again when transition is not finished skip
+e2e: Transition transition with Suspense trigger again when transition is not finished & correctly anchor skip
+e2e: Transition transition with Suspense switch between Async and Sync child when transition is not finished skip
+e2e: Transition transition with Teleport apply transition to teleport child skip
+e2e: Transition transition with v-show named transition with v-show skip
+e2e: Transition transition with v-show transition events with v-show skip
+e2e: Transition transition with v-show onLeaveCancelled (v-show only) skip
+e2e: Transition transition with v-show transition on appear with v-show skip
+e2e: Transition transition with v-show transition events should not call onEnter with v-show false skip
+e2e: Transition explicit durations single value skip
+e2e: Transition explicit durations enter with explicit durations skip
+e2e: Transition explicit durations leave with explicit durations skip
+e2e: Transition explicit durations separate enter and leave skip
+e2e: Transition explicit durations warn invalid durations skip
+e2e: Transition warn when used on multiple elements skip
+e2e: Transition warn when invalid transition mode skip
+e2e: Transition HOC w/ merged hooks skip
+e2e: Transition should work with dev root fragment skip
+e2e: TransitionGroup enter skip
+e2e: TransitionGroup leave skip
+e2e: TransitionGroup enter + leave skip
+e2e: TransitionGroup appear skip
+e2e: TransitionGroup move skip
+e2e: TransitionGroup dynamic name skip
+e2e: TransitionGroup events skip
+e2e: TransitionGroup warn unkeyed children skip
+e2e: TransitionGroup avoid set transition hooks for comment node skip
+e2e: TransitionGroup avoid set transition hooks for text node skip
+e2e: commits classic skip
+e2e: commits composition skip
+e2e: grid classic skip
+e2e: grid composition skip
+async component hydration strategies idle skip
+async component hydration strategies visible skip
+async component hydration strategies visible (with rootMargin) skip
+async component hydration strategies visible (fragment) skip
+async component hydration strategies media query skip
+async component hydration strategies interaction skip
+async component hydration strategies interaction (fragment) skip
+async component hydration strategies custom skip
+async component hydration strategies custom teardown skip
+e2e: markdown classic skip
+e2e: markdown composition skip
+ssr custom element hydration skip
+pass key to custom element skip
+e2e: svg classic skip
+e2e: svg composition skip
+e2e: todomvc classic skip
+e2e: todomvc composition skip
+e2e: tree classic skip
+e2e: tree composition skip
+e2e: trusted types should render the hello world app skip
+e2e: trusted types should render static vnode without error skip
+e2e: trusted types should accept v-html with custom policy skip
+build success
+release failed

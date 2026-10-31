@@ -1,0 +1,62 @@
+pre
+Repository build/test is broken on this environment without modifying source files.
+Attempting minimal build (expected to fail):
+/testbed/setup.py:33: SetuptoolsDeprecationWarning: The test command is disabled and references to it are deprecated.
+!!
+
+        ********************************************************************************
+        Please remove any references to `setuptools.command.test` in all supported versions of the affected package.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+        ********************************************************************************
+
+!!
+  from setuptools.command.test import test as TestCommand
+Traceback (most recent call last):
+  File "/testbed/setup.py", line 53, in <module>
+    __version__ = versioneer.get_version()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/versioneer.py", line 1410, in get_version
+    return get_versions()["version"]
+           ^^^^^^^^^^^^^^
+  File "/testbed/versioneer.py", line 1344, in get_versions
+    cfg = get_config_from_root(root)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/versioneer.py", line 401, in get_config_from_root
+    parser = configparser.SafeConfigParser()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'configparser' has no attribute 'SafeConfigParser'. Did you mean: 'RawConfigParser'?
+build :: fail
+post
+Repository build/test is broken on this environment without modifying source files.
+Attempting minimal build (expected to fail):
+/testbed/setup.py:33: SetuptoolsDeprecationWarning: The test command is disabled and references to it are deprecated.
+!!
+
+        ********************************************************************************
+        Please remove any references to `setuptools.command.test` in all supported versions of the affected package.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+        ********************************************************************************
+
+!!
+  from setuptools.command.test import test as TestCommand
+Traceback (most recent call last):
+  File "/testbed/setup.py", line 53, in <module>
+    __version__ = versioneer.get_version()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/versioneer.py", line 1410, in get_version
+    return get_versions()["version"]
+           ^^^^^^^^^^^^^^
+  File "/testbed/versioneer.py", line 1344, in get_versions
+    cfg = get_config_from_root(root)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/versioneer.py", line 401, in get_config_from_root
+    parser = configparser.SafeConfigParser()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'configparser' has no attribute 'SafeConfigParser'. Did you mean: 'RawConfigParser'?
+build :: fail
+(.venv) (.venv) build failed
+(.venv) (.venv) 

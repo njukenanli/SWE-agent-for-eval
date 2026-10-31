@@ -1,0 +1,58 @@
+pre
+   Compiling red_knot_wasm v0.0.0 (/testbed/crates/red_knot_wasm)
+   Compiling ruff_wasm v0.8.6 (/testbed/crates/ruff_wasm)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 11.30s
+python_version::tests::same_default_as_python_version pass
+hard_links_to_target_outside_workspace fail
+hard_links_in_workspace fail
+move_file_to_trash fail
+deleted_file fail
+nested_packages_delete_root fail
+remove_search_path fail
+unix::symlink_inside_workspace fail
+unix::symlink_target_outside_watched_paths fail
+changed_versions_file fail
+unix::symlinked_module_search_path fail
+search_path fail
+new_ignored_file fail
+directory_deleted fail
+directory_renamed fail
+directory_moved_to_trash fail
+removed_package fail
+added_package fail
+post
+   Compiling red_knot_wasm v0.0.0 (/testbed/crates/red_knot_wasm)
+   Compiling ruff_linter v0.8.6 (/testbed/crates/ruff_linter)
+   Compiling ruff_graph v0.1.0 (/testbed/crates/ruff_graph)
+   Compiling ruff_workspace v0.0.0 (/testbed/crates/ruff_workspace)
+   Compiling ruff_server v0.2.2 (/testbed/crates/ruff_server)
+   Compiling ruff v0.8.6 (/testbed/crates/ruff)
+   Compiling ruff_wasm v0.8.6 (/testbed/crates/ruff_wasm)
+   Compiling ruff_dev v0.0.0 (/testbed/crates/ruff_dev)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 34.01s
+python_version::tests::same_default_as_python_version pass
+hard_links_to_target_outside_workspace fail
+changed_versions_file fail
+directory_moved_to_trash fail
+directory_renamed fail
+add_search_path fail
+unix::symlinked_module_search_path fail
+move_file_to_trash fail
+deleted_file fail
+unix::changed_metadata fail
+search_path fail
+changed_file fail
+move_file_to_workspace fail
+new_file fail
+remove_search_path fail
+unix::symlink_inside_workspace fail
+nested_packages_delete_root fail
+hard_links_in_workspace fail
+added_package fail
+unix::symlink_target_outside_watched_paths fail
+directory_moved_to_workspace fail
+new_ignored_file fail
+removed_package fail
+directory_deleted fail
+build success
+release failed

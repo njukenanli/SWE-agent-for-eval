@@ -1,0 +1,205 @@
+pre
+createToExtensionsRedirects creates redirects from html/htm extensions pass
+createToExtensionsRedirects creates "to" redirects when relativeRoutesPath contains a prefix pass
+createToExtensionsRedirects does not create redirection for an empty extension array pass
+createFromExtensionsRedirects rejects empty extensions pass
+createFromExtensionsRedirects rejects extensions with "." pass
+createFromExtensionsRedirects rejects extensions with / pass
+createFromExtensionsRedirects rejects extensions with illegal url char pass
+createFromExtensionsRedirects creates redirects from html/htm extensions pass
+createFromExtensionsRedirects creates "from" redirects when relativeRoutesPath contains a prefix pass
+createFromExtensionsRedirects does not create redirection for an empty extension array pass
+listTagsByLetters creates letters list pass
+normalizeFrontMatterTags normalizes simple string tag pass
+normalizeFrontMatterTags normalizes complex string tag pass
+normalizeFrontMatterTags normalizes simple object tag pass
+normalizeFrontMatterTags normalizes complex string tag with object tag pass
+normalizeFrontMatterTags normalizes string list pass
+normalizeFrontMatterTags succeeds for empty list pass
+normalizeFrontMatterTags normalizes complex mixed list pass
+groupTaggedItems groups items by tag permalink pass
+getTagVisibility works for some unlisted pass
+getTagVisibility works for all unlisted pass
+getTagVisibility works for all listed pass
+useTitleFormatter works pass
+getErrorCausalChain works for simple error pass
+getErrorCausalChain works for nested errors pass
+normalizeLocation rewrites locations with index.html pass
+normalizeLocation removes html extension pass
+normalizeLocation does not strip extension if the route location has one pass
+normalizeLocation leaves pathnames untouched pass
+remove-overridden-custom-properties overridden custom properties should be removed pass
+remove-overridden-custom-properties overridden custom properties with `!important` rule should not be removed pass
+normalization normalizes shorthands pass
+normalization rejects some invalid cases pass
+normalization adds a translatable marker for labels defined in sidebars.js pass
+duplicates gets duplicate values pass
+duplicates accepts custom comparator pass
+uniq remove duplicate primitives pass
+uniq remove duplicate objects/arrays by identity pass
+isInternalUrl returns true for empty links pass
+isInternalUrl returns true for root relative links pass
+isInternalUrl returns true for relative links pass
+isInternalUrl returns false for HTTP links pass
+isInternalUrl returns false for HTTPS links pass
+isInternalUrl returns false for whatever protocol links pass
+isInternalUrl returns false for telephone links pass
+isInternalUrl returns false for mailto links pass
+isInternalUrl returns false for undefined links pass
+formatters path pass
+formatters url pass
+formatters id pass
+formatters code pass
+formatters subdue pass
+interpolate formats text with variables & arrays pass
+interpolate recognizes valid flags pass
+interpolate interpolates arrays with flags pass
+interpolate prints detached flags as-is pass
+interpolate throws with bad flags pass
+info prints objects pass
+warn prints objects pass
+error prints objects pass
+success prints objects pass
+report works with all severities pass
+isRegexpStringMatch works pass
+getNamePatterns resolves plain names pass
+getNamePatterns expands bare scopes pass
+getNamePatterns expands scoped names pass
+getNamePatterns expands deep scoped paths pass
+resolveModuleName resolves longhand pass
+resolveModuleName resolves shorthand pass
+resolveModuleName throws good error message for longhand pass
+resolveModuleName throws good error message for shorthand pass
+isMultiColumnFooterLinks works pass
+getAllFinalRoutes gets final routes correctly pass
+getFileCommitDate returns earliest commit date pass
+getFileCommitDate returns latest commit date pass
+getFileCommitDate returns latest commit date with author pass
+getFileCommitDate returns earliest commit date with author pass
+getFileCommitDate throws custom error when file is not tracked pass
+getFileCommitDate throws when file not found pass
+docVersionSearchTag works pass
+hashUtils simpleHash pass
+docuHash docuHash works pass
+toTagsProp works pass
+toTagsProp filters unlisted tags pass
+DocusaurusContextProvider returns right value pass
+DocusaurusContextProvider has reference-equal value on hydration pass
+createRedirectPageContent works pass
+createRedirectPageContent encodes uri special chars pass
+shouldQuotifyFrontMatter works pass
+ensureUniquePluginInstanceIds accept single instance plugins pass
+ensureUniquePluginInstanceIds accept single instance plugins, all with sameId pass
+ensureUniquePluginInstanceIds accept multi instance plugins without id pass
+ensureUniquePluginInstanceIds reject multi instance plugins without id pass
+ensureUniquePluginInstanceIds reject multi instance plugins with same id pass
+ensureUniquePluginInstanceIds reject multi instance plugins with some without id pass
+shellUtils escapeShellArg pass
+toggleListItem removes item already in list pass
+toggleListItem appends item not in list pass
+BrowserContextProvider has value false on first render pass
+BrowserContextProvider has value true on hydration pass
+post
+getFileCommitDate returns latest commit date with author pass
+getFileCommitDate returns earliest commit date with author pass
+getFileCommitDate throws custom error when file is not tracked pass
+getFileCommitDate throws when file not found pass
+normalizeLocation rewrites locations with index.html pass
+normalizeLocation removes html extension pass
+normalizeLocation does not strip extension if the route location has one pass
+normalizeLocation leaves pathnames untouched pass
+useRouteContext throws when there is no route context at all pass
+useRouteContext returns merged route contexts pass
+stripNumberPrefix strips number prefix if present pass
+stripNumberPrefix does not strip number prefix if pattern does not match pass
+stripPathNumberPrefix strips number prefixes in paths pass
+stripPathNumberPrefix strips number prefixes in paths with custom parser pass
+stripPathNumberPrefix does not strip number prefixes in paths with disabled parser pass
+DefaultNumberPrefixParser extracts number prefix if present pass
+DefaultNumberPrefixParser does not extract number prefix if pattern does not match pass
+isMultiColumnFooterLinks works pass
+applyTrailingSlash applies to empty pass
+applyTrailingSlash does not apply to / pass
+applyTrailingSlash does not apply to /baseUrl/ pass
+applyTrailingSlash does not apply to #anchor links pass
+applyTrailingSlash applies to simple paths pass
+applyTrailingSlash applies to path with #anchor pass
+applyTrailingSlash applies to path with ?search pass
+applyTrailingSlash applies to path with ?search#anchor pass
+applyTrailingSlash applies to fully qualified urls pass
+isInternalUrl returns true for empty links pass
+isInternalUrl returns true for root relative links pass
+isInternalUrl returns true for relative links pass
+isInternalUrl returns false for HTTP links pass
+isInternalUrl returns false for HTTPS links pass
+isInternalUrl returns false for whatever protocol links pass
+isInternalUrl returns false for telephone links pass
+isInternalUrl returns false for mailto links pass
+isInternalUrl returns false for undefined links pass
+getPluginVersion detects external packages plugins versions pass
+getPluginVersion detects project plugins versions pass
+getPluginVersion detects local packages versions pass
+loadSiteMetadata warns about plugin version mismatch pass
+Head does exactly what Helmet does pass
+createSlugger can create unique slugs pass
+createSlugger can create unique slugs respecting case pass
+shouldQuotifyFrontMatter works pass
+normalization normalizes shorthands pass
+normalization rejects some invalid cases pass
+normalization adds a translatable marker for labels defined in sidebars.js pass
+loadPresets no presets pass
+loadPresets string form pass
+loadPresets string form composite pass
+loadPresets array form pass
+loadPresets array form with options pass
+loadPresets array form composite pass
+loadPresets mixed form pass
+loadPresets mixed form with themes pass
+getFileLoaderUtils() plugin svgo/removeViewBox and removeTitle should be disabled pass
+isSamePath returns true for compared path without trailing slash pass
+isSamePath returns true for compared path with trailing slash pass
+isSamePath returns true for compared path with different case pass
+isSamePath returns true for compared path with different case + trailing slash pass
+isSamePath returns false for compared path with double trailing slash pass
+isSamePath returns true for twice undefined/null pass
+isSamePath returns false when one undefined pass
+findHomePageRoute returns undefined for no routes pass
+findHomePageRoute returns undefined for no homepage pass
+findHomePageRoute finds top-level homepage pass
+findHomePageRoute finds nested homepage pass
+findHomePageRoute finds nested homepage with baseUrl pass
+listTagsByLetters creates letters list pass
+duplicates gets duplicate values pass
+duplicates accepts custom comparator pass
+uniq remove duplicate primitives pass
+uniq remove duplicate objects/arrays by identity pass
+ensureUniquePluginInstanceIds accept single instance plugins pass
+ensureUniquePluginInstanceIds accept single instance plugins, all with sameId pass
+ensureUniquePluginInstanceIds accept multi instance plugins without id pass
+ensureUniquePluginInstanceIds reject multi instance plugins without id pass
+ensureUniquePluginInstanceIds reject multi instance plugins with same id pass
+ensureUniquePluginInstanceIds reject multi instance plugins with some without id pass
+loadHtmlTags works for an empty plugin pass
+loadHtmlTags only injects headTags pass
+loadHtmlTags only injects preBodyTags pass
+loadHtmlTags only injects postBodyTags pass
+loadHtmlTags allows multiple plugins that inject different part of html tags pass
+loadHtmlTags allows multiple plugins that might/might not inject html tags pass
+loadHtmlTags throws for invalid tag pass
+loadHtmlTags throws for invalid tagName pass
+loadHtmlTags throws for invalid tag object pass
+toggleListItem removes item already in list pass
+toggleListItem appends item not in list pass
+hashUtils simpleHash pass
+docuHash docuHash works pass
+shellUtils escapeShellArg pass
+getAllFinalRoutes gets final routes correctly pass
+toTagsProp works pass
+toTagsProp filters unlisted tags pass
+createRedirectPageContent works pass
+createRedirectPageContent encodes uri special chars pass
+BrowserContextProvider has value false on first render pass
+BrowserContextProvider has value true on hydration pass
+build success
+release success
+{'replaceMarkdownLinks preserves query/hash', 'replaceMarkdownLinks does not replace non-Markdown links', 'replaceMarkdownLinks handles stray spaces', 'replaceMarkdownLinks handles link titles'}

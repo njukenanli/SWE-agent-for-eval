@@ -1,0 +1,204 @@
+pre
+    from pkg_resources import iter_entry_points
+ModuleNotFoundError: No module named 'pkg_resources'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/testbed/.venv/lib/python3.12/site-packages/pytest/__main__.py", line 9, in <module>
+    raise SystemExit(_console_main())
+                     ^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 253, in _console_main
+    code = _main(prog=_get_prog_name(sys.argv))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 223, in _main
+    config = _prepareconfig(new_args, plugins, prog=prog)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 410, in _prepareconfig
+    config: Config = pluginmanager.hook.pytest_cmdline_parse(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/helpconfig.py", line 124, in pytest_cmdline_parse
+    config = yield
+             ^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 1232, in pytest_cmdline_parse
+    self.parse(args)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 1605, in parse
+    self.hook.pytest_load_initial_conftests(
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/warnings.py", line 129, in pytest_load_initial_conftests
+    return (yield)
+            ^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/capture.py", line 173, in pytest_load_initial_conftests
+    yield
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 1312, in pytest_load_initial_conftests
+    self.pluginmanager._set_initial_conftests(
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 662, in _set_initial_conftests
+    self._loadconftestmodules(
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 707, in _loadconftestmodules
+    mod = self._importconftest(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 783, in _importconftest
+    self.consider_conftest(mod, registration_name=conftestpath_plugin_name)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 870, in consider_conftest
+    self.register(conftestmodule, name=registration_name)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 582, in register
+    self.consider_module(plugin)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 878, in consider_module
+    self._import_plugin_specs(getattr(mod, "pytest_plugins", []))
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 885, in _import_plugin_specs
+    self.import_plugin(import_spec)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 920, in import_plugin
+    raise ImportError(
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 913, in import_plugin
+    mod = importlib.import_module(importspec)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py", line 188, in exec_module
+    exec(co, module.__dict__)
+  File "/testbed/sphinx/testing/fixtures.py", line 21, in <module>
+    from sphinx.testing import util
+  File "/testbed/sphinx/testing/util.py", line 23, in <module>
+    from sphinx import application, locale
+  File "/testbed/sphinx/application.py", line 43, in <module>
+    from sphinx.registry import SphinxComponentRegistry
+  File "/testbed/sphinx/registry.py", line 22, in <module>
+    from pkg_resources import iter_entry_points
+ImportError: Error importing plugin "sphinx.testing.fixtures": No module named 'pkg_resources'
+post
+    from pkg_resources import iter_entry_points
+ModuleNotFoundError: No module named 'pkg_resources'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/testbed/.venv/lib/python3.12/site-packages/pytest/__main__.py", line 9, in <module>
+    raise SystemExit(_console_main())
+                     ^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 253, in _console_main
+    code = _main(prog=_get_prog_name(sys.argv))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 223, in _main
+    config = _prepareconfig(new_args, plugins, prog=prog)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 410, in _prepareconfig
+    config: Config = pluginmanager.hook.pytest_cmdline_parse(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/helpconfig.py", line 124, in pytest_cmdline_parse
+    config = yield
+             ^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 1232, in pytest_cmdline_parse
+    self.parse(args)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 1605, in parse
+    self.hook.pytest_load_initial_conftests(
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/warnings.py", line 129, in pytest_load_initial_conftests
+    return (yield)
+            ^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/capture.py", line 173, in pytest_load_initial_conftests
+    yield
+  File "/testbed/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 1312, in pytest_load_initial_conftests
+    self.pluginmanager._set_initial_conftests(
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 662, in _set_initial_conftests
+    self._loadconftestmodules(
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 707, in _loadconftestmodules
+    mod = self._importconftest(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 783, in _importconftest
+    self.consider_conftest(mod, registration_name=conftestpath_plugin_name)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 870, in consider_conftest
+    self.register(conftestmodule, name=registration_name)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 582, in register
+    self.consider_module(plugin)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 878, in consider_module
+    self._import_plugin_specs(getattr(mod, "pytest_plugins", []))
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 885, in _import_plugin_specs
+    self.import_plugin(import_spec)
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 920, in import_plugin
+    raise ImportError(
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 913, in import_plugin
+    mod = importlib.import_module(importspec)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "/testbed/.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py", line 188, in exec_module
+    exec(co, module.__dict__)
+  File "/testbed/sphinx/testing/fixtures.py", line 21, in <module>
+    from sphinx.testing import util
+  File "/testbed/sphinx/testing/util.py", line 23, in <module>
+    from sphinx import application, locale
+  File "/testbed/sphinx/application.py", line 43, in <module>
+    from sphinx.registry import SphinxComponentRegistry
+  File "/testbed/sphinx/registry.py", line 22, in <module>
+    from pkg_resources import iter_entry_points
+ImportError: Error importing plugin "sphinx.testing.fixtures": No module named 'pkg_resources'
+(.venv) (.venv) build failed
+(.venv) (.venv) 
