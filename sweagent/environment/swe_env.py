@@ -153,7 +153,10 @@ class SWEEnv:
             # todo: Currently has swe-ft specific change: The original repo.copy isn't called, because the repo is already
             # present. However, reset --hard <BRANCH> also doesn't work. So modified it here to do a checkout instead.
             startup_commands = [
-                f"cd /{self.repo.repo_name}",
+                "apt-get update",
+                "DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git ca-certificates",
+                f"git clone https://github.com/{self.repo.repo_name} /testbed",
+                f"cd /testbed",
                 "export ROOT=$(pwd -P)",
                 *self.repo.get_reset_commands(),
             ]
@@ -162,7 +165,7 @@ class SWEEnv:
                 check="raise",
                 error_msg="Failed to clean repository",
                 # Sometimes this is slow because it rebuilds some index
-                timeout=120,
+                timeout=300,
             )
 
     def close(self) -> None:

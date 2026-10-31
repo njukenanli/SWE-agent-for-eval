@@ -39,6 +39,7 @@ from sweagent.exceptions import (
 from sweagent.tools.tools import ToolConfig
 from sweagent.types import History, HistoryItem
 from sweagent.utils.log import get_logger
+import sys
 
 try:
     import readline  # noqa: F401
@@ -579,6 +580,10 @@ class LiteLLMModel(AbstractModel):
     def __init__(self, args: GenericAPIModelConfig, tools: ToolConfig):
         """Model served by the `litellm` library."""
         # Always copy config to avoid shared state between different instances
+
+        from cloudgpt_aoai import get_openai_token_provider
+        self.token_provider = get_openai_token_provider()
+
         self.config: GenericAPIModelConfig = args.model_copy(deep=True)
         self.stats = InstanceStats()
         self.tools = tools
@@ -712,18 +717,32 @@ class LiteLLMModel(AbstractModel):
         if self.lm_provider == "anthropic":
             completion_kwargs["max_tokens"] = self.model_max_output_tokens
         try:
-            response: litellm.types.utils.ModelResponse = litellm.completion(  # type: ignore
-                model=self.config.name,
-                messages=messages,
-                temperature=self.config.temperature if temperature is None else temperature,
-                top_p=self.config.top_p,
-                api_version=self.config.api_version,
-                api_key=self.config.choose_api_key(),
-                fallbacks=self.config.fallbacks,
-                **completion_kwargs,
-                **extra_args,
-                n=n,
-            )
+            if "claude" in self.config.name:
+                response: litellm.types.utils.ModelResponse = litellm.completion(  # type: ignore
+                    model = self.config.name,
+                    messages = messages,
+                    # temperature = self.config.temperature,
+                    # top_p = self.config.top_p,
+                    api_key = os.environ.get("ANTHROPIC_API_KEY", ""),
+                    fallbacks = self.config.fallbacks,
+                    n = n,
+                    **completion_kwargs,    # <- you removed this
+                    **extra_args 
+                )
+            else:
+                response: litellm.types.utils.ModelResponse = litellm.completion(  # type: ignore
+                    model = f"azure/{self.config.name}",
+                    messages = messages,
+                    # temperature = self.config.temperature,
+                    # top_p = self.config.top_p,
+                    api_base = "https://cloudgpt-openai.azure-api.net/",
+                    api_version = "2025-04-01-preview",
+                    azure_ad_token_provider = self.token_provider,
+                    fallbacks = self.config.fallbacks,
+                    n = n,
+                    **completion_kwargs,    # <- you removed this
+                    **extra_args 
+                )
         except litellm.exceptions.ContextWindowExceededError as e:
             raise ContextWindowExceededError from e
         except litellm.exceptions.ContentPolicyViolationError as e:
@@ -734,7 +753,7 @@ class LiteLLMModel(AbstractModel):
             raise
         self.logger.debug(f"Response: {response}")
         try:
-            cost = litellm.cost_calculator.completion_cost(response, model=self.config.name)
+            cost = litellm.cost_calculator.completion_cost(response)
         except Exception as e:
             self.logger.debug(f"Error calculating cost: {e}, setting cost to 0.")
             if self.config.per_instance_cost_limit > 0 or self.config.total_cost_limit > 0:

@@ -2,6 +2,14 @@
 # This template is heavily inspired by anthropic's computer use demo, but you can use
 # it with any LM.
 agent:
+  model:
+    name: 'gpt-5.2-20251211'
+    per_instance_cost_limit: 0
+    total_cost_limit: 0
+    per_instance_call_limit: 120
+    max_input_tokens: 0
+    temperature: 0.0
+    top_p: 1.0
   templates:
     system_template: |-
       You are a helpful assistant that can interact with a computer to solve tasks.
@@ -9,22 +17,28 @@ agent:
       <uploaded_files>
       {{working_dir}}
       </uploaded_files>
-      I've uploaded a python code repository in the directory {{working_dir}}. Consider the following PR description:
+      I've uploaded a code repository in the directory {{working_dir}}. You need to build and test the repository.
 
-      <pr_description>
       {{problem_statement}}
-      </pr_description>
 
-      Can you help me implement the necessary changes to the repository so that the requirements specified in the <pr_description> are met?
-      I've already taken care of all changes to any of the test files described in the <pr_description>. This means you DON'T have to modify the testing logic or any of the tests in any way!
-      Your task is to make the minimal changes to non-tests files in the {{working_dir}} directory to ensure the <pr_description> is satisfied.
-      Follow these steps to resolve the issue:
-      1. As a first step, it might be a good idea to find and read code relevant to the <pr_description>
-      2. Create a script to reproduce the error and execute it with `python <filename.py>` using the bash tool, to confirm the error
-      3. Edit the sourcecode of the repo to resolve the issue
-      4. Rerun your reproduce script and confirm that the error is fixed!
-      5. Think about edgecases and make sure your fix handles them as well
-      Your thinking should be thorough and so it's fine if it's very long.
+      You should do all these steps one by one:
+      (1) Install dependencies. Build the repository.
+      (2) Find the command to run all regression tests in the repository that can show the status of each test to a temp file.
+      (3) Write a bash script to parse the test output and print the test name :: status mapping to standard output like:
+      testcase_1 pass
+      testcase_2 fail
+      testcase_3 skip
+      ...
+      where test status only have three values of {'pass', 'fail', 'skip'}. All kinds of fail should be seen as 'fail'.
+      (3) Figure out the minimal commands to re-build the repository again after modifications to the source code.
+      (4) Create a bash script run.sh that can be run with `bash run.sh`. In run.sh you should first write the the minimal commands to re-build the repository again after modifications to the source code, then write the commands to run all regression tests in the repository that can show the status of each test to a temp file, and finally write the command to run your parser bash script to print test name :: status mapping to standard output.
+      (5) We would check whether your deployment is correct by running run.sh. You must complete run.sh carefully. After your run.sh is completed, submit.
+
+      Notes:
+      (1) If the repository is not a Python repository, do not install or use Python!!! If the repository is a Python repository, you need to install a new Python manually with `apt-get install python3.** ; python3.** -m venv .venv ; source .venv/bin/activate`. Do not use the system pre-installed Python because this would corrupt the system!!! If the repository is not a Python repository, you are forbidden to install Python!!!
+      (2) You should not modify source code / config files. Keep all the files untouched. If you cannot build and test the repository when files are not modified, which means the repository has problems, just give up and submit
+      (3) run.sh should print test name :: status mapping to standard output. If the output is too long so that it exceeds your context window, bash run.sh > log.out 2>&1 ; tail -n 500 log.out
+
     next_step_template: |-
       OBSERVATION:
       {{observation}}
@@ -48,13 +62,9 @@ agent:
         - |
           Thank you for your work on this issue. Please carefully follow the steps below to help review your changes.
 
-          1. If you made any changes to your code after running the reproduction script, please run the reproduction script again.
-            If the reproduction script is failing, please revisit your changes and make sure they are correct.
-            If you have already removed your reproduction script, please ignore this step.
-          2. Remove your reproduction script (if you haven't done so already).
-          3. If you have modified any TEST files, please revert them to the state they had before you started fixing the issue.
+          1. If you have modified any TEST / code / config files, please revert them to the state they had before you started fixing the issue.
             You can do this with `git checkout -- /path/to/test/file.py`. Use below <diff> to find the files you need to revert.
-          4. Run the submit command again to confirm.
+          2. Run the submit command again to confirm.
 
           Here is a list of all of your changes:
 
@@ -63,7 +73,7 @@ agent:
           </diff>
     enable_bash_tool: true
     parse_function:
-      type: function_calling
+      type: function_calling # thought_action
   history_processors:
     - type: cache_control
       last_n_messages: 2

@@ -126,25 +126,7 @@ class SimpleBatchInstance(BaseModel):
                 text=self.problem_statement, id=self.instance_id, extra_fields=self.extra_fields
             )
 
-        if not self.repo_name:
-            repo = None
-        elif "github" in self.repo_name:
-            repo = GithubRepoConfig(github_url=self.repo_name, base_commit=self.base_commit)
-        elif "/" not in self.repo_name:
-            repo = PreExistingRepoConfig(repo_name=self.repo_name, base_commit=self.base_commit)
-        else:
-            repo = LocalRepoConfig(path=Path(self.repo_name), base_commit=self.base_commit)
-        if isinstance(deployment, LocalDeploymentConfig):
-            if self.image_name:
-                msg = "Local deployment does not support image_name"
-                raise ValueError(msg)
-            return BatchInstance(
-                env=EnvironmentConfig(deployment=deployment, repo=repo), problem_statement=problem_statement
-            )
-        if isinstance(deployment, DummyDeploymentConfig):
-            return BatchInstance(
-                env=EnvironmentConfig(deployment=deployment, repo=repo), problem_statement=problem_statement
-            )
+        repo = PreExistingRepoConfig(repo_name=self.repo_name, base_commit=self.base_commit)
 
         deployment.image = self.image_name  # type: ignore
 
@@ -170,21 +152,12 @@ class SimpleBatchInstance(BaseModel):
     @classmethod
     def from_swe_bench(cls, instance: dict[str, Any]) -> Self:
         """Convert instances from the classical SWE-bench dataset to the `SimpleBatchInstance` format."""
-        iid = instance["instance_id"]
-        image_name = instance.get("image_name", None)
-        if image_name is None:
-            # Docker doesn't allow double underscore, so we replace them with a magic token
-            id_docker_compatible = iid.replace("__", "_1776_")
-            image_name = f"docker.io/swebench/sweb.eval.x86_64.{id_docker_compatible}:latest".lower()
-        extra_fields = {}
-        if "image_assets" in instance:
-            issue_images = json.loads(instance["image_assets"])["problem_statement"]
-            extra_fields["issue_images"] = issue_images
+        extra_fields = {"instance": instance}
         return cls(
-            image_name=image_name,
-            problem_statement=instance["problem_statement"],
-            instance_id=iid,
-            repo_name="testbed",
+            image_name="ubuntu:24.04",
+            problem_statement="\n------\n",
+            instance_id=instance["instance_id"],
+            repo_name=instance["repo"],
             base_commit=instance["base_commit"],
             extra_fields=extra_fields,
         )
@@ -268,7 +241,7 @@ class InstancesFromHuggingFace(BaseModel, AbstractInstanceSource):
 class SWEBenchInstances(BaseModel, AbstractInstanceSource):
     """Load instances from SWE-bench."""
 
-    subset: Literal["lite", "verified", "full", "multimodal", "multilingual"] = "lite"
+    subset: str = "lite"
     """Subset of swe-bench to use"""
 
     # IMPORTANT: Do not call this `path`, because then if people do not specify instance.type,
@@ -322,7 +295,8 @@ class SWEBenchInstances(BaseModel, AbstractInstanceSource):
     def get_instance_configs(self) -> list[BatchInstance]:
         from datasets import load_dataset
 
-        ds: list[dict[str, Any]] = load_dataset(self._get_dataset_path(), split=self.split)  # type: ignore
+        with open(self.subset) as f:
+            ds: list[dict[str, Any]] = [json.loads(i) for i in f]  # type: ignore
 
         if isinstance(self.deployment, DockerDeploymentConfig):
             self.deployment.platform = "linux/amd64"
